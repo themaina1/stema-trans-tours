@@ -1,412 +1,796 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nairobi Tours | Stema Trans</title>
+    <title>Tours | Stema Trans Tours</title>
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+          content="Discover Nairobi city tours, wildlife experiences, cultural attractions and private tours with Stema Trans Tours.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 18px 5%;
+        }
+
+        .header-container {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #d6a03d;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d6a03d;
+        }
+
+        .hero {
+            background:
+                linear-gradient(rgba(0,0,0,0.63), rgba(0,0,0,0.63)),
+                url("images/hero.jpg") center/cover;
+
+            min-height: 390px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+
+            padding: 50px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 19px;
+        }
+
+        .container {
+            max-width: 1150px;
+            width: 92%;
+            margin: 55px auto;
+        }
+
+        .intro {
+            max-width: 850px;
+            text-align: center;
+            margin: 0 auto 60px;
+        }
+
+        .intro h2 {
+            font-size: 31px;
+            margin-bottom: 14px;
+        }
+
+        .intro p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .tour-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 25px;
+        }
+
+        .tour-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .tour-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .tour-content {
+            padding: 24px;
+        }
+
+        .tour-content h3 {
+            color: #9a681c;
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .tour-content p {
+            color: #555;
+            margin-bottom: 18px;
+        }
+
+        .tour-button {
+            display: inline-block;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .tour-button:hover {
+            background: #333;
+        }
+
+        .section {
+            margin-bottom: 70px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-heading h2 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .section-heading p {
+            color: #666;
+        }
+
+        .experience-box {
+            background: #222;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .experience-box h2 {
+            margin-bottom: 15px;
+        }
+
+        .experience-box p {
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .experience-box ul {
+            list-style: none;
+        }
+
+        .experience-box li {
+            margin-bottom: 10px;
+            padding-left: 22px;
+            position: relative;
+        }
+
+        .experience-box li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #d6a03d;
+            font-weight: bold;
+        }
+
+        .custom {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            text-align: center;
+        }
+
+        .custom h2 {
+            margin-bottom: 12px;
+        }
+
+        .custom p {
+            color: #555;
+            max-width: 750px;
+            margin: 0 auto 22px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #d6a03d;
+            color: #111;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #c18c2d;
+        }
+
+        .note {
+            background: #fff8e7;
+            border-left: 5px solid #d6a03d;
+            padding: 22px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+
+        .cta {
+            background: #d6a03d;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .cta h2 {
+            font-size: 31px;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            margin-bottom: 23px;
+        }
+
+        .cta .button {
+            background: #111;
+            color: white;
+        }
+
+        footer {
+            background: #111;
+            color: #bbb;
+            text-align: center;
+            padding: 27px 15px;
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+
+            .hero {
+                min-height: 310px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .intro h2,
+            .section-heading h2 {
+                font-size: 26px;
+            }
+
+            .experience-box {
+                padding: 30px 24px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-<header>
-    <div class="container nav-container">
 
-        <a href="index.html" class="logo">
-            <strong>STEMA TRANS</strong>
-            <span>City Tours & Transfers</span>
-        </a>
+<header>
+
+    <div class="header-container">
+
+        <div class="logo">
+            STEMA <span>TRANS</span>
+        </div>
 
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="tours.html">Tours</a>
             <a href="transfers.html">Transfers</a>
-            <a href="gallery.html">Gallery</a>
             <a href="rates.html">Rates</a>
-            <a href="booking.html" class="book-button">Book Now</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
     </div>
+
 </header>
 
 
-<main>
 
-    <!-- PAGE INTRO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Nairobi Tours & Experiences</h1>
+
+        <p>
+            Discover Nairobi through private city tours,
+            wildlife experiences, culture, history and local attractions.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<main class="container">
+
+
+    <section class="intro">
+
+        <h2>Explore Nairobi with Stema Trans</h2>
+
+        <p>
+            Nairobi is a city where modern urban life meets wildlife,
+            history and Kenyan culture. Our private tours are designed
+            to help visitors experience the city comfortably and at
+            their own pace.
+        </p>
+
+        <p>
+            Choose one of our popular experiences or contact us to
+            create a private itinerary around your interests.
+        </p>
+
+    </section>
+
+
+
     <section class="section">
 
-        <div class="container">
+        <div class="section-heading">
 
-            <p class="eyebrow">STEMA TRANS TOURS</p>
+            <h2>Popular Nairobi Tours</h2>
 
-            <h1>
-                Explore Nairobi
-            </h1>
-
-            <p style="max-width:650px; margin-top:15px;">
-                Discover Nairobi's landmarks, wildlife, culture
-                and local experiences with Stema Trans.
+            <p>
+                Private tours with flexible pickup and sightseeing options.
             </p>
+
+        </div>
+
+
+        <div class="tour-grid">
+
+
+            <!-- NAIROBI CITY -->
+
+            <article class="tour-card">
+
+                <img src="images/nairobi-city.jpg"
+                     alt="Nairobi city skyline">
+
+                <div class="tour-content">
+
+                    <h3>Nairobi City Highlights</h3>
+
+                    <p>
+                        Discover some of Nairobi's best-known landmarks,
+                        including the city centre, KICC area, City Market,
+                        Jeevanjee Gardens, Uhuru Park and other points
+                        of interest.
+                    </p>
+
+                    <a href="booking.html" class="tour-button">
+                        Book This Tour
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- NAIROBI NATIONAL PARK -->
+
+            <article class="tour-card">
+
+                <img src="images/nairobi-national-park.jpg"
+                     alt="Wildlife at Nairobi National Park">
+
+                <div class="tour-content">
+
+                    <h3>Nairobi National Park</h3>
+
+                    <p>
+                        Experience wildlife just outside the city.
+                        Depending on conditions and season, guests may
+                        encounter lions, giraffes, zebras, buffalo,
+                        rhinos, antelopes and many bird species.
+                    </p>
+
+                    <a href="booking.html" class="tour-button">
+                        Book This Tour
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- GIRAFFE CENTRE -->
+
+            <article class="tour-card">
+
+                <img src="images/giraffe-centre.jpg"
+                     alt="Giraffe at the Giraffe Centre">
+
+                <div class="tour-content">
+
+                    <h3>Giraffe Centre</h3>
+
+                    <p>
+                        Visit the famous Giraffe Centre and learn about
+                        giraffe conservation while enjoying a close
+                        encounter with these remarkable animals.
+                    </p>
+
+                    <a href="booking.html" class="tour-button">
+                        Book This Tour
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- KAREN BLIXEN -->
+
+            <article class="tour-card">
+
+                <img src="images/karen-blixen.jpg"
+                     alt="Karen Blixen Museum area">
+
+                <div class="tour-content">
+
+                    <h3>Karen & Karen Blixen</h3>
+
+                    <p>
+                        Explore the Karen area and visit the former home
+                        of author Karen Blixen while learning about the
+                        history and heritage of this part of Nairobi.
+                    </p>
+
+                    <a href="booking.html" class="tour-button">
+                        Book This Tour
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- MUSEUM -->
+
+            <article class="tour-card">
+
+                <img src="images/nairobi-museum.jpg"
+                     alt="Nairobi National Museum">
+
+                <div class="tour-content">
+
+                    <h3>Nairobi National Museum</h3>
+
+                    <p>
+                        Discover Kenya's natural history, culture,
+                        archaeology and art at one of Nairobi's
+                        leading cultural attractions.
+                    </p>
+
+                    <a href="booking.html" class="tour-button">
+                        Book This Tour
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- BOMAS -->
+
+            <article class="tour-card">
+
+                <img src="images/bomas-of-kenya.jpg"
+                     alt="Bomas of Kenya cultural performance">
+
+                <div class="tour-content">
+
+                    <h3>Bomas of Kenya</h3>
+
+                    <p>
+                        Experience Kenya's diverse cultures through
+                        traditional homes, cultural displays, music,
+                        dance and performances.
+                    </p>
+
+                    <a href="booking.html" class="tour-button">
+                        Book This Tour
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="note">
+
+            <strong>Important:</strong>
+            Attraction entrance fees are separate unless your
+            quotation specifically states that they are included.
+            See our <a href="rates.html">Rates</a> page for vehicle
+            and tour transport rates.
 
         </div>
 
     </section>
 
 
-    <!-- TOURS -->
-    <section class="section light">
 
-        <div class="container">
+    <!-- COMBINATION EXPERIENCES -->
 
-            <div class="cards">
+    <section class="section">
 
+        <div class="section-heading">
 
-                <!-- CITY HIGHLIGHTS -->
+            <h2>Combine Experiences</h2>
 
-                <article class="card">
+            <p>
+                Make better use of your time by combining nearby attractions.
+            </p>
 
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
+        </div>
 
-                    <div class="card-content">
 
-                        <h3>
-                            Nairobi City Highlights
-                        </h3>
+        <div class="tour-grid">
 
-                        <p>
-                            Discover some of Nairobi's best-known
-                            landmarks and attractions, including
-                            the city centre, KICC area, Parliament
-                            surroundings, City Market and other
-                            highlights.
-                        </p>
 
-                        <a href="booking.html">
-                            Book This Tour →
-                        </a>
+            <div class="tour-card">
 
-                    </div>
+                <div class="tour-content">
 
-                </article>
+                    <h3>City & Museum Experience</h3>
 
+                    <p>
+                        Combine a Nairobi city orientation with a visit
+                        to the Nairobi National Museum.
+                    </p>
 
-                <!-- CITY WALK -->
+                    <a href="booking.html" class="tour-button">
+                        Plan This Tour
+                    </a>
 
-                <article class="card">
-
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
-
-                    <div class="card-content">
-
-                        <h3>
-                            Nairobi City Walk
-                        </h3>
-
-                        <p>
-                            Experience Nairobi on foot while
-                            discovering its history, architecture,
-                            culture and everyday city life.
-                        </p>
-
-                        <a href="booking.html">
-                            Book This Walk →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- NNP -->
-
-                <article class="card">
-
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
-
-                    <div class="card-content">
-
-                        <h3>
-                            Nairobi National Park
-                        </h3>
-
-                        <p>
-                            Enjoy a wildlife experience only a
-                            short distance from Nairobi's city
-                            centre. Look out for lions, giraffes,
-                            zebras, buffaloes, rhinos and many
-                            bird species.
-                        </p>
-
-                        <a href="booking.html">
-                            Book This Tour →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- GIRAFFE CENTRE -->
-
-                <article class="card">
-
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
-
-                    <div class="card-content">
-
-                        <h3>
-                            Giraffe Centre
-                        </h3>
-
-                        <p>
-                            Visit the famous Giraffe Centre and
-                            get an opportunity to learn about and
-                            observe Rothschild's giraffes.
-                        </p>
-
-                        <a href="booking.html">
-                            Book This Tour →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- MUSEUM -->
-
-                <article class="card">
-
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
-
-                    <div class="card-content">
-
-                        <h3>
-                            Nairobi National Museum
-                        </h3>
-
-                        <p>
-                            Explore Kenya's history, culture,
-                            art, archaeology and natural heritage
-                            at the Nairobi National Museum.
-                        </p>
-
-                        <a href="booking.html">
-                            Book This Tour →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- BOMAS -->
-
-                <article class="card">
-
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
-
-                    <div class="card-content">
-
-                        <h3>
-                            Bomas of Kenya
-                        </h3>
-
-                        <p>
-                            Experience Kenya's diverse cultures,
-                            traditional homes, music, dance and
-                            heritage at Bomas of Kenya.
-                        </p>
-
-                        <a href="booking.html">
-                            Book This Tour →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- KAREN BLIXEN -->
-
-                <article class="card">
-
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
-
-                    <div class="card-content">
-
-                        <h3>
-                            Karen Blixen Museum
-                        </h3>
-
-                        <p>
-                            Visit the historic home associated
-                            with Karen Blixen and learn about
-                            her life and connection to Kenya.
-                        </p>
-
-                        <a href="booking.html">
-                            Book This Tour →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- GIRAFFE + KAREN -->
-
-                <article class="card">
-
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
-
-                    <div class="card-content">
-
-                        <h3>
-                            Karen Experience
-                        </h3>
-
-                        <p>
-                            Combine selected Karen attractions
-                            for a relaxed day exploring one of
-                            Nairobi's most popular areas.
-                        </p>
-
-                        <a href="booking.html">
-                            Book This Tour →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- CUSTOM -->
-
-                <article class="card">
-
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
-
-                    <div class="card-content">
-
-                        <h3>
-                            Private / Custom Tour
-                        </h3>
-
-                        <p>
-                            Have a specific place or itinerary
-                            in mind? Contact Stema Trans and
-                            discuss a private Nairobi experience.
-                        </p>
-
-                        <a href="booking.html">
-                            Plan Your Trip →
-                        </a>
-
-                    </div>
-
-                </article>
-
+                </div>
 
             </div>
 
+
+            <div class="tour-card">
+
+                <div class="tour-content">
+
+                    <h3>Karen Experience</h3>
+
+                    <p>
+                        Combine the Giraffe Centre, Karen Blixen Museum
+                        and other attractions around Karen.
+                    </p>
+
+                    <a href="booking.html" class="tour-button">
+                        Plan This Tour
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="tour-card">
+
+                <div class="tour-content">
+
+                    <h3>Wildlife & City Experience</h3>
+
+                    <p>
+                        Combine Nairobi National Park with selected
+                        city or cultural attractions for a full Nairobi day.
+                    </p>
+
+                    <a href="booking.html" class="tour-button">
+                        Plan This Tour
+                    </a>
+
+                </div>
+
+            </div>
+
+
         </div>
 
     </section>
 
 
-    <!-- BOOKING CTA -->
 
-    <section class="cta">
+    <!-- PRIVATE EXPERIENCES -->
 
-        <div class="container">
+    <section class="section">
 
-            <h2>
-                Find Your Nairobi Experience
-            </h2>
+        <div class="experience-box">
+
+            <h2>Private & Flexible Experiences</h2>
 
             <p>
-                Choose your tour and send us your preferred
-                date, number of guests and requirements.
+                Not every traveller wants the same itinerary.
+                Stema Trans can arrange private Nairobi experiences
+                according to your available time and interests.
+            </p>
+
+            <ul>
+
+                <li>
+                    Flexible hotel or residence pickup
+                </li>
+
+                <li>
+                    Private vehicle for your group
+                </li>
+
+                <li>
+                    Professional driver / driver-guide
+                </li>
+
+                <li>
+                    Flexible sightseeing and photo stops
+                </li>
+
+                <li>
+                    City, wildlife, cultural and historical experiences
+                </li>
+
+                <li>
+                    Custom itineraries available on request
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CUSTOM TOUR -->
+
+    <section class="section">
+
+        <div class="custom">
+
+            <h2>Have Your Own Itinerary?</h2>
+
+            <p>
+                Tell us where you would like to go, how many people
+                are travelling and how much time you have. We can
+                help organize a private Nairobi tour around your plans.
             </p>
 
             <a href="booking.html" class="button">
-                Start Booking
+                Plan My Tour
             </a>
 
         </div>
 
     </section>
 
+
 </main>
+
+
+
+<section class="cta">
+
+    <h2>Ready to Explore Nairobi?</h2>
+
+    <p>
+        Choose your experience and let Stema Trans handle the transportation.
+    </p>
+
+    <a href="booking.html" class="button">
+        Book Your Tour
+    </a>
+
+</section>
+
 
 
 <footer>
 
-    <div class="container footer-grid">
+    <p>
+        <strong>STEMA TRANS</strong>
+        — Nairobi City Tours, Transfers & Guided Experiences
+    </p>
 
-        <div>
-
-            <h3>STEMA TRANS</h3>
-
-            <p>
-                Nairobi City Tours & Transfers
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h4>Quick Links</h4>
-
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="transfers.html">Transfers</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="booking.html">Book Now</a>
-
-        </div>
-
-
-        <div>
-
-            <h4>Contact</h4>
-
-            <p>0722 910 913</p>
-            <p>stemawastrans@gmail.com</p>
-
-        </div>
-
-    </div>
-
-
-    <div class="copyright">
+    <p>
         © 2026 Stema Trans. All Rights Reserved.
-    </div>
+    </p>
 
 </footer>
+
 
 </body>
 </html>
