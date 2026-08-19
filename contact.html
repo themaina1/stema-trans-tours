@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Stema Trans Tours</title>
+
+    <meta name="description"
+          content="Contact Stema Trans Tours for Nairobi city tours, airport transfers, private transportation and guided experiences.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 18px 5%;
+        }
+
+        .header-container {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #d6a03d;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d6a03d;
+        }
+
+        .hero {
+            background:
+                linear-gradient(rgba(0,0,0,0.63), rgba(0,0,0,0.63)),
+                url("images/hero.jpg") center/cover;
+
+            min-height: 340px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+
+            padding: 50px 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 14px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 92%;
+            margin: 55px auto;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 45px;
+        }
+
+        .intro h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            color: #555;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 25px;
+            margin-bottom: 55px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .contact-card h3 {
+            color: #9a681c;
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .contact-card p {
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .contact-card a {
+            color: #9a681c;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .booking-box {
+            background: #222;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 55px;
+        }
+
+        .booking-box h2 {
+            margin-bottom: 12px;
+        }
+
+        .booking-box p {
+            color: #ddd;
+            margin-bottom: 22px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #d6a03d;
+            color: #111;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .button:hover {
+            background: #c18c2d;
+        }
+
+        .button-dark {
+            background: white;
+            color: #111;
+        }
+
+        .button-dark:hover {
+            background: #eee;
+        }
+
+        .info-box {
+            background: white;
+            padding: 32px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            margin-bottom: 55px;
+        }
+
+        .info-box h2 {
+            margin-bottom: 15px;
+            color: #9a681c;
+        }
+
+        .info-box p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .cta {
+            background: #d6a03d;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .cta h2 {
+            font-size: 31px;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            margin-bottom: 23px;
+        }
+
+        .cta .button {
+            background: #111;
+            color: white;
+        }
+
+        footer {
+            background: #111;
+            color: #bbb;
+            text-align: center;
+            padding: 27px 15px;
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+
+            .hero {
+                min-height: 290px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .booking-box {
+                padding: 30px 24px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<header>
+
+    <div class="header-container">
+
+        <div class="logo">
+            STEMA <span>TRANS</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="tours.html">Tours</a>
+            <a href="transfers.html">Transfers</a>
+            <a href="rates.html">Rates</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Contact Stema Trans</h1>
+
+        <p>
+            Get in touch to plan your Nairobi tour,
+            transfer or private travel experience.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<main class="container">
+
+
+    <section class="intro">
+
+        <h2>Let's Plan Your Journey</h2>
+
+        <p>
+            Whether you need an airport transfer, Nairobi city tour,
+            private vehicle or customized experience, contact us with
+            your travel details and we'll help you plan your trip.
+        </p>
+
+    </section>
+
+
+
+    <section class="contact-grid">
+
+
+        <div class="contact-card">
+
+            <h3>Phone</h3>
+
+            <p>
+                Call or send a WhatsApp message.
+            </p>
+
+            <p>
+                <a href="tel:+254722910913">
+                    +254 722 910 913
+                </a>
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <h3>Email</h3>
+
+            <p>
+                Send us your enquiry or booking request.
+            </p>
+
+            <p>
+                <a href="mailto:Stemawastrans@gmail.com">
+                    Stemawastrans@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <h3>Location</h3>
+
+            <p>
+                Nairobi, Kenya
+            </p>
+
+            <p>
+                Serving Nairobi and selected destinations
+                around Kenya.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <section class="booking-box">
+
+        <h2>Ready to Book?</h2>
+
+        <p>
+            For a booking, please provide your preferred date,
+            pickup location, destination, number of passengers,
+            vehicle preference and any special requirements.
+        </p>
+
+        <a href="booking.html" class="button">
+            Make a Booking
+        </a>
+
+        <a href="rates.html" class="button button-dark">
+            View Our Rates
+        </a>
+
+    </section>
+
+
+
+    <section class="info-box">
+
+        <h2>For Airport Transfers</h2>
+
+        <p>
+            If you are arriving by air, please include your flight
+            number, arrival date and arrival time when making your enquiry.
+        </p>
+
+        <p>
+            This allows us to coordinate your airport pickup more
+            effectively.
+        </p>
+
+    </section>
+
+
+
+    <section class="info-box">
+
+        <h2>For Nairobi Tours</h2>
+
+        <p>
+            Tell us which attractions you would like to visit,
+            how many people are travelling and how much time you
+            have available.
+        </p>
+
+        <p>
+            We can help you choose a suitable vehicle and organize
+            a private itinerary around your interests.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+
+<section class="cta">
+
+    <h2>Start Planning Your Nairobi Experience</h2>
+
+    <p>
+        Contact Stema Trans Tours today.
+    </p>
+
+    <a href="booking.html" class="button">
+        Book Now
+    </a>
+
+</section>
+
+
+
+<footer>
+
+    <p>
+        <strong>STEMA TRANS</strong>
+        — Nairobi City Tours, Transfers & Guided Experiences
+    </p>
+
+    <p>
+        © 2026 Stema Trans. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+</html>
