@@ -4,239 +4,496 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Transfers | Stema Trans</title>
+    <title>Transfers | Stema Trans Tours</title>
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+          content="Reliable airport, hotel, corporate and private transfers in Nairobi by Stema Trans Tours.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 18px 5%;
+        }
+
+        .header-container {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #d6a03d;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d6a03d;
+        }
+
+        .hero {
+            background:
+                linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
+                url("images/hero.jpg") center/cover;
+
+            min-height: 360px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+
+            padding: 50px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1150px;
+            width: 92%;
+            margin: 55px auto;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 55px;
+        }
+
+        .intro h2 {
+            font-size: 31px;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            color: #555;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+            margin-bottom: 65px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .card h3 {
+            color: #9a681c;
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        .section {
+            margin-bottom: 65px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-heading h2 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .section-heading p {
+            color: #666;
+        }
+
+        .airport-box {
+            background: white;
+            padding: 32px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .airport-box h3 {
+            margin-bottom: 12px;
+            color: #9a681c;
+        }
+
+        .airport-box ul {
+            padding-left: 20px;
+        }
+
+        .airport-box li {
+            margin-bottom: 8px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .feature {
+            background: white;
+            padding: 24px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .feature h3 {
+            margin-bottom: 8px;
+            color: #9a681c;
+        }
+
+        .feature p {
+            color: #555;
+        }
+
+        .note {
+            background: #fff8e7;
+            border-left: 5px solid #d6a03d;
+            padding: 22px;
+            border-radius: 5px;
+            margin-top: 25px;
+        }
+
+        .note h3 {
+            margin-bottom: 8px;
+        }
+
+        .cta {
+            background: #d6a03d;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .cta h2 {
+            font-size: 31px;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            margin-bottom: 23px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #333;
+        }
+
+        footer {
+            background: #111;
+            color: #bbb;
+            text-align: center;
+            padding: 27px 15px;
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+
+            .hero {
+                min-height: 300px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .intro h2,
+            .section-heading h2 {
+                font-size: 26px;
+            }
+
+        }
+
+    </style>
 </head>
 
 <body>
 
-<header>
-    <div class="container nav-container">
 
-        <a href="index.html" class="logo">
-            <strong>STEMA TRANS</strong>
-            <span>City Tours & Transfers</span>
-        </a>
+<header>
+
+    <div class="header-container">
+
+        <div class="logo">
+            STEMA <span>TRANS</span>
+        </div>
 
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="tours.html">Tours</a>
             <a href="transfers.html">Transfers</a>
-            <a href="gallery.html">Gallery</a>
             <a href="rates.html">Rates</a>
-            <a href="booking.html" class="book-button">Book Now</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
     </div>
+
 </header>
 
 
-<main>
+<section class="hero">
 
-    <section class="section">
+    <div class="hero-content">
 
-        <div class="container">
+        <h1>Nairobi Transfers</h1>
 
-            <p class="eyebrow">STEMA TRANS</p>
+        <p>
+            Reliable private transfers with professional drivers
+            for airports, hotels, businesses and destinations around Nairobi.
+        </p>
 
-            <h1>
-                Nairobi Transfers
-            </h1>
+    </div>
 
-            <p style="max-width:650px; margin-top:15px;">
-                Reliable private transportation for airport,
-                hotel, city and selected long-distance transfers.
-            </p>
+</section>
 
-        </div>
+
+<main class="container">
+
+
+    <section class="intro">
+
+        <h2>Comfortable & Reliable Transfers</h2>
+
+        <p>
+            Stema Trans provides convenient private transportation
+            for visitors, residents, families, business travellers
+            and groups travelling around Nairobi and beyond.
+        </p>
+
+        <p>
+            Whether you are arriving at the airport, moving between
+            hotels, attending a business meeting or travelling to
+            another destination, we provide a comfortable vehicle
+            and professional driver for your journey.
+        </p>
 
     </section>
 
 
-    <section class="section light">
 
-        <div class="container">
-
-            <div class="cards">
+    <section class="services">
 
 
-                <!-- AIRPORT -->
+        <div class="card">
 
-                <article class="card">
+            <h3>JKIA Airport Transfers</h3>
 
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
+            <p>
+                Pre-arranged pickup and drop-off between Jomo Kenyatta
+                International Airport and hotels, residences, offices
+                and other destinations in Nairobi.
+            </p>
 
-                    <div class="card-content">
-
-                        <h3>
-                            JKIA Airport Transfer
-                        </h3>
-
-                        <p>
-                            Private pickup or drop-off between
-                            Jomo Kenyatta International Airport
-                            and your hotel, residence or chosen
-                            destination in Nairobi.
-                        </p>
-
-                        <a href="booking.html">
-                            Book Transfer →
-                        </a>
-
-                    </div>
-
-                </article>
+        </div>
 
 
-                <!-- HOTEL -->
+        <div class="card">
 
-                <article class="card">
+            <h3>Wilson Airport Transfers</h3>
 
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
+            <p>
+                Convenient transfers to and from Wilson Airport for
+                domestic flights, safari connections and private
+                travellers.
+            </p>
 
-                    <div class="card-content">
-
-                        <h3>
-                            Hotel Transfers
-                        </h3>
-
-                        <p>
-                            Convenient transportation between
-                            Nairobi hotels, attractions, business
-                            locations and other destinations.
-                        </p>
-
-                        <a href="booking.html">
-                            Book Transfer →
-                        </a>
-
-                    </div>
-
-                </article>
+        </div>
 
 
-                <!-- CITY -->
+        <div class="card">
 
-                <article class="card">
+            <h3>Hotel Transfers</h3>
 
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
+            <p>
+                Travel comfortably between Nairobi hotels, residences,
+                airports, attractions, conference venues and other
+                destinations.
+            </p>
 
-                    <div class="card-content">
-
-                        <h3>
-                            Nairobi City Transfer
-                        </h3>
-
-                        <p>
-                            Need transportation across Nairobi?
-                            Arrange a private vehicle for your
-                            preferred pickup and destination.
-                        </p>
-
-                        <a href="booking.html">
-                            Book Transfer →
-                        </a>
-
-                    </div>
-
-                </article>
+        </div>
 
 
-                <!-- FULL DAY -->
+        <div class="card">
 
-                <article class="card">
+            <h3>Corporate Transfers</h3>
 
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
+            <p>
+                Professional transportation for business meetings,
+                conferences, corporate events and visiting executives.
+            </p>
 
-                    <div class="card-content">
-
-                        <h3>
-                            Full-Day Private Vehicle
-                        </h3>
-
-                        <p>
-                            Keep a vehicle and driver available
-                            for your Nairobi activities, meetings,
-                            sightseeing or private itinerary.
-                        </p>
-
-                        <a href="booking.html">
-                            Request Service →
-                        </a>
-
-                    </div>
-
-                </article>
+        </div>
 
 
-                <!-- OUT OF TOWN -->
+        <div class="card">
 
-                <article class="card">
+            <h3>Private Transfers</h3>
 
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
+            <p>
+                Point-to-point private transportation for individuals,
+                couples, families and groups travelling around Nairobi.
+            </p>
 
-                    <div class="card-content">
-
-                        <h3>
-                            Out-of-Town Transfers
-                        </h3>
-
-                        <p>
-                            Private transportation to selected
-                            destinations outside Nairobi can be
-                            arranged on request.
-                        </p>
-
-                        <a href="booking.html">
-                            Request Quote →
-                        </a>
-
-                    </div>
-
-                </article>
+        </div>
 
 
-                <!-- CUSTOM -->
+        <div class="card">
 
-                <article class="card">
+            <h3>Long-Distance Transfers</h3>
 
-                    <div class="card-placeholder">
-                        <span>PHOTO</span>
-                    </div>
+            <p>
+                We can arrange private vehicle transfers outside Nairobi.
+                Longer journeys are quoted according to distance,
+                vehicle type and itinerary.
+            </p>
 
-                    <div class="card-content">
+        </div>
 
-                        <h3>
-                            Custom Transfer
-                        </h3>
 
-                        <p>
-                            Have a different pickup point,
-                            destination or travel requirement?
-                            Contact us and we will discuss your
-                            transportation needs.
-                        </p>
+    </section>
 
-                        <a href="booking.html">
-                            Request Transfer →
-                        </a>
 
-                    </div>
 
-                </article>
+    <section class="section">
 
+        <div class="section-heading">
+
+            <h2>Airport Transfers</h2>
+
+            <p>
+                A simple and dependable way to start or finish your trip.
+            </p>
+
+        </div>
+
+
+        <div class="airport-box">
+
+            <h3>JKIA Pickup</h3>
+
+            <ul>
+
+                <li>
+                    Driver meets you at the agreed airport pickup point.
+                </li>
+
+                <li>
+                    Flight details can be provided during booking
+                    for easier coordination.
+                </li>
+
+                <li>
+                    Assistance with luggage where required.
+                </li>
+
+                <li>
+                    Comfortable private vehicle for your party.
+                </li>
+
+                <li>
+                    Drop-off directly at your hotel, residence,
+                    office or other agreed destination.
+                </li>
+
+            </ul>
+
+
+            <div class="note">
+
+                <h3>Flight Delays</h3>
+
+                <p>
+                    We recommend providing your flight number when booking.
+                    This helps us coordinate your airport pickup if your
+                    flight schedule changes.
+                </p>
 
             </div>
 
@@ -245,76 +502,209 @@
     </section>
 
 
-    <section class="cta">
 
-        <div class="container">
+    <section class="section">
 
-            <h2>
-                Need a Reliable Transfer?
-            </h2>
+        <div class="section-heading">
+
+            <h2>Our Transfer Vehicles</h2>
 
             <p>
-                Send us your pickup location, destination,
-                date and number of passengers.
+                Choose a vehicle according to your group size,
+                luggage and comfort requirements.
             </p>
 
-            <a href="booking.html" class="button">
-                Book Your Transfer
+        </div>
+
+
+        <div class="features">
+
+
+            <div class="feature">
+
+                <h3>Sedan</h3>
+
+                <p>
+                    Comfortable and economical for individuals,
+                    couples and small groups.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>SUV</h3>
+
+                <p>
+                    Extra space and comfort for families and
+                    small groups.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>7-Seater</h3>
+
+                <p>
+                    A practical choice for families and groups
+                    travelling with luggage.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>Tour Van</h3>
+
+                <p>
+                    Suitable for larger groups, corporate travel
+                    and extended journeys.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>Land Cruiser</h3>
+
+                <p>
+                    A premium option for guests requiring additional
+                    comfort and safari-capable transportation.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <h2>What Your Transfer Includes</h2>
+
+        </div>
+
+
+        <div class="features">
+
+
+            <div class="feature">
+
+                <h3>Private Vehicle</h3>
+
+                <p>
+                    Your booking is for your party rather than
+                    shared public transportation.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>Professional Driver</h3>
+
+                <p>
+                    A courteous driver familiar with Nairobi
+                    routes and traffic conditions.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>Fuel</h3>
+
+                <p>
+                    Fuel for the agreed transfer itinerary
+                    is included.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>Convenience</h3>
+
+                <p>
+                    Pickup and drop-off at the agreed locations
+                    without the need to arrange separate transport.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="note">
+
+            <h3>View Our Rates</h3>
+
+            <p>
+                Transfer prices depend on the vehicle type and route.
+                See our current rates page for the standard Nairobi
+                airport and transfer prices.
+            </p>
+
+            <br>
+
+            <a href="rates.html" class="button">
+                View Rates
             </a>
 
         </div>
 
     </section>
 
+
+
 </main>
+
+
+
+<section class="cta">
+
+    <h2>Need a Nairobi Transfer?</h2>
+
+    <p>
+        Send us your pickup location, destination, travel date,
+        time and number of passengers.
+    </p>
+
+    <a href="booking.html" class="button">
+        Book Your Transfer
+    </a>
+
+</section>
+
 
 
 <footer>
 
-    <div class="container footer-grid">
+    <p>
+        <strong>STEMA TRANS</strong>
+        — Nairobi City Tours, Transfers & Guided Experiences
+    </p>
 
-        <div>
-
-            <h3>STEMA TRANS</h3>
-
-            <p>
-                Nairobi City Tours & Transfers
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h4>Quick Links</h4>
-
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="tours.html">Tours</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="rates.html">Rates</a>
-            <a href="booking.html">Book Now</a>
-
-        </div>
-
-
-        <div>
-
-            <h4>Contact</h4>
-
-            <p>0722 910 913</p>
-            <p>stemawastrans@gmail.com</p>
-
-        </div>
-
-    </div>
-
-
-    <div class="copyright">
+    <p>
         © 2026 Stema Trans. All Rights Reserved.
-    </div>
+    </p>
 
 </footer>
+
 
 </body>
 </html>
