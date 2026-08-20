@@ -100,7 +100,6 @@ textarea {
     gap: 15px;
 }
 
-/* SERVICE AREAS */
 .service-area {
     display: none;
 }
@@ -109,14 +108,13 @@ textarea {
     display: block;
 }
 
-/* PRICE */
 .price-box {
     margin-top: 20px;
     padding: 16px;
     background: #eef7f1;
     border: 2px solid #0b5d3b;
     border-radius: 8px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .price-box h3 {
@@ -124,7 +122,6 @@ textarea {
     color: #0b5d3b;
 }
 
-/* NOTICE */
 .notice {
     margin-top: 18px;
     padding: 14px;
@@ -134,7 +131,16 @@ textarea {
     font-size: 14px;
 }
 
-/* BUTTON */
+.warning {
+    margin-top: 12px;
+    padding: 12px;
+    background: #fff0f0;
+    border-left: 4px solid #c62828;
+    color: #9b1c1c;
+    display: none;
+    line-height: 1.5;
+}
+
 .submit-button {
     width: 100%;
     margin-top: 22px;
@@ -167,8 +173,14 @@ textarea {
     line-height: 1.5;
 }
 
-@media screen and (max-width: 650px) {
+.vehicle-note {
+    margin-top: -8px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #666;
+}
 
+@media screen and (max-width: 650px) {
     .row {
         grid-template-columns: 1fr;
         gap: 0;
@@ -188,13 +200,8 @@ textarea {
 <body>
 
 <header>
-
-<h1>STEMA TRANS</h1>
-
-<p>
-City Tours, Transfers & Guided Experiences
-</p>
-
+    <h1>STEMA TRANS</h1>
+    <p>City Tours, Transfers & Guided Experiences</p>
 </header>
 
 
@@ -205,110 +212,59 @@ City Tours, Transfers & Guided Experiences
 <h2>Book Your Experience</h2>
 
 <p class="intro">
-Choose your service below. The form will automatically display
-only the information required for that service.
+Choose your service below. The booking form will automatically
+show only the information needed for that service.
 </p>
 
 
-<!-- =====================================================
-CUSTOMER DETAILS
-===================================================== -->
+<!-- CUSTOMER DETAILS -->
 
 <div class="section-title">
 Customer Details
 </div>
 
+<div class="row">
+
+<div class="form-group">
+<label for="fullName">Full Name *</label>
+<input type="text" id="fullName" required>
+</div>
+
+<div class="form-group">
+<label for="email">Email Address *</label>
+<input type="email" id="email" required>
+</div>
+
+</div>
 
 <div class="row">
 
 <div class="form-group">
-
-<label for="fullName">
-Full Name *
-</label>
-
-<input
-type="text"
-id="fullName"
-required
->
-
+<label for="phone">Phone / WhatsApp *</label>
+<input type="tel" id="phone" required>
 </div>
-
 
 <div class="form-group">
-
-<label for="email">
-Email Address *
-</label>
-
-<input
-type="email"
-id="email"
-required
->
-
+<label for="country">Country</label>
+<input type="text" id="country">
 </div>
 
 </div>
 
 
-<div class="row">
-
-<div class="form-group">
-
-<label for="phone">
-Phone / WhatsApp *
-</label>
-
-<input
-type="tel"
-id="phone"
-required
->
-
-</div>
-
-
-<div class="form-group">
-
-<label for="country">
-Country
-</label>
-
-<input
-type="text"
-id="country"
->
-
-</div>
-
-</div>
-
-
-<!-- =====================================================
-SERVICE
-===================================================== -->
+<!-- SERVICE -->
 
 <div class="section-title">
 Select Service
 </div>
 
-
 <div class="form-group">
 
-<label for="service">
-Service *
-</label>
+<label for="service">Service *</label>
 
-<select
-id="service"
-required
->
+<select id="service" required>
 
-<option value="">
--- Select Service --
-</option>
+<option value="">-- Select Service --</option>
 
 <option value="city-tour">
 Nairobi City Tours
@@ -363,15 +319,11 @@ Private Vehicle Hire
 NAIROBI CITY TOURS
 ===================================================== -->
 
-<div
-class="service-area"
-id="city-tour"
->
+<div class="service-area" id="city-tour">
 
 <div class="section-title">
 Nairobi City Tours
 </div>
-
 
 <div class="form-group">
 
@@ -401,38 +353,19 @@ Nairobi City & Cultural Experience
 
 </div>
 
-
 <div class="row">
 
 <div class="form-group">
-
-<label for="cityTourDate">
-Date *
-</label>
-
-<input
-type="date"
-id="cityTourDate"
->
-
+<label for="cityTourDate">Date *</label>
+<input type="date" id="cityTourDate">
 </div>
-
 
 <div class="form-group">
-
-<label for="cityTourTime">
-Preferred Time *
-</label>
-
-<input
-type="time"
-id="cityTourTime"
->
-
+<label for="cityTourTime">Preferred Time *</label>
+<input type="time" id="cityTourTime">
 </div>
 
 </div>
-
 
 <div class="row">
 
@@ -451,7 +384,6 @@ value="1"
 
 </div>
 
-
 <div class="form-group">
 
 <label for="cityTourVehicle">
@@ -464,12 +396,20 @@ Vehicle Category *
 -- Select Vehicle --
 </option>
 
+<option value="Sedan">
+Sedan — 1–4 people — KES 4,500
+</option>
+
+<option value="SUV">
+SUV — 1–5 people — KES 6,500
+</option>
+
 <option value="Tour Van">
-Tour Van — 1–7 people
+Tour Van — 1–7 people — KES 5,500
 </option>
 
 <option value="Land Cruiser">
-Land Cruiser — 1–7 people
+Land Cruiser — 1–7 people — KES 8,500
 </option>
 
 </select>
@@ -478,6 +418,11 @@ Land Cruiser — 1–7 people
 
 </div>
 
+<div class="vehicle-note">
+Vehicle charges are per vehicle, not per person.
+</div>
+
+<div id="cityTourWarning" class="warning"></div>
 
 <div class="form-group">
 
@@ -493,31 +438,33 @@ placeholder="Hotel, residence or other pickup point"
 
 </div>
 
+<div class="price-box">
+
+<h3>Booking Price</h3>
+
+<div id="cityTourPrice">
+Select a vehicle category.
+</div>
+
+</div>
+
 </div>
 
 
 <!-- =====================================================
 CITY WALKS
-NO VEHICLE
 ===================================================== -->
 
-<div
-class="service-area"
-id="city-walk"
->
+<div class="service-area" id="city-walk">
 
 <div class="section-title">
 Nairobi City Walks
 </div>
 
-
-<div class="small-text">
-
+<p class="small-text">
 Guided walking experiences around Nairobi.
 Transport is not included in the walking tour price.
-
-</div>
-
+</p>
 
 <div class="form-group">
 
@@ -547,38 +494,19 @@ Nairobi Food & Local Life Walk
 
 </div>
 
-
 <div class="row">
 
 <div class="form-group">
-
-<label for="walkDate">
-Date *
-</label>
-
-<input
-type="date"
-id="walkDate"
->
-
+<label for="walkDate">Date *</label>
+<input type="date" id="walkDate">
 </div>
-
 
 <div class="form-group">
-
-<label for="walkTime">
-Preferred Time *
-</label>
-
-<input
-type="time"
-id="walkTime"
->
-
+<label for="walkTime">Preferred Time *</label>
+<input type="time" id="walkTime">
 </div>
 
 </div>
-
 
 <div class="form-group">
 
@@ -595,7 +523,6 @@ value="1"
 
 </div>
 
-
 <div class="form-group">
 
 <label for="walkMeetingPoint">
@@ -610,12 +537,9 @@ placeholder="Agreed meeting point in Nairobi"
 
 </div>
 
-
 <div class="price-box">
 
-<h3>
-City Walk Price
-</h3>
+<h3>City Walk Price</h3>
 
 <div id="walkPrice">
 Select your walk.
@@ -630,23 +554,16 @@ Select your walk.
 COMBINE EXPERIENCES
 ===================================================== -->
 
-<div
-class="service-area"
-id="combine"
->
+<div class="service-area" id="combine">
 
 <div class="section-title">
 Combine Experiences
 </div>
 
-
 <p class="small-text">
-
 Make better use of your time by combining nearby attractions
 into one convenient Nairobi experience.
-
 </p>
-
 
 <div class="form-group">
 
@@ -660,27 +577,27 @@ Choose Combination *
 -- Select Combination --
 </option>
 
-<option value="6500">
+<option value="Giraffe Centre + Karen Blixen">
 Giraffe Centre + Karen Blixen
 </option>
 
-<option value="6500">
-Giraffe Centre + Nairobi National Museum
+<option value="Giraffe Centre + Bomas of Kenya">
+Giraffe Centre + Bomas of Kenya
 </option>
 
-<option value="6500">
+<option value="Karen Blixen + Bomas of Kenya">
 Karen Blixen + Bomas of Kenya
 </option>
 
-<option value="6000">
+<option value="Nairobi National Museum + Nairobi City Highlights">
 Nairobi National Museum + Nairobi City Highlights
 </option>
 
-<option value="8500">
+<option value="Giraffe Centre + Karen Blixen + Bomas of Kenya">
 Giraffe Centre + Karen Blixen + Bomas of Kenya
 </option>
 
-<option value="0">
+<option value="Custom Combination">
 Custom Combination
 </option>
 
@@ -688,11 +605,7 @@ Custom Combination
 
 </div>
 
-
-<div
-id="customCombine"
-style="display:none;"
->
+<div id="customCombine" style="display:none;">
 
 <div class="form-group">
 
@@ -709,7 +622,6 @@ placeholder="Example: Giraffe Centre + Karen Blixen + Bomas of Kenya"
 
 </div>
 
-
 <div class="row">
 
 <div class="form-group">
@@ -718,13 +630,9 @@ placeholder="Example: Giraffe Centre + Karen Blixen + Bomas of Kenya"
 Date *
 </label>
 
-<input
-type="date"
-id="combineDate"
->
+<input type="date" id="combineDate">
 
 </div>
-
 
 <div class="form-group">
 
@@ -732,15 +640,11 @@ id="combineDate"
 Preferred Time *
 </label>
 
-<input
-type="time"
-id="combineTime"
->
+<input type="time" id="combineTime">
 
 </div>
 
 </div>
-
 
 <div class="row">
 
@@ -759,7 +663,6 @@ value="1"
 
 </div>
 
-
 <div class="form-group">
 
 <label for="combineVehicle">
@@ -772,12 +675,20 @@ Vehicle Category *
 -- Select Vehicle --
 </option>
 
+<option value="Sedan">
+Sedan — 1–4 people — KES 4,500
+</option>
+
+<option value="SUV">
+SUV — 1–5 people — KES 6,500
+</option>
+
 <option value="Tour Van">
-Tour Van — 1–7 people
+Tour Van — 1–7 people — KES 5,500
 </option>
 
 <option value="Land Cruiser">
-Land Cruiser — 1–7 people
+Land Cruiser — 1–7 people — KES 8,500
 </option>
 
 </select>
@@ -786,6 +697,7 @@ Land Cruiser — 1–7 people
 
 </div>
 
+<div id="combineWarning" class="warning"></div>
 
 <div class="form-group">
 
@@ -801,12 +713,9 @@ placeholder="Hotel, residence or other pickup point"
 
 </div>
 
-
 <div class="price-box">
 
-<h3>
-Combined Experience Price
-</h3>
+<h3>Combined Experience Price</h3>
 
 <div id="combinePrice">
 Select a combination and vehicle.
@@ -814,14 +723,13 @@ Select a combination and vehicle.
 
 </div>
 
-
 <div class="notice">
 
-<strong>Please note:</strong><br>
+<strong>Important:</strong><br>
 
-The displayed amount is the transport/package charge.
-Attraction entry fees are separate unless specifically stated
-as included in the confirmed booking.
+The transport charge is based on the selected vehicle.
+Attraction entrance fees are separate unless specifically
+stated otherwise.
 
 </div>
 
@@ -832,40 +740,25 @@ as included in the confirmed booking.
 NATIONAL PARK
 ===================================================== -->
 
-<div
-class="service-area"
-id="national-park"
->
+<div class="service-area" id="national-park">
 
 <div class="section-title">
 Nairobi National Park
 </div>
 
-
 <div class="row">
 
 <div class="form-group">
-
-<label for="parkDate">
-Date *
-</label>
-
+<label for="parkDate">Date *</label>
 <input type="date" id="parkDate">
-
 </div>
 
 <div class="form-group">
-
-<label for="parkTime">
-Preferred Time *
-</label>
-
+<label for="parkTime">Preferred Time *</label>
 <input type="time" id="parkTime">
-
 </div>
 
 </div>
-
 
 <div class="row">
 
@@ -896,12 +789,20 @@ Vehicle Category *
 -- Select Vehicle --
 </option>
 
-<option>
-Tour Van — 1–7 people
+<option value="Sedan">
+Sedan — 1–4 people — KES 4,500
 </option>
 
-<option>
-Land Cruiser — 1–7 people
+<option value="SUV">
+SUV — 1–5 people — KES 6,500
+</option>
+
+<option value="Tour Van">
+Tour Van — 1–7 people — KES 5,500
+</option>
+
+<option value="Land Cruiser">
+Land Cruiser — 1–7 people — KES 8,500
 </option>
 
 </select>
@@ -910,6 +811,11 @@ Land Cruiser — 1–7 people
 
 </div>
 
+<div class="vehicle-note">
+Vehicle charges are per vehicle. Park entry fees are separate.
+</div>
+
+<div id="parkWarning" class="warning"></div>
 
 <div class="form-group">
 
@@ -921,47 +827,42 @@ Pickup Location *
 
 </div>
 
+<div class="price-box">
+
+<h3>Transport Price</h3>
+
+<div id="parkPrice">
+Select a vehicle category.
+</div>
+
+</div>
+
 </div>
 
 
 <!-- =====================================================
-GIRAFFE CENTRE
+GIRAFFE
 ===================================================== -->
 
-<div
-class="service-area"
-id="giraffe"
->
+<div class="service-area" id="giraffe">
 
 <div class="section-title">
 Giraffe Centre
 </div>
 
-
 <div class="row">
 
 <div class="form-group">
-
-<label for="giraffeDate">
-Date *
-</label>
-
+<label for="giraffeDate">Date *</label>
 <input type="date" id="giraffeDate">
-
 </div>
 
 <div class="form-group">
-
-<label for="giraffeTime">
-Preferred Time *
-</label>
-
+<label for="giraffeTime">Preferred Time *</label>
 <input type="time" id="giraffeTime">
-
 </div>
 
 </div>
-
 
 <div class="row">
 
@@ -992,12 +893,20 @@ Vehicle Category *
 -- Select Vehicle --
 </option>
 
-<option>
-Tour Van — 1–7 people
+<option value="Sedan">
+Sedan — 1–4 people — KES 4,500
 </option>
 
-<option>
-Land Cruiser — 1–7 people
+<option value="SUV">
+SUV — 1–5 people — KES 6,500
+</option>
+
+<option value="Tour Van">
+Tour Van — 1–7 people — KES 5,500
+</option>
+
+<option value="Land Cruiser">
+Land Cruiser — 1–7 people — KES 8,500
 </option>
 
 </select>
@@ -1006,6 +915,7 @@ Land Cruiser — 1–7 people
 
 </div>
 
+<div id="giraffeWarning" class="warning"></div>
 
 <div class="form-group">
 
@@ -1017,47 +927,42 @@ Pickup Location *
 
 </div>
 
+<div class="price-box">
+
+<h3>Transport Price</h3>
+
+<div id="giraffePrice">
+Select a vehicle category.
+</div>
+
+</div>
+
 </div>
 
 
 <!-- =====================================================
-KAREN BLIXEN
+KAREN
 ===================================================== -->
 
-<div
-class="service-area"
-id="karen"
->
+<div class="service-area" id="karen">
 
 <div class="section-title">
 Karen & Karen Blixen
 </div>
 
-
 <div class="row">
 
 <div class="form-group">
-
-<label for="karenDate">
-Date *
-</label>
-
+<label for="karenDate">Date *</label>
 <input type="date" id="karenDate">
-
 </div>
 
 <div class="form-group">
-
-<label for="karenTime">
-Preferred Time *
-</label>
-
+<label for="karenTime">Preferred Time *</label>
 <input type="time" id="karenTime">
-
 </div>
 
 </div>
-
 
 <div class="row">
 
@@ -1088,12 +993,20 @@ Vehicle Category *
 -- Select Vehicle --
 </option>
 
-<option>
-Tour Van — 1–7 people
+<option value="Sedan">
+Sedan — 1–4 people — KES 4,500
 </option>
 
-<option>
-Land Cruiser — 1–7 people
+<option value="SUV">
+SUV — 1–5 people — KES 6,500
+</option>
+
+<option value="Tour Van">
+Tour Van — 1–7 people — KES 5,500
+</option>
+
+<option value="Land Cruiser">
+Land Cruiser — 1–7 people — KES 8,500
 </option>
 
 </select>
@@ -1102,6 +1015,7 @@ Land Cruiser — 1–7 people
 
 </div>
 
+<div id="karenWarning" class="warning"></div>
 
 <div class="form-group">
 
@@ -1113,6 +1027,16 @@ Pickup Location *
 
 </div>
 
+<div class="price-box">
+
+<h3>Transport Price</h3>
+
+<div id="karenPrice">
+Select a vehicle category.
+</div>
+
+</div>
+
 </div>
 
 
@@ -1120,40 +1044,25 @@ Pickup Location *
 MUSEUM
 ===================================================== -->
 
-<div
-class="service-area"
-id="museum"
->
+<div class="service-area" id="museum">
 
 <div class="section-title">
 Nairobi National Museum
 </div>
 
-
 <div class="row">
 
 <div class="form-group">
-
-<label for="museumDate">
-Date *
-</label>
-
+<label for="museumDate">Date *</label>
 <input type="date" id="museumDate">
-
 </div>
 
 <div class="form-group">
-
-<label for="museumTime">
-Preferred Time *
-</label>
-
+<label for="museumTime">Preferred Time *</label>
 <input type="time" id="museumTime">
-
 </div>
 
 </div>
-
 
 <div class="row">
 
@@ -1184,12 +1093,20 @@ Vehicle Category *
 -- Select Vehicle --
 </option>
 
-<option>
-Tour Van — 1–7 people
+<option value="Sedan">
+Sedan — 1–4 people — KES 4,500
 </option>
 
-<option>
-Land Cruiser — 1–7 people
+<option value="SUV">
+SUV — 1–5 people — KES 6,500
+</option>
+
+<option value="Tour Van">
+Tour Van — 1–7 people — KES 5,500
+</option>
+
+<option value="Land Cruiser">
+Land Cruiser — 1–7 people — KES 8,500
 </option>
 
 </select>
@@ -1198,6 +1115,7 @@ Land Cruiser — 1–7 people
 
 </div>
 
+<div id="museumWarning" class="warning"></div>
 
 <div class="form-group">
 
@@ -1209,6 +1127,16 @@ Pickup Location *
 
 </div>
 
+<div class="price-box">
+
+<h3>Transport Price</h3>
+
+<div id="museumPrice">
+Select a vehicle category.
+</div>
+
+</div>
+
 </div>
 
 
@@ -1216,40 +1144,25 @@ Pickup Location *
 BOMAS
 ===================================================== -->
 
-<div
-class="service-area"
-id="bomas"
->
+<div class="service-area" id="bomas">
 
 <div class="section-title">
 Bomas of Kenya
 </div>
 
-
 <div class="row">
 
 <div class="form-group">
-
-<label for="bomasDate">
-Date *
-</label>
-
+<label for="bomasDate">Date *</label>
 <input type="date" id="bomasDate">
-
 </div>
 
 <div class="form-group">
-
-<label for="bomasTime">
-Preferred Time *
-</label>
-
+<label for="bomasTime">Preferred Time *</label>
 <input type="time" id="bomasTime">
-
 </div>
 
 </div>
-
 
 <div class="row">
 
@@ -1280,12 +1193,20 @@ Vehicle Category *
 -- Select Vehicle --
 </option>
 
-<option>
-Tour Van — 1–7 people
+<option value="Sedan">
+Sedan — 1–4 people — KES 4,500
 </option>
 
-<option>
-Land Cruiser — 1–7 people
+<option value="SUV">
+SUV — 1–5 people — KES 6,500
+</option>
+
+<option value="Tour Van">
+Tour Van — 1–7 people — KES 5,500
+</option>
+
+<option value="Land Cruiser">
+Land Cruiser — 1–7 people — KES 8,500
 </option>
 
 </select>
@@ -1294,6 +1215,7 @@ Land Cruiser — 1–7 people
 
 </div>
 
+<div id="bomasWarning" class="warning"></div>
 
 <div class="form-group">
 
@@ -1305,6 +1227,16 @@ Pickup Location *
 
 </div>
 
+<div class="price-box">
+
+<h3>Transport Price</h3>
+
+<div id="bomasPrice">
+Select a vehicle category.
+</div>
+
+</div>
+
 </div>
 
 
@@ -1312,15 +1244,11 @@ Pickup Location *
 AIRPORT TRANSFER
 ===================================================== -->
 
-<div
-class="service-area"
-id="airport"
->
+<div class="service-area" id="airport">
 
 <div class="section-title">
 Airport Transfer
 </div>
-
 
 <div class="form-group">
 
@@ -1346,31 +1274,19 @@ Airport Drop-off
 
 </div>
 
-
 <div class="row">
 
 <div class="form-group">
-
-<label for="airportDate">
-Date *
-</label>
-
+<label for="airportDate">Date *</label>
 <input type="date" id="airportDate">
-
 </div>
 
 <div class="form-group">
-
-<label for="airportTime">
-Time *
-</label>
-
+<label for="airportTime">Time *</label>
 <input type="time" id="airportTime">
-
 </div>
 
 </div>
-
 
 <div class="row">
 
@@ -1401,12 +1317,20 @@ Vehicle Category *
 -- Select Vehicle --
 </option>
 
-<option>
-Tour Van — 1–7 passengers
+<option value="Sedan">
+Sedan — 1–4 passengers — KES 4,500
 </option>
 
-<option>
-Land Cruiser — 1–7 passengers
+<option value="SUV">
+SUV — 1–5 passengers — KES 6,500
+</option>
+
+<option value="Tour Van">
+Tour Van — 1–7 passengers — KES 5,500
+</option>
+
+<option value="Land Cruiser">
+Land Cruiser — 1–7 passengers — KES 8,500
 </option>
 
 </select>
@@ -1415,6 +1339,7 @@ Land Cruiser — 1–7 passengers
 
 </div>
 
+<div id="airportWarning" class="warning"></div>
 
 <div class="form-group">
 
@@ -1426,7 +1351,6 @@ Pickup / Drop-off Location *
 
 </div>
 
-
 <div class="form-group">
 
 <label for="flightNumber">
@@ -1437,6 +1361,16 @@ Flight Number
 
 </div>
 
+<div class="price-box">
+
+<h3>Transfer Price</h3>
+
+<div id="airportPrice">
+Select a vehicle category.
+</div>
+
+</div>
+
 </div>
 
 
@@ -1444,40 +1378,25 @@ Flight Number
 HOTEL TRANSFER
 ===================================================== -->
 
-<div
-class="service-area"
-id="hotel"
->
+<div class="service-area" id="hotel">
 
 <div class="section-title">
 Hotel Transfer
 </div>
 
-
 <div class="row">
 
 <div class="form-group">
-
-<label for="hotelDate">
-Date *
-</label>
-
+<label for="hotelDate">Date *</label>
 <input type="date" id="hotelDate">
-
 </div>
 
 <div class="form-group">
-
-<label for="hotelTime">
-Time *
-</label>
-
+<label for="hotelTime">Time *</label>
 <input type="time" id="hotelTime">
-
 </div>
 
 </div>
-
 
 <div class="row">
 
@@ -1508,12 +1427,20 @@ Vehicle Category *
 -- Select Vehicle --
 </option>
 
-<option>
-Tour Van — 1–7 passengers
+<option value="Sedan">
+Sedan — 1–4 passengers — KES 4,500
 </option>
 
-<option>
-Land Cruiser — 1–7 passengers
+<option value="SUV">
+SUV — 1–5 passengers — KES 6,500
+</option>
+
+<option value="Tour Van">
+Tour Van — 1–7 passengers — KES 5,500
+</option>
+
+<option value="Land Cruiser">
+Land Cruiser — 1–7 passengers — KES 8,500
 </option>
 
 </select>
@@ -1522,6 +1449,7 @@ Land Cruiser — 1–7 passengers
 
 </div>
 
+<div id="hotelWarning" class="warning"></div>
 
 <div class="form-group">
 
@@ -1533,7 +1461,6 @@ Pickup Location *
 
 </div>
 
-
 <div class="form-group">
 
 <label for="hotelDropoff">
@@ -1544,22 +1471,28 @@ Drop-off Location *
 
 </div>
 
+<div class="price-box">
+
+<h3>Transfer Price</h3>
+
+<div id="hotelPrice">
+Select a vehicle category.
+</div>
+
+</div>
+
 </div>
 
 
 <!-- =====================================================
-PRIVATE HIRE
+PRIVATE VEHICLE HIRE
 ===================================================== -->
 
-<div
-class="service-area"
-id="private"
->
+<div class="service-area" id="private">
 
 <div class="section-title">
 Private Vehicle Hire
 </div>
-
 
 <div class="form-group">
 
@@ -1573,43 +1506,39 @@ Vehicle Category *
 -- Select Vehicle --
 </option>
 
-<option>
-Tour Van — 1–7 people
+<option value="Sedan">
+Sedan — 1–4 people — KES 4,500
 </option>
 
-<option>
-Land Cruiser — 1–7 people
+<option value="SUV">
+SUV — 1–5 people — KES 6,500
+</option>
+
+<option value="Tour Van">
+Tour Van — 1–7 people — KES 5,500
+</option>
+
+<option value="Land Cruiser">
+Land Cruiser — 1–7 people — KES 8,500
 </option>
 
 </select>
 
 </div>
 
-
 <div class="row">
 
 <div class="form-group">
-
-<label for="privateDate">
-Date *
-</label>
-
+<label for="privateDate">Date *</label>
 <input type="date" id="privateDate">
-
 </div>
 
 <div class="form-group">
-
-<label for="privateTime">
-Start Time *
-</label>
-
+<label for="privateTime">Start Time *</label>
 <input type="time" id="privateTime">
-
 </div>
 
 </div>
-
 
 <div class="form-group">
 
@@ -1626,6 +1555,7 @@ value="1"
 
 </div>
 
+<div id="privateWarning" class="warning"></div>
 
 <div class="form-group">
 
@@ -1640,17 +1570,24 @@ placeholder="Tell us your destination, duration and requirements."
 
 </div>
 
+<div class="price-box">
+
+<h3>Vehicle Hire Price</h3>
+
+<div id="privatePrice">
+Select a vehicle category.
+</div>
+
+</div>
+
 </div>
 
 
-<!-- =====================================================
-ADDITIONAL REQUEST
-===================================================== -->
+<!-- ADDITIONAL INFORMATION -->
 
 <div class="section-title">
 Additional Information
 </div>
-
 
 <div class="form-group">
 
@@ -1666,38 +1603,21 @@ placeholder="Any additional information or special requests..."
 </div>
 
 
-<!-- =====================================================
-PRICE
-===================================================== -->
-
-<div class="price-box">
-
-<h3>
-Booking Price
-</h3>
-
-<div id="priceDisplay">
-Select a service to see the applicable pricing.
-</div>
-
-</div>
-
+<!-- GENERAL NOTICE -->
 
 <div class="notice">
 
 <strong>Please note:</strong><br>
 
-Transport charges for vehicle-based services are per vehicle.
+Vehicle charges are per vehicle.
 City Walk charges are per person.
-Attraction and park entry fees are charged separately unless
-otherwise stated.
+Attraction and park entry fees are charged separately
+unless otherwise stated.
 
 </div>
 
 
-<!-- =====================================================
-SUBMIT
-===================================================== -->
+<!-- SUBMIT -->
 
 <button
 type="button"
@@ -1709,10 +1629,7 @@ Submit Booking
 
 </div>
 
-<a
-href="index.html"
-class="back-home"
->
+<a href="index.html" class="back-home">
 ← Back to Home
 </a>
 
@@ -1721,22 +1638,50 @@ class="back-home"
 
 <script>
 
-/* =====================================================
+/* =========================================================
 STEMA TRANS BOOKING SYSTEM
-===================================================== */
+========================================================= */
 
-const service = document.getElementById("service");
+
+/* VEHICLE DATABASE */
+
+const vehicles = {
+
+    "Sedan": {
+        capacity: 4,
+        price: 4500
+    },
+
+    "SUV": {
+        capacity: 5,
+        price: 6500
+    },
+
+    "Tour Van": {
+        capacity: 7,
+        price: 5500
+    },
+
+    "Land Cruiser": {
+        capacity: 7,
+        price: 8500
+    }
+
+};
+
+
+/* SERVICE SELECTOR */
+
+const service =
+document.getElementById("service");
 
 const serviceAreas =
 document.querySelectorAll(".service-area");
 
-const priceDisplay =
-document.getElementById("priceDisplay");
 
-
-/* =====================================================
-SHOW ONLY SELECTED SERVICE
-===================================================== */
+/* =========================================================
+SHOW SELECTED SERVICE
+========================================================= */
 
 service.addEventListener("change", function() {
 
@@ -1761,14 +1706,14 @@ service.addEventListener("change", function() {
     }
 
 
-    updatePrice();
+    updateAllPrices();
 
 });
 
 
-/* =====================================================
-CITY WALK PRICE
-===================================================== */
+/* =========================================================
+CITY WALK CALCULATOR
+========================================================= */
 
 const walkType =
 document.getElementById("walkType");
@@ -1776,11 +1721,16 @@ document.getElementById("walkType");
 const walkPeople =
 document.getElementById("walkPeople");
 
+
 function updateWalkPrice() {
+
+    const output =
+    document.getElementById("walkPrice");
+
 
     if (!walkType.value) {
 
-        document.getElementById("walkPrice").innerHTML =
+        output.innerHTML =
         "Select your walk.";
 
         return;
@@ -1798,15 +1748,17 @@ function updateWalkPrice() {
     pricePerPerson * people;
 
 
-    document.getElementById("walkPrice").innerHTML =
+    output.innerHTML =
 
-    "KES " +
+    "Price per person: <strong>KES " +
     pricePerPerson.toLocaleString() +
-    " per person × " +
-    people +
-    " people" +
+    "</strong><br>" +
 
-    "<br><strong>Total: KES " +
+    "People: <strong>" +
+    people +
+    "</strong><br>" +
+
+    "<strong>Total: KES " +
     total.toLocaleString() +
     "</strong>";
 
@@ -1824,9 +1776,126 @@ updateWalkPrice
 );
 
 
-/* =====================================================
-COMBINE EXPERIENCE
-===================================================== */
+/* =========================================================
+VEHICLE CALCULATOR
+========================================================= */
+
+function calculateVehicle(
+    peopleId,
+    vehicleId,
+    priceId,
+    warningId
+) {
+
+    const peopleElement =
+    document.getElementById(peopleId);
+
+    const vehicleElement =
+    document.getElementById(vehicleId);
+
+    const priceElement =
+    document.getElementById(priceId);
+
+    const warningElement =
+    document.getElementById(warningId);
+
+
+    if (!peopleElement ||
+        !vehicleElement ||
+        !priceElement ||
+        !warningElement) {
+
+        return;
+
+    }
+
+
+    const people =
+    Number(peopleElement.value) || 1;
+
+    const vehicle =
+    vehicleElement.value;
+
+
+    warningElement.style.display =
+    "none";
+
+    warningElement.innerHTML = "";
+
+
+    if (!vehicle) {
+
+        priceElement.innerHTML =
+        "Select a vehicle category.";
+
+        return;
+
+    }
+
+
+    const vehicleData =
+    vehicles[vehicle];
+
+
+    if (!vehicleData) {
+
+        return;
+
+    }
+
+
+    if (
+        people >
+        vehicleData.capacity
+    ) {
+
+        warningElement.style.display =
+        "block";
+
+        warningElement.innerHTML =
+
+        "<strong>Vehicle capacity exceeded.</strong><br>" +
+
+        vehicle +
+        " accommodates up to " +
+        vehicleData.capacity +
+        " people. Please select a larger vehicle.";
+
+        priceElement.innerHTML =
+
+        "Please select a vehicle suitable for " +
+        people +
+        " people.";
+
+        return;
+
+    }
+
+
+    priceElement.innerHTML =
+
+    "Vehicle: <strong>" +
+    vehicle +
+    "</strong><br>" +
+
+    "Capacity: <strong>up to " +
+    vehicleData.capacity +
+    " people</strong><br>" +
+
+    "People: <strong>" +
+    people +
+    "</strong><br>" +
+
+    "Transport charge: <strong>KES " +
+    vehicleData.price.toLocaleString() +
+    " per vehicle</strong>";
+
+}
+
+
+/* =========================================================
+COMBINE EXPERIENCES
+========================================================= */
 
 const combineType =
 document.getElementById("combineType");
@@ -1834,8 +1903,8 @@ document.getElementById("combineType");
 const combineVehicle =
 document.getElementById("combineVehicle");
 
-const combinePrice =
-document.getElementById("combinePrice");
+const combinePeople =
+document.getElementById("combinePeople");
 
 const customCombine =
 document.getElementById("customCombine");
@@ -1843,9 +1912,22 @@ document.getElementById("customCombine");
 
 function updateCombinePrice() {
 
+    const output =
+    document.getElementById("combinePrice");
+
+    const warning =
+    document.getElementById("combineWarning");
+
+
+    warning.style.display =
+    "none";
+
+    warning.innerHTML = "";
+
+
     if (!combineType.value) {
 
-        combinePrice.innerHTML =
+        output.innerHTML =
         "Select a combination and vehicle.";
 
         return;
@@ -1854,43 +1936,31 @@ function updateCombinePrice() {
 
 
     if (
-        combineType.options[
-        combineType.selectedIndex
-        ].text === "Custom Combination"
+        combineType.value ===
+        "Custom Combination"
     ) {
 
         customCombine.style.display =
         "block";
 
-        if (!combineVehicle.value) {
+    } else {
 
-            combinePrice.innerHTML =
-            "Select a vehicle category for your custom combination.";
-
-            return;
-
-        }
-
-
-        combinePrice.innerHTML =
-        "<strong>Custom Combination</strong><br>" +
-        "Vehicle: " +
-        combineVehicle.value +
-        "<br>" +
-        "Price: <strong>Quote on request</strong>";
-
-        return;
+        customCombine.style.display =
+        "none";
 
     }
 
 
-    customCombine.style.display =
-    "none";
+    const people =
+    Number(combinePeople.value) || 1;
+
+    const vehicle =
+    combineVehicle.value;
 
 
-    if (!combineVehicle.value) {
+    if (!vehicle) {
 
-        combinePrice.innerHTML =
+        output.innerHTML =
         "Select a vehicle category.";
 
         return;
@@ -1898,50 +1968,81 @@ function updateCombinePrice() {
     }
 
 
-    const basePrice =
-    Number(combineType.value);
+    const vehicleData =
+    vehicles[vehicle];
 
-    let finalPrice =
-    basePrice;
-
-
-    /*
-    Tour Van = base price
-    Land Cruiser = base price + 3000
-    */
 
     if (
-        combineVehicle.value ===
-        "Land Cruiser"
+        people >
+        vehicleData.capacity
     ) {
 
-        finalPrice =
-        basePrice + 3000;
+        warning.style.display =
+        "block";
+
+        warning.innerHTML =
+
+        "<strong>Vehicle capacity exceeded.</strong><br>" +
+
+        vehicle +
+        " accommodates up to " +
+        vehicleData.capacity +
+        " people.";
+
+        output.innerHTML =
+        "Please select a larger vehicle.";
+
+        return;
 
     }
 
 
-    combinePrice.innerHTML =
+    let combination =
+    combineType.value;
+
+
+    if (
+        combination ===
+        "Custom Combination"
+    ) {
+
+        combination =
+        document.getElementById(
+        "customCombineText"
+        ).value.trim();
+
+
+        if (!combination) {
+
+            combination =
+            "Custom combination — quote required";
+
+        }
+
+    }
+
+
+    output.innerHTML =
 
     "<strong>" +
-    combineType.options[
-    combineType.selectedIndex
-    ].text +
+    combination +
+    "</strong><br><br>" +
+
+    "Vehicle: <strong>" +
+    vehicle +
     "</strong><br>" +
 
-    "Vehicle: " +
-    combineVehicle.value +
+    "People: <strong>" +
+    people +
+    "</strong><br>" +
 
-    "<br><strong>" +
-
-    "Transport Package: KES " +
-    finalPrice.toLocaleString() +
-
+    "Transport charge: <strong>KES " +
+    vehicleData.price.toLocaleString() +
     "</strong><br><br>" +
 
     "<small>" +
-    "Attraction entry fees are separate unless " +
-    "specifically stated otherwise." +
+    "Attraction entrance fees are separate " +
+    "unless specifically stated otherwise." +
     "</small>";
 
 }
@@ -1957,36 +2058,144 @@ combineVehicle.addEventListener(
 updateCombinePrice
 );
 
+combinePeople.addEventListener(
+"input",
+updateCombinePrice
+);
 
-/* =====================================================
-GENERAL VEHICLE PRICE DISPLAY
-===================================================== */
+document.getElementById(
+"customCombineText"
+).addEventListener(
+"input",
+updateCombinePrice
+);
 
-const vehicleFields = [
 
-"cityTourVehicle",
-"parkVehicle",
-"giraffeVehicle",
-"karenVehicle",
-"museumVehicle",
-"bomasVehicle",
-"airportVehicle",
-"hotelVehicle",
-"privateVehicle"
+/* =========================================================
+ALL VEHICLE SERVICES
+========================================================= */
+
+const vehicleServiceSettings = [
+
+    {
+        people: "cityTourPeople",
+        vehicle: "cityTourVehicle",
+        price: "cityTourPrice",
+        warning: "cityTourWarning"
+    },
+
+    {
+        people: "parkPeople",
+        vehicle: "parkVehicle",
+        price: "parkPrice",
+        warning: "parkWarning"
+    },
+
+    {
+        people: "giraffePeople",
+        vehicle: "giraffeVehicle",
+        price: "giraffePrice",
+        warning: "giraffeWarning"
+    },
+
+    {
+        people: "karenPeople",
+        vehicle: "karenVehicle",
+        price: "karenPrice",
+        warning: "karenWarning"
+    },
+
+    {
+        people: "museumPeople",
+        vehicle: "museumVehicle",
+        price: "museumPrice",
+        warning: "museumWarning"
+    },
+
+    {
+        people: "bomasPeople",
+        vehicle: "bomasVehicle",
+        price: "bomasPrice",
+        warning: "bomasWarning"
+    },
+
+    {
+        people: "airportPeople",
+        vehicle: "airportVehicle",
+        price: "airportPrice",
+        warning: "airportWarning"
+    },
+
+    {
+        people: "hotelPeople",
+        vehicle: "hotelVehicle",
+        price: "hotelPrice",
+        warning: "hotelWarning"
+    },
+
+    {
+        people: "privatePeople",
+        vehicle: "privateVehicle",
+        price: "privatePrice",
+        warning: "privateWarning"
+    }
 
 ];
 
 
-vehicleFields.forEach(function(id) {
+function updateAllPrices() {
 
-    const element =
-    document.getElementById(id);
+    updateWalkPrice();
 
-    if (element) {
+    updateCombinePrice();
 
-        element.addEventListener(
+
+    vehicleServiceSettings.forEach(
+    function(item) {
+
+        calculateVehicle(
+            item.people,
+            item.vehicle,
+            item.price,
+            item.warning
+        );
+
+    });
+
+}
+
+
+/* INPUT LISTENERS */
+
+vehicleServiceSettings.forEach(
+function(item) {
+
+    const peopleElement =
+    document.getElementById(
+    item.people
+    );
+
+    const vehicleElement =
+    document.getElementById(
+    item.vehicle
+    );
+
+
+    if (peopleElement) {
+
+        peopleElement.addEventListener(
+        "input",
+        updateAllPrices
+        );
+
+    }
+
+
+    if (vehicleElement) {
+
+        vehicleElement.addEventListener(
         "change",
-        updatePrice
+        updateAllPrices
         );
 
     }
@@ -1994,214 +2203,33 @@ vehicleFields.forEach(function(id) {
 });
 
 
-function updatePrice() {
-
-    const selectedService =
-    service.value;
-
-
-    /* CITY WALK */
-
-    if (
-        selectedService ===
-        "city-walk"
-    ) {
-
-        updateWalkPrice();
-
-        return;
-
-    }
-
-
-    /* COMBINE */
-
-    if (
-        selectedService ===
-        "combine"
-    ) {
-
-        updateCombinePrice();
-
-        return;
-
-    }
-
-
-    /* VEHICLE BASED SERVICES */
-
-    let vehicleElement = null;
-
-
-    if (
-        selectedService ===
-        "city-tour"
-    ) {
-        vehicleElement =
-        document.getElementById(
-        "cityTourVehicle"
-        );
-    }
-
-
-    if (
-        selectedService ===
-        "national-park"
-    ) {
-        vehicleElement =
-        document.getElementById(
-        "parkVehicle"
-        );
-    }
-
-
-    if (
-        selectedService ===
-        "giraffe"
-    ) {
-        vehicleElement =
-        document.getElementById(
-        "giraffeVehicle"
-        );
-    }
-
-
-    if (
-        selectedService ===
-        "karen"
-    ) {
-        vehicleElement =
-        document.getElementById(
-        "karenVehicle"
-        );
-    }
-
-
-    if (
-        selectedService ===
-        "museum"
-    ) {
-        vehicleElement =
-        document.getElementById(
-        "museumVehicle"
-        );
-    }
-
-
-    if (
-        selectedService ===
-        "bomas"
-    ) {
-        vehicleElement =
-        document.getElementById(
-        "bomasVehicle"
-        );
-    }
-
-
-    if (
-        selectedService ===
-        "airport"
-    ) {
-        vehicleElement =
-        document.getElementById(
-        "airportVehicle"
-        );
-    }
-
-
-    if (
-        selectedService ===
-        "hotel"
-    ) {
-        vehicleElement =
-        document.getElementById(
-        "hotelVehicle"
-        );
-    }
-
-
-    if (
-        selectedService ===
-        "private"
-    ) {
-        vehicleElement =
-        document.getElementById(
-        "privateVehicle"
-        );
-    }
-
-
-    if (!vehicleElement) {
-
-        priceDisplay.innerHTML =
-        "Select a service.";
-
-        return;
-
-    }
-
-
-    if (!vehicleElement.value) {
-
-        priceDisplay.innerHTML =
-        "Select a vehicle category to see the transport price.";
-
-        return;
-
-    }
-
-
-    let price;
-
-
-    if (
-        vehicleElement.value.includes(
-        "Tour Van"
-        )
-    ) {
-
-        price = 5500;
-
-    } else {
-
-        price = 8500;
-
-    }
-
-
-    priceDisplay.innerHTML =
-
-    "Vehicle: <strong>" +
-    vehicleElement.value +
-    "</strong><br>" +
-
-    "Transport charge: <strong>KES " +
-    price.toLocaleString() +
-    " per vehicle</strong>";
-
-}
-
-
-/* =====================================================
+/* =========================================================
 SUBMIT BOOKING
-===================================================== */
+========================================================= */
 
 document
 .getElementById("submitButton")
-.addEventListener("click", function() {
-
-
-    /* BASIC VALIDATION */
+.addEventListener(
+"click",
+function() {
 
     const fullName =
-    document.getElementById("fullName").value.trim();
+    document.getElementById(
+    "fullName"
+    ).value.trim();
+
 
     const email =
-    document.getElementById("email").value.trim();
+    document.getElementById(
+    "email"
+    ).value.trim();
+
 
     const phone =
-    document.getElementById("phone").value.trim();
+    document.getElementById(
+    "phone"
+    ).value.trim();
+
 
     const selectedService =
     service.value;
@@ -2209,7 +2237,9 @@ document
 
     if (!fullName) {
 
-        alert("Please enter your full name.");
+        alert(
+        "Please enter your full name."
+        );
 
         return;
 
@@ -2218,7 +2248,9 @@ document
 
     if (!email) {
 
-        alert("Please enter your email address.");
+        alert(
+        "Please enter your email address."
+        );
 
         return;
 
@@ -2227,7 +2259,9 @@ document
 
     if (!phone) {
 
-        alert("Please enter your phone or WhatsApp number.");
+        alert(
+        "Please enter your phone or WhatsApp number."
+        );
 
         return;
 
@@ -2236,103 +2270,144 @@ document
 
     if (!selectedService) {
 
-        alert("Please select a service.");
+        alert(
+        "Please select a service."
+        );
 
         return;
 
     }
 
 
-    /* =================================================
+    /* =====================================================
+    CHECK VEHICLE CAPACITY
+    ===================================================== */
+
+    let capacityError =
+    false;
+
+
+    const selectedVehicleData =
+    getSelectedVehicleData(
+    selectedService
+    );
+
+
+    if (
+        selectedVehicleData &&
+        selectedVehicleData.people >
+        selectedVehicleData.capacity
+    ) {
+
+        capacityError =
+        true;
+
+    }
+
+
+    if (capacityError) {
+
+        alert(
+        "The selected vehicle cannot accommodate the number of people entered. Please select a larger vehicle."
+        );
+
+        return;
+
+    }
+
+
+    /* =====================================================
     CREATE FORM
-    ================================================= */
+    ===================================================== */
 
     const form =
-    document.createElement("form");
+    document.createElement(
+    "form"
+    );
 
-    form.method = "POST";
+
+    form.method =
+    "POST";
+
 
     form.action =
     "https://formsubmit.co/stemawastrans@gmail.com";
 
 
-    /* FORM SUBMIT HIDDEN VALUES */
+    /* FORM SUBMIT SETTINGS */
 
     addHidden(
-        form,
-        "_subject",
-        "New Stema Trans Booking"
+    form,
+    "_subject",
+    "New Stema Trans Booking"
     );
 
 
     addHidden(
-        form,
-        "_next",
-        "https://themaina1.github.io/stema-trans-tours/thankyou.html"
+    form,
+    "_next",
+    "https://themaina1.github.io/stema-trans-tours/thankyou.html"
     );
 
 
     addHidden(
-        form,
-        "_captcha",
-        "false"
+    form,
+    "_captcha",
+    "false"
     );
 
 
     addHidden(
-        form,
-        "_template",
-        "table"
+    form,
+    "_template",
+    "table"
     );
 
 
     /* CUSTOMER */
 
     addHidden(
-        form,
-        "Full Name",
-        fullName
+    form,
+    "Full Name",
+    fullName
     );
 
 
     addHidden(
-        form,
-        "Email",
-        email
+    form,
+    "Email",
+    email
     );
 
 
     addHidden(
-        form,
-        "Phone / WhatsApp",
-        phone
+    form,
+    "Phone / WhatsApp",
+    phone
     );
 
 
     addHidden(
-        form,
-        "Country",
-        document.getElementById(
-        "country"
-        ).value
+    form,
+    "Country",
+    document.getElementById(
+    "country"
+    ).value
     );
 
-
-    /* SERVICE */
 
     addHidden(
-        form,
-        "Service",
-        service.options[
-        service.selectedIndex
-        ].text
+    form,
+    "Service",
+    service.options[
+    service.selectedIndex
+    ].text
     );
 
 
-    /* =================================================
-    SERVICE SPECIFIC INFORMATION
-    ================================================= */
-
+    /* =====================================================
+    CITY TOUR
+    ===================================================== */
 
     if (
         selectedService ===
@@ -2381,6 +2456,16 @@ document
 
         addHidden(
         form,
+        "Transport Charge",
+        getVehiclePrice(
+        document.getElementById(
+        "cityTourVehicle"
+        ).value
+        )
+        );
+
+        addHidden(
+        form,
         "Pickup",
         document.getElementById(
         "cityTourPickup"
@@ -2390,22 +2475,29 @@ document
     }
 
 
+    /* =====================================================
+    CITY WALK
+    ===================================================== */
+
     if (
         selectedService ===
         "city-walk"
     ) {
 
+        const walkSelect =
+        document.getElementById(
+        "walkType"
+        );
+
+
         addHidden(
         form,
         "Walk",
-        document.getElementById(
-        "walkType"
-        ).options[
-        document.getElementById(
-        "walkType"
-        ).selectedIndex
+        walkSelect.options[
+        walkSelect.selectedIndex
         ].text
         );
+
 
         addHidden(
         form,
@@ -2415,6 +2507,7 @@ document
         ).value
         );
 
+
         addHidden(
         form,
         "Time",
@@ -2422,6 +2515,7 @@ document
         "walkTime"
         ).value
         );
+
 
         addHidden(
         form,
@@ -2431,6 +2525,7 @@ document
         ).value
         );
 
+
         addHidden(
         form,
         "Meeting Point",
@@ -2438,6 +2533,7 @@ document
         "walkMeetingPoint"
         ).value
         );
+
 
         addHidden(
         form,
@@ -2450,30 +2546,40 @@ document
     }
 
 
+    /* =====================================================
+    COMBINE
+    ===================================================== */
+
     if (
         selectedService ===
         "combine"
     ) {
 
-        addHidden(
-        form,
-        "Combination",
+        let combination =
         document.getElementById(
         "combineType"
-        ).options[
-        document.getElementById(
-        "combineType"
-        ).selectedIndex
-        ].text
-        );
+        ).value;
+
+
+        if (
+            combination ===
+            "Custom Combination"
+        ) {
+
+            combination =
+            document.getElementById(
+            "customCombineText"
+            ).value;
+
+        }
+
 
         addHidden(
         form,
-        "Custom Combination",
-        document.getElementById(
-        "customCombineText"
-        ).value
+        "Combination",
+        combination
         );
+
 
         addHidden(
         form,
@@ -2483,6 +2589,7 @@ document
         ).value
         );
 
+
         addHidden(
         form,
         "Time",
@@ -2490,6 +2597,7 @@ document
         "combineTime"
         ).value
         );
+
 
         addHidden(
         form,
@@ -2499,6 +2607,7 @@ document
         ).value
         );
 
+
         addHidden(
         form,
         "Vehicle",
@@ -2506,6 +2615,18 @@ document
         "combineVehicle"
         ).value
         );
+
+
+        addHidden(
+        form,
+        "Transport Charge",
+        getVehiclePrice(
+        document.getElementById(
+        "combineVehicle"
+        ).value
+        )
+        );
+
 
         addHidden(
         form,
@@ -2515,256 +2636,117 @@ document
         ).value
         );
 
-        addHidden(
-        form,
-        "Price",
-        document.getElementById(
-        "combinePrice"
-        ).innerText
-        );
-
     }
 
+
+    /* =====================================================
+    NATIONAL PARK
+    ===================================================== */
 
     if (
         selectedService ===
         "national-park"
     ) {
 
-        addHidden(
+        addVehicleBookingFields(
         form,
-        "Date",
-        document.getElementById(
-        "parkDate"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Time",
-        document.getElementById(
-        "parkTime"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "People",
-        document.getElementById(
-        "parkPeople"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Vehicle",
-        document.getElementById(
-        "parkVehicle"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Pickup",
-        document.getElementById(
+        "parkDate",
+        "parkTime",
+        "parkPeople",
+        "parkVehicle",
         "parkPickup"
-        ).value
         );
 
     }
 
+
+    /* =====================================================
+    GIRAFFE
+    ===================================================== */
 
     if (
         selectedService ===
         "giraffe"
     ) {
 
-        addHidden(
+        addVehicleBookingFields(
         form,
-        "Date",
-        document.getElementById(
-        "giraffeDate"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Time",
-        document.getElementById(
-        "giraffeTime"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "People",
-        document.getElementById(
-        "giraffePeople"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Vehicle",
-        document.getElementById(
-        "giraffeVehicle"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Pickup",
-        document.getElementById(
+        "giraffeDate",
+        "giraffeTime",
+        "giraffePeople",
+        "giraffeVehicle",
         "giraffePickup"
-        ).value
         );
 
     }
 
+
+    /* =====================================================
+    KAREN
+    ===================================================== */
 
     if (
         selectedService ===
         "karen"
     ) {
 
-        addHidden(
+        addVehicleBookingFields(
         form,
-        "Date",
-        document.getElementById(
-        "karenDate"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Time",
-        document.getElementById(
-        "karenTime"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "People",
-        document.getElementById(
-        "karenPeople"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Vehicle",
-        document.getElementById(
-        "karenVehicle"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Pickup",
-        document.getElementById(
+        "karenDate",
+        "karenTime",
+        "karenPeople",
+        "karenVehicle",
         "karenPickup"
-        ).value
         );
 
     }
 
+
+    /* =====================================================
+    MUSEUM
+    ===================================================== */
 
     if (
         selectedService ===
         "museum"
     ) {
 
-        addHidden(
+        addVehicleBookingFields(
         form,
-        "Date",
-        document.getElementById(
-        "museumDate"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Time",
-        document.getElementById(
-        "museumTime"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "People",
-        document.getElementById(
-        "museumPeople"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Vehicle",
-        document.getElementById(
-        "museumVehicle"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Pickup",
-        document.getElementById(
+        "museumDate",
+        "museumTime",
+        "museumPeople",
+        "museumVehicle",
         "museumPickup"
-        ).value
         );
 
     }
 
+
+    /* =====================================================
+    BOMAS
+    ===================================================== */
 
     if (
         selectedService ===
         "bomas"
     ) {
 
-        addHidden(
+        addVehicleBookingFields(
         form,
-        "Date",
-        document.getElementById(
-        "bomasDate"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Time",
-        document.getElementById(
-        "bomasTime"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "People",
-        document.getElementById(
-        "bomasPeople"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Vehicle",
-        document.getElementById(
-        "bomasVehicle"
-        ).value
-        );
-
-        addHidden(
-        form,
-        "Pickup",
-        document.getElementById(
+        "bomasDate",
+        "bomasTime",
+        "bomasPeople",
+        "bomasVehicle",
         "bomasPickup"
-        ).value
         );
 
     }
 
+
+    /* =====================================================
+    AIRPORT
+    ===================================================== */
 
     if (
         selectedService ===
@@ -2779,6 +2761,7 @@ document
         ).value
         );
 
+
         addHidden(
         form,
         "Date",
@@ -2786,6 +2769,7 @@ document
         "airportDate"
         ).value
         );
+
 
         addHidden(
         form,
@@ -2795,6 +2779,7 @@ document
         ).value
         );
 
+
         addHidden(
         form,
         "Passengers",
@@ -2802,6 +2787,7 @@ document
         "airportPeople"
         ).value
         );
+
 
         addHidden(
         form,
@@ -2811,13 +2797,26 @@ document
         ).value
         );
 
+
         addHidden(
         form,
-        "Location",
+        "Transport Charge",
+        getVehiclePrice(
+        document.getElementById(
+        "airportVehicle"
+        ).value
+        )
+        );
+
+
+        addHidden(
+        form,
+        "Pickup / Drop-off",
         document.getElementById(
         "airportLocation"
         ).value
         );
+
 
         addHidden(
         form,
@@ -2829,6 +2828,10 @@ document
 
     }
 
+
+    /* =====================================================
+    HOTEL
+    ===================================================== */
 
     if (
         selectedService ===
@@ -2843,6 +2846,7 @@ document
         ).value
         );
 
+
         addHidden(
         form,
         "Time",
@@ -2850,6 +2854,7 @@ document
         "hotelTime"
         ).value
         );
+
 
         addHidden(
         form,
@@ -2859,6 +2864,7 @@ document
         ).value
         );
 
+
         addHidden(
         form,
         "Vehicle",
@@ -2867,6 +2873,18 @@ document
         ).value
         );
 
+
+        addHidden(
+        form,
+        "Transport Charge",
+        getVehiclePrice(
+        document.getElementById(
+        "hotelVehicle"
+        ).value
+        )
+        );
+
+
         addHidden(
         form,
         "Pickup",
@@ -2874,6 +2892,7 @@ document
         "hotelPickup"
         ).value
         );
+
 
         addHidden(
         form,
@@ -2885,6 +2904,10 @@ document
 
     }
 
+
+    /* =====================================================
+    PRIVATE HIRE
+    ===================================================== */
 
     if (
         selectedService ===
@@ -2899,6 +2922,7 @@ document
         ).value
         );
 
+
         addHidden(
         form,
         "Date",
@@ -2907,13 +2931,15 @@ document
         ).value
         );
 
+
         addHidden(
         form,
-        "Time",
+        "Start Time",
         document.getElementById(
         "privateTime"
         ).value
         );
+
 
         addHidden(
         form,
@@ -2922,6 +2948,18 @@ document
         "privatePeople"
         ).value
         );
+
+
+        addHidden(
+        form,
+        "Vehicle Hire Charge",
+        getVehiclePrice(
+        document.getElementById(
+        "privateVehicle"
+        ).value
+        )
+        );
+
 
         addHidden(
         form,
@@ -2934,7 +2972,7 @@ document
     }
 
 
-    /* ADDITIONAL REQUEST */
+    /* SPECIAL REQUESTS */
 
     addHidden(
     form,
@@ -2945,7 +2983,7 @@ document
     );
 
 
-    /* SEND */
+    /* SUBMIT */
 
     document.body.appendChild(form);
 
@@ -2954,31 +2992,339 @@ document
 });
 
 
-/* =====================================================
-CREATE HIDDEN FORM FIELD
-===================================================== */
+/* =========================================================
+HELPER: ADD VEHICLE SERVICE FIELDS
+========================================================= */
+
+function addVehicleBookingFields(
+    form,
+    dateId,
+    timeId,
+    peopleId,
+    vehicleId,
+    pickupId
+) {
+
+    addHidden(
+    form,
+    "Date",
+    document.getElementById(
+    dateId
+    ).value
+    );
+
+
+    addHidden(
+    form,
+    "Time",
+    document.getElementById(
+    timeId
+    ).value
+    );
+
+
+    addHidden(
+    form,
+    "People",
+    document.getElementById(
+    peopleId
+    ).value
+    );
+
+
+    addHidden(
+    form,
+    "Vehicle",
+    document.getElementById(
+    vehicleId
+    ).value
+    );
+
+
+    addHidden(
+    form,
+    "Transport Charge",
+    getVehiclePrice(
+    document.getElementById(
+    vehicleId
+    ).value
+    )
+    );
+
+
+    addHidden(
+    form,
+    "Pickup",
+    document.getElementById(
+    pickupId
+    ).value
+    );
+
+}
+
+
+/* =========================================================
+GET VEHICLE PRICE
+========================================================= */
+
+function getVehiclePrice(vehicle) {
+
+    if (
+        vehicles[vehicle]
+    ) {
+
+        return (
+        "KES " +
+        vehicles[vehicle].price.toLocaleString() +
+        " per vehicle"
+        );
+
+    }
+
+    return "Not selected";
+
+}
+
+
+/* =========================================================
+GET SELECTED VEHICLE DATA
+========================================================= */
+
+function getSelectedVehicleData(
+    selectedService
+) {
+
+    let peopleId = null;
+
+    let vehicleId = null;
+
+
+    if (
+        selectedService ===
+        "city-tour"
+    ) {
+
+        peopleId =
+        "cityTourPeople";
+
+        vehicleId =
+        "cityTourVehicle";
+
+    }
+
+
+    if (
+        selectedService ===
+        "combine"
+    ) {
+
+        peopleId =
+        "combinePeople";
+
+        vehicleId =
+        "combineVehicle";
+
+    }
+
+
+    if (
+        selectedService ===
+        "national-park"
+    ) {
+
+        peopleId =
+        "parkPeople";
+
+        vehicleId =
+        "parkVehicle";
+
+    }
+
+
+    if (
+        selectedService ===
+        "giraffe"
+    ) {
+
+        peopleId =
+        "giraffePeople";
+
+        vehicleId =
+        "giraffeVehicle";
+
+    }
+
+
+    if (
+        selectedService ===
+        "karen"
+    ) {
+
+        peopleId =
+        "karenPeople";
+
+        vehicleId =
+        "karenVehicle";
+
+    }
+
+
+    if (
+        selectedService ===
+        "museum"
+    ) {
+
+        peopleId =
+        "museumPeople";
+
+        vehicleId =
+        "museumVehicle";
+
+    }
+
+
+    if (
+        selectedService ===
+        "bomas"
+    ) {
+
+        peopleId =
+        "bomasPeople";
+
+        vehicleId =
+        "bomasVehicle";
+
+    }
+
+
+    if (
+        selectedService ===
+        "airport"
+    ) {
+
+        peopleId =
+        "airportPeople";
+
+        vehicleId =
+        "airportVehicle";
+
+    }
+
+
+    if (
+        selectedService ===
+        "hotel"
+    ) {
+
+        peopleId =
+        "hotelPeople";
+
+        vehicleId =
+        "hotelVehicle";
+
+    }
+
+
+    if (
+        selectedService ===
+        "private"
+    ) {
+
+        peopleId =
+        "privatePeople";
+
+        vehicleId =
+        "privateVehicle";
+
+    }
+
+
+    if (
+        !peopleId ||
+        !vehicleId
+    ) {
+
+        return null;
+
+    }
+
+
+    const people =
+    Number(
+    document.getElementById(
+    peopleId
+    ).value
+    ) || 1;
+
+
+    const vehicle =
+    document.getElementById(
+    vehicleId
+    ).value;
+
+
+    if (!vehicle ||
+        !vehicles[vehicle]) {
+
+        return null;
+
+    }
+
+
+    return {
+
+        people:
+        people,
+
+        vehicle:
+        vehicle,
+
+        capacity:
+        vehicles[vehicle].capacity
+
+    };
+
+}
+
+
+/* =========================================================
+CREATE HIDDEN FIELD
+========================================================= */
 
 function addHidden(
-form,
-name,
-value
+    form,
+    name,
+    value
 ) {
 
     const input =
-    document.createElement("input");
+    document.createElement(
+    "input"
+    );
+
 
     input.type =
     "hidden";
 
+
     input.name =
     name;
+
 
     input.value =
     value || "";
 
-    form.appendChild(input);
+
+    form.appendChild(
+    input
+    );
 
 }
+
+
+/* INITIAL STATE */
+
+updateAllPrices();
 
 </script>
 
