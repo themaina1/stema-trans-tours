@@ -20,7 +20,7 @@ body {
 
 header {
     background: #0b5d3b;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 22px 15px;
 }
@@ -42,7 +42,7 @@ header p {
 }
 
 .booking-card {
-    background: white;
+    background: #fff;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 3px 15px rgba(0,0,0,0.10);
@@ -60,7 +60,7 @@ h2 {
 
 .section-title {
     background: #0b5d3b;
-    color: white;
+    color: #fff;
     padding: 11px 14px;
     border-radius: 6px;
     margin: 25px 0 16px;
@@ -85,7 +85,7 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 15px;
-    background: white;
+    background: #fff;
 }
 
 textarea {
@@ -99,12 +99,11 @@ textarea {
     gap: 15px;
 }
 
-/* ALL SERVICE SECTIONS HIDDEN BY DEFAULT */
+/* SERVICE SECTIONS HIDDEN UNTIL SELECTED */
 .service-section {
     display: none;
 }
 
-/* ONLY SELECTED SERVICE IS SHOWN */
 .service-section.show {
     display: block;
 }
@@ -142,7 +141,7 @@ textarea {
     border: none;
     border-radius: 7px;
     background: #0b5d3b;
-    color: white;
+    color: #fff;
     font-size: 17px;
     font-weight: bold;
     cursor: pointer;
@@ -159,6 +158,13 @@ textarea {
     color: #0b5d3b;
     text-decoration: none;
     font-weight: bold;
+}
+
+.small-note {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 18px;
 }
 
 @media (max-width: 650px) {
@@ -186,6 +192,7 @@ textarea {
     <p>City Tours, Transfers & Guided Experiences</p>
 </header>
 
+
 <div class="container">
 
 <div class="booking-card">
@@ -193,8 +200,8 @@ textarea {
 <h2>Book Your Experience</h2>
 
 <p class="intro">
-Select the service you would like to book. Only the information relevant
-to that service will appear.
+Choose the service you would like to book. The booking form will display
+only the information relevant to the service you select.
 </p>
 
 
@@ -204,7 +211,7 @@ to that service will appear.
     id="bookingForm"
 >
 
-<!-- FORM SUBMIT -->
+<!-- FORM SUBMIT SETTINGS -->
 
 <input
     type="hidden"
@@ -225,11 +232,14 @@ to that service will appear.
 >
 
 
-<!-- CUSTOMER -->
+<!-- =====================================================
+     CUSTOMER DETAILS
+===================================================== -->
 
 <div class="section-title">
     Customer Details
 </div>
+
 
 <div class="row">
 
@@ -302,11 +312,14 @@ to that service will appear.
 </div>
 
 
-<!-- SERVICE MENU -->
+<!-- =====================================================
+     MAIN SERVICE MENU
+===================================================== -->
 
 <div class="section-title">
     Select Service
 </div>
+
 
 <div class="form-group">
 
@@ -330,6 +343,10 @@ to that service will appear.
 
 <option value="Nairobi City Walks">
     Nairobi City Walks
+</option>
+
+<option value="Combine Experiences">
+    Combine Experiences
 </option>
 
 <option value="Nairobi National Park">
@@ -369,9 +386,9 @@ to that service will appear.
 </div>
 
 
-<!-- =================================================
-     NAIROBI CITY TOURS
-================================================= -->
+<!-- =====================================================
+     1. NAIROBI CITY TOURS
+===================================================== -->
 
 <div
     id="nairobiTours"
@@ -381,6 +398,7 @@ to that service will appear.
 <div class="section-title">
     Nairobi City Tours
 </div>
+
 
 <div class="form-group">
 
@@ -425,6 +443,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="row">
 
 <div class="form-group">
@@ -441,6 +460,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="nairobiTime">
@@ -456,6 +476,7 @@ to that service will appear.
 </div>
 
 </div>
+
 
 <div class="row">
 
@@ -474,6 +495,7 @@ to that service will appear.
 >
 
 </div>
+
 
 <div class="form-group">
 
@@ -504,6 +526,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="nairobiPickup">
@@ -514,6 +537,7 @@ to that service will appear.
     type="text"
     id="nairobiPickup"
     name="Nairobi Tour Pickup"
+    placeholder="Hotel, residence or other pickup point"
 >
 
 </div>
@@ -521,9 +545,9 @@ to that service will appear.
 </div>
 
 
-<!-- =================================================
-     NAIROBI CITY WALKS
-================================================= -->
+<!-- =====================================================
+     2. NAIROBI CITY WALKS
+===================================================== -->
 
 <div
     id="cityWalks"
@@ -533,6 +557,7 @@ to that service will appear.
 <div class="section-title">
     Nairobi City Walks
 </div>
+
 
 <div class="form-group">
 
@@ -565,6 +590,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="row">
 
 <div class="form-group">
@@ -580,6 +606,7 @@ to that service will appear.
 >
 
 </div>
+
 
 <div class="form-group">
 
@@ -597,6 +624,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="walkPeople">
@@ -612,6 +640,7 @@ to that service will appear.
 >
 
 </div>
+
 
 <div class="form-group">
 
@@ -631,9 +660,224 @@ to that service will appear.
 </div>
 
 
-<!-- =================================================
-     NAIROBI NATIONAL PARK
-================================================= -->
+<!-- =====================================================
+     3. COMBINE EXPERIENCES
+===================================================== -->
+
+<div
+    id="combineExperiences"
+    class="service-section"
+>
+
+<div class="section-title">
+    Combine Experiences
+</div>
+
+
+<p class="small-note">
+
+Make better use of your time by combining nearby attractions
+into one convenient Nairobi experience.
+
+</p>
+
+
+<div class="form-group">
+
+<label for="combinePackage">
+    Choose a Combination *
+</label>
+
+<select
+    id="combinePackage"
+    name="Combined Experience"
+>
+
+<option value="">
+    -- Select Combination --
+</option>
+
+<option value="Giraffe Centre + Karen Blixen">
+    Giraffe Centre + Karen Blixen
+</option>
+
+<option value="Giraffe Centre + Nairobi National Museum">
+    Giraffe Centre + Nairobi National Museum
+</option>
+
+<option value="Karen Blixen + Bomas of Kenya">
+    Karen Blixen + Bomas of Kenya
+</option>
+
+<option value="Nairobi National Museum + Nairobi City Highlights">
+    Nairobi National Museum + Nairobi City Highlights
+</option>
+
+<option value="Giraffe Centre + Karen Blixen + Bomas of Kenya">
+    Giraffe Centre + Karen Blixen + Bomas of Kenya
+</option>
+
+<option value="Custom Combination">
+    Custom Combination
+</option>
+
+</select>
+
+</div>
+
+
+<div
+    id="customCombinationBox"
+    style="display:none;"
+>
+
+<div class="form-group">
+
+<label for="customCombination">
+    Describe Your Combination
+</label>
+
+<textarea
+    id="customCombination"
+    name="Custom Combination"
+    placeholder="Example: Giraffe Centre + Karen Blixen + Bomas of Kenya"
+></textarea>
+
+</div>
+
+</div>
+
+
+<div class="row">
+
+<div class="form-group">
+
+<label for="combineDate">
+    Date *
+</label>
+
+<input
+    type="date"
+    id="combineDate"
+    name="Combined Experience Date"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="combineTime">
+    Preferred Time *
+</label>
+
+<input
+    type="time"
+    id="combineTime"
+    name="Combined Experience Time"
+>
+
+</div>
+
+</div>
+
+
+<div class="row">
+
+<div class="form-group">
+
+<label for="combinePeople">
+    Number of People *
+</label>
+
+<input
+    type="number"
+    id="combinePeople"
+    name="Combined Experience People"
+    min="1"
+    value="1"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="combineVehicle">
+    Vehicle Category *
+</label>
+
+<select
+    id="combineVehicle"
+    name="Combined Experience Vehicle"
+>
+
+<option value="">
+    -- Select Vehicle --
+</option>
+
+<option value="Tour Van">
+    Tour Van — 1–7 people
+</option>
+
+<option value="Land Cruiser">
+    Land Cruiser — 1–7 people
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="combinePickup">
+    Pickup Location *
+</label>
+
+<input
+    type="text"
+    id="combinePickup"
+    name="Combined Experience Pickup"
+    placeholder="Hotel, residence or other pickup point"
+>
+
+</div>
+
+
+<div class="price-box">
+
+<h3>
+    Combined Experience Price
+</h3>
+
+<div id="combinePriceDetails">
+
+Select a combination and vehicle to calculate the transport package.
+
+</div>
+
+</div>
+
+
+<div class="notice">
+
+<strong>Important:</strong><br>
+
+The displayed amount is the Stema Trans transport/package charge.
+Attraction entry fees are separate unless specifically stated as
+included in the confirmed booking.
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     4. NAIROBI NATIONAL PARK
+===================================================== -->
 
 <div
     id="nationalPark"
@@ -643,6 +887,7 @@ to that service will appear.
 <div class="section-title">
     Nairobi National Park
 </div>
+
 
 <div class="row">
 
@@ -660,6 +905,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="parkTime">
@@ -675,6 +921,7 @@ to that service will appear.
 </div>
 
 </div>
+
 
 <div class="row">
 
@@ -693,6 +940,7 @@ to that service will appear.
 >
 
 </div>
+
 
 <div class="form-group">
 
@@ -723,6 +971,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="parkPickup">
@@ -740,9 +989,9 @@ to that service will appear.
 </div>
 
 
-<!-- =================================================
-     GIRAFFE CENTRE
-================================================= -->
+<!-- =====================================================
+     5. GIRAFFE CENTRE
+===================================================== -->
 
 <div
     id="giraffe"
@@ -752,6 +1001,7 @@ to that service will appear.
 <div class="section-title">
     Giraffe Centre
 </div>
+
 
 <div class="row">
 
@@ -769,6 +1019,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="giraffeTime">
@@ -784,6 +1035,7 @@ to that service will appear.
 </div>
 
 </div>
+
 
 <div class="row">
 
@@ -802,6 +1054,7 @@ to that service will appear.
 >
 
 </div>
+
 
 <div class="form-group">
 
@@ -832,6 +1085,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="giraffePickup">
@@ -849,9 +1103,9 @@ to that service will appear.
 </div>
 
 
-<!-- =================================================
-     KAREN BLIXEN
-================================================= -->
+<!-- =====================================================
+     6. KAREN & KAREN BLIXEN
+===================================================== -->
 
 <div
     id="karen"
@@ -861,6 +1115,7 @@ to that service will appear.
 <div class="section-title">
     Karen & Karen Blixen
 </div>
+
 
 <div class="row">
 
@@ -878,6 +1133,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="karenTime">
@@ -893,6 +1149,7 @@ to that service will appear.
 </div>
 
 </div>
+
 
 <div class="row">
 
@@ -911,6 +1168,7 @@ to that service will appear.
 >
 
 </div>
+
 
 <div class="form-group">
 
@@ -941,6 +1199,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="karenPickup">
@@ -958,9 +1217,9 @@ to that service will appear.
 </div>
 
 
-<!-- =================================================
-     MUSEUM
-================================================= -->
+<!-- =====================================================
+     7. NAIROBI NATIONAL MUSEUM
+===================================================== -->
 
 <div
     id="museum"
@@ -970,6 +1229,7 @@ to that service will appear.
 <div class="section-title">
     Nairobi National Museum
 </div>
+
 
 <div class="row">
 
@@ -987,6 +1247,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="museumTime">
@@ -1002,6 +1263,7 @@ to that service will appear.
 </div>
 
 </div>
+
 
 <div class="row">
 
@@ -1020,6 +1282,7 @@ to that service will appear.
 >
 
 </div>
+
 
 <div class="form-group">
 
@@ -1050,6 +1313,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="museumPickup">
@@ -1067,9 +1331,9 @@ to that service will appear.
 </div>
 
 
-<!-- =================================================
-     BOMAS
-================================================= -->
+<!-- =====================================================
+     8. BOMAS OF KENYA
+===================================================== -->
 
 <div
     id="bomas"
@@ -1079,6 +1343,7 @@ to that service will appear.
 <div class="section-title">
     Bomas of Kenya
 </div>
+
 
 <div class="row">
 
@@ -1096,6 +1361,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="bomasTime">
@@ -1111,6 +1377,7 @@ to that service will appear.
 </div>
 
 </div>
+
 
 <div class="row">
 
@@ -1129,6 +1396,7 @@ to that service will appear.
 >
 
 </div>
+
 
 <div class="form-group">
 
@@ -1159,6 +1427,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="bomasPickup">
@@ -1176,9 +1445,9 @@ to that service will appear.
 </div>
 
 
-<!-- =================================================
-     AIRPORT TRANSFER
-================================================= -->
+<!-- =====================================================
+     9. AIRPORT TRANSFER
+===================================================== -->
 
 <div
     id="airport"
@@ -1188,6 +1457,7 @@ to that service will appear.
 <div class="section-title">
     Airport Transfer
 </div>
+
 
 <div class="form-group">
 
@@ -1216,6 +1486,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="row">
 
 <div class="form-group">
@@ -1232,6 +1503,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="airportTime">
@@ -1247,6 +1519,7 @@ to that service will appear.
 </div>
 
 </div>
+
 
 <div class="row">
 
@@ -1265,6 +1538,7 @@ to that service will appear.
 >
 
 </div>
+
 
 <div class="form-group">
 
@@ -1295,6 +1569,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="airportLocation">
@@ -1309,6 +1584,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="flight">
@@ -1319,7 +1595,7 @@ to that service will appear.
     type="text"
     id="flight"
     name="Flight Number"
-    placeholder="e.g. KQ 101"
+    placeholder="Example: KQ 101"
 >
 
 </div>
@@ -1327,9 +1603,9 @@ to that service will appear.
 </div>
 
 
-<!-- =================================================
-     HOTEL TRANSFER
-================================================= -->
+<!-- =====================================================
+     10. HOTEL TRANSFER
+===================================================== -->
 
 <div
     id="hotel"
@@ -1339,6 +1615,7 @@ to that service will appear.
 <div class="section-title">
     Hotel Transfer
 </div>
+
 
 <div class="row">
 
@@ -1356,6 +1633,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="hotelTime">
@@ -1371,6 +1649,7 @@ to that service will appear.
 </div>
 
 </div>
+
 
 <div class="row">
 
@@ -1389,6 +1668,7 @@ to that service will appear.
 >
 
 </div>
+
 
 <div class="form-group">
 
@@ -1419,6 +1699,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="hotelPickup">
@@ -1432,6 +1713,7 @@ to that service will appear.
 >
 
 </div>
+
 
 <div class="form-group">
 
@@ -1450,9 +1732,9 @@ to that service will appear.
 </div>
 
 
-<!-- =================================================
-     PRIVATE HIRE
-================================================= -->
+<!-- =====================================================
+     11. PRIVATE HIRE
+===================================================== -->
 
 <div
     id="privateHire"
@@ -1462,6 +1744,7 @@ to that service will appear.
 <div class="section-title">
     Private Vehicle Hire
 </div>
+
 
 <div class="form-group">
 
@@ -1490,6 +1773,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="row">
 
 <div class="form-group">
@@ -1505,6 +1789,7 @@ to that service will appear.
 >
 
 </div>
+
 
 <div class="form-group">
 
@@ -1522,6 +1807,7 @@ to that service will appear.
 
 </div>
 
+
 <div class="form-group">
 
 <label for="hirePeople">
@@ -1537,6 +1823,7 @@ to that service will appear.
 >
 
 </div>
+
 
 <div class="form-group">
 
@@ -1555,11 +1842,15 @@ to that service will appear.
 </div>
 
 
-<!-- PRICE -->
+<!-- =====================================================
+     PRICE
+===================================================== -->
 
 <div class="price-box">
 
-<h3>Booking Price</h3>
+<h3>
+    Booking Price
+</h3>
 
 <div id="priceDetails">
     Select a service to see the applicable price.
@@ -1568,11 +1859,14 @@ to that service will appear.
 </div>
 
 
-<!-- ADDITIONAL REQUEST -->
+<!-- =====================================================
+     ADDITIONAL INFORMATION
+===================================================== -->
 
 <div class="section-title">
     Additional Information
 </div>
+
 
 <div class="form-group">
 
@@ -1594,7 +1888,7 @@ to that service will appear.
 <strong>Please note:</strong><br>
 
 Vehicle-based services are charged per vehicle.
-Nairobi City Walks are charged per person.
+City Walks are charged per person.
 Attraction and park entry fees are separate unless otherwise stated.
 
 </div>
@@ -1634,6 +1928,8 @@ const serviceMap = {
 
     "Nairobi City Walks": "cityWalks",
 
+    "Combine Experiences": "combineExperiences",
+
     "Nairobi National Park": "nationalPark",
 
     "Giraffe Centre": "giraffe",
@@ -1654,24 +1950,23 @@ const serviceMap = {
 
 
 /* =====================================================
-   SHOW ONLY SELECTED SERVICE
+   MAIN SERVICE SELECTOR
 ===================================================== */
 
-const service =
+const serviceSelect =
     document.getElementById("service");
 
-
-const sections =
+const serviceSections =
     document.querySelectorAll(".service-section");
 
 
-service.addEventListener(
+serviceSelect.addEventListener(
     "change",
     function() {
 
-        /* Hide absolutely everything first */
+        /* Hide every service */
 
-        sections.forEach(
+        serviceSections.forEach(
             function(section) {
 
                 section.classList.remove("show");
@@ -1680,35 +1975,70 @@ service.addEventListener(
         );
 
 
-        /* Get selected service */
+        /* Find selected service */
 
         const selected =
-            service.value;
-
-
-        /* Find matching section */
+            serviceSelect.value;
 
         const sectionId =
             serviceMap[selected];
 
 
-        /* Show ONLY that section */
+        /* Show selected service only */
 
         if (sectionId) {
 
-            const selectedSection =
-                document.getElementById(
-                    sectionId
-                );
+            const section =
+                document.getElementById(sectionId);
 
-            if (selectedSection) {
+            if (section) {
 
-                selectedSection.classList.add("show");
+                section.classList.add("show");
 
             }
 
         }
 
+
+        updatePrice();
+
+    }
+);
+
+
+/* =====================================================
+   COMBINE EXPERIENCES - CUSTOM OPTION
+===================================================== */
+
+const combinePackage =
+    document.getElementById(
+        "combinePackage"
+    );
+
+const customCombinationBox =
+    document.getElementById(
+        "customCombinationBox"
+    );
+
+
+combinePackage.addEventListener(
+    "change",
+    function() {
+
+        if (
+            this.value ===
+            "Custom Combination"
+        ) {
+
+            customCombinationBox.style.display =
+                "block";
+
+        } else {
+
+            customCombinationBox.style.display =
+                "none";
+
+        }
 
         updatePrice();
 
@@ -1723,15 +2053,167 @@ service.addEventListener(
 function updatePrice() {
 
     const selected =
-        service.value;
+        serviceSelect.value;
 
-    const price =
+    const priceDetails =
         document.getElementById(
             "priceDetails"
         );
 
 
-    /* CITY WALK */
+    /* ================================================
+       COMBINE EXPERIENCES
+    ================================================ */
+
+    if (
+        selected ===
+        "Combine Experiences"
+    ) {
+
+        const combination =
+            document.getElementById(
+                "combinePackage"
+            ).value;
+
+        const vehicle =
+            document.getElementById(
+                "combineVehicle"
+            ).value;
+
+        const people =
+            Number(
+                document.getElementById(
+                    "combinePeople"
+                ).value
+            ) || 1;
+
+
+        if (!combination) {
+
+            priceDetails.innerHTML =
+                "Select a combination to calculate the price.";
+
+            return;
+
+        }
+
+
+        if (!vehicle) {
+
+            priceDetails.innerHTML =
+                "Select a vehicle category to calculate the price.";
+
+            return;
+
+        }
+
+
+        let rate = 0;
+
+
+        if (
+            combination ===
+            "Giraffe Centre + Karen Blixen"
+        ) {
+
+            rate =
+                vehicle === "Tour Van"
+                ? 6500
+                : 9500;
+
+        }
+
+
+        else if (
+            combination ===
+            "Giraffe Centre + Nairobi National Museum"
+        ) {
+
+            rate =
+                vehicle === "Tour Van"
+                ? 6500
+                : 9500;
+
+        }
+
+
+        else if (
+            combination ===
+            "Karen Blixen + Bomas of Kenya"
+        ) {
+
+            rate =
+                vehicle === "Tour Van"
+                ? 6500
+                : 9500;
+
+        }
+
+
+        else if (
+            combination ===
+            "Nairobi National Museum + Nairobi City Highlights"
+        ) {
+
+            rate =
+                vehicle === "Tour Van"
+                ? 6000
+                : 9000;
+
+        }
+
+
+        else if (
+            combination ===
+            "Giraffe Centre + Karen Blixen + Bomas of Kenya"
+        ) {
+
+            rate =
+                vehicle === "Tour Van"
+                ? 8500
+                : 12000;
+
+        }
+
+
+        else {
+
+            priceDetails.innerHTML =
+                "Custom combinations will be quoted according to the attractions selected.";
+
+            return;
+
+        }
+
+
+        priceDetails.innerHTML =
+
+            "<strong>" +
+            combination +
+            "</strong><br>" +
+
+            "Vehicle: " +
+            vehicle +
+            "<br>" +
+
+            "People: " +
+            people +
+            "<br>" +
+
+            "<strong>Transport Package: KES " +
+            rate.toLocaleString() +
+            "</strong><br>" +
+
+            "<small>Attraction entry fees are separate unless stated otherwise.</small>";
+
+        return;
+
+    }
+
+
+    /* ================================================
+       CITY WALK
+    ================================================ */
 
     if (
         selected ===
@@ -1753,8 +2235,8 @@ function updatePrice() {
 
         if (!walk) {
 
-            price.innerHTML =
-                "Select a city walk to see the price.";
+            priceDetails.innerHTML =
+                "Select a city walk to calculate the price.";
 
             return;
 
@@ -1778,14 +2260,17 @@ function updatePrice() {
             rate * people;
 
 
-        price.innerHTML =
+        priceDetails.innerHTML =
+
             "<strong>" +
             walk +
             "</strong><br>" +
+
             "KES " +
             rate.toLocaleString() +
             " per person × " +
             people +
+
             "<br><strong>Total: KES " +
             total.toLocaleString() +
             "</strong>";
@@ -1795,9 +2280,11 @@ function updatePrice() {
     }
 
 
-    /* VEHICLE SERVICES */
+    /* ================================================
+       VEHICLE SERVICES
+    ================================================ */
 
-    let vehicle = null;
+    let vehicle = "";
 
 
     if (
@@ -1812,6 +2299,7 @@ function updatePrice() {
 
     }
 
+
     else if (
         selected ===
         "Nairobi National Park"
@@ -1823,6 +2311,7 @@ function updatePrice() {
             ).value;
 
     }
+
 
     else if (
         selected ===
@@ -1836,6 +2325,7 @@ function updatePrice() {
 
     }
 
+
     else if (
         selected ===
         "Karen & Karen Blixen"
@@ -1847,6 +2337,7 @@ function updatePrice() {
             ).value;
 
     }
+
 
     else if (
         selected ===
@@ -1860,6 +2351,7 @@ function updatePrice() {
 
     }
 
+
     else if (
         selected ===
         "Bomas of Kenya"
@@ -1871,6 +2363,7 @@ function updatePrice() {
             ).value;
 
     }
+
 
     else if (
         selected ===
@@ -1884,6 +2377,7 @@ function updatePrice() {
 
     }
 
+
     else if (
         selected ===
         "Hotel Transfer"
@@ -1895,6 +2389,7 @@ function updatePrice() {
             ).value;
 
     }
+
 
     else if (
         selected ===
@@ -1923,6 +2418,7 @@ function updatePrice() {
 
         }
 
+
         if (
             vehicle ===
             "Land Cruiser"
@@ -1933,7 +2429,12 @@ function updatePrice() {
         }
 
 
-        price.innerHTML =
+        priceDetails.innerHTML =
+
+            "Vehicle: <strong>" +
+            vehicle +
+            "</strong><br>" +
+
             "Transport: <strong>KES " +
             rate.toLocaleString() +
             " per vehicle</strong>";
@@ -1943,14 +2444,14 @@ function updatePrice() {
     }
 
 
-    price.innerHTML =
+    priceDetails.innerHTML =
         "Select the required vehicle category to see the transport price.";
 
 }
 
 
 /* =====================================================
-   PRICE EVENTS
+   UPDATE PRICE WHEN FIELDS CHANGE
 ===================================================== */
 
 document.addEventListener(
@@ -1971,8 +2472,26 @@ document.addEventListener(
 );
 
 
+document.addEventListener(
+    "input",
+    function(event) {
+
+        if (
+            event.target.matches(
+                "input[type='number']"
+            )
+        ) {
+
+            updatePrice();
+
+        }
+
+    }
+);
+
+
 /* =====================================================
-   FORM SUBMISSION VALIDATION
+   FORM SUBMISSION
 ===================================================== */
 
 document
@@ -1982,7 +2501,7 @@ document
         function(event) {
 
             const selected =
-                service.value;
+                serviceSelect.value;
 
 
             if (!selected) {
@@ -2000,22 +2519,21 @@ document
 
             /*
              * Make sure the selected service
-             * has actually been opened.
+             * is actually displayed.
              */
 
             const sectionId =
                 serviceMap[selected];
 
-
-            const selectedSection =
+            const section =
                 document.getElementById(
                     sectionId
                 );
 
 
             if (
-                !selectedSection ||
-                !selectedSection.classList.contains("show")
+                !section ||
+                !section.classList.contains("show")
             ) {
 
                 event.preventDefault();
