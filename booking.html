@@ -7,9 +7,10 @@
     <title>Book Now | Stema Trans Tours</title>
 
     <meta name="description"
-          content="Book Nairobi city tours, airport transfers and private transportation with Stema Trans Tours.">
+          content="Book Nairobi city tours, city walks, airport transfers and private transportation with Stema Trans Tours.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -66,15 +67,18 @@
 
         .hero {
             background:
-                linear-gradient(rgba(0,0,0,0.63), rgba(0,0,0,0.63)),
+                linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
                 url("images/hero.jpg") center/cover;
 
             min-height: 330px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
             color: white;
+
             padding: 50px 20px;
         }
 
@@ -149,6 +153,7 @@
             border-radius: 5px;
             font-family: inherit;
             font-size: 15px;
+            background: white;
         }
 
         textarea {
@@ -180,6 +185,73 @@
         .notice strong {
             display: block;
             margin-bottom: 5px;
+        }
+
+        /* PRICE BOX */
+
+        .price-box {
+            background: #222;
+            color: white;
+            border-radius: 10px;
+            padding: 28px;
+            margin: 30px 0;
+        }
+
+        .price-box h3 {
+            color: #d6a03d;
+            margin-bottom: 15px;
+            font-size: 23px;
+        }
+
+        .price-summary {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 25px;
+            margin-bottom: 20px;
+        }
+
+        .price-summary div {
+            padding: 5px 0;
+        }
+
+        .price-label {
+            color: #bbb;
+        }
+
+        .estimated-price {
+            border-top: 1px solid #555;
+            padding-top: 18px;
+            margin-top: 12px;
+        }
+
+        .estimated-price .amount {
+            font-size: 34px;
+            font-weight: bold;
+            color: #d6a03d;
+        }
+
+        .price-note {
+            margin-top: 12px;
+            color: #ccc;
+            font-size: 13px;
+        }
+
+        .vehicle-warning {
+            background: #fff3cd;
+            color: #664d03;
+            padding: 13px;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .vehicle-ok {
+            background: #e9f7ef;
+            color: #176b3a;
+            padding: 13px;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: none;
         }
 
         .submit-area {
@@ -236,6 +308,7 @@
         }
 
         @media (max-width: 768px) {
+
             .header-container {
                 flex-direction: column;
                 gap: 15px;
@@ -271,13 +344,25 @@
                 grid-template-columns: 1fr;
                 gap: 0;
             }
+
+            .price-summary {
+                grid-template-columns: 1fr;
+            }
+
+            .estimated-price .amount {
+                font-size: 29px;
+            }
+
         }
+
     </style>
 </head>
 
 <body>
 
+
 <header>
+
     <div class="header-container">
 
         <div class="logo">
@@ -294,39 +379,55 @@
         </nav>
 
     </div>
+
 </header>
 
 
+
 <section class="hero">
+
     <div class="hero-content">
+
         <h1>Book With Stema Trans</h1>
 
         <p>
-            Tell us about your trip and we'll get back to you
-            with confirmation and any additional details.
+            Choose your service and vehicle and get an
+            instant estimated price before submitting your request.
         </p>
+
     </div>
+
 </section>
+
 
 
 <main class="container">
 
+
     <section class="intro">
+
         <h2>Booking & Enquiry Form</h2>
 
         <p>
-            Complete the form below with as much information as possible.
+            Select your service, passengers, vehicle and duration.
+            Your estimated price will be calculated automatically.
         </p>
+
     </section>
 
 
+
     <div class="notice">
+
         <strong>Please Note</strong>
 
-        This is a booking enquiry. Your reservation is confirmed
-        only after Stema Trans has responded and confirmed the
-        arrangements with you.
+        The displayed amount is an estimated price.
+        Your final quotation may change depending on the exact
+        itinerary, pickup location, destination, waiting time,
+        extra hours, parking, attraction fees or other requirements.
+
     </div>
+
 
 
     <div class="form-box">
@@ -335,6 +436,7 @@
             action="https://formsubmit.co/Stemawastrans@gmail.com"
             method="POST"
         >
+
 
             <!-- FORM SETTINGS -->
 
@@ -350,13 +452,12 @@
                 value="false"
             >
 
-            <!-- CORRECT GITHUB PAGES REDIRECT -->
-
             <input
                 type="hidden"
                 name="_next"
                 value="https://themaina1.github.io/stema-trans-tours/thankyou.html"
             >
+
 
 
             <!-- CUSTOMER DETAILS -->
@@ -368,7 +469,10 @@
                 <div class="two-column">
 
                     <div class="form-group">
-                        <label for="name">Full Name *</label>
+
+                        <label for="name">
+                            Full Name *
+                        </label>
 
                         <input
                             type="text"
@@ -376,11 +480,15 @@
                             name="Full Name"
                             required
                         >
+
                     </div>
 
 
                     <div class="form-group">
-                        <label for="email">Email Address *</label>
+
+                        <label for="email">
+                            Email Address *
+                        </label>
 
                         <input
                             type="email"
@@ -388,12 +496,14 @@
                             name="Email"
                             required
                         >
+
                     </div>
 
                 </div>
 
 
                 <div class="form-group">
+
                     <label for="phone">
                         Phone / WhatsApp Number *
                     </label>
@@ -404,16 +514,19 @@
                         name="Phone / WhatsApp"
                         required
                     >
+
                 </div>
 
             </div>
 
 
-            <!-- SERVICE -->
+
+            <!-- TRIP DETAILS -->
 
             <div class="form-section">
 
                 <h3>2. Your Trip</h3>
+
 
                 <div class="form-group">
 
@@ -431,53 +544,169 @@
                             Select a service
                         </option>
 
-                        <option value="Nairobi City Tour">
+                        <option value="city-tour">
                             Nairobi City Tour
                         </option>
 
-                        <option value="Nairobi National Park">
+                        <option value="city-highlights-walk">
+                            Nairobi Highlights Walk
+                        </option>
+
+                        <option value="history-culture-walk">
+                            Nairobi History & Culture Walk
+                        </option>
+
+                        <option value="food-local-walk">
+                            Nairobi Food & Local Life Walk
+                        </option>
+
+                        <option value="airport-transfer">
+                            JKIA Airport Transfer
+                        </option>
+
+                        <option value="wilson-transfer">
+                            Wilson Airport Transfer
+                        </option>
+
+                        <option value="hotel-transfer">
+                            Hotel / Private Transfer
+                        </option>
+
+                        <option value="nairobi-national-park">
                             Nairobi National Park
                         </option>
 
-                        <option value="Giraffe Centre">
+                        <option value="giraffe-centre">
                             Giraffe Centre
                         </option>
 
-                        <option value="Karen & Karen Blixen">
-                            Karen & Karen Blixen
-                        </option>
-
-                        <option value="Nairobi National Museum">
+                        <option value="museum">
                             Nairobi National Museum
                         </option>
 
-                        <option value="Bomas of Kenya">
+                        <option value="bomas">
                             Bomas of Kenya
                         </option>
 
-                        <option value="Airport Transfer">
-                            Airport Transfer
+                        <option value="karen">
+                            Karen & Karen Blixen
                         </option>
 
-                        <option value="Hotel Transfer">
-                            Hotel Transfer
-                        </option>
-
-                        <option value="Corporate Transfer">
-                            Corporate Transfer
-                        </option>
-
-                        <option value="Private Transfer">
-                            Private Transfer
-                        </option>
-
-                        <option value="Custom Tour / Trip">
+                        <option value="custom">
                             Custom Tour / Trip
                         </option>
 
                     </select>
 
                 </div>
+
+
+
+                <div class="two-column">
+
+                    <div class="form-group">
+
+                        <label for="passengers">
+                            Number of Passengers *
+                        </label>
+
+                        <select
+                            id="passengers"
+                            name="Number of Passengers"
+                            required
+                        >
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8+">8+</option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="vehicle">
+                            Vehicle Category *
+                        </label>
+
+                        <select
+                            id="vehicle"
+                            name="Vehicle Category"
+                            required
+                        >
+
+                            <option value="">
+                                Select vehicle
+                            </option>
+
+                            <option value="sedan">
+                                Sedan
+                            </option>
+
+                            <option value="suv">
+                                SUV
+                            </option>
+
+                            <option value="van">
+                                7-Seater Van
+                            </option>
+
+                            <option value="landcruiser">
+                                Safari Land Cruiser
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="duration">
+                        Duration *
+                    </label>
+
+                    <select
+                        id="duration"
+                        name="Duration"
+                        required
+                    >
+
+                        <option value="">
+                            Select duration
+                        </option>
+
+                        <option value="3">
+                            3 Hours
+                        </option>
+
+                        <option value="4">
+                            4 Hours / Half Day
+                        </option>
+
+                        <option value="8">
+                            8 Hours / Full Day
+                        </option>
+
+                    </select>
+
+                </div>
+
 
 
                 <div class="two-column">
@@ -515,88 +744,121 @@
 
                 </div>
 
+            </div>
 
-                <div class="two-column">
 
-                    <div class="form-group">
 
-                        <label for="passengers">
-                            Number of Passengers *
-                        </label>
+            <!-- LIVE PRICE CALCULATOR -->
 
-                        <select
-                            id="passengers"
-                            name="Number of Passengers"
-                            required
-                        >
+            <div
+                class="price-box"
+                id="priceBox"
+            >
 
-                            <option value="">
-                                Select
-                            </option>
+                <h3>
+                    Estimated Booking Price
+                </h3>
 
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8+">8+</option>
 
-                        </select>
+                <div class="price-summary">
 
+                    <div>
+                        <span class="price-label">
+                            Service:
+                        </span>
+
+                        <span id="summaryService">
+                            —
+                        </span>
                     </div>
 
 
-                    <div class="form-group">
+                    <div>
+                        <span class="price-label">
+                            Passengers:
+                        </span>
 
-                        <label for="vehicle">
-                            Preferred Vehicle
-                        </label>
-
-                        <select
-                            id="vehicle"
-                            name="Preferred Vehicle"
-                        >
-
-                            <option value="">
-                                No preference
-                            </option>
-
-                            <option value="Sedan">
-                                Sedan
-                            </option>
-
-                            <option value="SUV">
-                                SUV
-                            </option>
-
-                            <option value="7-Seater">
-                                7-Seater
-                            </option>
-
-                            <option value="Tour Van">
-                                Tour Van
-                            </option>
-
-                            <option value="Land Cruiser">
-                                Land Cruiser
-                            </option>
-
-                        </select>
-
+                        <span id="summaryPassengers">
+                            —
+                        </span>
                     </div>
 
+
+                    <div>
+                        <span class="price-label">
+                            Vehicle:
+                        </span>
+
+                        <span id="summaryVehicle">
+                            —
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <span class="price-label">
+                            Duration:
+                        </span>
+
+                        <span id="summaryDuration">
+                            —
+                        </span>
+                    </div>
+
+                </div>
+
+
+
+                <div class="estimated-price">
+
+                    <div class="price-label">
+                        Estimated Total
+                    </div>
+
+                    <div
+                        class="amount"
+                        id="estimatedPrice"
+                    >
+                        Select your trip details
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="price-note"
+                    id="priceNote"
+                >
+                    Select your service, passengers,
+                    vehicle and duration to calculate
+                    your estimated price.
+                </div>
+
+
+
+                <div
+                    class="vehicle-warning"
+                    id="vehicleWarning"
+                >
+                </div>
+
+
+                <div
+                    class="vehicle-ok"
+                    id="vehicleOK"
+                >
                 </div>
 
             </div>
 
 
-            <!-- PICKUP -->
+
+            <!-- PICKUP & DESTINATION -->
 
             <div class="form-section">
 
                 <h3>3. Pickup & Destination</h3>
+
 
                 <div class="form-group">
 
@@ -634,11 +896,13 @@
             </div>
 
 
+
             <!-- FLIGHT -->
 
             <div class="form-section">
 
                 <h3>4. Flight Information</h3>
+
 
                 <div class="form-group">
 
@@ -650,7 +914,7 @@
                         type="text"
                         id="flight"
                         name="Flight Number"
-                        placeholder="For airport transfers only"
+                        placeholder="For airport transfers"
                     >
 
                 </div>
@@ -658,11 +922,13 @@
             </div>
 
 
+
             <!-- ADDITIONAL INFORMATION -->
 
             <div class="form-section">
 
                 <h3>5. Additional Information</h3>
+
 
                 <div class="form-group">
 
@@ -681,6 +947,9 @@
             </div>
 
 
+
+            <!-- SUBMIT -->
+
             <div class="submit-area">
 
                 <button type="submit">
@@ -688,11 +957,12 @@
                 </button>
 
                 <p class="small-note">
-                    We will review your request and contact you
-                    using the details provided.
+                    Your estimated price will also be included
+                    with your booking enquiry.
                 </p>
 
             </div>
+
 
         </form>
 
@@ -701,16 +971,18 @@
 </main>
 
 
+
 <section class="cta">
 
-    <h2>Need Help Before Booking?</h2>
+    <h2>Need Help Choosing a Vehicle?</h2>
 
     <p>
-        Contact Stema Trans directly if you would like to discuss
-        your itinerary before submitting a booking request.
+        Contact Stema Trans and we'll help you select the
+        most suitable vehicle for your group and itinerary.
     </p>
 
 </section>
+
 
 
 <footer>
@@ -725,6 +997,699 @@
     </p>
 
 </footer>
+
+
+
+<script>
+
+    const service = document.getElementById("service");
+    const passengers = document.getElementById("passengers");
+    const vehicle = document.getElementById("vehicle");
+    const duration = document.getElementById("duration");
+
+    const summaryService =
+        document.getElementById("summaryService");
+
+    const summaryPassengers =
+        document.getElementById("summaryPassengers");
+
+    const summaryVehicle =
+        document.getElementById("summaryVehicle");
+
+    const summaryDuration =
+        document.getElementById("summaryDuration");
+
+    const estimatedPrice =
+        document.getElementById("estimatedPrice");
+
+    const priceNote =
+        document.getElementById("priceNote");
+
+    const vehicleWarning =
+        document.getElementById("vehicleWarning");
+
+    const vehicleOK =
+        document.getElementById("vehicleOK");
+
+
+    /*
+        CITY TOUR VEHICLE RATES
+
+        3 HOURS / 4 HOURS / 8 HOURS
+    */
+
+    const cityTourRates = {
+
+        sedan: {
+            3: 4500,
+            4: 6000,
+            8: 9500
+        },
+
+        suv: {
+            3: 6000,
+            4: 8000,
+            8: 13000
+        },
+
+        van: {
+            3: 6500,
+            4: 8500,
+            8: 15000
+        },
+
+        landcruiser: {
+            3: 9000,
+            4: 12000,
+            8: 20000
+        }
+
+    };
+
+
+    /*
+        PRIVATE VEHICLE RATES
+
+        Same basic Nairobi vehicle pricing.
+    */
+
+    const privateRates = {
+
+        sedan: {
+            3: 4500,
+            4: 6000,
+            8: 9500
+        },
+
+        suv: {
+            3: 6000,
+            4: 8000,
+            8: 13000
+        },
+
+        van: {
+            3: 6500,
+            4: 8500,
+            8: 15000
+        },
+
+        landcruiser: {
+            3: 9000,
+            4: 12000,
+            8: 20000
+        }
+
+    };
+
+
+    /*
+        CITY WALK PRICES
+
+        PER PERSON.
+    */
+
+    const walkRates = {
+
+        "city-highlights-walk": 2000,
+
+        "history-culture-walk": 2500,
+
+        "food-local-walk": 3500
+
+    };
+
+
+    /*
+        STARTING AIRPORT TRANSFER RATES
+
+        ONE WAY.
+    */
+
+    const airportRates = {
+
+        sedan: 3000,
+
+        suv: 4500,
+
+        van: 5000,
+
+        landcruiser: 7000
+
+    };
+
+
+    /*
+        WILSON TRANSFER STARTING RATE
+    */
+
+    const wilsonRate = 2500;
+
+
+    /*
+        DISPLAY NAMES
+    */
+
+    const vehicleNames = {
+
+        sedan: "Sedan",
+
+        suv: "SUV",
+
+        van: "7-Seater Van",
+
+        landcruiser: "Safari Land Cruiser"
+
+    };
+
+
+    const serviceNames = {
+
+        "city-tour": "Nairobi City Tour",
+
+        "city-highlights-walk":
+            "Nairobi Highlights Walk",
+
+        "history-culture-walk":
+            "Nairobi History & Culture Walk",
+
+        "food-local-walk":
+            "Nairobi Food & Local Life Walk",
+
+        "airport-transfer":
+            "JKIA Airport Transfer",
+
+        "wilson-transfer":
+            "Wilson Airport Transfer",
+
+        "hotel-transfer":
+            "Hotel / Private Transfer",
+
+        "nairobi-national-park":
+            "Nairobi National Park",
+
+        "giraffe-centre":
+            "Giraffe Centre",
+
+        "museum":
+            "Nairobi National Museum",
+
+        "bomas":
+            "Bomas of Kenya",
+
+        "karen":
+            "Karen & Karen Blixen",
+
+        "custom":
+            "Custom Tour / Trip"
+
+    };
+
+
+    /*
+        VEHICLE CAPACITY CHECK
+    */
+
+    function checkVehicleCapacity() {
+
+        vehicleWarning.style.display = "none";
+
+        vehicleOK.style.display = "none";
+
+        const passengerValue = passengers.value;
+
+        const vehicleValue = vehicle.value;
+
+        if (!passengerValue || !vehicleValue) {
+            return;
+        }
+
+        if (passengerValue === "8+") {
+
+            vehicleWarning.innerHTML =
+                "<strong>Group size notice:</strong> " +
+                "For groups of more than 7 passengers, " +
+                "please contact Stema Trans for a suitable vehicle.";
+
+            vehicleWarning.style.display = "block";
+
+            return;
+        }
+
+
+        const numberOfPassengers =
+            parseInt(passengerValue);
+
+
+        let capacity = 0;
+
+
+        if (vehicleValue === "sedan") {
+            capacity = 4;
+        }
+
+        if (vehicleValue === "suv") {
+            capacity = 5;
+        }
+
+        if (vehicleValue === "van") {
+            capacity = 7;
+        }
+
+        if (vehicleValue === "landcruiser") {
+            capacity = 7;
+        }
+
+
+        if (numberOfPassengers > capacity) {
+
+            vehicleWarning.innerHTML =
+                "<strong>Vehicle may be too small:</strong> " +
+                vehicleNames[vehicleValue] +
+                " is recommended for up to " +
+                capacity +
+                " passengers. Please select a larger vehicle.";
+
+            vehicleWarning.style.display = "block";
+
+        } else {
+
+            vehicleOK.innerHTML =
+                "✓ " +
+                vehicleNames[vehicleValue] +
+                " is suitable for " +
+                numberOfPassengers +
+                " passenger" +
+                (numberOfPassengers === 1 ? "" : "s") +
+                ".";
+
+            vehicleOK.style.display = "block";
+
+        }
+
+    }
+
+
+    /*
+        MAIN PRICE CALCULATOR
+    */
+
+    function calculatePrice() {
+
+        const selectedService = service.value;
+
+        const selectedPassengers = passengers.value;
+
+        const selectedVehicle = vehicle.value;
+
+        const selectedDuration = duration.value;
+
+
+        summaryService.textContent =
+            selectedService
+                ? serviceNames[selectedService]
+                : "—";
+
+
+        summaryPassengers.textContent =
+            selectedPassengers
+                ? selectedPassengers
+                : "—";
+
+
+        summaryVehicle.textContent =
+            selectedVehicle
+                ? vehicleNames[selectedVehicle]
+                : "—";
+
+
+        summaryDuration.textContent =
+            selectedDuration
+                ? selectedDuration + " Hours"
+                : "—";
+
+
+        estimatedPrice.textContent =
+            "Select your trip details";
+
+
+        priceNote.textContent =
+            "Select your service, passengers, vehicle " +
+            "and duration to calculate your estimated price.";
+
+
+        /*
+            Nothing selected yet
+        */
+
+        if (!selectedService) {
+
+            checkVehicleCapacity();
+
+            return;
+        }
+
+
+        /*
+            CITY WALKS
+        */
+
+        if (walkRates[selectedService]) {
+
+            const numberOfPeople =
+                parseInt(selectedPassengers);
+
+
+            if (!selectedPassengers) {
+
+                estimatedPrice.textContent =
+                    "Select passengers";
+
+                priceNote.textContent =
+                    "City Walk prices are charged per person.";
+
+                checkVehicleCapacity();
+
+                return;
+
+            }
+
+
+            const total =
+                walkRates[selectedService] *
+                numberOfPeople;
+
+
+            estimatedPrice.textContent =
+                "KES " + total.toLocaleString();
+
+
+            priceNote.textContent =
+                "City Walk price: KES " +
+                walkRates[selectedService].toLocaleString() +
+                " per person × " +
+                numberOfPeople +
+                " passenger" +
+                (numberOfPeople === 1 ? "" : "s") +
+                ".";
+
+
+            checkVehicleCapacity();
+
+            return;
+        }
+
+
+        /*
+            JKIA AIRPORT TRANSFER
+        */
+
+        if (selectedService === "airport-transfer") {
+
+            if (!selectedVehicle) {
+
+                estimatedPrice.textContent =
+                    "Select vehicle";
+
+                priceNote.textContent =
+                    "Airport transfers are priced per vehicle " +
+                    "and are one-way starting rates.";
+
+                checkVehicleCapacity();
+
+                return;
+
+            }
+
+
+            const total =
+                airportRates[selectedVehicle];
+
+
+            estimatedPrice.textContent =
+                "From KES " +
+                total.toLocaleString();
+
+
+            priceNote.textContent =
+                "One-way starting rate. Final price depends " +
+                "on the exact pickup/drop-off area and requirements.";
+
+
+            checkVehicleCapacity();
+
+            return;
+        }
+
+
+        /*
+            WILSON AIRPORT TRANSFER
+        */
+
+        if (selectedService === "wilson-transfer") {
+
+            estimatedPrice.textContent =
+                "From KES " +
+                wilsonRate.toLocaleString();
+
+
+            priceNote.textContent =
+                "Starting rate. Exact price depends on destination " +
+                "and vehicle requirements.";
+
+
+            checkVehicleCapacity();
+
+            return;
+        }
+
+
+        /*
+            HOTEL / PRIVATE TRANSFER
+        */
+
+        if (selectedService === "hotel-transfer") {
+
+            if (!selectedVehicle) {
+
+                estimatedPrice.textContent =
+                    "Select vehicle";
+
+                priceNote.textContent =
+                    "Select a vehicle to see the starting rate.";
+
+                checkVehicleCapacity();
+
+                return;
+
+            }
+
+
+            const rates =
+                privateRates[selectedVehicle];
+
+
+            if (!selectedDuration) {
+
+                estimatedPrice.textContent =
+                    "Select duration";
+
+                priceNote.textContent =
+                    "Private vehicle hire is charged according " +
+                    "to vehicle and duration.";
+
+                checkVehicleCapacity();
+
+                return;
+
+            }
+
+
+            const total =
+                rates[selectedDuration];
+
+
+            estimatedPrice.textContent =
+                "KES " +
+                total.toLocaleString();
+
+
+            priceNote.textContent =
+                "Vehicle-based rate. Fuel and driver are included " +
+                "for the agreed Nairobi itinerary.";
+
+
+            checkVehicleCapacity();
+
+            return;
+        }
+
+
+        /*
+            CUSTOM / ATTRACTION-BASED TOURS
+
+            Use vehicle rates as an estimate.
+        */
+
+        if (
+            selectedService === "nairobi-national-park" ||
+            selectedService === "giraffe-centre" ||
+            selectedService === "museum" ||
+            selectedService === "bomas" ||
+            selectedService === "karen" ||
+            selectedService === "custom"
+        ) {
+
+            if (!selectedVehicle) {
+
+                estimatedPrice.textContent =
+                    "Select vehicle";
+
+                priceNote.textContent =
+                    "Select a vehicle to calculate the " +
+                    "estimated transport price.";
+
+                checkVehicleCapacity();
+
+                return;
+
+            }
+
+
+            if (!selectedDuration) {
+
+                estimatedPrice.textContent =
+                    "Select duration";
+
+                priceNote.textContent =
+                    "Select the expected duration to calculate " +
+                    "your estimated transport price.";
+
+                checkVehicleCapacity();
+
+                return;
+
+            }
+
+
+            const rates =
+                privateRates[selectedVehicle];
+
+
+            const total =
+                rates[selectedDuration];
+
+
+            estimatedPrice.textContent =
+                "KES " +
+                total.toLocaleString();
+
+
+            priceNote.textContent =
+                "Estimated vehicle and driver/guide charge. " +
+                "Park, attraction and other entry fees are separate.";
+
+
+            checkVehicleCapacity();
+
+            return;
+        }
+
+
+        /*
+            NAIROBI CITY TOUR
+        */
+
+        if (selectedService === "city-tour") {
+
+            if (!selectedVehicle) {
+
+                estimatedPrice.textContent =
+                    "Select vehicle";
+
+                priceNote.textContent =
+                    "Select a vehicle to calculate the city tour rate.";
+
+                checkVehicleCapacity();
+
+                return;
+
+            }
+
+
+            if (!selectedDuration) {
+
+                estimatedPrice.textContent =
+                    "Select duration";
+
+                priceNote.textContent =
+                    "Select 3, 4 or 8 hours.";
+
+                checkVehicleCapacity();
+
+                return;
+
+            }
+
+
+            const total =
+                cityTourRates[selectedVehicle]
+                [selectedDuration];
+
+
+            estimatedPrice.textContent =
+                "KES " +
+                total.toLocaleString();
+
+
+            priceNote.textContent =
+                "Transport charge is per vehicle, not per passenger.";
+
+
+            checkVehicleCapacity();
+
+            return;
+        }
+
+
+        checkVehicleCapacity();
+
+    }
+
+
+    /*
+        UPDATE CALCULATOR WHEN ANY
+        RELEVANT FIELD CHANGES
+    */
+
+    service.addEventListener(
+        "change",
+        calculatePrice
+    );
+
+    passengers.addEventListener(
+        "change",
+        calculatePrice
+    );
+
+    vehicle.addEventListener(
+        "change",
+        calculatePrice
+    );
+
+    duration.addEventListener(
+        "change",
+        calculatePrice
+    );
+
+
+    /*
+        INITIAL CALCULATION
+    */
+
+    calculatePrice();
+
+</script>
+
 
 </body>
 </html>
