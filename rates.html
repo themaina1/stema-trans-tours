@@ -1,517 +1,1003 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Rates | Stema Trans Tours</title>
-
-    <meta name="description"
-          content="Stema Trans Tours Nairobi rates for city tours, city walks, airport transfers, private driver hire, SUVs, vans, sedans and Land Cruisers.">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #111;
-            color: white;
-            padding: 18px 5%;
-        }
-
-        .header-container {
-            max-width: 1150px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: #d6a03d;
-        }
-
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 18px;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            color: #d6a03d;
-        }
-
-        .hero {
-            background:
-                linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-                url("images/hero.jpg") center/cover;
-
-            min-height: 340px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-            color: white;
-
-            padding: 50px 20px;
-        }
-
-        .hero-content {
-            max-width: 850px;
-        }
-
-        .hero h1 {
-            font-size: 46px;
-            margin-bottom: 14px;
-        }
-
-        .hero p {
-            font-size: 18px;
-        }
-
-        .container {
-            max-width: 1150px;
-            width: 92%;
-            margin: 55px auto;
-        }
-
-        .intro {
-            text-align: center;
-            max-width: 850px;
-            margin: 0 auto 50px;
-        }
-
-        .intro h2 {
-            font-size: 30px;
-            margin-bottom: 12px;
-        }
-
-        .intro p {
-            color: #555;
-        }
-
-        .section {
-            margin-bottom: 60px;
-        }
-
-        .section-heading {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .section-heading h2 {
-            font-size: 29px;
-            margin-bottom: 8px;
-        }
-
-        .section-heading p {
-            color: #666;
-        }
-
-        .walk-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 22px;
-        }
-
-        .walk-card {
-            background: white;
-            padding: 28px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
-            text-align: center;
-        }
-
-        .walk-card h3 {
-            color: #9a681c;
-            margin-bottom: 12px;
-        }
-
-        .walk-card p {
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .price {
-            font-size: 25px;
-            font-weight: bold;
-            color: #222;
-        }
-
-        .price span {
-            font-size: 14px;
-            font-weight: normal;
-            color: #777;
-        }
-
-        .table-wrapper {
-            overflow-x: auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 650px;
-        }
-
-        th {
-            background: #222;
-            color: white;
-            padding: 16px;
-            text-align: left;
-        }
-
-        td {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        tr:hover {
-            background: #fafafa;
-        }
-
-        .vehicle {
-            font-weight: bold;
-        }
-
-        .airport-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-        }
-
-        .airport-card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-        }
-
-        .airport-card h3 {
-            color: #9a681c;
-            margin-bottom: 12px;
-        }
-
-        .airport-card p {
-            color: #555;
-        }
-
-        .airport-price {
-            font-size: 22px;
-            font-weight: bold;
-            margin-top: 12px;
-        }
-
-        .note {
-            background: #fff8e7;
-            border-left: 5px solid #d6a03d;
-            padding: 22px;
-            border-radius: 5px;
-            margin-top: 25px;
-        }
-
-        .note strong {
-            display: block;
-            margin-bottom: 7px;
-        }
-
-        .included {
-            background: #222;
-            color: white;
-            padding: 38px;
-            border-radius: 10px;
-        }
-
-        .included h2 {
-            margin-bottom: 18px;
-        }
-
-        .included ul {
-            list-style: none;
-        }
-
-        .included li {
-            margin-bottom: 10px;
-            padding-left: 22px;
-            position: relative;
-        }
-
-        .included li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #d6a03d;
-            font-weight: bold;
-        }
-
-        .cta {
-            background: #d6a03d;
-            text-align: center;
-            padding: 55px 20px;
-        }
-
-        .cta h2 {
-            font-size: 31px;
-            margin-bottom: 10px;
-        }
-
-        .cta p {
-            margin-bottom: 22px;
-        }
-
-        .button {
-            display: inline-block;
-            background: #111;
-            color: white;
-            text-decoration: none;
-            padding: 13px 28px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .button:hover {
-            background: #333;
-        }
-
-        footer {
-            background: #111;
-            color: #bbb;
-            text-align: center;
-            padding: 27px 15px;
-            font-size: 14px;
-        }
-
-        footer strong {
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-
-            .header-container {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav {
-                justify-content: center;
-                text-align: center;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px 7px;
-            }
-
-            .hero {
-                min-height: 290px;
-            }
-
-            .hero h1 {
-                font-size: 35px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .included {
-                padding: 30px 24px;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rates | Stema Trans Tours</title>
+
+<meta name="description"
+content="Stema Trans Tours Nairobi rates for city walks, city tours, airport transfers and private transportation.">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 18px 5%;
+}
+
+.header-container {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #d6a03d;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d6a03d;
+}
+
+.hero {
+    background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+        url("images/hero.jpg") center/cover;
+
+    min-height: 340px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 50px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 14px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1150px;
+    width: 92%;
+    margin: 55px auto;
+}
+
+.intro {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 50px;
+}
+
+.intro h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.intro p {
+    color: #555;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 29px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: #666;
+}
+
+/* WALK CARDS */
+
+.walk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+}
+
+.walk-card {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.07);
+}
+
+.walk-card h3 {
+    color: #9a681c;
+    margin-bottom: 12px;
+}
+
+.walk-card p {
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.walk-price {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.walk-price span {
+    font-size: 14px;
+    color: #777;
+    font-weight: normal;
+}
+
+.duration {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+/* GROUP PRICING */
+
+.group-box {
+    background: #222;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.group-box h3 {
+    color: #d6a03d;
+    margin-bottom: 15px;
+}
+
+.group-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.group-table th,
+.group-table td {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    text-align: left;
+}
+
+.group-table th {
+    color: #d6a03d;
+}
+
+.group-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* GENERAL TABLE */
+
+.table-wrapper {
+    overflow-x: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.07);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th {
+    background: #222;
+    color: white;
+    padding: 16px;
+    text-align: left;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background: #fafafa;
+}
+
+.vehicle {
+    font-weight: bold;
+}
+
+/* AIRPORT */
+
+.airport-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.airport-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.06);
+}
+
+.airport-card h3 {
+    color: #9a681c;
+    margin-bottom: 12px;
+}
+
+.airport-card p {
+    color: #555;
+}
+
+.airport-price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* NOTES */
+
+.note {
+    background: #fff8e7;
+    border-left: 5px solid #d6a03d;
+    padding: 22px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.note strong {
+    display: block;
+    margin-bottom: 7px;
+}
+
+/* INCLUDED */
+
+.included {
+    background: #222;
+    color: white;
+    padding: 38px;
+    border-radius: 10px;
+}
+
+.included h2 {
+    margin-bottom: 18px;
+}
+
+.included ul {
+    list-style: none;
+}
+
+.included li {
+    margin-bottom: 10px;
+    padding-left: 22px;
+    position: relative;
+}
+
+.included li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #d6a03d;
+    font-weight: bold;
+}
+
+/* CTA */
+
+.cta {
+    background: #d6a03d;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.cta h2 {
+    font-size: 31px;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 22px;
+}
+
+.button {
+    display: inline-block;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    padding: 13px 28px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #333;
+}
+
+footer {
+    background: #111;
+    color: #bbb;
+    text-align: center;
+    padding: 27px 15px;
+    font-size: 14px;
+}
+
+footer strong {
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 7px;
+    }
+
+    .hero {
+        min-height: 290px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .included {
+        padding: 30px 24px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-
 <header>
 
-    <div class="header-container">
+<div class="header-container">
 
-        <div class="logo">
-            STEMA <span>TRANS</span>
-        </div>
+<div class="logo">
+STEMA <span>TRANS</span>
+</div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="tours.html">Tours</a>
-            <a href="transfers.html">Transfers</a>
-            <a href="rates.html">Rates</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="tours.html">Tours</a>
+<a href="transfers.html">Transfers</a>
+<a href="rates.html">Rates</a>
+<a href="contact.html">Contact</a>
+</nav>
 
-    </div>
+</div>
 
 </header>
 
 
-
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <h1>Our Rates</h1>
+<h1>Our Rates</h1>
 
-        <p>
-            Clear and competitive rates for Nairobi tours,
-            city walks, airport transfers and private transportation.
-        </p>
+<p>
+Clear and competitive rates for Nairobi city walks,
+city tours, airport transfers and private transportation.
+</p>
 
-    </div>
+</div>
 
 </section>
-
 
 
 <main class="container">
 
 
-    <section class="intro">
+<section class="intro">
 
-        <h2>Simple, Transparent Pricing</h2>
+<h2>Simple, Transparent Pricing</h2>
 
-        <p>
-            Our vehicle-based rates are charged per vehicle rather
-            than per passenger. This makes private travel convenient
-            for individuals, couples, families and small groups.
-        </p>
+<p>
+Choose a guided walking experience, private city tour,
+airport transfer or vehicle with a professional driver.
+Vehicle-based services are charged per vehicle while
+walking experiences are charged according to the selected
+pricing option.
+</p>
 
-    </section>
-
-
-
-    <!-- CITY WALKS -->
-
-    <section class="section">
-
-        <div class="section-heading">
-
-            <h2>City Walks</h2>
-
-            <p>
-                Guided walking experiences in Nairobi.
-                Prices are per person.
-            </p>
-
-        </div>
+</section>
 
 
-        <div class="walk-grid">
+<!-- CITY WALKS -->
+
+<section class="section">
+
+<div class="section-heading">
+
+<h2>Nairobi City Walks</h2>
+
+<p>
+Discover Nairobi on foot with a local guide.
+</p>
+
+</div>
 
 
-            <div class="walk-card">
-
-                <h3>Nairobi Highlights Walk</h3>
-
-                <p>
-                    Explore some of Nairobi's central landmarks,
-                    streets, gardens and major points of interest.
-                </p>
-
-                <div class="price">
-                    KES 2,000
-                    <span>per person</span>
-                </div>
-
-            </div>
+<div class="walk-grid">
 
 
-            <div class="walk-card">
+<div class="walk-card">
 
-                <h3>History & Culture Walk</h3>
+<h3>Nairobi CBD City Walk & Orientation</h3>
 
-                <p>
-                    Discover Nairobi's history, heritage, architecture
-                    and cultural stories through a guided city walk.
-                </p>
+<div class="duration">
+2–2.5 Hours
+</div>
 
-                <div class="price">
-                    KES 2,500
-                    <span>per person</span>
-                </div>
+<p>
+A practical introduction to Nairobi's CBD for first-time
+visitors. Explore central landmarks, historic streets,
+City Market and everyday city life while learning how
+to navigate Nairobi.
+</p>
 
-            </div>
+<div class="walk-price">
+KES 2,000
+<span>per person</span>
+</div>
 
-
-            <div class="walk-card">
-
-                <h3>Food & Local Life Walk</h3>
-
-                <p>
-                    Experience Nairobi's food, markets and everyday
-                    local life while discovering the city on foot.
-                </p>
-
-                <div class="price">
-                    KES 3,500
-                    <span>per person</span>
-                </div>
-
-            </div>
+</div>
 
 
-        </div>
+<div class="walk-card">
 
-    </section>
+<h3>Nairobi Highlights Walk</h3>
+
+<div class="duration">
+2.5–3 Hours
+</div>
+
+<p>
+Explore some of Nairobi's major central landmarks,
+public spaces, streets and points of interest on foot.
+</p>
+
+<div class="walk-price">
+KES 2,500
+<span>per person</span>
+</div>
+
+</div>
 
 
+<div class="walk-card">
 
-    <!-- CITY TOURS -->
+<h3>Nairobi History & Culture Walk</h3>
 
-    <section class="section">
+<div class="duration">
+3 Hours
+</div>
 
-        <div class="section-heading">
+<p>
+Discover Nairobi's history, heritage, architecture,
+important landmarks and cultural stories.
+</p>
 
-            <h2>Private Nairobi City Tours</h2>
+<div class="walk-price">
+KES 3,000
+<span>per person</span>
+</div>
 
-            <p>
-                Vehicle and driver/guide rates.
-                Prices are per vehicle.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="table-wrapper">
+<div class="walk-card">
 
-            <table>
+<h3>Nairobi Food & Local Life Walk</h3>
 
-                <thead>
+<div class="duration">
+3 Hours
+</div>
 
-                   
+<p>
+Experience Nairobi's food, markets and everyday local
+life while discovering the city from a local perspective.
+</p>
+
+<div class="walk-price">
+KES 3,500
+<span>per person</span>
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="group-box">
+
+<h3>Private Group Walking Rates</h3>
+
+<p>
+Want your own private walking experience?
+The following rates apply to the CBD City Walk & Orientation.
+</p>
+
+<table class="group-table">
+
+<thead>
+
+<tr>
+<th>Group Size</th>
+<th>Private Group Price</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>1–2 people</td>
+<td>KES 4,000</td>
+</tr>
+
+<tr>
+<td>3–4 people</td>
+<td>KES 7,000</td>
+</tr>
+
+<tr>
+<td>5–7 people</td>
+<td>KES 10,000</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<div class="note">
+
+<strong>Walking tour pricing:</strong>
+
+Per-person prices are suitable for individual bookings.
+Private group rates are available for guests who want
+the guide exclusively for their group.
+
+Optional attraction entrance fees, food, drinks,
+shopping and personal expenses are separate.
+
+</div>
+
+</section>
+
+
+<!-- CITY TOURS -->
+
+<section class="section">
+
+<div class="section-heading">
+
+<h2>Private Nairobi City Tours</h2>
+
+<p>
+Vehicle and driver/guide rates. Prices are per vehicle.
+</p>
+
+</div>
+
+
+<div class="table-wrapper">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Vehicle</th>
+<th>3 Hours</th>
+<th>Half Day / 4 Hours</th>
+<th>Full Day / 8 Hours</th>
+<th>Extra Hour</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td class="vehicle">Sedan</td>
+<td>KES 4,500</td>
+<td>KES 6,000</td>
+<td>KES 9,500</td>
+<td>KES 1,500</td>
+</tr>
+
+<tr>
+<td class="vehicle">SUV</td>
+<td>KES 6,000</td>
+<td>KES 8,000</td>
+<td>KES 13,000</td>
+<td>KES 2,000</td>
+</tr>
+
+<tr>
+<td class="vehicle">7-Seater Van</td>
+<td>KES 6,500</td>
+<td>KES 8,500</td>
+<td>KES 15,000</td>
+<td>KES 2,000</td>
+</tr>
+
+<tr>
+<td class="vehicle">Safari Land Cruiser</td>
+<td>KES 9,000</td>
+<td>KES 12,000</td>
+<td>KES 20,000</td>
+<td>KES 3,000</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<div class="note">
+
+<strong>Important:</strong>
+
+City tour rates are charged per vehicle, not per passenger.
+Attraction entry fees, parking fees and other third-party
+charges are separate unless specifically stated.
+
+</div>
+
+</section>
+
+
+<!-- AIRPORT -->
+
+<section class="section">
+
+<div class="section-heading">
+
+<h2>Airport Transfers</h2>
+
+<p>
+Private one-way transfers from JKIA to Nairobi destinations.
+</p>
+
+</div>
+
+
+<div class="airport-grid">
+
+
+<div class="airport-card">
+
+<h3>Sedan</h3>
+
+<p>
+Suitable for individuals and small groups with normal luggage.
+</p>
+
+<div class="airport-price">
+From KES 3,000
+</div>
+
+</div>
+
+
+<div class="airport-card">
+
+<h3>SUV</h3>
+
+<p>
+Comfortable option for couples, families and small groups.
+</p>
+
+<div class="airport-price">
+From KES 4,500
+</div>
+
+</div>
+
+
+<div class="airport-card">
+
+<h3>7-Seater Van</h3>
+
+<p>
+Ideal for families and small groups travelling with luggage.
+</p>
+
+<div class="airport-price">
+From KES 5,000
+</div>
+
+</div>
+
+
+<div class="airport-card">
+
+<h3>Land Cruiser</h3>
+
+<p>
+Premium private transportation with additional comfort.
+</p>
+
+<div class="airport-price">
+From KES 7,000
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="note">
+
+<strong>Airport transfer pricing:</strong>
+
+Final price depends on the exact pickup/drop-off location,
+vehicle selected, passenger numbers and luggage requirements.
+
+</div>
+
+</section>
+
+
+<!-- WILSON -->
+
+<section class="section">
+
+<div class="section-heading">
+
+<h2>Wilson Airport Transfers</h2>
+
+<p>
+Private transfers between Wilson Airport and Nairobi destinations.
+</p>
+
+</div>
+
+
+<div class="airport-card">
+
+<h3>Private Transfer</h3>
+
+<p>
+Transfers are available between Wilson Airport, hotels,
+residences, offices and other Nairobi destinations.
+</p>
+
+<div class="airport-price">
+From KES 2,500
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRIVATE DRIVER -->
+
+<section class="section">
+
+<div class="section-heading">
+
+<h2>Private Driver & Vehicle Hire</h2>
+
+<p>
+For meetings, errands, shopping, sightseeing and private
+transportation around Nairobi.
+</p>
+
+</div>
+
+
+<div class="table-wrapper">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Vehicle</th>
+<th>Hourly*</th>
+<th>4 Hours</th>
+<th>8 Hours</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td class="vehicle">Sedan</td>
+<td>KES 1,500</td>
+<td>KES 6,000</td>
+<td>KES 9,500</td>
+</tr>
+
+<tr>
+<td class="vehicle">SUV</td>
+<td>KES 2,000</td>
+<td>KES 8,000</td>
+<td>KES 13,000</td>
+</tr>
+
+<tr>
+<td class="vehicle">7-Seater Van</td>
+<td>KES 2,125</td>
+<td>KES 8,500</td>
+<td>KES 15,000</td>
+</tr>
+
+<tr>
+<td class="vehicle">Land Cruiser</td>
+<td>KES 3,000</td>
+<td>KES 12,000</td>
+<td>KES 20,000</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<div class="note">
+
+<strong>*Hourly hire:</strong>
+
+Minimum booking period is 3 hours. Out-of-town journeys,
+overnight assignments and special itineraries are quoted separately.
+
+</div>
+
+</section>
+
+
+<!-- INCLUDED -->
+
+<section class="section">
+
+<div class="included">
+
+<h2>What Our Vehicle Rates Include</h2>
+
+<ul>
+
+<li>Private vehicle for your booking</li>
+
+<li>Professional driver/guide</li>
+
+<li>Fuel for the agreed Nairobi itinerary</li>
+
+<li>Pickup and drop-off within the agreed service area</li>
+
+<li>Private transportation for your group</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- EXCLUSIONS -->
+
+<section class="section">
+
+<div class="note">
+
+<strong>Charges generally not included:</strong>
+
+Attraction and park entry fees, parking charges, meals,
+accommodation, personal expenses, shopping, optional
+activities and other third-party charges unless specifically
+stated in your quotation.
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<section class="cta">
+
+<h2>Ready to Explore Nairobi?</h2>
+
+<p>
+Choose your experience and send us your booking details.
+</p>
+
+<a href="booking.html" class="button">
+Book Now
+</a>
+
+</section>
+
+
+<footer>
+
+<p>
+<strong>STEMA TRANS</strong>
+— Nairobi City Tours, Transfers & Guided Experiences
+</p>
+
+<p>
+© 2026 Stema Trans. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
