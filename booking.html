@@ -4,157 +4,68 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Book Now | Stema Trans Tours</title>
-
-<meta name="description"
-content="Book Nairobi city walks, city tours, airport transfers and private transportation with Stema Trans Tours.">
+<title>Book a Tour | Stema Trans City Tours</title>
 
 <style>
-
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f5f5;
+    background: #f4f7f5;
     color: #222;
-    line-height: 1.6;
 }
 
 header {
-    background: #111;
+    background: #0b5d3b;
     color: white;
-    padding: 18px 5%;
-}
-
-.header-container {
-    max-width: 1150px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.logo span {
-    color: #d6a03d;
-}
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 18px;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: #d6a03d;
-}
-
-.hero {
-    background:
-        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
-        url("images/hero.jpg") center/cover;
-
-    min-height: 330px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    padding: 18px 20px;
     text-align: center;
-    color: white;
-
-    padding: 50px 20px;
 }
 
-.hero-content {
-    max-width: 850px;
+header h1 {
+    margin: 0;
+    font-size: 28px;
 }
 
-.hero h1 {
-    font-size: 46px;
-    margin-bottom: 14px;
-}
-
-.hero p {
-    font-size: 18px;
+header p {
+    margin: 6px 0 0;
+    font-size: 15px;
 }
 
 .container {
-    max-width: 900px;
-    width: 92%;
-    margin: 55px auto;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 15px;
 }
 
-.intro {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.intro h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.intro p {
-    color: #555;
-}
-
-.notice {
-    background: #fff8e7;
-    border-left: 5px solid #d6a03d;
-    padding: 18px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-}
-
-.notice strong {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-box {
+.booking-box {
     background: white;
-    padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0 4px 18px rgba(0,0,0,.08);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.10);
 }
 
-.form-section {
-    margin-bottom: 30px;
+h2 {
+    color: #0b5d3b;
+    margin-top: 0;
 }
 
-.form-section h3 {
-    color: #9a681c;
-    margin-bottom: 18px;
-    font-size: 21px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 8px;
-}
-
-.form-group {
-    margin-bottom: 18px;
+.section-title {
+    background: #0b5d3b;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin: 25px 0 15px;
+    font-size: 17px;
 }
 
 label {
     display: block;
     font-weight: bold;
-    margin-bottom: 7px;
+    margin-bottom: 6px;
 }
 
 input,
@@ -163,791 +74,308 @@ textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: inherit;
+    border-radius: 6px;
     font-size: 15px;
     background: white;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-    border-color: #d6a03d;
-}
-
 textarea {
-    min-height: 130px;
+    min-height: 100px;
     resize: vertical;
 }
 
-.two-column {
+.form-group {
+    margin-bottom: 17px;
+}
+
+.row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    gap: 15px;
 }
 
 .hidden {
-    display: none !important;
+    display: none;
 }
 
-
-/* PRICE BOX */
-
 .price-box {
-    background: #222;
-    color: white;
-    border-radius: 10px;
-    padding: 28px;
-    margin: 30px 0;
+    background: #eef8f2;
+    border: 2px solid #0b5d3b;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
 .price-box h3 {
-    color: #d6a03d;
-    margin-bottom: 15px;
-    font-size: 23px;
+    margin: 0 0 8px;
+    color: #0b5d3b;
 }
 
-.price-summary {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 25px;
-    margin-bottom: 20px;
+#priceDetails {
+    font-size: 15px;
+    line-height: 1.6;
 }
 
-.price-summary div {
-    padding: 5px 0;
-}
-
-.price-label {
-    color: #bbb;
-}
-
-.estimated-price {
-    border-top: 1px solid #555;
-    padding-top: 18px;
-    margin-top: 12px;
-}
-
-.estimated-price .amount {
-    font-size: 34px;
-    font-weight: bold;
-    color: #d6a03d;
-}
-
-.price-note {
-    margin-top: 12px;
-    color: #ccc;
-    font-size: 13px;
-}
-
-.vehicle-warning {
-    background: #fff3cd;
-    color: #664d03;
-    padding: 13px;
-    border-radius: 5px;
-    margin-top: 15px;
-    display: none;
-}
-
-.vehicle-ok {
-    background: #e9f7ef;
-    color: #176b3a;
-    padding: 13px;
-    border-radius: 5px;
-    margin-top: 15px;
-    display: none;
-}
-
-
-/* BUTTON */
-
-.submit-area {
-    text-align: center;
-    margin-top: 25px;
-}
-
-button {
-    border: none;
-    background: #d6a03d;
-    color: #111;
-    padding: 14px 35px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #c18c2d;
-}
-
-.small-note {
-    color: #777;
-    font-size: 13px;
-    margin-top: 12px;
-}
-
-
-/* FOOTER */
-
-footer {
-    background: #111;
-    color: #bbb;
-    text-align: center;
-    padding: 27px 15px;
-    font-size: 14px;
-}
-
-footer strong {
+.submit-btn {
+    width: 100%;
+    background: #0b5d3b;
     color: white;
+    border: none;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
+.submit-btn:hover {
+    background: #08482e;
+}
 
-@media (max-width: 768px) {
+.notice {
+    background: #fff8df;
+    border-left: 4px solid #d69e00;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
 
-    .header-container {
-        flex-direction: column;
-        gap: 15px;
-    }
+.back-link {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    color: #0b5d3b;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    nav {
-        justify-content: center;
-        text-align: center;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 5px 7px;
-    }
-
-    .hero {
-        min-height: 290px;
-    }
-
-    .hero h1 {
-        font-size: 35px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .form-box {
-        padding: 25px 20px;
-    }
-
-    .two-column {
+@media (max-width: 650px) {
+    .row {
         grid-template-columns: 1fr;
         gap: 0;
     }
 
-    .price-summary {
-        grid-template-columns: 1fr;
+    .booking-box {
+        padding: 18px;
     }
 
-    .estimated-price .amount {
-        font-size: 29px;
+    header h1 {
+        font-size: 24px;
     }
-
 }
-
 </style>
 </head>
 
-
 <body>
 
-
 <header>
-
-<div class="header-container">
-
-<div class="logo">
-STEMA <span>TRANS</span>
-</div>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="tours.html">Tours</a>
-<a href="transfers.html">Transfers</a>
-<a href="rates.html">Rates</a>
-<a href="contact.html">Contact</a>
-</nav>
-
-</div>
-
+    <h1>STEMA TRANS</h1>
+    <p>City Tours, Transfers & Guided Experiences</p>
 </header>
 
+<div class="container">
 
-<section class="hero">
+<div class="booking-box">
 
-<div class="hero-content">
-
-<h1>Book With Stema Trans</h1>
-
-<p>
-Choose your service and send us your booking request.
-</p>
-
-</div>
-
-</section>
-
-
-<main class="container">
-
-
-<section class="intro">
-
-<h2>Booking & Enquiry Form</h2>
+<h2>Book Your Experience</h2>
 
 <p>
-Tell us about your trip and we'll help arrange your
-Nairobi experience.
+Please select your service below. The form will automatically show only the
+information required for that service.
 </p>
 
-</section>
+<form action="https://formsubmit.co/stemawastrans@gmail.com"
+      method="POST"
+      id="bookingForm">
 
-
-<div class="notice">
-
-<strong>Please Note</strong>
-
-The displayed amount is an estimated price.
-The final quotation may vary depending on the exact
-itinerary, locations, parking, attraction fees,
-waiting time, extra hours and special requirements.
-
-</div>
-
-
-<div class="form-box">
-
-
-<form
-action="https://formsubmit.co/Stemawastrans@gmail.com"
-method="POST"
->
-
-
-<!-- FORMSUBMIT -->
-
-<input
-type="hidden"
-name="_subject"
-value="New Stema Trans Booking Enquiry"
->
-
-<input
-type="hidden"
-name="_captcha"
-value="false"
->
-
-<input
-type="hidden"
-name="_next"
-value="https://themaina1.github.io/stema-trans-tours/thankyou.html"
->
-
+<!-- FORM SUBMIT SETTINGS -->
+<input type="hidden" name="_subject" value="New Stema Trans Booking">
+<input type="hidden" name="_next" value="https://themaina1.github.io/stema-trans-city-tours/thankyou.html">
+<input type="hidden" name="_captcha" value="false">
 
 <!-- CUSTOMER DETAILS -->
 
-<div class="form-section">
+<div class="section-title">
+    Customer Details
+</div>
 
-<h3>1. Your Details</h3>
+<div class="row">
 
+    <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="Full Name" required>
+    </div>
 
-<div class="two-column">
-
-
-<div class="form-group">
-
-<label for="name">
-Full Name *
-</label>
-
-<input
-type="text"
-id="name"
-name="Full Name"
-required
->
+    <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="Email" required>
+    </div>
 
 </div>
 
+<div class="row">
 
-<div class="form-group">
+    <div class="form-group">
+        <label for="phone">Phone / WhatsApp *</label>
+        <input type="tel" id="phone" name="Phone / WhatsApp" required>
+    </div>
 
-<label for="email">
-Email Address *
-</label>
-
-<input
-type="email"
-id="email"
-name="Email"
-required
->
-
-</div>
-
-
-</div>
-
-
-<div class="form-group">
-
-<label for="phone">
-Phone / WhatsApp Number *
-</label>
-
-<input
-type="tel"
-id="phone"
-name="Phone / WhatsApp"
-required
->
-
-</div>
+    <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" id="country" name="Country">
+    </div>
 
 </div>
 
 
 <!-- SERVICE -->
 
-<div class="form-section">
-
-<h3>2. Your Service</h3>
-
+<div class="section-title">
+    Select Your Service
+</div>
 
 <div class="form-group">
 
-<label for="service">
-Service Required *
-</label>
+<label for="service">Service *</label>
 
-<select
-id="service"
-name="Service Required"
-required
->
+<select id="service" name="Service" required onchange="showService()">
 
-<option value="">
-Select a service
-</option>
+    <option value="">-- Select a Service --</option>
 
+    <option value="city-tour">
+        City Tours & Excursions
+    </option>
 
-<optgroup label="Nairobi City Walks">
+    <option value="city-walk">
+        Nairobi City Walks
+    </option>
 
-<option value="city-orientation">
-Nairobi CBD City Walk & Orientation
-</option>
+    <option value="airport-transfer">
+        Airport Transfer
+    </option>
 
-<option value="city-highlights-walk">
-Nairobi Highlights Walk
-</option>
-
-<option value="history-culture-walk">
-Nairobi History & Culture Walk
-</option>
-
-<option value="food-local-walk">
-Nairobi Food & Local Life Walk
-</option>
-
-</optgroup>
-
-
-<optgroup label="City Tours & Excursions">
-
-<option value="city-tour">
-Nairobi City Tour
-</option>
-
-<option value="nairobi-national-park">
-Nairobi National Park
-</option>
-
-<option value="giraffe-centre">
-Giraffe Centre
-</option>
-
-<option value="museum">
-Nairobi National Museum
-</option>
-
-<option value="bomas">
-Bomas of Kenya
-</option>
-
-<option value="karen">
-Karen & Karen Blixen
-</option>
-
-<option value="custom">
-Custom Tour / Trip
-</option>
-
-</optgroup>
-
-
-<optgroup label="Transfers">
-
-<option value="airport-transfer">
-JKIA Airport Transfer
-</option>
-
-<option value="wilson-transfer">
-Wilson Airport Transfer
-</option>
-
-<option value="hotel-transfer">
-Hotel / Private Transfer
-</option>
-
-</optgroup>
+    <option value="hotel-transfer">
+        Hotel Transfer
+    </option>
 
 </select>
 
 </div>
 
 
-<!-- CITY WALK TYPE -->
+<!-- CITY TOURS -->
 
-<div
-class="form-group hidden"
-id="walkTypeSection"
->
+<div id="cityTourSection" class="hidden">
 
-<label for="walkType">
-Walking Tour Booking Type *
-</label>
-
-<select
-id="walkType"
-name="Walking Tour Booking Type"
->
-
-<option value="">
-Select booking type
-</option>
-
-<option value="per-person">
-Per Person
-</option>
-
-<option value="private-group">
-Private Group
-</option>
-
-</select>
-
+<div class="section-title">
+    City Tour / Excursion Details
 </div>
-
-
-<!-- PRIVATE GROUP -->
-
-<div
-class="form-group hidden"
-id="privateGroupSection"
->
-
-<label for="privateGroup">
-Private Group Size *
-</label>
-
-<select
-id="privateGroup"
-name="Private Group Size"
->
-
-<option value="">
-Select group size
-</option>
-
-<option value="1-2">
-1–2 people
-</option>
-
-<option value="3-4">
-3–4 people
-</option>
-
-<option value="5-7">
-5–7 people
-</option>
-
-</select>
-
-</div>
-
-
-<!-- PEOPLE FIELD -->
-
-<div
-class="form-group hidden"
-id="peopleSection"
->
-
-<label for="people">
-Number of People *
-</label>
-
-<select
-id="people"
-name="Number of People"
->
-
-<option value="">
-Select number of people
-</option>
-
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8+">8+</option>
-
-</select>
-
-</div>
-
-
-<!-- PASSENGERS FOR VEHICLE SERVICES -->
-
-<div
-class="form-group"
-id="passengerSection"
->
-
-<label for="passengers">
-Number of Passengers *
-</label>
-
-<select
-id="passengers"
-name="Number of Passengers"
-required
->
-
-<option value="">
-Select number of passengers
-</option>
-
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8+">8+</option>
-
-</select>
-
-</div>
-
-
-<!-- VEHICLE -->
-
-<div
-class="form-group"
-id="vehicleSection"
->
-
-<label for="vehicle">
-Vehicle Category *
-</label>
-
-<select
-id="vehicle"
-name="Vehicle Category"
->
-
-<option value="">
-Select vehicle
-</option>
-
-<option value="sedan">
-Sedan
-</option>
-
-<option value="suv">
-SUV
-</option>
-
-<option value="van">
-7-Seater Van
-</option>
-
-<option value="landcruiser">
-Safari Land Cruiser
-</option>
-
-</select>
-
-</div>
-
-
-<!-- DURATION -->
-
-<div
-class="form-group"
-id="durationSection"
->
-
-<label for="duration">
-Duration *
-</label>
-
-<select
-id="duration"
-name="Duration"
->
-
-<option value="">
-Select duration
-</option>
-
-<option value="3">
-3 Hours
-</option>
-
-<option value="4">
-4 Hours / Half Day
-</option>
-
-<option value="8">
-8 Hours / Full Day
-</option>
-
-</select>
-
-</div>
-
-
-<!-- CITY WALK DATE -->
-
-<div
-class="form-group hidden"
-id="walkDateSection"
->
-
-<label for="walkDate">
-City Tour Date *
-</label>
-
-<input
-type="date"
-id="walkDate"
-name="City Tour Date"
->
-
-</div>
-
-
-<!-- NORMAL TRAVEL DATE -->
-
-<div
-class="form-group"
-id="travelDateSection"
->
-
-<label for="travelDate">
-Travel Date *
-</label>
-
-<input
-type="date"
-id="travelDate"
-name="Travel Date"
-required
->
-
-</div>
-
-
-<!-- TIME -->
-
-<div class="form-group">
-
-<label for="time">
-Preferred Time *
-</label>
-
-<input
-type="time"
-id="time"
-name="Preferred Time"
-required
->
-
-</div>
-
-</div>
-
-
-<!-- CITY WALK LOCATION SECTION -->
-
-<div
-class="form-section hidden"
-id="walkLocationSection"
->
-
-<h3>3. City Walk Details</h3>
-
-
-<div class="form-group">
-
-<label for="meetup">
-Meet-up Point *
-</label>
-
-<input
-type="text"
-id="meetup"
-name="Meet-up Point"
-placeholder="Hotel, landmark, restaurant or agreed meeting point"
->
-
-</div>
-
 
 <div class="form-group">
 
 <label for="cityTour">
-City Tour / Walk *
+    Choose City Tour / Excursion *
 </label>
 
-<select
-id="cityTour"
-name="City Tour / Walk"
->
+<select id="cityTour" name="City Tour / Excursion">
 
 <option value="">
-Select your city walk
+    -- Select City Tour / Excursion --
 </option>
 
-<option value="Nairobi CBD City Walk & Orientation">
-Nairobi CBD City Walk & Orientation
+<option value="Nairobi City Highlights Tour">
+    Nairobi City Highlights Tour
 </option>
 
-<option value="Nairobi Highlights Walk">
-Nairobi Highlights Walk
+<option value="Giraffe Centre Tour">
+    Giraffe Centre Tour
 </option>
 
-<option value="Nairobi History & Culture Walk">
-Nairobi History & Culture Walk
+<option value="Nairobi National Museum">
+    Nairobi National Museum
 </option>
 
-<option value="Nairobi Food & Local Life Walk">
-Nairobi Food & Local Life Walk
+<option value="Bomas of Kenya">
+    Bomas of Kenya
+</option>
+
+<option value="Nairobi National Park">
+    Nairobi National Park
+</option>
+
+<option value="Karen Blixen Tour">
+    Karen Blixen Tour
+</option>
+
+</select>
+
+</div>
+
+<div class="row">
+
+<div class="form-group">
+
+<label for="tourDate">
+    Date *
+</label>
+
+<input type="date"
+       id="tourDate"
+       name="Tour Date">
+
+</div>
+
+<div class="form-group">
+
+<label for="tourTime">
+    Preferred Time *
+</label>
+
+<input type="time"
+       id="tourTime"
+       name="Preferred Time">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="form-group">
+
+<label for="tourPeople">
+    Number of People *
+</label>
+
+<input type="number"
+       id="tourPeople"
+       name="Number of People"
+       min="1"
+       value="1">
+
+</div>
+
+<div class="form-group">
+
+<label for="tourVehicle">
+    Vehicle *
+</label>
+
+<select id="tourVehicle"
+        name="Vehicle">
+
+<option value="">
+    -- Select Vehicle --
+</option>
+
+<option value="Tour Van">
+    Tour Van (1–7 passengers)
+</option>
+
+<option value="Land Cruiser">
+    Land Cruiser (1–7 passengers)
 </option>
 
 </select>
@@ -956,73 +384,348 @@ Nairobi Food & Local Life Walk
 
 </div>
 
-
-<!-- VEHICLE LOCATION SECTION -->
-
-<div
-class="form-section"
-id="vehicleLocationSection"
->
-
-<h3>3. Pickup & Destination</h3>
-
-
 <div class="form-group">
 
-<label for="pickup">
-Pickup Location *
+<label for="tourPickup">
+    Pickup Location *
 </label>
 
-<input
-type="text"
-id="pickup"
-name="Pickup Location"
-placeholder="Hotel, airport, residence or other location"
->
-
-</div>
-
-
-<div class="form-group">
-
-<label for="destination">
-Destination *
-</label>
-
-<input
-type="text"
-id="destination"
-name="Destination"
-placeholder="Where would you like to go?"
->
+<input type="text"
+       id="tourPickup"
+       name="Pickup Location">
 
 </div>
 
 </div>
 
 
-<!-- FLIGHT INFORMATION -->
+<!-- CITY WALKS -->
 
-<div
-class="form-section hidden"
-id="flightSection"
->
+<div id="cityWalkSection" class="hidden">
 
-<h3>4. Flight Information</h3>
-
+<div class="section-title">
+    Nairobi City Walk Details
+</div>
 
 <div class="form-group">
 
-<label for="flight">
-Flight Number *
+<label for="cityWalk">
+    Choose Your Walk *
 </label>
 
-<input
-type="text"
-id="flight"
-name="Flight Number"
-placeholder="e.g. KQ 101"
->
+<select id="cityWalk"
+        name="City Walk">
+
+<option value="">
+    -- Select City Walk --
+</option>
+
+<option value="Nairobi Highlights Walk">
+    Nairobi Highlights Walk
+</option>
+
+<option value="Nairobi History & Culture Walk">
+    Nairobi History & Culture Walk
+</option>
+
+<option value="Nairobi Food & Local Life Walk">
+    Nairobi Food & Local Life Walk
+</option>
+
+</select>
+
+</div>
+
+<div class="row">
+
+<div class="form-group">
+
+<label for="walkDate">
+    Date *
+</label>
+
+<input type="date"
+       id="walkDate"
+       name="Walk Date">
+
+</div>
+
+<div class="form-group">
+
+<label for="walkTime">
+    Preferred Time *
+</label>
+
+<input type="time"
+       id="walkTime"
+       name="Walk Time">
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label for="walkPeople">
+    People *
+</label>
+
+<input type="number"
+       id="walkPeople"
+       name="People"
+       min="1"
+       value="1">
+
+</div>
+
+<div class="form-group">
+
+<label for="meetingPoint">
+    Meeting Point *
+</label>
+
+<input type="text"
+       id="meetingPoint"
+       name="Meeting Point"
+       placeholder="e.g. Hotel, CBD meeting point">
+
+</div>
+
+</div>
+
+
+<!-- AIRPORT TRANSFER -->
+
+<div id="airportSection" class="hidden">
+
+<div class="section-title">
+    Airport Transfer Details
+</div>
+
+<div class="form-group">
+
+<label for="airportType">
+    Transfer Type *
+</label>
+
+<select id="airportType"
+        name="Airport Transfer Type">
+
+<option value="">
+    -- Select Transfer Type --
+</option>
+
+<option value="Airport Pickup">
+    Airport Pickup
+</option>
+
+<option value="Airport Drop-off">
+    Airport Drop-off
+</option>
+
+</select>
+
+</div>
+
+<div class="row">
+
+<div class="form-group">
+
+<label for="airportDate">
+    Date *
+</label>
+
+<input type="date"
+       id="airportDate"
+       name="Airport Transfer Date">
+
+</div>
+
+<div class="form-group">
+
+<label for="airportTime">
+    Time *
+</label>
+
+<input type="time"
+       id="airportTime"
+       name="Airport Transfer Time">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="form-group">
+
+<label for="airportPeople">
+    Number of Passengers *
+</label>
+
+<input type="number"
+       id="airportPeople"
+       name="Number of Passengers"
+       min="1"
+       value="1">
+
+</div>
+
+<div class="form-group">
+
+<label for="airportVehicle">
+    Vehicle *
+</label>
+
+<select id="airportVehicle"
+        name="Airport Vehicle">
+
+<option value="">
+    -- Select Vehicle --
+</option>
+
+<option value="Tour Van">
+    Tour Van (1–7 passengers)
+</option>
+
+<option value="Land Cruiser">
+    Land Cruiser (1–7 passengers)
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label for="airportLocation">
+    Pickup / Drop-off Location *
+</label>
+
+<input type="text"
+       id="airportLocation"
+       name="Airport Pickup / Drop-off Location">
+
+</div>
+
+<div class="form-group">
+
+<label for="flightNumber">
+    Flight Number
+</label>
+
+<input type="text"
+       id="flightNumber"
+       name="Flight Number"
+       placeholder="e.g. KQ 101">
+
+</div>
+
+</div>
+
+
+<!-- HOTEL TRANSFER -->
+
+<div id="hotelSection" class="hidden">
+
+<div class="section-title">
+    Hotel Transfer Details
+</div>
+
+<div class="row">
+
+<div class="form-group">
+
+<label for="hotelDate">
+    Date *
+</label>
+
+<input type="date"
+       id="hotelDate"
+       name="Hotel Transfer Date">
+
+</div>
+
+<div class="form-group">
+
+<label for="hotelTime">
+    Time *
+</label>
+
+<input type="time"
+       id="hotelTime"
+       name="Hotel Transfer Time">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="form-group">
+
+<label for="hotelPeople">
+    Number of Passengers *
+</label>
+
+<input type="number"
+       id="hotelPeople"
+       name="Hotel Passengers"
+       min="1"
+       value="1">
+
+</div>
+
+<div class="form-group">
+
+<label for="hotelVehicle">
+    Vehicle *
+</label>
+
+<select id="hotelVehicle"
+        name="Hotel Vehicle">
+
+<option value="">
+    -- Select Vehicle --
+</option>
+
+<option value="Tour Van">
+    Tour Van (1–7 passengers)
+</option>
+
+<option value="Land Cruiser">
+    Land Cruiser (1–7 passengers)
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label for="hotelPickup">
+    Pickup Location *
+</label>
+
+<input type="text"
+       id="hotelPickup"
+       name="Hotel Pickup Location">
+
+</div>
+
+<div class="form-group">
+
+<label for="hotelDropoff">
+    Drop-off Location *
+</label>
+
+<input type="text"
+       id="hotelDropoff"
+       name="Hotel Drop-off Location">
 
 </div>
 
@@ -1033,1270 +736,363 @@ placeholder="e.g. KQ 101"
 
 <div class="price-box">
 
-<h3>
-Estimated Booking Price
-</h3>
+<h3>Booking Price</h3>
 
-
-<div class="price-summary">
-
-
-<div>
-
-<span class="price-label">
-Service:
-</span>
-
-<span id="summaryService">
-—
-</span>
-
-</div>
-
-
-<div>
-
-<span class="price-label"
-id="summaryPeopleLabel">
-Passengers:
-</span>
-
-<span id="summaryPeople">
-—
-</span>
-
-</div>
-
-
-<div
-id="summaryVehicleRow"
->
-
-<span class="price-label">
-Vehicle:
-</span>
-
-<span id="summaryVehicle">
-—
-</span>
-
-</div>
-
-
-<div>
-
-<span class="price-label">
-Duration:
-</span>
-
-<span id="summaryDuration">
-—
-</span>
-
-</div>
-
-
-<div>
-
-<span class="price-label">
-Booking Type:
-</span>
-
-<span id="summaryType">
-—
-</span>
-
+<div id="priceDetails">
+    Select a service to see the applicable price.
 </div>
 
 </div>
 
 
-<div class="estimated-price">
+<!-- SPECIAL REQUESTS -->
 
-<div class="price-label">
-Estimated Total
+<div class="section-title">
+    Additional Information
 </div>
-
-<div
-class="amount"
-id="estimatedPrice"
->
-Select your trip details
-</div>
-
-</div>
-
-
-<div
-class="price-note"
-id="priceNote"
->
-Select your service and details to calculate
-your estimated price.
-</div>
-
-
-<div
-class="vehicle-warning"
-id="vehicleWarning"
->
-</div>
-
-
-<div
-class="vehicle-ok"
-id="vehicleOK"
->
-</div>
-
-</div>
-
-
-<!-- ADDITIONAL INFORMATION -->
-
-<div class="form-section">
-
-<h3 id="additionalHeading">
-5. Additional Information
-</h3>
-
 
 <div class="form-group">
 
-<label for="message">
-Special Requests / Itinerary Details
+<label for="requests">
+    Special Requests / Additional Information
 </label>
 
-<textarea
-id="message"
-name="Additional Information"
-placeholder="Tell us anything else we should know about your trip..."
-></textarea>
-
-</div>
+<textarea id="requests"
+          name="Special Requests"
+          placeholder="Tell us anything else we should know about your booking..."></textarea>
 
 </div>
 
 
-<!-- HIDDEN PRICE -->
-
-<input
-type="hidden"
-id="calculatedPrice"
-name="Estimated Booking Price"
-value=""
->
+<div class="notice">
+<strong>Important:</strong>
+Transport charges for vehicle-based services are per vehicle.
+City Walk charges are per person.
+Attraction and park entry fees are charged separately unless otherwise stated.
+</div>
 
 
-<div class="submit-area">
-
-<button type="submit">
-Send Booking Request
+<button type="submit" class="submit-btn">
+    Book Now
 </button>
-
-<p class="small-note">
-We will confirm availability and the final quotation
-after receiving your request.
-</p>
-
-</div>
-
 
 </form>
 
 </div>
 
-</main>
+<a href="index.html" class="back-link">
+    ← Back to Home
+</a>
 
-
-<footer>
-
-<p>
-<strong>STEMA TRANS</strong>
-— Nairobi City Tours, Transfers & Guided Experiences
-</p>
-
-<p>
-© 2026 Stema Trans. All Rights Reserved.
-</p>
-
-</footer>
+</div>
 
 
 <script>
 
 /* =========================
-   ELEMENTS
+   SERVICE DISPLAY
 ========================= */
 
-const service = document.getElementById("service");
+function showService() {
 
-const walkTypeSection =
-document.getElementById("walkTypeSection");
+    const service = document.getElementById("service").value;
 
-const walkType =
-document.getElementById("walkType");
+    const sections = [
+        "cityTourSection",
+        "cityWalkSection",
+        "airportSection",
+        "hotelSection"
+    ];
 
-const privateGroupSection =
-document.getElementById("privateGroupSection");
+    sections.forEach(function(id) {
+        document.getElementById(id).classList.add("hidden");
+    });
 
-const privateGroup =
-document.getElementById("privateGroup");
+    if (service === "city-tour") {
+        document.getElementById("cityTourSection").classList.remove("hidden");
+    }
 
-const peopleSection =
-document.getElementById("peopleSection");
+    if (service === "city-walk") {
+        document.getElementById("cityWalkSection").classList.remove("hidden");
+    }
 
-const people =
-document.getElementById("people");
+    if (service === "airport-transfer") {
+        document.getElementById("airportSection").classList.remove("hidden");
+    }
 
-const passengerSection =
-document.getElementById("passengerSection");
+    if (service === "hotel-transfer") {
+        document.getElementById("hotelSection").classList.remove("hidden");
+    }
 
-const passengers =
-document.getElementById("passengers");
-
-const vehicleSection =
-document.getElementById("vehicleSection");
-
-const vehicle =
-document.getElementById("vehicle");
-
-const durationSection =
-document.getElementById("durationSection");
-
-const duration =
-document.getElementById("duration");
-
-const walkDateSection =
-document.getElementById("walkDateSection");
-
-const walkDate =
-document.getElementById("walkDate");
-
-const travelDateSection =
-document.getElementById("travelDateSection");
-
-const travelDate =
-document.getElementById("travelDate");
-
-const walkLocationSection =
-document.getElementById("walkLocationSection");
-
-const meetup =
-document.getElementById("meetup");
-
-const cityTour =
-document.getElementById("cityTour");
-
-const vehicleLocationSection =
-document.getElementById("vehicleLocationSection");
-
-const pickup =
-document.getElementById("pickup");
-
-const destination =
-document.getElementById("destination");
-
-const flightSection =
-document.getElementById("flightSection");
-
-const flight =
-document.getElementById("flight");
-
-const summaryService =
-document.getElementById("summaryService");
-
-const summaryPeopleLabel =
-document.getElementById("summaryPeopleLabel");
-
-const summaryPeople =
-document.getElementById("summaryPeople");
-
-const summaryVehicleRow =
-document.getElementById("summaryVehicleRow");
-
-const summaryVehicle =
-document.getElementById("summaryVehicle");
-
-const summaryDuration =
-document.getElementById("summaryDuration");
-
-const summaryType =
-document.getElementById("summaryType");
-
-const estimatedPrice =
-document.getElementById("estimatedPrice");
-
-const priceNote =
-document.getElementById("priceNote");
-
-const calculatedPrice =
-document.getElementById("calculatedPrice");
-
-const vehicleWarning =
-document.getElementById("vehicleWarning");
-
-const vehicleOK =
-document.getElementById("vehicleOK");
-
-
-/* =========================
-   SERVICE NAMES
-========================= */
-
-const serviceNames = {
-
-"city-orientation":
-"Nairobi CBD City Walk & Orientation",
-
-"city-highlights-walk":
-"Nairobi Highlights Walk",
-
-"history-culture-walk":
-"Nairobi History & Culture Walk",
-
-"food-local-walk":
-"Nairobi Food & Local Life Walk",
-
-"city-tour":
-"Nairobi City Tour",
-
-"nairobi-national-park":
-"Nairobi National Park",
-
-"giraffe-centre":
-"Giraffe Centre",
-
-"museum":
-"Nairobi National Museum",
-
-"bomas":
-"Bomas of Kenya",
-
-"karen":
-"Karen & Karen Blixen",
-
-"custom":
-"Custom Tour / Trip",
-
-"airport-transfer":
-"JKIA Airport Transfer",
-
-"wilson-transfer":
-"Wilson Airport Transfer",
-
-"hotel-transfer":
-"Hotel / Private Transfer"
-
-};
-
-
-/* =========================
-   VEHICLE NAMES
-========================= */
-
-const vehicleNames = {
-
-sedan: "Sedan",
-
-suv: "SUV",
-
-van: "7-Seater Van",
-
-landcruiser: "Safari Land Cruiser"
-
-};
-
-
-/* =========================
-   WALK DURATIONS
-========================= */
-
-const walkDurations = {
-
-"city-orientation":
-"2–2.5 Hours",
-
-"city-highlights-walk":
-"2.5–3 Hours",
-
-"history-culture-walk":
-"3 Hours",
-
-"food-local-walk":
-"3 Hours"
-
-};
-
-
-/* =========================
-   WALK PRICES
-========================= */
-
-const walkRates = {
-
-"city-orientation": 2000,
-
-"city-highlights-walk": 2500,
-
-"history-culture-walk": 3000,
-
-"food-local-walk": 3500
-
-};
-
-
-/* =========================
-   PRIVATE GROUP PRICES
-========================= */
-
-const privateGroupRates = {
-
-"1-2": 4000,
-
-"3-4": 7000,
-
-"5-7": 10000
-
-};
-
-
-/* =========================
-   VEHICLE CITY RATES
-========================= */
-
-const vehicleRates = {
-
-sedan: {
-3: 4500,
-4: 6000,
-8: 9500
-},
-
-suv: {
-3: 6000,
-4: 8000,
-8: 13000
-},
-
-van: {
-3: 6500,
-4: 8500,
-8: 15000
-},
-
-landcruiser: {
-3: 9000,
-4: 12000,
-8: 20000
+    updatePrice();
 }
 
-};
+
+/* =========================
+   PRICE CALCULATION
+========================= */
+
+function updatePrice() {
+
+    const service = document.getElementById("service").value;
+    const priceDetails = document.getElementById("priceDetails");
+
+    /* CITY WALKS */
+
+    if (service === "city-walk") {
+
+        const walk = document.getElementById("cityWalk").value;
+        const people = parseInt(
+            document.getElementById("walkPeople").value
+        ) || 1;
+
+        if (!walk) {
+            priceDetails.innerHTML =
+                "Select a city walk to see the price.";
+            return;
+        }
+
+        let pricePerPerson = 2500;
+
+        if (walk === "Nairobi Food & Local Life Walk") {
+            pricePerPerson = 3500;
+        }
+
+        const total = pricePerPerson * people;
+
+        priceDetails.innerHTML =
+            "<strong>" + walk + "</strong><br>" +
+            "KES " + pricePerPerson.toLocaleString() +
+            " per person × " + people +
+            "<br><strong>Total: KES " +
+            total.toLocaleString() +
+            "</strong>";
+
+        return;
+    }
+
+
+    /* CITY TOURS */
+
+    if (service === "city-tour") {
+
+        const vehicle =
+            document.getElementById("tourVehicle").value;
+
+        if (!vehicle) {
+            priceDetails.innerHTML =
+                "Select a vehicle to see the transport price.";
+            return;
+        }
+
+        let price = 0;
+
+        if (vehicle === "Tour Van") {
+            price = 5500;
+        }
+
+        if (vehicle === "Land Cruiser") {
+            price = 8500;
+        }
+
+        priceDetails.innerHTML =
+            "Transport: <strong>KES " +
+            price.toLocaleString() +
+            " per vehicle</strong><br>" +
+            "Attraction and park entry fees are separate.";
+
+        return;
+    }
+
+
+    /* AIRPORT TRANSFER */
+
+    if (service === "airport-transfer") {
+
+        const vehicle =
+            document.getElementById("airportVehicle").value;
+
+        if (!vehicle) {
+            priceDetails.innerHTML =
+                "Select a vehicle to see the transport price.";
+            return;
+        }
+
+        let price = 0;
+
+        if (vehicle === "Tour Van") {
+            price = 5500;
+        }
+
+        if (vehicle === "Land Cruiser") {
+            price = 8500;
+        }
+
+        priceDetails.innerHTML =
+            "Transport: <strong>KES " +
+            price.toLocaleString() +
+            " per vehicle</strong>";
+
+        return;
+    }
+
+
+    /* HOTEL TRANSFER */
+
+    if (service === "hotel-transfer") {
+
+        const vehicle =
+            document.getElementById("hotelVehicle").value;
+
+        if (!vehicle) {
+            priceDetails.innerHTML =
+                "Select a vehicle to see the transport price.";
+            return;
+        }
+
+        let price = 0;
+
+        if (vehicle === "Tour Van") {
+            price = 5500;
+        }
+
+        if (vehicle === "Land Cruiser") {
+            price = 8500;
+        }
+
+        priceDetails.innerHTML =
+            "Transport: <strong>KES " +
+            price.toLocaleString() +
+            " per vehicle</strong>";
+
+        return;
+    }
+
+
+    priceDetails.innerHTML =
+        "Select a service to see the applicable price.";
+}
 
 
 /* =========================
-   AIRPORT RATES
+   PRICE UPDATE EVENTS
 ========================= */
 
-const airportRates = {
+document.addEventListener("DOMContentLoaded", function() {
 
-sedan: 3000,
+    const fields = document.querySelectorAll(
+        "#cityWalk, #walkPeople, #tourVehicle, " +
+        "#airportVehicle, #hotelVehicle"
+    );
 
-suv: 4500,
+    fields.forEach(function(field) {
+        field.addEventListener("change", updatePrice);
+        field.addEventListener("input", updatePrice);
+    });
 
-van: 5000,
-
-landcruiser: 7000
-
-};
+});
 
 
 /* =========================
-   VEHICLE CAPACITY
+   FORM VALIDATION
 ========================= */
 
-const capacities = {
+document.getElementById("bookingForm").addEventListener(
+    "submit",
+    function(event) {
 
-sedan: 4,
+        const service =
+            document.getElementById("service").value;
 
-suv: 5,
+        if (!service) {
+            event.preventDefault();
 
-van: 7,
+            alert("Please select a service before submitting your booking.");
 
-landcruiser: 7
+            return;
+        }
 
-};
+        /*
+         * CITY WALK VALIDATION
+         */
+
+        if (service === "city-walk") {
+
+            const walk =
+                document.getElementById("cityWalk").value;
+
+            const people =
+                document.getElementById("walkPeople").value;
+
+            const date =
+                document.getElementById("walkDate").value;
+
+            const time =
+                document.getElementById("walkTime").value;
+
+            const meeting =
+                document.getElementById("meetingPoint").value;
+
+            if (!walk || !people || !date || !time || !meeting) {
+
+                event.preventDefault();
+
+                alert(
+                    "Please complete all required City Walk details."
+                );
+
+                return;
+            }
+        }
 
 
-/* =========================
-   IDENTIFY CITY WALK
-========================= */
+        /*
+         * CITY TOUR VALIDATION
+         */
 
-function isCityWalk() {
+        if (service === "city-tour") {
 
-return (
+            const tour =
+                document.getElementById("cityTour").value;
 
-service.value === "city-orientation" ||
+            const vehicle =
+                document.getElementById("tourVehicle").value;
 
-service.value === "city-highlights-walk" ||
+            const people =
+                document.getElementById("tourPeople").value;
 
-service.value === "history-culture-walk" ||
+            const date =
+                document.getElementById("tourDate").value;
 
-service.value === "food-local-walk"
+            const time =
+                document.getElementById("tourTime").value;
 
+            const pickup =
+                document.getElementById("tourPickup").value;
+
+            if (
+                !tour ||
+                !vehicle ||
+                !people ||
+                !date ||
+                !time ||
+                !pickup
+            ) {
+
+                event.preventDefault();
+
+                alert(
+                    "Please complete all required City Tour details."
+                );
+
+                return;
+            }
+        }
+
+    }
 );
-
-}
-
-
-/* =========================
-   SHOW / HIDE FORM
-========================= */
-
-function updateForm() {
-
-const selected = service.value;
-
-const cityWalk = isCityWalk();
-
-const airport =
-selected === "airport-transfer";
-
-const transfer =
-selected === "airport-transfer" ||
-selected === "wilson-transfer" ||
-selected === "hotel-transfer";
-
-
-/* Reset */
-
-walkTypeSection.classList.add("hidden");
-
-privateGroupSection.classList.add("hidden");
-
-peopleSection.classList.add("hidden");
-
-passengerSection.classList.remove("hidden");
-
-vehicleSection.classList.remove("hidden");
-
-durationSection.classList.remove("hidden");
-
-walkDateSection.classList.add("hidden");
-
-travelDateSection.classList.remove("hidden");
-
-walkLocationSection.classList.add("hidden");
-
-vehicleLocationSection.classList.remove("hidden");
-
-flightSection.classList.add("hidden");
-
-
-/* Required reset */
-
-walkType.required = false;
-
-privateGroup.required = false;
-
-people.required = false;
-
-passengers.required = true;
-
-vehicle.required = false;
-
-duration.required = false;
-
-walkDate.required = false;
-
-travelDate.required = true;
-
-meetup.required = false;
-
-cityTour.required = false;
-
-pickup.required = false;
-
-destination.required = false;
-
-flight.required = false;
-
-
-/* =========================
-   CITY WALK
-========================= */
-
-if (cityWalk) {
-
-walkTypeSection.classList.remove("hidden");
-
-peopleSection.classList.remove("hidden");
-
-passengerSection.classList.add("hidden");
-
-vehicleSection.classList.add("hidden");
-
-durationSection.classList.add("hidden");
-
-walkDateSection.classList.remove("hidden");
-
-travelDateSection.classList.add("hidden");
-
-walkLocationSection.classList.remove("hidden");
-
-vehicleLocationSection.classList.add("hidden");
-
-summaryVehicleRow.classList.add("hidden");
-
-walkType.required = true;
-
-people.required = true;
-
-walkDate.required = true;
-
-meetup.required = true;
-
-cityTour.required = true;
-
-summaryPeopleLabel.textContent = "People:";
-
-}
-
-
-/* =========================
-   PRIVATE GROUP WALK
-========================= */
-
-if (
-cityWalk &&
-walkType.value === "private-group"
-) {
-
-privateGroupSection.classList.remove("hidden");
-
-privateGroup.required = true;
-
-people.required = false;
-
-}
-
-
-/* =========================
-   PER PERSON WALK
-========================= */
-
-if (
-cityWalk &&
-walkType.value === "per-person"
-) {
-
-privateGroupSection.classList.add("hidden");
-
-privateGroup.required = false;
-
-people.required = true;
-
-}
-
-
-/* =========================
-   VEHICLE SERVICES
-========================= */
-
-if (!cityWalk) {
-
-summaryVehicleRow.classList.remove("hidden");
-
-summaryPeopleLabel.textContent = "Passengers:";
-
-}
-
-
-/* =========================
-   AIRPORT TRANSFER
-========================= */
-
-if (airport) {
-
-flightSection.classList.remove("hidden");
-
-flight.required = true;
-
-}
-
-
-/* =========================
-   TRANSFER / VEHICLE
-========================= */
-
-if (!cityWalk) {
-
-vehicle.required = true;
-
-duration.required =
-!transfer;
-
-pickup.required = true;
-
-destination.required = true;
-
-}
-
-
-/* =========================
-   UPDATE
-========================= */
-
-updateSummary();
-
-calculatePrice();
-
-}
-
-
-/* =========================
-   SUMMARY
-========================= */
-
-function updateSummary() {
-
-const selected = service.value;
-
-const cityWalk = isCityWalk();
-
-
-summaryService.textContent =
-selected
-? serviceNames[selected]
-: "—";
-
-
-/* PEOPLE */
-
-if (cityWalk) {
-
-summaryPeople.textContent =
-people.value
-? people.value
-: "—";
-
-}
-
-else {
-
-summaryPeople.textContent =
-passengers.value
-? passengers.value
-: "—";
-
-}
-
-
-/* VEHICLE */
-
-if (!cityWalk) {
-
-summaryVehicle.textContent =
-vehicle.value
-? vehicleNames[vehicle.value]
-: "—";
-
-}
-
-
-/* DURATION */
-
-if (cityWalk) {
-
-summaryDuration.textContent =
-selected
-? walkDurations[selected]
-: "—";
-
-}
-
-else {
-
-summaryDuration.textContent =
-duration.value
-? duration.value + " Hours"
-: "—";
-
-}
-
-
-/* BOOKING TYPE */
-
-if (cityWalk) {
-
-summaryType.textContent =
-walkType.value === "per-person"
-? "Per Person"
-: walkType.value === "private-group"
-? "Private Group"
-: "—";
-
-}
-
-else {
-
-summaryType.textContent =
-"Private Vehicle";
-
-}
-
-}
-
-
-/* =========================
-   CAPACITY CHECK
-========================= */
-
-function checkCapacity() {
-
-vehicleWarning.style.display = "none";
-
-vehicleOK.style.display = "none";
-
-
-if (
-isCityWalk() ||
-!vehicle.value ||
-!passengers.value
-) {
-
-return;
-
-}
-
-
-if (passengers.value === "8+") {
-
-vehicleWarning.innerHTML =
-"<strong>Group size notice:</strong> " +
-"Groups of more than 7 passengers require a larger vehicle arrangement. " +
-"Please contact Stema Trans.";
-
-vehicleWarning.style.display = "block";
-
-return;
-
-}
-
-
-const count =
-parseInt(passengers.value);
-
-const capacity =
-capacities[vehicle.value];
-
-
-if (count > capacity) {
-
-vehicleWarning.innerHTML =
-"<strong>Vehicle may be too small:</strong> " +
-vehicleNames[vehicle.value] +
-" is recommended for up to " +
-capacity +
-" passengers. Please select a larger vehicle.";
-
-vehicleWarning.style.display = "block";
-
-}
-
-else {
-
-vehicleOK.innerHTML =
-"✓ " +
-vehicleNames[vehicle.value] +
-" is suitable for " +
-count +
-" passenger" +
-(count === 1 ? "" : "s") +
-".";
-
-vehicleOK.style.display = "block";
-
-}
-
-}
-
-
-/* =========================
-   CALCULATE PRICE
-========================= */
-
-function calculatePrice() {
-
-const selected = service.value;
-
-const cityWalk = isCityWalk();
-
-
-estimatedPrice.textContent =
-"Select your trip details";
-
-priceNote.textContent =
-"Select your service and details to calculate your estimated price.";
-
-calculatedPrice.value = "";
-
-
-/* NOTHING SELECTED */
-
-if (!selected) {
-
-updateSummary();
-
-return;
-
-}
-
-
-/* =========================
-   CITY WALKS
-========================= */
-
-if (cityWalk) {
-
-
-/* PER PERSON */
-
-if (walkType.value === "per-person") {
-
-if (!people.value) {
-
-estimatedPrice.textContent =
-"Select number of people";
-
-return;
-
-}
-
-
-if (people.value === "8+") {
-
-estimatedPrice.textContent =
-"Contact us";
-
-priceNote.textContent =
-"Groups larger than 7 should contact Stema Trans.";
-
-return;
-
-}
-
-
-const count =
-parseInt(people.value);
-
-
-const total =
-walkRates[selected] * count;
-
-
-estimatedPrice.textContent =
-"KES " +
-total.toLocaleString();
-
-
-priceNote.textContent =
-"KES " +
-walkRates[selected].toLocaleString() +
-" per person × " +
-count +
-" people.";
-
-
-calculatedPrice.value =
-"KES " +
-total.toLocaleString();
-
-return;
-
-}
-
-
-/* PRIVATE GROUP */
-
-if (walkType.value === "private-group") {
-
-if (!privateGroup.value) {
-
-estimatedPrice.textContent =
-"Select group size";
-
-return;
-
-}
-
-
-if (selected !== "city-orientation") {
-
-estimatedPrice.textContent =
-"Contact us";
-
-priceNote.textContent =
-"Private group pricing is currently available for " +
-"Nairobi CBD City Walk & Orientation.";
-
-return;
-
-}
-
-
-const total =
-privateGroupRates[privateGroup.value];
-
-
-estimatedPrice.textContent =
-"KES " +
-total.toLocaleString();
-
-
-priceNote.textContent =
-"Private CBD City Walk & Orientation for " +
-privateGroup.value +
-" people.";
-
-
-calculatedPrice.value =
-"KES " +
-total.toLocaleString();
-
-return;
-
-}
-
-
-return;
-
-}
-
-
-/* =========================
-   AIRPORT TRANSFER
-========================= */
-
-if (selected === "airport-transfer") {
-
-if (!vehicle.value) {
-
-estimatedPrice.textContent =
-"Select vehicle";
-
-return;
-
-}
-
-
-const total =
-airportRates[vehicle.value];
-
-
-estimatedPrice.textContent =
-"From KES " +
-total.toLocaleString();
-
-
-priceNote.textContent =
-"One-way starting rate. Final price depends on " +
-"pickup/drop-off location and requirements.";
-
-
-calculatedPrice.value =
-"From KES " +
-total.toLocaleString();
-
-
-checkCapacity();
-
-return;
-
-}
-
-
-/* =========================
-   WILSON TRANSFER
-========================= */
-
-if (selected === "wilson-transfer") {
-
-estimatedPrice.textContent =
-"From KES 2,500";
-
-
-priceNote.textContent =
-"Starting rate. Final price depends on destination " +
-"and vehicle requirements.";
-
-
-calculatedPrice.value =
-"From KES 2,500";
-
-
-checkCapacity();
-
-return;
-
-}
-
-
-/* =========================
-   OTHER VEHICLE SERVICES
-========================= */
-
-if (
-selected === "city-tour" ||
-selected === "hotel-transfer" ||
-selected === "nairobi-national-park" ||
-selected === "giraffe-centre" ||
-selected === "museum" ||
-selected === "bomas" ||
-selected === "karen" ||
-selected === "custom"
-) {
-
-
-if (!vehicle.value) {
-
-estimatedPrice.textContent =
-"Select vehicle";
-
-return;
-
-}
-
-
-if (!duration.value) {
-
-estimatedPrice.textContent =
-"Select duration";
-
-return;
-
-}
-
-
-const total =
-vehicleRates[vehicle.value][duration.value];
-
-
-estimatedPrice.textContent =
-"KES " +
-total.toLocaleString();
-
-
-priceNote.textContent =
-"Vehicle and driver/guide charge. " +
-"Attraction and park entry fees are separate.";
-
-
-calculatedPrice.value =
-"KES " +
-total.toLocaleString();
-
-
-checkCapacity();
-
-return;
-
-}
-
-
-updateSummary();
-
-}
-
-
-/* =========================
-   EVENT LISTENERS
-========================= */
-
-service.addEventListener(
-"change",
-updateForm
-);
-
-
-walkType.addEventListener(
-"change",
-function() {
-
-updateForm();
-
-}
-);
-
-
-privateGroup.addEventListener(
-"change",
-function() {
-
-updateSummary();
-
-calculatePrice();
-
-}
-);
-
-
-people.addEventListener(
-"change",
-function() {
-
-updateSummary();
-
-calculatePrice();
-
-}
-);
-
-
-passengers.addEventListener(
-"change",
-function() {
-
-updateSummary();
-
-calculatePrice();
-
-}
-);
-
-
-vehicle.addEventListener(
-"change",
-function() {
-
-updateSummary();
-
-calculatePrice();
-
-}
-);
-
-
-duration.addEventListener(
-"change",
-function() {
-
-updateSummary();
-
-calculatePrice();
-
-}
-);
-
-
-/* =========================
-   INITIAL STATE
-========================= */
-
-updateForm();
 
 </script>
-
 
 </body>
 </html>
