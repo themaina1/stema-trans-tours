@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fleet | Stema Trans Nairobi City Tours</title>
+
+<meta name="description"
+content="Explore the Stema Trans vehicle fleet for Nairobi city tours, airport transfers, private transfers and excursions. Sedan, SUV, Tour Van and Tour Land Cruiser options.">
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f7f8f6;
+    color:#222;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#063d28;
+    box-shadow:0 3px 15px rgba(0,0,0,.18);
+}
+
+.nav-inner{
+    max-width:1200px;
+    margin:auto;
+    min-height:70px;
+    padding:0 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:#fff;
+    font-size:24px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#e6b34a;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:17px;
+}
+
+.nav-links a{
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    color:#e6b34a;
+}
+
+.book{
+    background:#e6b34a;
+    color:#063d28 !important;
+    padding:10px 17px;
+    border-radius:6px;
+}
+
+
+/* =========================
+   PAGE HERO
+========================= */
+
+.page-hero{
+    min-height:430px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.48),
+        rgba(0,0,0,.65)
+    ),
+    url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_city_skyline_at_dawn_2025.jpg")
+    center/cover no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:#fff;
+}
+
+.page-hero-content{
+    max-width:800px;
+    padding:70px 20px;
+}
+
+.badge{
+    display:inline-block;
+
+    background:#e6b34a;
+    color:#063d28;
+
+    padding:7px 14px;
+    border-radius:5px;
+
+    font-size:13px;
+    font-weight:bold;
+
+    text-transform:uppercase;
+    letter-spacing:1.2px;
+}
+
+.page-hero h1{
+    font-size:52px;
+    line-height:1.1;
+    margin:18px 0;
+}
+
+.page-hero h1 span{
+    color:#e6b34a;
+}
+
+.page-hero p{
+    font-size:19px;
+    max-width:700px;
+    margin:auto;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:75px 20px;
+}
+
+.heading{
+    max-width:800px;
+    margin:0 auto 45px;
+    text-align:center;
+}
+
+.kicker{
+    color:#087044;
+    font-size:13px;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+}
+
+.heading h2{
+    color:#063d28;
+    font-size:38px;
+    margin:8px 0 12px;
+}
+
+.heading p{
+    color:#666;
+}
+
+
+/* =========================
+   FLEET GRID
+========================= */
+
+.fleet-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+}
+
+.vehicle-card{
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.11);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.vehicle-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 28px rgba(0,0,0,.16);
+}
+
+.vehicle-photo{
+    height:330px;
+    overflow:hidden;
+    background:#ddd;
+}
+
+.vehicle-photo img{
+    transition:transform .4s ease;
+}
+
+.vehicle-card:hover .vehicle-photo img{
+    transform:scale(1.04);
+}
+
+.vehicle-info{
+    padding:25px;
+}
+
+.vehicle-info h3{
+    margin:0 0 8px;
+    color:#063d28;
+    font-size:27px;
+}
+
+.vehicle-info p{
+    color:#666;
+    margin:0 0 18px;
+}
+
+.vehicle-details{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin:18px 0;
+}
+
+.detail{
+    background:#f1f5f2;
+    border-radius:7px;
+    padding:11px;
+}
+
+.detail strong{
+    display:block;
+    color:#063d28;
+    font-size:13px;
+}
+
+.detail span{
+    color:#666;
+    font-size:14px;
+}
+
+.rate{
+    border-top:1px solid #ddd;
+    padding-top:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.rate-label{
+    color:#666;
+    font-size:13px;
+}
+
+.rate-price{
+    color:#9a6700;
+    font-size:21px;
+    font-weight:bold;
+}
+
+.vehicle-button{
+    display:inline-block;
+
+    background:#063d28;
+    color:#fff;
+
+    padding:11px 17px;
+    border-radius:6px;
+
+    font-weight:bold;
+    font-size:14px;
+}
+
+.vehicle-button:hover{
+    background:#087044;
+}
+
+
+/* =========================
+   PRICING NOTE
+========================= */
+
+.pricing-note{
+    margin-top:40px;
+
+    background:#eaf1ec;
+    border-left:5px solid #087044;
+
+    padding:22px 25px;
+    border-radius:8px;
+}
+
+.pricing-note h3{
+    margin-top:0;
+    color:#063d28;
+}
+
+.pricing-note p{
+    margin-bottom:8px;
+    color:#555;
+}
+
+.pricing-note strong{
+    color:#063d28;
+}
+
+
+/* =========================
+   USE CASES
+========================= */
+
+.use-area{
+    background:#063d28;
+    color:#fff;
+}
+
+.use-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:75px 20px;
+}
+
+.use-heading{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 45px;
+}
+
+.use-heading .kicker{
+    color:#e6b34a;
+}
+
+.use-heading h2{
+    font-size:38px;
+    margin:8px 0;
+}
+
+.use-heading p{
+    color:#dbe6df;
+}
+
+.use-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.use-card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+
+    padding:25px 20px;
+    border-radius:10px;
+
+    text-align:center;
+}
+
+.use-icon{
+    width:58px;
+    height:58px;
+
+    margin:0 auto 15px;
+
+    border-radius:50%;
+
+    background:#e6b34a;
+    color:#063d28;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:23px;
+    font-weight:bold;
+}
+
+.use-card h3{
+    margin:8px 0;
+}
+
+.use-card p{
+    color:#dbe6df;
+    font-size:14px;
+}
+
+
+/* =========================
+   BOOKING CTA
+========================= */
+
+.cta{
+    background:#f0f4f1;
+    text-align:center;
+    padding:75px 20px;
+}
+
+.cta-content{
+    max-width:750px;
+    margin:auto;
+}
+
+.cta h2{
+    color:#063d28;
+    font-size:38px;
+    margin:0 0 12px;
+}
+
+.cta p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.cta-button{
+    display:inline-block;
+
+    background:#e6b34a;
+    color:#063d28;
+
+    padding:14px 25px;
+
+    border-radius:7px;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#032d1d;
+    color:#fff;
+    padding:50px 20px 20px;
+}
+
+.footer-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:35px;
+}
+
+footer h3{
+    color:#e6b34a;
+}
+
+footer p,
+footer li{
+    color:#d7dfda;
+}
+
+footer ul{
+    list-style:none;
+    padding:0;
+}
+
+footer li{
+    margin:7px 0;
+}
+
+footer a{
+    color:#d7dfda;
+}
+
+footer a:hover{
+    color:#e6b34a;
+}
+
+.copyright{
+    max-width:1100px;
+    margin:30px auto 0;
+    padding-top:18px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+    color:#9daaa3;
+    font-size:13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:950px){
+
+    .nav-links{
+        gap:9px;
+    }
+
+    .nav-links a{
+        font-size:12px;
+    }
+
+    .fleet-grid{
+        grid-template-columns:1fr;
+    }
+
+    .use-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .page-hero h1{
+        font-size:45px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .nav-links a:not(.book){
+        display:none;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
+    .page-hero{
+        min-height:370px;
+    }
+
+    .page-hero h1{
+        font-size:37px;
+    }
+
+    .page-hero p{
+        font-size:16px;
+    }
+
+    .heading h2,
+    .use-heading h2,
+    .cta h2{
+        font-size:30px;
+    }
+
+    .vehicle-photo{
+        height:260px;
+    }
+
+    .vehicle-details{
+        grid-template-columns:1fr;
+    }
+
+    .rate{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .use-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="navbar">
+
+<div class="nav-inner">
+
+<a href="index.html" class="logo">
+STEMA <span>TRANS</span>
+</a>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="tours.html">Tours</a>
+
+<a href="city-walks.html">City Walks</a>
+
+<a href="transfers.html">Transfers</a>
+
+<a href="fleet.html">Fleet</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="contact.html">Contact</a>
+
+<a href="booking.html" class="book">
+BOOK NOW
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="page-hero">
+
+<div class="page-hero-content">
+
+<div class="badge">
+Stema Trans Fleet
+</div>
+
+<h1>
+Choose Your <span>Ride</span>
+</h1>
+
+<p>
+Comfortable vehicle options for Nairobi city tours,
+airport transfers, private transfers and excursions.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FLEET
+========================= -->
+
+<section class="section">
+
+<div class="heading">
+
+<div class="kicker">
+Our Vehicles
+</div>
+
+<h2>
+Vehicles for Every Type of Journey
+</h2>
+
+<p>
+Choose the vehicle that best suits your group,
+comfort requirements and type of experience.
+</p>
+
+</div>
+
+
+<div class="fleet-grid">
+
+
+<!-- =========================
+     SEDAN
+========================= -->
+
+<div class="vehicle-card">
+
+<div class="vehicle-photo">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/2004-2007_Toyota_Premio.jpg"
+alt="Toyota Premio sedan">
+
+</div>
+
+<div class="vehicle-info">
+
+<h3>
+Sedan
+</h3>
+
+<p>
+A comfortable and practical option for
+individual travellers, couples and small groups.
+Ideal for airport transfers, hotel transfers
+and private Nairobi city trips.
+</p>
+
+<div class="vehicle-details">
+
+<div class="detail">
+
+<strong>Capacity</strong>
+
+<span>
+Up to 3 passengers
+</span>
+
+</div>
+
+<div class="detail">
+
+<strong>Best For</strong>
+
+<span>
+Transfers & city tours
+</span>
+
+</div>
+
+</div>
+
+<div class="rate">
+
+<div>
+
+<div class="rate-label">
+Vehicle rate
+</div>
+
+<div class="rate-price">
+From KES 4,500
+</div>
+
+</div>
+
+<a href="booking.html" class="vehicle-button">
+Book Sedan
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     SUV
+========================= -->
+
+<div class="vehicle-card">
+
+<div class="vehicle-photo">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Toyota_Land_Cruiser_Prado_%28second_generation%29_%28rear%29%2C_Serdang.jpg"
+alt="Toyota Land Cruiser Prado SUV">
+
+</div>
+
+<div class="vehicle-info">
+
+<h3>
+SUV
+</h3>
+
+<p>
+A spacious and comfortable choice for small
+groups wanting extra room and comfort during
+city tours, transfers and excursions.
+</p>
+
+<div class="vehicle-details">
+
+<div class="detail">
+
+<strong>Capacity</strong>
+
+<span>
+Up to 5 passengers
+</span>
+
+</div>
+
+<div class="detail">
+
+<strong>Best For</strong>
+
+<span>
+Private tours & transfers
+</span>
+
+</div>
+
+</div>
+
+<div class="rate">
+
+<div>
+
+<div class="rate-label">
+Vehicle rate
+</div>
+
+<div class="rate-price">
+From KES 6,500
+</div>
+
+</div>
+
+<a href="booking.html" class="vehicle-button">
+Book SUV
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     TOUR VAN
+========================= -->
+
+<div class="vehicle-card">
+
+<div class="vehicle-photo">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Toyota_HiAce_%28H200%29.jpg"
+alt="Toyota HiAce passenger tour van">
+
+</div>
+
+<div class="vehicle-info">
+
+<h3>
+Tour Van
+</h3>
+
+<p>
+A practical passenger vehicle for families,
+small groups, city tours, airport transfers
+and private excursions.
+</p>
+
+<div class="vehicle-details">
+
+<div class="detail">
+
+<strong>Capacity</strong>
+
+<span>
+Up to 7 passengers
+</span>
+
+</div>
+
+<div class="detail">
+
+<strong>Best For</strong>
+
+<span>
+Groups & city tours
+</span>
+
+</div>
+
+</div>
+
+<div class="rate">
+
+<div>
+
+<div class="rate-label">
+Vehicle rate
+</div>
+
+<div class="rate-price">
+KES 5,500
+</div>
+
+</div>
+
+<a href="booking.html" class="vehicle-button">
+Book Tour Van
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     TOUR LAND CRUISER
+========================= -->
+
+<div class="vehicle-card">
+
+<div class="vehicle-photo">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Toyota_Land_Cruiser_70_Station_Wagon.jpg"
+alt="Toyota Land Cruiser tour vehicle">
+
+</div>
+
+<div class="vehicle-info">
+
+<h3>
+Tour Land Cruiser
+</h3>
+
+<p>
+A rugged and comfortable tour vehicle suitable
+for Nairobi excursions, national park trips
+and longer journeys.
+</p>
+
+<div class="vehicle-details">
+
+<div class="detail">
+
+<strong>Capacity</strong>
+
+<span>
+Up to 7 passengers
+</span>
+
+</div>
+
+<div class="detail">
+
+<strong>Best For</strong>
+
+<span>
+Excursions & safaris
+</span>
+
+</div>
+
+</div>
+
+<div class="rate">
+
+<div>
+
+<div class="rate-label">
+Vehicle rate
+</div>
+
+<div class="rate-price">
+KES 8,500
+</div>
+
+</div>
+
+<a href="booking.html" class="vehicle-button">
+Book Land Cruiser
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- =========================
+     PRICING INFORMATION
+========================= -->
+
+<div class="pricing-note">
+
+<h3>
+How Our Vehicle Pricing Works
+</h3>
+
+<p>
+<strong>Vehicle rates are charged per vehicle, not per passenger.</strong>
+</p>
+
+<p>
+The listed rate covers the vehicle for the selected service
+within the applicable passenger capacity.
+</p>
+
+<p>
+For attraction and national park visits, entrance,
+park and activity fees are charged separately unless
+the booking specifically states that they are included.
+</p>
+
+<p>
+For example, a private Nairobi City Tour using a Tour Van
+is charged at the applicable <strong>vehicle rate</strong>;
+there is no additional passenger charge simply because
+more people are travelling within the vehicle capacity.
+</p>
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     WHAT EACH VEHICLE IS FOR
+========================= -->
+
+<section class="use-area">
+
+<div class="use-inner">
+
+<div class="use-heading">
+
+<div class="kicker">
+Choose According to Your Trip
+</div>
+
+<h2>
+Which Vehicle Is Right for You?
+</h2>
+
+<p>
+Different vehicles work better for different
+group sizes and travel requirements.
+</p>
+
+</div>
+
+
+<div class="use-grid">
+
+
+<div class="use-card">
+
+<div class="use-icon">
+1
+</div>
+
+<h3>
+Sedan
+</h3>
+
+<p>
+Best for individuals, couples,
+airport transfers and small private trips.
+</p>
+
+</div>
+
+
+<div class="use-card">
+
+<div class="use-icon">
+2
+</div>
+
+<h3>
+SUV
+</h3>
+
+<p>
+Ideal when you want additional comfort,
+space and a higher seating position.
+</p>
+
+</div>
+
+
+<div class="use-card">
+
+<div class="use-icon">
+3
+</div>
+
+<h3>
+Tour Van
+</h3>
+
+<p>
+A practical choice for families and
+groups travelling together.
+</p>
+
+</div>
+
+
+<div class="use-card">
+
+<div class="use-icon">
+4
+</div>
+
+<h3>
+Tour Land Cruiser
+</h3>
+
+<p>
+Suitable for longer excursions,
+rougher routes and safari experiences.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="section">
+
+<div class="heading">
+
+<div class="kicker">
+Vehicle Services
+</div>
+
+<h2>
+Where You Can Use Our Vehicles
+</h2>
+
+<p>
+Our fleet can be arranged for a range of
+private and guided travel services.
+</p>
+
+</div>
+
+
+<div class="fleet-grid">
+
+
+<div class="vehicle-card">
+
+<div class="vehicle-info">
+
+<h3>
+Nairobi City Tours
+</h3>
+
+<p>
+Explore Nairobi landmarks, CBD attractions,
+markets, museums and parks with a private vehicle.
+</p>
+
+<a href="booking.html" class="vehicle-button">
+Book City Tour
+</a>
+
+</div>
+
+</div>
+
+
+<div class="vehicle-card">
+
+<div class="vehicle-info">
+
+<h3>
+Airport Transfers
+</h3>
+
+<p>
+Private transfers between JKIA and hotels,
+residences or other Nairobi destinations.
+</p>
+
+<a href="booking.html" class="vehicle-button">
+Book Transfer
+</a>
+
+</div>
+
+</div>
+
+
+<div class="vehicle-card">
+
+<div class="vehicle-info">
+
+<h3>
+Private Excursions
+</h3>
+
+<p>
+Plan a private Nairobi attraction visit or
+combined experience using your preferred vehicle.
+</p>
+
+<a href="booking.html" class="vehicle-button">
+Plan Excursion
+</a>
+
+</div>
+
+</div>
+
+
+<div class="vehicle-card">
+
+<div class="vehicle-info">
+
+<h3>
+National Park Trips
+</h3>
+
+<p>
+Use the appropriate vehicle for Nairobi
+National Park and selected longer excursions.
+</p>
+
+<a href="booking.html" class="vehicle-button">
+Book Park Trip
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+<div class="cta-content">
+
+<h2>
+Ready to Choose Your Vehicle?
+</h2>
+
+<p>
+Select your preferred vehicle and tell us
+about your trip. We will help arrange the experience.
+</p>
+
+<a href="booking.html" class="cta-button">
+BOOK YOUR VEHICLE
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+STEMA TRANS
+</h3>
+
+<p>
+Nairobi City Tours, City Walks, Attractions,
+Transfers and Guided Experiences.
+</p>
+
+<p>
+Discover Nairobi your way.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Quick Links
+</h3>
+
+<ul>
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="tours.html">
+Tours
+</a>
+</li>
+
+<li>
+<a href="city-walks.html">
+City Walks
+</a>
+</li>
+
+<li>
+<a href="transfers.html">
+Transfers
+</a>
+</li>
+
+<li>
+<a href="fleet.html">
+Fleet
+</a>
+</li>
+
+<li>
+<a href="gallery.html">
+Gallery
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
+
+<li>
+<a href="booking.html">
+Book Now
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>
+Contact
+</h3>
+
+<p>
+Phone / WhatsApp:<br>
+0722 915 913
+</p>
+
+<p>
+Email:<br>
+stemawastrans@gmail.com
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Stema Trans. All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
