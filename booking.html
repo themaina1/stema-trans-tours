@@ -3,249 +3,237 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Book Now | Stema Trans</title>
 
 <style>
-* {
-    box-sizing: border-box;
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f6f4;
+color:#222;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f6f4;
-    color: #222;
+header{
+background:#0b5d3b;
+color:#fff;
+text-align:center;
+padding:25px 15px;
 }
 
-header {
-    background: #0b5d3b;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
+header h1{
+margin:0;
+font-size:29px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 29px;
+header p{
+margin:7px 0 0;
 }
 
-header p {
-    margin: 7px 0 0;
+.container{
+max-width:900px;
+margin:25px auto;
+padding:0 15px;
 }
 
-.container {
-    max-width: 900px;
-    margin: 25px auto;
-    padding: 0 15px;
+.booking-box{
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 3px 15px rgba(0,0,0,.10);
 }
 
-.booking-box {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 15px rgba(0,0,0,.10);
+h2{
+color:#0b5d3b;
+margin-top:0;
 }
 
-h2 {
-    color: #0b5d3b;
-    margin-top: 0;
+.section-title{
+background:#0b5d3b;
+color:#fff;
+padding:12px 15px;
+border-radius:6px;
+margin:25px 0 18px;
+font-weight:bold;
 }
 
-.section-title {
-    background: #0b5d3b;
-    color: white;
-    padding: 12px 15px;
-    border-radius: 6px;
-    margin: 25px 0 18px;
-    font-weight: bold;
+.form-group{
+margin-bottom:18px;
 }
 
-.form-group {
-    margin-bottom: 18px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 7px;
+label{
+display:block;
+font-weight:bold;
+margin-bottom:7px;
 }
 
 input,
 select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 15px;
-    background: white;
+textarea{
+width:100%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:15px;
+background:#fff;
 }
 
-textarea {
-    min-height: 100px;
-    resize: vertical;
+textarea{
+min-height:100px;
+resize:vertical;
 }
 
-.row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+.row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
 }
 
-.service-area {
-    display: none;
+.service-area{
+display:none;
 }
 
-.service-area.active {
-    display: block;
+.service-area.active{
+display:block;
 }
 
-.price-box {
-    margin-top: 20px;
-    padding: 18px;
-    border-radius: 8px;
-    background: #eef7f1;
-    border: 2px solid #0b5d3b;
+.price-box{
+margin-top:20px;
+padding:18px;
+border-radius:8px;
+background:#eef7f1;
+border:2px solid #0b5d3b;
 }
 
-.price-box h3 {
-    margin-top: 0;
-    color: #0b5d3b;
+.price-box h3{
+margin-top:0;
+color:#0b5d3b;
 }
 
-.summary-box {
-    background: #f8faf8;
-    border: 2px solid #0b5d3b;
-    padding: 18px;
-    border-radius: 8px;
+.summary-box{
+background:#f8faf8;
+border:2px solid #0b5d3b;
+padding:18px;
+border-radius:8px;
 }
 
-.summary-box h3 {
-    margin-top: 0;
-    color: #0b5d3b;
+.summary-box h3{
+margin-top:0;
+color:#0b5d3b;
 }
 
-.summary-line {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    padding: 8px 0;
-    border-bottom: 1px solid #ddd;
+.summary-line{
+display:flex;
+justify-content:space-between;
+gap:15px;
+padding:8px 0;
+border-bottom:1px solid #ddd;
 }
 
-.summary-label {
-    font-weight: bold;
+.summary-label{
+font-weight:bold;
 }
 
-.total-line {
-    margin-top: 8px;
-    padding-top: 12px;
-    border-top: 2px solid #0b5d3b;
-    font-size: 18px;
-    font-weight: bold;
+.total-line{
+margin-top:8px;
+padding-top:12px;
+border-top:2px solid #0b5d3b;
+font-size:18px;
+font-weight:bold;
 }
 
-.notice {
-    margin-top: 18px;
-    padding: 14px;
-    background: #fff8df;
-    border-left: 4px solid #d49b00;
-    line-height: 1.5;
-    font-size: 14px;
+.notice{
+margin-top:18px;
+padding:14px;
+background:#fff8df;
+border-left:4px solid #d49b00;
+line-height:1.5;
+font-size:14px;
 }
 
-.warning {
-    display: none;
-    margin-top: 10px;
-    padding: 12px;
-    background: #fff0f0;
-    border-left: 4px solid #c62828;
-    color: #9b1c1c;
-    line-height: 1.5;
+.warning{
+display:none;
+margin-top:10px;
+padding:12px;
+background:#fff0f0;
+border-left:4px solid #c62828;
+color:#9b1c1c;
+line-height:1.5;
 }
 
-.submit-button {
-    width: 100%;
-    margin-top: 22px;
-    padding: 15px;
-    border: 0;
-    border-radius: 7px;
-    background: #0b5d3b;
-    color: white;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
+.submit-button{
+width:100%;
+margin-top:22px;
+padding:15px;
+border:0;
+border-radius:7px;
+background:#0b5d3b;
+color:#fff;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
 }
 
-.submit-button:hover {
-    background: #08482d;
+.submit-button:hover{
+background:#08482d;
 }
 
-.back-home {
-    display: block;
-    text-align: center;
-    margin: 22px 0;
-    color: #0b5d3b;
-    text-decoration: none;
-    font-weight: bold;
+.back-home{
+display:block;
+text-align:center;
+margin:22px 0;
+color:#0b5d3b;
+text-decoration:none;
+font-weight:bold;
 }
 
-.small-text {
-    color: #666;
-    font-size: 14px;
-    line-height: 1.5;
+.small-text{
+color:#666;
+font-size:14px;
+line-height:1.5;
 }
 
-.vehicle-note {
-    margin-top: -8px;
-    margin-bottom: 15px;
-    font-size: 13px;
-    color: #666;
+.vehicle-note{
+margin-top:-8px;
+margin-bottom:15px;
+font-size:13px;
+color:#666;
 }
 
-.required-note {
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 15px;
+.required-note{
+font-size:13px;
+color:#666;
+margin-bottom:15px;
 }
 
-.reference-box {
-    display: none;
-    background: #0b5d3b;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+.payment-box{
+background:#f7fbf8;
+border:1px solid #c9ddd2;
+padding:18px;
+border-radius:8px;
 }
 
-.reference-box strong {
-    display: block;
-    font-size: 21px;
-    margin-top: 5px;
-    letter-spacing: 1px;
+@media(max-width:650px){
+
+.row{
+grid-template-columns:1fr;
+gap:0;
 }
 
-@media screen and (max-width: 650px) {
+.booking-box{
+padding:18px;
+}
 
-    .row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
+header h1{
+font-size:24px;
+}
 
-    .booking-box {
-        padding: 18px;
-    }
+.summary-line{
+flex-direction:column;
+gap:3px;
+}
 
-    header h1 {
-        font-size: 24px;
-    }
-
-    .summary-line {
-        flex-direction: column;
-        gap: 3px;
-    }
 }
 </style>
 </head>
@@ -253,8 +241,8 @@ textarea {
 <body>
 
 <header>
-    <h1>STEMA TRANS</h1>
-    <p>City Tours, Transfers & Guided Experiences</p>
+<h1>STEMA TRANS</h1>
+<p>City Tours, Transfers & Guided Experiences</p>
 </header>
 
 <div class="container">
@@ -264,13 +252,39 @@ textarea {
 <h2>Book Your Experience</h2>
 
 <p class="small-text">
-Choose your service below. The booking form will automatically
-show only the information relevant to your selected service.
+Choose your service below. The form will show only the information
+needed for that service.
 </p>
 
 <p class="required-note">
 Fields marked with * are required.
 </p>
+
+
+<!-- REAL FORMSUBMIT FORM -->
+
+<form
+id="bookingForm"
+action="https://formsubmit.co/stemawastrans@gmail.com"
+method="POST"
+>
+
+<input type="hidden" name="_subject" value="New Stema Trans Booking">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input
+type="hidden"
+name="_next"
+value="https://themaina1.github.io/stema-trans-tours/thankyou.html"
+>
+
+<input
+type="hidden"
+id="bookingReference"
+name="Booking Reference"
+value=""
+>
+
 
 <!-- CUSTOMER DETAILS -->
 
@@ -282,12 +296,22 @@ Customer Details
 
 <div class="form-group">
 <label for="fullName">Full Name *</label>
-<input type="text" id="fullName">
+<input
+type="text"
+id="fullName"
+name="Customer Name"
+required
+>
 </div>
 
 <div class="form-group">
 <label for="email">Email Address *</label>
-<input type="email" id="email">
+<input
+type="email"
+id="email"
+name="Email"
+required
+>
 </div>
 
 </div>
@@ -296,12 +320,21 @@ Customer Details
 
 <div class="form-group">
 <label for="phone">Phone / WhatsApp *</label>
-<input type="tel" id="phone">
+<input
+type="tel"
+id="phone"
+name="Phone / WhatsApp"
+required
+>
 </div>
 
 <div class="form-group">
 <label for="country">Country</label>
-<input type="text" id="country">
+<input
+type="text"
+id="country"
+name="Country"
+>
 </div>
 
 </div>
@@ -319,53 +352,57 @@ Select Service
 Service *
 </label>
 
-<select id="service">
+<select
+id="service"
+name="Service"
+required
+>
 
 <option value="">
 -- Select Service --
 </option>
 
-<option value="city-tour">
+<option value="Nairobi City Tours">
 Nairobi City Tours
 </option>
 
-<option value="city-walk">
+<option value="Nairobi City Walks">
 Nairobi City Walks
 </option>
 
-<option value="combine">
+<option value="Combine Experiences">
 Combine Experiences
 </option>
 
-<option value="national-park">
+<option value="Nairobi National Park">
 Nairobi National Park
 </option>
 
-<option value="giraffe">
+<option value="Giraffe Centre">
 Giraffe Centre
 </option>
 
-<option value="karen">
+<option value="Karen & Karen Blixen">
 Karen & Karen Blixen
 </option>
 
-<option value="museum">
+<option value="Nairobi National Museum">
 Nairobi National Museum
 </option>
 
-<option value="bomas">
+<option value="Bomas of Kenya">
 Bomas of Kenya
 </option>
 
-<option value="airport">
+<option value="Airport Transfer">
 Airport Transfer
 </option>
 
-<option value="hotel">
+<option value="Hotel Transfer">
 Hotel Transfer
 </option>
 
-<option value="private">
+<option value="Private Vehicle Hire">
 Private Vehicle Hire
 </option>
 
@@ -374,7 +411,7 @@ Private Vehicle Hire
 </div>
 
 
-<!-- NAIROBI CITY TOURS -->
+<!-- CITY TOURS -->
 
 <div class="service-area" id="city-tour">
 
@@ -388,7 +425,10 @@ Nairobi City Tours
 Choose Tour *
 </label>
 
-<select id="cityTourName">
+<select
+id="cityTourName"
+name="City Tour"
+>
 
 <option value="">
 -- Select Tour --
@@ -413,13 +453,21 @@ Nairobi City & Cultural Experience
 <div class="row">
 
 <div class="form-group">
-<label for="cityTourDate">Date *</label>
-<input type="date" id="cityTourDate">
+<label>Date *</label>
+<input
+type="date"
+id="cityTourDate"
+name="City Tour Date"
+>
 </div>
 
 <div class="form-group">
-<label for="cityTourTime">Preferred Time *</label>
-<input type="time" id="cityTourTime">
+<label>Preferred Time *</label>
+<input
+type="time"
+id="cityTourTime"
+name="City Tour Time"
+>
 </div>
 
 </div>
@@ -428,13 +476,12 @@ Nairobi City & Cultural Experience
 
 <div class="form-group">
 
-<label for="cityTourPeople">
-Number of People *
-</label>
+<label>Number of People *</label>
 
 <input
 type="number"
 id="cityTourPeople"
+name="City Tour People"
 min="1"
 value="1"
 >
@@ -443,11 +490,12 @@ value="1"
 
 <div class="form-group">
 
-<label for="cityTourVehicle">
-Vehicle Category *
-</label>
+<label>Vehicle Category *</label>
 
-<select id="cityTourVehicle">
+<select
+id="cityTourVehicle"
+name="City Tour Vehicle"
+>
 
 <option value="">
 -- Select Vehicle --
@@ -476,18 +524,23 @@ Land Cruiser — 1–7 people — KES 8,500
 </div>
 
 <div class="vehicle-note">
-Transport charges are per vehicle, not per person.
+Transport charges are per vehicle.
 </div>
 
-<div id="cityTourWarning" class="warning"></div>
+<div
+id="cityTourWarning"
+class="warning"
+></div>
 
 <div class="form-group">
 
-<label for="cityTourPickup">
-Pickup Location *
-</label>
+<label>Pickup Location *</label>
 
-<input type="text" id="cityTourPickup">
+<input
+type="text"
+id="cityTourPickup"
+name="City Tour Pickup"
+>
 
 </div>
 
@@ -514,7 +567,7 @@ Nairobi City Walks
 
 <p class="small-text">
 Walking experiences around Nairobi. Transport is not included.
-City Walk charges are per person.
+Prices are per person.
 </p>
 
 <div class="form-group">
@@ -523,21 +576,24 @@ City Walk charges are per person.
 Choose Your Walk *
 </label>
 
-<select id="walkType">
+<select
+id="walkType"
+name="City Walk"
+>
 
 <option value="">
 -- Select City Walk --
 </option>
 
-<option value="2500">
+<option value="Nairobi Highlights Walk — KES 2,500 per person">
 Nairobi Highlights Walk — KES 2,500 per person
 </option>
 
-<option value="2500">
+<option value="Nairobi History & Culture Walk — KES 2,500 per person">
 Nairobi History & Culture Walk — KES 2,500 per person
 </option>
 
-<option value="3500">
+<option value="Nairobi Food & Local Life Walk — KES 3,500 per person">
 Nairobi Food & Local Life Walk — KES 3,500 per person
 </option>
 
@@ -548,26 +604,35 @@ Nairobi Food & Local Life Walk — KES 3,500 per person
 <div class="row">
 
 <div class="form-group">
-<label for="walkDate">Date *</label>
-<input type="date" id="walkDate">
+<label>Date *</label>
+<input
+type="date"
+id="walkDate"
+name="Walk Date"
+>
 </div>
 
 <div class="form-group">
-<label for="walkTime">Preferred Time *</label>
-<input type="time" id="walkTime">
+<label>Preferred Time *</label>
+<input
+type="time"
+id="walkTime"
+name="Walk Time"
+>
 </div>
 
 </div>
 
 <div class="form-group">
 
-<label for="walkPeople">
+<label>
 People *
 </label>
 
 <input
 type="number"
 id="walkPeople"
+name="Walk People"
 min="1"
 value="1"
 >
@@ -576,13 +641,14 @@ value="1"
 
 <div class="form-group">
 
-<label for="walkMeetingPoint">
+<label>
 Meeting Point *
 </label>
 
 <input
 type="text"
 id="walkMeetingPoint"
+name="Walk Meeting Point"
 placeholder="Agreed meeting point in Nairobi"
 >
 
@@ -601,7 +667,7 @@ Select your walk.
 </div>
 
 
-<!-- COMBINE EXPERIENCES -->
+<!-- COMBINE -->
 
 <div class="service-area" id="combine">
 
@@ -610,17 +676,21 @@ Combine Experiences
 </div>
 
 <p class="small-text">
-Make better use of your time by combining nearby attractions
-into one convenient Nairobi experience.
+Make better use of your time by combining nearby attractions.
+Transport is charged according to the selected vehicle.
+Attraction entrance fees are separate unless otherwise stated.
 </p>
 
 <div class="form-group">
 
-<label for="combineType">
+<label>
 Choose Combination *
 </label>
 
-<select id="combineType">
+<select
+id="combineType"
+name="Combination"
+>
 
 <option value="">
 -- Select Combination --
@@ -654,16 +724,20 @@ Custom Combination
 
 </div>
 
-<div id="customCombine" style="display:none;">
+<div
+id="customCombine"
+style="display:none;"
+>
 
 <div class="form-group">
 
-<label for="customCombineText">
-Which attractions would you like to combine?
+<label>
+Describe Your Combination
 </label>
 
 <textarea
 id="customCombineText"
+name="Custom Combination"
 placeholder="Example: Giraffe Centre + Karen Blixen + Bomas of Kenya"
 ></textarea>
 
@@ -674,13 +748,21 @@ placeholder="Example: Giraffe Centre + Karen Blixen + Bomas of Kenya"
 <div class="row">
 
 <div class="form-group">
-<label for="combineDate">Date *</label>
-<input type="date" id="combineDate">
+<label>Date *</label>
+<input
+type="date"
+id="combineDate"
+name="Combine Date"
+>
 </div>
 
 <div class="form-group">
-<label for="combineTime">Preferred Time *</label>
-<input type="time" id="combineTime">
+<label>Preferred Time *</label>
+<input
+type="time"
+id="combineTime"
+name="Combine Time"
+>
 </div>
 
 </div>
@@ -689,13 +771,14 @@ placeholder="Example: Giraffe Centre + Karen Blixen + Bomas of Kenya"
 
 <div class="form-group">
 
-<label for="combinePeople">
+<label>
 People *
 </label>
 
 <input
 type="number"
 id="combinePeople"
+name="Combine People"
 min="1"
 value="1"
 >
@@ -704,11 +787,14 @@ value="1"
 
 <div class="form-group">
 
-<label for="combineVehicle">
+<label>
 Vehicle Category *
 </label>
 
-<select id="combineVehicle">
+<select
+id="combineVehicle"
+name="Combine Vehicle"
+>
 
 <option value="">
 -- Select Vehicle --
@@ -736,15 +822,22 @@ Land Cruiser — 1–7 people — KES 8,500
 
 </div>
 
-<div id="combineWarning" class="warning"></div>
+<div
+id="combineWarning"
+class="warning"
+></div>
 
 <div class="form-group">
 
-<label for="combinePickup">
+<label>
 Pickup Location *
 </label>
 
-<input type="text" id="combinePickup">
+<input
+type="text"
+id="combinePickup"
+name="Combine Pickup"
+>
 
 </div>
 
@@ -758,18 +851,10 @@ Select a combination and vehicle.
 
 </div>
 
-<div class="notice">
-
-<strong>Please note:</strong><br>
-Transport charge is based on the selected vehicle.
-Attraction entrance fees are separate unless otherwise stated.
-
-</div>
-
 </div>
 
 
-<!-- NAIROBI NATIONAL PARK -->
+<!-- NNP -->
 
 <div class="service-area" id="national-park">
 
@@ -780,13 +865,13 @@ Nairobi National Park
 <div class="row">
 
 <div class="form-group">
-<label for="parkDate">Date *</label>
-<input type="date" id="parkDate">
+<label>Date *</label>
+<input type="date" id="parkDate" name="Park Date">
 </div>
 
 <div class="form-group">
-<label for="parkTime">Preferred Time *</label>
-<input type="time" id="parkTime">
+<label>Preferred Time *</label>
+<input type="time" id="parkTime" name="Park Time">
 </div>
 
 </div>
@@ -794,17 +879,15 @@ Nairobi National Park
 <div class="row">
 
 <div class="form-group">
-<label for="parkPeople">People *</label>
-<input type="number" id="parkPeople" min="1" value="1">
+<label>People *</label>
+<input type="number" id="parkPeople" name="Park People" min="1" value="1">
 </div>
 
 <div class="form-group">
 
-<label for="parkVehicle">
-Vehicle Category *
-</label>
+<label>Vehicle Category *</label>
 
-<select id="parkVehicle">
+<select id="parkVehicle" name="Park Vehicle">
 
 <option value="">
 -- Select Vehicle --
@@ -835,8 +918,8 @@ Land Cruiser — 1–7 people — KES 8,500
 <div id="parkWarning" class="warning"></div>
 
 <div class="form-group">
-<label for="parkPickup">Pickup Location *</label>
-<input type="text" id="parkPickup">
+<label>Pickup Location *</label>
+<input type="text" id="parkPickup" name="Park Pickup">
 </div>
 
 <div class="price-box">
@@ -851,7 +934,7 @@ Park entry fees are separate.
 </div>
 
 
-<!-- GIRAFFE CENTRE -->
+<!-- GIRAFFE -->
 
 <div class="service-area" id="giraffe">
 
@@ -862,13 +945,13 @@ Giraffe Centre
 <div class="row">
 
 <div class="form-group">
-<label for="giraffeDate">Date *</label>
-<input type="date" id="giraffeDate">
+<label>Date *</label>
+<input type="date" id="giraffeDate" name="Giraffe Date">
 </div>
 
 <div class="form-group">
-<label for="giraffeTime">Preferred Time *</label>
-<input type="time" id="giraffeTime">
+<label>Preferred Time *</label>
+<input type="time" id="giraffeTime" name="Giraffe Time">
 </div>
 
 </div>
@@ -876,17 +959,15 @@ Giraffe Centre
 <div class="row">
 
 <div class="form-group">
-<label for="giraffePeople">People *</label>
-<input type="number" id="giraffePeople" min="1" value="1">
+<label>People *</label>
+<input type="number" id="giraffePeople" name="Giraffe People" min="1" value="1">
 </div>
 
 <div class="form-group">
 
-<label for="giraffeVehicle">
-Vehicle Category *
-</label>
+<label>Vehicle Category *</label>
 
-<select id="giraffeVehicle">
+<select id="giraffeVehicle" name="Giraffe Vehicle">
 
 <option value="">
 -- Select Vehicle --
@@ -917,8 +998,8 @@ Land Cruiser — 1–7 people — KES 8,500
 <div id="giraffeWarning" class="warning"></div>
 
 <div class="form-group">
-<label for="giraffePickup">Pickup Location *</label>
-<input type="text" id="giraffePickup">
+<label>Pickup Location *</label>
+<input type="text" id="giraffePickup" name="Giraffe Pickup">
 </div>
 
 <div class="price-box">
@@ -940,13 +1021,13 @@ Karen & Karen Blixen
 <div class="row">
 
 <div class="form-group">
-<label for="karenDate">Date *</label>
-<input type="date" id="karenDate">
+<label>Date *</label>
+<input type="date" id="karenDate" name="Karen Date">
 </div>
 
 <div class="form-group">
-<label for="karenTime">Preferred Time *</label>
-<input type="time" id="karenTime">
+<label>Preferred Time *</label>
+<input type="time" id="karenTime" name="Karen Time">
 </div>
 
 </div>
@@ -954,17 +1035,15 @@ Karen & Karen Blixen
 <div class="row">
 
 <div class="form-group">
-<label for="karenPeople">People *</label>
-<input type="number" id="karenPeople" min="1" value="1">
+<label>People *</label>
+<input type="number" id="karenPeople" name="Karen People" min="1" value="1">
 </div>
 
 <div class="form-group">
 
-<label for="karenVehicle">
-Vehicle Category *
-</label>
+<label>Vehicle Category *</label>
 
-<select id="karenVehicle">
+<select id="karenVehicle" name="Karen Vehicle">
 
 <option value="">
 -- Select Vehicle --
@@ -995,8 +1074,8 @@ Land Cruiser — 1–7 people — KES 8,500
 <div id="karenWarning" class="warning"></div>
 
 <div class="form-group">
-<label for="karenPickup">Pickup Location *</label>
-<input type="text" id="karenPickup">
+<label>Pickup Location *</label>
+<input type="text" id="karenPickup" name="Karen Pickup">
 </div>
 
 <div class="price-box">
@@ -1018,13 +1097,13 @@ Nairobi National Museum
 <div class="row">
 
 <div class="form-group">
-<label for="museumDate">Date *</label>
-<input type="date" id="museumDate">
+<label>Date *</label>
+<input type="date" id="museumDate" name="Museum Date">
 </div>
 
 <div class="form-group">
-<label for="museumTime">Preferred Time *</label>
-<input type="time" id="museumTime">
+<label>Preferred Time *</label>
+<input type="time" id="museumTime" name="Museum Time">
 </div>
 
 </div>
@@ -1032,17 +1111,15 @@ Nairobi National Museum
 <div class="row">
 
 <div class="form-group">
-<label for="museumPeople">People *</label>
-<input type="number" id="museumPeople" min="1" value="1">
+<label>People *</label>
+<input type="number" id="museumPeople" name="Museum People" min="1" value="1">
 </div>
 
 <div class="form-group">
 
-<label for="museumVehicle">
-Vehicle Category *
-</label>
+<label>Vehicle Category *</label>
 
-<select id="museumVehicle">
+<select id="museumVehicle" name="Museum Vehicle">
 
 <option value="">
 -- Select Vehicle --
@@ -1073,8 +1150,8 @@ Land Cruiser — 1–7 people — KES 8,500
 <div id="museumWarning" class="warning"></div>
 
 <div class="form-group">
-<label for="museumPickup">Pickup Location *</label>
-<input type="text" id="museumPickup">
+<label>Pickup Location *</label>
+<input type="text" id="museumPickup" name="Museum Pickup">
 </div>
 
 <div class="price-box">
@@ -1096,13 +1173,13 @@ Bomas of Kenya
 <div class="row">
 
 <div class="form-group">
-<label for="bomasDate">Date *</label>
-<input type="date" id="bomasDate">
+<label>Date *</label>
+<input type="date" id="bomasDate" name="Bomas Date">
 </div>
 
 <div class="form-group">
-<label for="bomasTime">Preferred Time *</label>
-<input type="time" id="bomasTime">
+<label>Preferred Time *</label>
+<input type="time" id="bomasTime" name="Bomas Time">
 </div>
 
 </div>
@@ -1110,17 +1187,15 @@ Bomas of Kenya
 <div class="row">
 
 <div class="form-group">
-<label for="bomasPeople">People *</label>
-<input type="number" id="bomasPeople" min="1" value="1">
+<label>People *</label>
+<input type="number" id="bomasPeople" name="Bomas People" min="1" value="1">
 </div>
 
 <div class="form-group">
 
-<label for="bomasVehicle">
-Vehicle Category *
-</label>
+<label>Vehicle Category *</label>
 
-<select id="bomasVehicle">
+<select id="bomasVehicle" name="Bomas Vehicle">
 
 <option value="">
 -- Select Vehicle --
@@ -1151,8 +1226,8 @@ Land Cruiser — 1–7 people — KES 8,500
 <div id="bomasWarning" class="warning"></div>
 
 <div class="form-group">
-<label for="bomasPickup">Pickup Location *</label>
-<input type="text" id="bomasPickup">
+<label>Pickup Location *</label>
+<input type="text" id="bomasPickup" name="Bomas Pickup">
 </div>
 
 <div class="price-box">
@@ -1163,7 +1238,7 @@ Land Cruiser — 1–7 people — KES 8,500
 </div>
 
 
-<!-- AIRPORT TRANSFER -->
+<!-- AIRPORT -->
 
 <div class="service-area" id="airport">
 
@@ -1173,23 +1248,16 @@ Airport Transfer
 
 <div class="form-group">
 
-<label for="airportType">
-Transfer Type *
-</label>
+<label>Transfer Type *</label>
 
-<select id="airportType">
+<select id="airportType" name="Airport Transfer Type">
 
 <option value="">
 -- Select --
 </option>
 
-<option>
-Airport Pickup
-</option>
-
-<option>
-Airport Drop-off
-</option>
+<option>Airport Pickup</option>
+<option>Airport Drop-off</option>
 
 </select>
 
@@ -1198,13 +1266,13 @@ Airport Drop-off
 <div class="row">
 
 <div class="form-group">
-<label for="airportDate">Date *</label>
-<input type="date" id="airportDate">
+<label>Date *</label>
+<input type="date" id="airportDate" name="Airport Date">
 </div>
 
 <div class="form-group">
-<label for="airportTime">Time *</label>
-<input type="time" id="airportTime">
+<label>Time *</label>
+<input type="time" id="airportTime" name="Airport Time">
 </div>
 
 </div>
@@ -1212,17 +1280,15 @@ Airport Drop-off
 <div class="row">
 
 <div class="form-group">
-<label for="airportPeople">Passengers *</label>
-<input type="number" id="airportPeople" min="1" value="1">
+<label>Passengers *</label>
+<input type="number" id="airportPeople" name="Airport Passengers" min="1" value="1">
 </div>
 
 <div class="form-group">
 
-<label for="airportVehicle">
-Vehicle Category *
-</label>
+<label>Vehicle Category *</label>
 
-<select id="airportVehicle">
+<select id="airportVehicle" name="Airport Vehicle">
 
 <option value="">
 -- Select Vehicle --
@@ -1253,30 +1319,24 @@ Land Cruiser — 1–7 — KES 8,500
 <div id="airportWarning" class="warning"></div>
 
 <div class="form-group">
-<label for="airportLocation">
-Pickup / Drop-off Location *
-</label>
-<input type="text" id="airportLocation">
+<label>Pickup / Drop-off Location *</label>
+<input type="text" id="airportLocation" name="Airport Location">
 </div>
 
 <div class="form-group">
-<label for="flightNumber">
-Flight Number
-</label>
-<input type="text" id="flightNumber">
+<label>Flight Number</label>
+<input type="text" id="flightNumber" name="Flight Number">
 </div>
 
 <div class="price-box">
 <h3>Transfer Price</h3>
-<div id="airportPrice">
-Select a vehicle category.
-</div>
+<div id="airportPrice">Select a vehicle category.</div>
 </div>
 
 </div>
 
 
-<!-- HOTEL TRANSFER -->
+<!-- HOTEL -->
 
 <div class="service-area" id="hotel">
 
@@ -1287,13 +1347,13 @@ Hotel Transfer
 <div class="row">
 
 <div class="form-group">
-<label for="hotelDate">Date *</label>
-<input type="date" id="hotelDate">
+<label>Date *</label>
+<input type="date" id="hotelDate" name="Hotel Date">
 </div>
 
 <div class="form-group">
-<label for="hotelTime">Time *</label>
-<input type="time" id="hotelTime">
+<label>Time *</label>
+<input type="time" id="hotelTime" name="Hotel Time">
 </div>
 
 </div>
@@ -1301,17 +1361,15 @@ Hotel Transfer
 <div class="row">
 
 <div class="form-group">
-<label for="hotelPeople">Passengers *</label>
-<input type="number" id="hotelPeople" min="1" value="1">
+<label>Passengers *</label>
+<input type="number" id="hotelPeople" name="Hotel Passengers" min="1" value="1">
 </div>
 
 <div class="form-group">
 
-<label for="hotelVehicle">
-Vehicle Category *
-</label>
+<label>Vehicle Category *</label>
 
-<select id="hotelVehicle">
+<select id="hotelVehicle" name="Hotel Vehicle">
 
 <option value="">
 -- Select Vehicle --
@@ -1342,20 +1400,18 @@ Land Cruiser — 1–7 — KES 8,500
 <div id="hotelWarning" class="warning"></div>
 
 <div class="form-group">
-<label for="hotelPickup">Pickup Location *</label>
-<input type="text" id="hotelPickup">
+<label>Pickup Location *</label>
+<input type="text" id="hotelPickup" name="Hotel Pickup">
 </div>
 
 <div class="form-group">
-<label for="hotelDropoff">Drop-off Location *</label>
-<input type="text" id="hotelDropoff">
+<label>Drop-off Location *</label>
+<input type="text" id="hotelDropoff" name="Hotel Drop-off">
 </div>
 
 <div class="price-box">
 <h3>Transfer Price</h3>
-<div id="hotelPrice">
-Select a vehicle category.
-</div>
+<div id="hotelPrice">Select a vehicle category.</div>
 </div>
 
 </div>
@@ -1371,11 +1427,9 @@ Private Vehicle Hire
 
 <div class="form-group">
 
-<label for="privateVehicle">
-Vehicle Category *
-</label>
+<label>Vehicle Category *</label>
 
-<select id="privateVehicle">
+<select id="privateVehicle" name="Private Vehicle">
 
 <option value="">
 -- Select Vehicle --
@@ -1404,52 +1458,56 @@ Land Cruiser — 1–7 — KES 8,500
 <div class="row">
 
 <div class="form-group">
-<label for="privateDate">Date *</label>
-<input type="date" id="privateDate">
+<label>Date *</label>
+<input type="date" id="privateDate" name="Private Hire Date">
 </div>
 
 <div class="form-group">
-<label for="privateTime">Start Time *</label>
-<input type="time" id="privateTime">
+<label>Start Time *</label>
+<input type="time" id="privateTime" name="Private Hire Time">
 </div>
 
 </div>
 
 <div class="form-group">
-<label for="privatePeople">People *</label>
-<input type="number" id="privatePeople" min="1" value="1">
+<label>People *</label>
+<input type="number" id="privatePeople" name="Private Hire People" min="1" value="1">
 </div>
 
 <div id="privateWarning" class="warning"></div>
 
 <div class="form-group">
 
-<label for="privateDetails">
-Tell Us What You Need *
-</label>
+<label>Tell Us What You Need *</label>
 
 <textarea
 id="privateDetails"
+name="Private Hire Details"
 placeholder="Tell us your destination, duration and requirements."
 ></textarea>
 
 </div>
 
 <div class="price-box">
+
 <h3>Vehicle Hire Price</h3>
+
 <div id="privatePrice">
 Select a vehicle category.
 </div>
-</div>
 
 </div>
 
+</div>
 
-<!-- PAYMENT METHOD -->
+
+<!-- PAYMENT -->
 
 <div class="section-title">
 Payment Method
 </div>
+
+<div class="payment-box">
 
 <div class="form-group">
 
@@ -1457,7 +1515,11 @@ Payment Method
 Preferred Payment Method *
 </label>
 
-<select id="paymentMethod">
+<select
+id="paymentMethod"
+name="Preferred Payment Method"
+required
+>
 
 <option value="">
 -- Select Payment Method --
@@ -1489,18 +1551,17 @@ Pay Later / Request Payment Instructions
 
 <div class="notice">
 
-<strong>Payment information:</strong><br>
+<strong>Payment:</strong><br>
+Your preferred payment method will be recorded with your booking.
+After Stema Trans confirms availability, the appropriate payment
+instructions will be provided.
 
-After your booking is received, Stema Trans will confirm
-availability and provide the appropriate payment instructions.
-
-For services involving attraction or park entrance fees,
-those fees may be payable separately.
+</div>
 
 </div>
 
 
-<!-- ADDITIONAL INFORMATION -->
+<!-- ADDITIONAL -->
 
 <div class="section-title">
 Additional Information
@@ -1508,19 +1569,20 @@ Additional Information
 
 <div class="form-group">
 
-<label for="message">
+<label>
 Special Requests
 </label>
 
 <textarea
 id="message"
+name="Special Requests"
 placeholder="Any additional information or special requests..."
 ></textarea>
 
 </div>
 
 
-<!-- BOOKING SUMMARY -->
+<!-- SUMMARY -->
 
 <div class="section-title">
 Review Your Booking
@@ -1542,17 +1604,21 @@ Please select a service to see your booking summary.
 
 Transport charges are per vehicle.
 City Walk charges are per person.
-Attraction and park entry fees are charged separately unless otherwise stated.
+Attraction and park entry fees are separate unless otherwise stated.
 
 </div>
 
+
+<!-- SUBMIT -->
+
 <button
-type="button"
+type="submit"
 class="submit-button"
-id="submitButton"
 >
 Confirm & Submit Booking
 </button>
+
+</form>
 
 </div>
 
@@ -1565,2093 +1631,654 @@ Confirm & Submit Booking
 
 <script>
 
-/* ==========================================================
-STEMA TRANS BOOKING SYSTEM
-========================================================== */
-
-
-/* VEHICLE PRICES AND CAPACITY */
+/* VEHICLE DATA */
 
 const vehicles = {
 
-    "Sedan": {
-        capacity: 4,
-        price: 4500
-    },
+Sedan:{
+capacity:4,
+price:4500
+},
 
-    "SUV": {
-        capacity: 5,
-        price: 6500
-    },
+SUV:{
+capacity:5,
+price:6500
+},
 
-    "Tour Van": {
-        capacity: 7,
-        price: 5500
-    },
+"Tour Van":{
+capacity:7,
+price:5500
+},
 
-    "Land Cruiser": {
-        capacity: 7,
-        price: 8500
-    }
+"Land Cruiser":{
+capacity:7,
+price:8500
+}
 
 };
 
 
-/* SERVICE */
+/* HELPERS */
 
-const service =
-document.getElementById("service");
+function money(number){
 
-const areas =
-document.querySelectorAll(".service-area");
+return "KES " +
+Number(number).toLocaleString();
+
+}
+
+function val(id){
+
+const element=document.getElementById(id);
+
+return element ? element.value : "";
+
+}
 
 
-service.addEventListener("change", function() {
+/* SERVICE DISPLAY */
 
-    areas.forEach(function(area) {
-        area.classList.remove("active");
-    });
+const service=document.getElementById("service");
 
-    if (this.value) {
+const areas=document.querySelectorAll(".service-area");
 
-        const area =
-        document.getElementById(this.value);
+service.addEventListener("change",function(){
 
-        if (area) {
-            area.classList.add("active");
-        }
+areas.forEach(function(area){
 
-    }
+area.classList.remove("active");
 
-    updateAll();
+});
+
+const value=this.value;
+
+const map={
+
+"Nairobi City Tours":"city-tour",
+"Nairobi City Walks":"city-walk",
+"Combine Experiences":"combine",
+"Nairobi National Park":"national-park",
+"Giraffe Centre":"giraffe",
+"Karen & Karen Blixen":"karen",
+"Nairobi National Museum":"museum",
+"Bomas of Kenya":"bomas",
+"Airport Transfer":"airport",
+"Hotel Transfer":"hotel",
+"Private Vehicle Hire":"private"
+
+};
+
+if(map[value]){
+
+document
+.getElementById(map[value])
+.classList.add("active");
+
+}
+
+updateAll();
 
 });
 
 
-/* ==========================================================
-HELPERS
-========================================================== */
+/* VEHICLE CHECK */
 
-function money(value) {
+function updateVehicle(
+peopleId,
+vehicleId,
+priceId,
+warningId
+){
 
-    return "KES " +
-    Number(value).toLocaleString();
+const people=Number(val(peopleId))||0;
+
+const vehicle=val(vehicleId);
+
+const output=document.getElementById(priceId);
+
+const warning=document.getElementById(warningId);
+
+if(!output||!warning)return;
+
+warning.style.display="none";
+
+if(!vehicle){
+
+output.innerHTML="Select a vehicle category.";
+
+return;
+
+}
+
+const capacity=vehicles[vehicle].capacity;
+
+const price=vehicles[vehicle].price;
+
+if(people>capacity){
+
+warning.style.display="block";
+
+warning.innerHTML=
+"<strong>Vehicle capacity exceeded.</strong><br>"+
+vehicle+
+" accommodates up to "+
+capacity+
+" people. Please select another vehicle.";
+
+output.innerHTML=
+"Please select a suitable vehicle.";
+
+return;
+
+}
+
+output.innerHTML=
+"Vehicle: <strong>"+
+vehicle+
+"</strong><br>"+
+"Capacity: <strong>"+
+capacity+
+" people</strong><br>"+
+"Transport charge: <strong>"+
+money(price)+
+"</strong>";
 
 }
 
 
-function vehiclePrice(vehicle) {
+/* CITY WALK */
 
-    if (!vehicles[vehicle]) {
-        return 0;
-    }
+function updateWalk(){
 
-    return vehicles[vehicle].price;
+const select=document.getElementById("walkType");
+
+const people=Number(val("walkPeople"))||0;
+
+const output=document.getElementById("walkPrice");
+
+if(!select||!output)return;
+
+if(!select.value){
+
+output.innerHTML="Select your walk.";
+
+return;
+
+}
+
+let price=2500;
+
+if(
+select.value.includes("Food")
+){
+
+price=3500;
+
+}
+
+const total=price*people;
+
+output.innerHTML=
+"Price per person: <strong>"+
+money(price)+
+"</strong><br>"+
+"People: <strong>"+
+people+
+"</strong><br>"+
+"<strong>Total: "+
+money(total)+
+"</strong>";
 
 }
 
 
-function vehicleCapacity(vehicle) {
+/* COMBINE */
 
-    if (!vehicles[vehicle]) {
-        return 0;
-    }
+function updateCombine(){
 
-    return vehicles[vehicle].capacity;
+const type=val("combineType");
+
+const vehicle=val("combineVehicle");
+
+const people=Number(val("combinePeople"))||0;
+
+const output=document.getElementById("combinePrice");
+
+const warning=document.getElementById("combineWarning");
+
+const custom=document.getElementById("customCombine");
+
+if(!output)return;
+
+if(type==="Custom Combination"){
+
+custom.style.display="block";
+
+}else{
+
+custom.style.display="none";
+
+}
+
+if(!type){
+
+output.innerHTML=
+"Select a combination and vehicle.";
+
+return;
+
+}
+
+if(!vehicle){
+
+output.innerHTML=
+"Select a vehicle category.";
+
+return;
+
+}
+
+const capacity=vehicles[vehicle].capacity;
+
+if(people>capacity){
+
+warning.style.display="block";
+
+warning.innerHTML=
+"<strong>Vehicle capacity exceeded.</strong><br>"+
+vehicle+
+" accommodates up to "+
+capacity+
+" people.";
+
+output.innerHTML=
+"Please select a larger vehicle.";
+
+return;
+
+}
+
+warning.style.display="none";
+
+output.innerHTML=
+"Vehicle: <strong>"+
+vehicle+
+"</strong><br>"+
+"People: <strong>"+
+people+
+"</strong><br>"+
+"Transport charge: <strong>"+
+money(vehicles[vehicle].price)+
+"</strong><br><br>"+
+"<small>Attraction entrance fees are separate.</small>";
 
 }
 
 
-function selectedValue(id) {
+/* SUMMARY */
 
-    const element =
-    document.getElementById(id);
+function updateSummary(){
 
-    return element ? element.value.trim() : "";
+const summary=document.getElementById("bookingSummary");
+
+const serviceValue=service.value;
+
+if(!serviceValue){
+
+summary.innerHTML=
+"Please select a service.";
+
+return;
+
+}
+
+let html="";
+
+html+=
+'<div class="summary-line">'+
+'<span class="summary-label">Customer</span>'+
+'<span>'+
+(val("fullName")||"Not entered")+
+'</span></div>';
+
+html+=
+'<div class="summary-line">'+
+'<span class="summary-label">Service</span>'+
+'<span>'+
+serviceValue+
+'</span></div>';
+
+html+=
+'<div class="summary-line">'+
+'<span class="summary-label">Payment</span>'+
+'<span>'+
+(val("paymentMethod")||"Not selected")+
+'</span></div>';
+
+
+if(serviceValue==="Nairobi City Walks"){
+
+html+=
+'<div class="summary-line">'+
+'<span class="summary-label">Walk</span>'+
+'<span>'+
+(val("walkType")||"Not selected")+
+'</span></div>';
+
+html+=
+'<div class="summary-line">'+
+'<span class="summary-label">Date</span>'+
+'<span>'+
+(val("walkDate")||"Not selected")+
+'</span></div>';
+
+html+=
+'<div class="summary-line">'+
+'<span class="summary-label">Time</span>'+
+'<span>'+
+(val("walkTime")||"Not selected")+
+'</span></div>';
+
+html+=
+'<div class="summary-line">'+
+'<span class="summary-label">People</span>'+
+'<span>'+
+(val("walkPeople")||"Not selected")+
+'</span></div>';
+
+let walkPrice=2500;
+
+if(
+val("walkType").includes("Food")
+){
+walkPrice=3500;
+}
+
+const walkTotal=
+walkPrice*
+(Number(val("walkPeople"))||0);
+
+html+=
+'<div class="summary-line total-line">'+
+'<span>Total</span>'+
+'<span>'+
+money(walkTotal)+
+'</span></div>';
+
+}
+
+else if(serviceValue==="Nairobi City Tours"){
+
+const vehicle=val("cityTourVehicle");
+
+html+=
+'<div class="summary-line"><span class="summary-label">Tour</span><span>'+
+(val("cityTourName")||"Not selected")+
+'</span></div>';
+
+html+=
+'<div class="summary-line"><span class="summary-label">Date</span><span>'+
+(val("cityTourDate")||"Not selected")+
+'</span></div>';
+
+html+=
+'<div class="summary-line"><span class="summary-label">People</span><span>'+
+(val("cityTourPeople")||"Not selected")+
+'</span></div>';
+
+html+=
+'<div class="summary-line"><span class="summary-label">Vehicle</span><span>'+
+(vehicle||"Not selected")+
+'</span></div>';
+
+if(vehicle){
+
+html+=
+'<div class="summary-line total-line"><span>Transport</span><span>'+
+money(vehicles[vehicle].price)+
+'</span></div>';
+
+}
+
+}
+
+else if(serviceValue==="Combine Experiences"){
+
+const vehicle=val("combineVehicle");
+
+let combination=val("combineType");
+
+if(combination==="Custom Combination"){
+
+combination=
+val("customCombineText")||
+"Custom Combination";
+
+}
+
+html+=
+'<div class="summary-line"><span class="summary-label">Combination</span><span>'+
+(combination||"Not selected")+
+'</span></div>';
+
+html+=
+'<div class="summary-line"><span class="summary-label">Date</span><span>'+
+(val("combineDate")||"Not selected")+
+'</span></div>';
+
+html+=
+'<div class="summary-line"><span class="summary-label">People</span><span>'+
+(val("combinePeople")||"Not selected")+
+'</span></div>';
+
+html+=
+'<div class="summary-line"><span class="summary-label">Vehicle</span><span>'+
+(vehicle||"Not selected")+
+'</span></div>';
+
+if(vehicle){
+
+html+=
+'<div class="summary-line total-line"><span>Transport</span><span>'+
+money(vehicles[vehicle].price)+
+'</span></div>';
+
+}
+
+}
+
+else{
+
+const map={
+
+"Nairobi National Park":["parkPeople","parkVehicle","parkDate"],
+"Giraffe Centre":["giraffePeople","giraffeVehicle","giraffeDate"],
+"Karen & Karen Blixen":["karenPeople","karenVehicle","karenDate"],
+"Nairobi National Museum":["museumPeople","museumVehicle","museumDate"],
+"Bomas of Kenya":["bomasPeople","bomasVehicle","bomasDate"],
+"Airport Transfer":["airportPeople","airportVehicle","airportDate"],
+"Hotel Transfer":["hotelPeople","hotelVehicle","hotelDate"],
+"Private Vehicle Hire":["privatePeople","privateVehicle","privateDate"]
+
+};
+
+const data=map[serviceValue];
+
+if(data){
+
+const people=val(data[0]);
+
+const vehicle=val(data[1]);
+
+const date=val(data[2]);
+
+html+=
+'<div class="summary-line"><span class="summary-label">Date</span><span>'+
+(date||"Not selected")+
+'</span></div>';
+
+html+=
+'<div class="summary-line"><span class="summary-label">People</span><span>'+
+(people||"Not selected")+
+'</span></div>';
+
+html+=
+'<div class="summary-line"><span class="summary-label">Vehicle</span><span>'+
+(vehicle||"Not selected")+
+'</span></div>';
+
+if(vehicle){
+
+html+=
+'<div class="summary-line total-line"><span>Transport</span><span>'+
+money(vehicles[vehicle].price)+
+'</span></div>';
+
+}
+
+}
+
+}
+
+summary.innerHTML=html;
 
 }
 
 
-function addHidden(form, name, value) {
+/* ALL UPDATES */
 
-    const input =
-    document.createElement("input");
+function updateAll(){
 
-    input.type = "hidden";
-    input.name = name;
-    input.value = value || "";
+updateWalk();
 
-    form.appendChild(input);
+updateCombine();
 
-}
-
-
-function line(label, value) {
-
-    return (
-        '<div class="summary-line">' +
-        '<span class="summary-label">' +
-        label +
-        '</span>' +
-        '<span>' +
-        value +
-        '</span>' +
-        '</div>'
-    );
-
-}
-
-
-function totalLine(label, value) {
-
-    return (
-        '<div class="summary-line total-line">' +
-        '<span>' +
-        label +
-        '</span>' +
-        '<span>' +
-        value +
-        '</span>' +
-        '</div>'
-    );
-
-}
-
-
-/* ==========================================================
-CITY WALK
-========================================================== */
-
-function updateWalk() {
-
-    const walk =
-    selectedValue("walkType");
-
-    const people =
-    Number(selectedValue("walkPeople")) || 0;
-
-    const output =
-    document.getElementById("walkPrice");
-
-    if (!walk) {
-
-        output.innerHTML =
-        "Select your walk.";
-
-        return;
-
-    }
-
-    const total =
-    Number(walk) * people;
-
-    output.innerHTML =
-
-    "Price per person: <strong>" +
-    money(walk) +
-    "</strong><br>" +
-
-    "People: <strong>" +
-    people +
-    "</strong><br>" +
-
-    "<strong>Total: " +
-    money(total) +
-    "</strong>";
-
-}
-
-
-/* ==========================================================
-VEHICLE SERVICES
-========================================================== */
-
-const vehicleServices = [
-
-    ["cityTourPeople","cityTourVehicle","cityTourPrice","cityTourWarning"],
-
-    ["parkPeople","parkVehicle","parkPrice","parkWarning"],
-
-    ["giraffePeople","giraffeVehicle","giraffePrice","giraffeWarning"],
-
-    ["karenPeople","karenVehicle","karenPrice","karenWarning"],
-
-    ["museumPeople","museumVehicle","museumPrice","museumWarning"],
-
-    ["bomasPeople","bomasVehicle","bomasPrice","bomasWarning"],
-
-    ["airportPeople","airportVehicle","airportPrice","airportWarning"],
-
-    ["hotelPeople","hotelVehicle","hotelPrice","hotelWarning"],
-
-    ["privatePeople","privateVehicle","privatePrice","privateWarning"]
-
-];
-
-
-function calculateVehicle(
-    peopleId,
-    vehicleId,
-    priceId,
-    warningId
-) {
-
-    const peopleElement =
-    document.getElementById(peopleId);
-
-    const vehicleElement =
-    document.getElementById(vehicleId);
-
-    const priceElement =
-    document.getElementById(priceId);
-
-    const warningElement =
-    document.getElementById(warningId);
-
-    if (
-        !peopleElement ||
-        !vehicleElement ||
-        !priceElement ||
-        !warningElement
-    ) {
-        return;
-    }
-
-    const people =
-    Number(peopleElement.value) || 0;
-
-    const vehicle =
-    vehicleElement.value;
-
-    warningElement.style.display =
-    "none";
-
-    if (!vehicle) {
-
-        priceElement.innerHTML =
-        "Select a vehicle category.";
-
-        return;
-
-    }
-
-    const capacity =
-    vehicleCapacity(vehicle);
-
-    const price =
-    vehiclePrice(vehicle);
-
-    if (people > capacity) {
-
-        warningElement.style.display =
-        "block";
-
-        warningElement.innerHTML =
-
-        "<strong>Vehicle capacity exceeded.</strong><br>" +
-
-        vehicle +
-        " accommodates up to " +
-        capacity +
-        " people. Please select another vehicle.";
-
-        priceElement.innerHTML =
-        "Please select a suitable vehicle.";
-
-        return;
-
-    }
-
-    priceElement.innerHTML =
-
-    "Vehicle: <strong>" +
-    vehicle +
-    "</strong><br>" +
-
-    "People: <strong>" +
-    people +
-    "</strong><br>" +
-
-    "Transport charge: <strong>" +
-    money(price) +
-    " per vehicle</strong>";
-
-}
-
-
-/* ==========================================================
-COMBINE EXPERIENCES
-========================================================== */
-
-function updateCombine() {
-
-    const type =
-    selectedValue("combineType");
-
-    const vehicle =
-    selectedValue("combineVehicle");
-
-    const people =
-    Number(selectedValue("combinePeople")) || 0;
-
-    const output =
-    document.getElementById("combinePrice");
-
-    const warning =
-    document.getElementById("combineWarning");
-
-    const custom =
-    document.getElementById("customCombine");
-
-
-    warning.style.display =
-    "none";
-
-
-    if (
-        type ===
-        "Custom Combination"
-    ) {
-
-        custom.style.display =
-        "block";
-
-    } else {
-
-        custom.style.display =
-        "none";
-
-    }
-
-
-    if (!type) {
-
-        output.innerHTML =
-        "Select a combination and vehicle.";
-
-        return;
-
-    }
-
-
-    if (!vehicle) {
-
-        output.innerHTML =
-        "Select a vehicle category.";
-
-        return;
-
-    }
-
-
-    const capacity =
-    vehicleCapacity(vehicle);
-
-    const price =
-    vehiclePrice(vehicle);
-
-
-    if (people > capacity) {
-
-        warning.style.display =
-        "block";
-
-        warning.innerHTML =
-
-        "<strong>Vehicle capacity exceeded.</strong><br>" +
-
-        vehicle +
-        " accommodates up to " +
-        capacity +
-        " people.";
-
-        output.innerHTML =
-        "Please select a larger vehicle.";
-
-        return;
-
-    }
-
-
-    output.innerHTML =
-
-    "Vehicle: <strong>" +
-    vehicle +
-    "</strong><br>" +
-
-    "People: <strong>" +
-    people +
-    "</strong><br>" +
-
-    "Transport charge: <strong>" +
-    money(price) +
-    "</strong><br><br>" +
-
-    "<small>Attraction entrance fees are separate.</small>";
-
-}
-
-
-/* ==========================================================
-GENERIC SERVICE DATA
-========================================================== */
-
-function getGenericServiceData(selected) {
-
-    const map = {
-
-        "national-park": [
-            "parkDate",
-            "parkTime",
-            "parkPeople",
-            "parkVehicle",
-            "parkPickup"
-        ],
-
-        "giraffe": [
-            "giraffeDate",
-            "giraffeTime",
-            "giraffePeople",
-            "giraffeVehicle",
-            "giraffePickup"
-        ],
-
-        "karen": [
-            "karenDate",
-            "karenTime",
-            "karenPeople",
-            "karenVehicle",
-            "karenPickup"
-        ],
-
-        "museum": [
-            "museumDate",
-            "museumTime",
-            "museumPeople",
-            "museumVehicle",
-            "museumPickup"
-        ],
-
-        "bomas": [
-            "bomasDate",
-            "bomasTime",
-            "bomasPeople",
-            "bomasVehicle",
-            "bomasPickup"
-        ],
-
-        "private": [
-            "privateDate",
-            "privateTime",
-            "privatePeople",
-            "privateVehicle",
-            "privateDetails"
-        ]
-
-    };
-
-
-    if (!map[selected]) {
-        return null;
-    }
-
-
-    const ids =
-    map[selected];
-
-
-    return {
-
-        date:
-        selectedValue(ids[0]),
-
-        time:
-        selectedValue(ids[1]),
-
-        people:
-        selectedValue(ids[2]),
-
-        vehicle:
-        selectedValue(ids[3]),
-
-        pickup:
-        selectedValue(ids[4])
-
-    };
-
-}
-
-
-/* ==========================================================
-BOOKING SUMMARY
-========================================================== */
-
-function updateSummary() {
-
-    const output =
-    document.getElementById(
-        "bookingSummary"
-    );
-
-
-    const selected =
-    service.value;
-
-
-    if (!selected) {
-
-        output.innerHTML =
-        "Please select a service.";
-
-        return;
-
-    }
-
-
-    let html = "";
-
-
-    html += line(
-        "Customer",
-        selectedValue("fullName") ||
-        "Not entered"
-    );
-
-
-    html += line(
-        "Service",
-        service.options[
-            service.selectedIndex
-        ].text
-    );
-
-
-    html += line(
-        "Payment Method",
-        selectedValue("paymentMethod") ||
-        "Not selected"
-    );
-
-
-    /* CITY WALK */
-
-    if (
-        selected === "city-walk"
-    ) {
-
-        const walk =
-        document.getElementById(
-            "walkType"
-        );
-
-        const walkName =
-        walk.value
-        ? walk.options[
-            walk.selectedIndex
-          ].text
-        : "Not selected";
-
-        const total =
-        Number(walk.value || 0) *
-        Number(
-            selectedValue("walkPeople")
-        ) || 0;
-
-
-        html += line(
-            "Walk",
-            walkName
-        );
-
-        html += line(
-            "Date",
-            selectedValue("walkDate") ||
-            "Not selected"
-        );
-
-        html += line(
-            "Time",
-            selectedValue("walkTime") ||
-            "Not selected"
-        );
-
-        html += line(
-            "People",
-            selectedValue("walkPeople") ||
-            "Not selected"
-        );
-
-        html += line(
-            "Meeting Point",
-            selectedValue("walkMeetingPoint") ||
-            "Not entered"
-        );
-
-        html += totalLine(
-            "Total",
-            money(total)
-        );
-
-    }
-
-
-    /* CITY TOUR */
-
-    else if (
-        selected === "city-tour"
-    ) {
-
-        const vehicle =
-        selectedValue(
-            "cityTourVehicle"
-        );
-
-
-        html += line(
-            "Tour",
-            selectedValue(
-                "cityTourName"
-            ) ||
-            "Not selected"
-        );
-
-        html += line(
-            "Date",
-            selectedValue(
-                "cityTourDate"
-            ) ||
-            "Not selected"
-        );
-
-        html += line(
-            "Time",
-            selectedValue(
-                "cityTourTime"
-            ) ||
-            "Not selected"
-        );
-
-        html += line(
-            "People",
-            selectedValue(
-                "cityTourPeople"
-            ) ||
-            "Not selected"
-        );
-
-        html += line(
-            "Vehicle",
-            vehicle ||
-            "Not selected"
-        );
-
-        html += line(
-            "Pickup",
-            selectedValue(
-                "cityTourPickup"
-            ) ||
-            "Not entered"
-        );
-
-        html += totalLine(
-            "Transport Total",
-            vehicle
-            ? money(
-                vehiclePrice(vehicle)
-              )
-            : "Not calculated"
-        );
-
-    }
-
-
-    /* COMBINE */
-
-    else if (
-        selected === "combine"
-    ) {
-
-        let combination =
-        selectedValue(
-            "combineType"
-        );
-
-
-        if (
-            combination ===
-            "Custom Combination"
-        ) {
-
-            combination =
-            selectedValue(
-                "customCombineText"
-            ) ||
-            "Custom combination";
-
-        }
-
-
-        const vehicle =
-        selectedValue(
-            "combineVehicle"
-        );
-
-
-        html += line(
-            "Combination",
-            combination
-        );
-
-        html += line(
-            "Date",
-            selectedValue(
-                "combineDate"
-            ) ||
-            "Not selected"
-        );
-
-        html += line(
-            "Time",
-            selectedValue(
-                "combineTime"
-            ) ||
-            "Not selected"
-        );
-
-        html += line(
-            "People",
-            selectedValue(
-                "combinePeople"
-            ) ||
-            "Not selected"
-        );
-
-        html += line(
-            "Vehicle",
-            vehicle ||
-            "Not selected"
-        );
-
-        html += line(
-            "Pickup",
-            selectedValue(
-                "combinePickup"
-            ) ||
-            "Not entered"
-        );
-
-        html += line(
-            "Attraction Fees",
-            "Separate"
-        );
-
-        html += totalLine(
-            "Transport Total",
-            vehicle
-            ? money(
-                vehiclePrice(vehicle)
-              )
-            : "Not calculated"
-        );
-
-    }
-
-
-    /* AIRPORT */
-
-    else if (
-        selected === "airport"
-    ) {
-
-        const vehicle =
-        selectedValue(
-            "airportVehicle"
-        );
-
-
-        html += line(
-            "Transfer",
-            selectedValue(
-                "airportType"
-            ) ||
-            "Not selected"
-        );
-
-        html += line(
-            "Date",
-            selectedValue(
-                "airportDate"
-            ) ||
-            "Not selected"
-        );
-
-        html += line(
-            "Time",
-            selectedValue(
-                "airportTime"
-            ) ||
-            "Not selected"
-        );
-
-        html += line(
-            "Passengers",
-            selectedValue(
-                "airportPeople"
-            ) ||
-            "Not selected"
-        );
-
-        html += line(
-            "Vehicle",
-            vehicle ||
-            "Not selected"
-        );
-
-        html += line(
-            "Pickup / Drop-off",
-            selectedValue(
-                "airportLocation"
-            ) ||
-            "Not entered"
-        );
-
-        html += line(
-            "Flight Number",
-            selectedValue(
-                "flightNumber"
-            ) ||
-            "Not provided"
-        );
-
-        html += totalLine(
-            "Transport Total",
-            vehicle
-            ? money(
-                vehiclePrice(vehicle)
-              )
-            : "Not calculated"
-        );
-
-    }
-
-
-    /* HOTEL */
-
-    else if (
-        selected === "hotel"
-    ) {
-
-        const vehicle =
-        selectedValue(
-            "hotelVehicle"
-        );
-
-
-        html += line(
-            "Date",
-            selectedValue(
-                "hotelDate"
-            ) ||
-            "Not selected"
-        );
-
-        html += line(
-            "Time",
-            selectedValue(
-                "hotelTime"
-            ) ||
-            "Not selected"
-        );
-
-        html += line(
-            "Passengers",
-            selectedValue(
-                "hotelPeople"
-            ) ||
-            "Not selected"
-        );
-
-        html += line(
-            "Vehicle",
-            vehicle ||
-            "Not selected"
-        );
-
-        html += line(
-            "Pickup",
-            selectedValue(
-                "hotelPickup"
-            ) ||
-            "Not entered"
-        );
-
-        html += line(
-            "Drop-off",
-            selectedValue(
-                "hotelDropoff"
-            ) ||
-            "Not entered"
-        );
-
-        html += totalLine(
-            "Transport Total",
-            vehicle
-            ? money(
-                vehiclePrice(vehicle)
-              )
-            : "Not calculated"
-        );
-
-    }
-
-
-    /* OTHER VEHICLE SERVICES */
-
-    else {
-
-        const data =
-        getGenericServiceData(
-            selected
-        );
-
-
-        if (data) {
-
-            html += line(
-                "Date",
-                data.date ||
-                "Not selected"
-            );
-
-            html += line(
-                "Time",
-                data.time ||
-                "Not selected"
-            );
-
-            html += line(
-                "People",
-                data.people ||
-                "Not selected"
-            );
-
-            html += line(
-                "Vehicle",
-                data.vehicle ||
-                "Not selected"
-            );
-
-            html += line(
-                "Pickup / Details",
-                data.pickup ||
-                "Not entered"
-            );
-
-            html += totalLine(
-                "Transport Total",
-                data.vehicle
-                ? money(
-                    vehiclePrice(
-                        data.vehicle
-                    )
-                  )
-                : "Not calculated"
-            );
-
-        }
-
-    }
-
-
-    output.innerHTML =
-    html;
-
-}
-
-
-/* ==========================================================
-VALIDATION
-========================================================== */
-
-function validateBooking() {
-
-    if (!selectedValue("fullName")) {
-
-        alert(
-            "Please enter your full name."
-        );
-
-        return false;
-
-    }
-
-
-    if (!selectedValue("email")) {
-
-        alert(
-            "Please enter your email address."
-        );
-
-        return false;
-
-    }
-
-
-    if (!selectedValue("phone")) {
-
-        alert(
-            "Please enter your phone or WhatsApp number."
-        );
-
-        return false;
-
-    }
-
-
-    if (!service.value) {
-
-        alert(
-            "Please select a service."
-        );
-
-        return false;
-
-    }
-
-
-    if (!selectedValue("paymentMethod")) {
-
-        alert(
-            "Please select your preferred payment method."
-        );
-
-        return false;
-
-    }
-
-
-    const s =
-    service.value;
-
-
-    /* CITY WALK */
-
-    if (
-        s === "city-walk"
-    ) {
-
-        if (
-            !selectedValue("walkType") ||
-            !selectedValue("walkDate") ||
-            !selectedValue("walkTime") ||
-            !selectedValue("walkPeople") ||
-            !selectedValue("walkMeetingPoint")
-        ) {
-
-            alert(
-                "Please complete all required City Walk details."
-            );
-
-            return false;
-
-        }
-
-    }
-
-
-    /* CITY TOUR */
-
-    else if (
-        s === "city-tour"
-    ) {
-
-        if (
-            !selectedValue("cityTourName") ||
-            !selectedValue("cityTourDate") ||
-            !selectedValue("cityTourTime") ||
-            !selectedValue("cityTourPeople") ||
-            !selectedValue("cityTourVehicle") ||
-            !selectedValue("cityTourPickup")
-        ) {
-
-            alert(
-                "Please complete all required Nairobi City Tour details."
-            );
-
-            return false;
-
-        }
-
-    }
-
-
-    /* COMBINE */
-
-    else if (
-        s === "combine"
-    ) {
-
-        if (
-            !selectedValue("combineType") ||
-            !selectedValue("combineDate") ||
-            !selectedValue("combineTime") ||
-            !selectedValue("combinePeople") ||
-            !selectedValue("combineVehicle") ||
-            !selectedValue("combinePickup")
-        ) {
-
-            alert(
-                "Please complete all required Combine Experience details."
-            );
-
-            return false;
-
-        }
-
-
-        if (
-            selectedValue(
-                "combineType"
-            ) ===
-            "Custom Combination" &&
-            !selectedValue(
-                "customCombineText"
-            )
-        ) {
-
-            alert(
-                "Please describe your custom combination."
-            );
-
-            return false;
-
-        }
-
-    }
-
-
-    /* AIRPORT */
-
-    else if (
-        s === "airport"
-    ) {
-
-        if (
-            !selectedValue("airportType") ||
-            !selectedValue("airportDate") ||
-            !selectedValue("airportTime") ||
-            !selectedValue("airportPeople") ||
-            !selectedValue("airportVehicle") ||
-            !selectedValue("airportLocation")
-        ) {
-
-            alert(
-                "Please complete all required Airport Transfer details."
-            );
-
-            return false;
-
-        }
-
-    }
-
-
-    /* HOTEL */
-
-    else if (
-        s === "hotel"
-    ) {
-
-        if (
-            !selectedValue("hotelDate") ||
-            !selectedValue("hotelTime") ||
-            !selectedValue("hotelPeople") ||
-            !selectedValue("hotelVehicle") ||
-            !selectedValue("hotelPickup") ||
-            !selectedValue("hotelDropoff")
-        ) {
-
-            alert(
-                "Please complete all required Hotel Transfer details."
-            );
-
-            return false;
-
-        }
-
-    }
-
-
-    /* OTHER SERVICES */
-
-    else {
-
-        const data =
-        getGenericServiceData(s);
-
-
-        if (!data) {
-
-            return false;
-
-        }
-
-
-        if (
-            !data.date ||
-            !data.time ||
-            !data.people ||
-            !data.vehicle ||
-            !data.pickup
-        ) {
-
-            alert(
-                "Please complete all required booking details."
-            );
-
-            return false;
-
-        }
-
-    }
-
-
-    /* VEHICLE CAPACITY */
-
-    let people = 0;
-    let vehicle = "";
-
-
-    if (
-        s === "city-tour"
-    ) {
-
-        people =
-        Number(
-            selectedValue(
-                "cityTourPeople"
-            )
-        );
-
-        vehicle =
-        selectedValue(
-            "cityTourVehicle"
-        );
-
-    }
-
-    else if (
-        s === "combine"
-    ) {
-
-        people =
-        Number(
-            selectedValue(
-                "combinePeople"
-            )
-        );
-
-        vehicle =
-        selectedValue(
-            "combineVehicle"
-        );
-
-    }
-
-    else if (
-        s === "airport"
-    ) {
-
-        people =
-        Number(
-            selectedValue(
-                "airportPeople"
-            )
-        );
-
-        vehicle =
-        selectedValue(
-            "airportVehicle"
-        );
-
-    }
-
-    else if (
-        s === "hotel"
-    ) {
-
-        people =
-        Number(
-            selectedValue(
-                "hotelPeople"
-            )
-        );
-
-        vehicle =
-        selectedValue(
-            "hotelVehicle"
-        );
-
-    }
-
-    else if (
-        s !== "city-walk"
-    ) {
-
-        const data =
-        getGenericServiceData(s);
-
-
-        if (data) {
-
-            people =
-            Number(data.people);
-
-            vehicle =
-            data.vehicle;
-
-        }
-
-    }
-
-
-    if (
-        vehicle &&
-        people >
-        vehicleCapacity(vehicle)
-    ) {
-
-        alert(
-            vehicle +
-            " accommodates up to " +
-            vehicleCapacity(vehicle) +
-            " people. Please select a larger vehicle."
-        );
-
-        return false;
-
-    }
-
-
-    return true;
-
-}
-
-
-/* ==========================================================
-REFERENCE NUMBER
-========================================================== */
-
-function generateReference() {
-
-    const now =
-    new Date();
-
-
-    const year =
-    String(
-        now.getFullYear()
-    ).slice(-2);
-
-
-    const month =
-    String(
-        now.getMonth() + 1
-    ).padStart(2,"0");
-
-
-    const day =
-    String(
-        now.getDate()
-    ).padStart(2,"0");
-
-
-    const random =
-    Math.floor(
-        1000 +
-        Math.random() * 9000
-    );
-
-
-    return (
-        "STM-" +
-        year +
-        month +
-        day +
-        "-" +
-        random
-    );
-
-}
-
-
-/* ==========================================================
-SUBMIT BOOKING
-========================================================== */
-
-document
-.getElementById("submitButton")
-.addEventListener(
-    "click",
-    function() {
-
-        if (!validateBooking()) {
-            return;
-        }
-
-
-        const reference =
-        generateReference();
-
-
-        const form =
-        document.createElement("form");
-
-
-        form.method =
-        "POST";
-
-
-        form.action =
-        "https://formsubmit.co/stemawastrans@gmail.com";
-
-
-        /* FORMSUBMIT SETTINGS */
-
-        addHidden(
-            form,
-            "_subject",
-            "NEW STEMA TRANS BOOKING - " +
-            reference
-        );
-
-
-        addHidden(
-            form,
-            "_next",
-            "https://themaina1.github.io/stema-trans-tours/thankyou.html?ref=" +
-            encodeURIComponent(reference)
-        );
-
-
-        addHidden(
-            form,
-            "_captcha",
-            "false"
-        );
-
-
-        addHidden(
-            form,
-            "_template",
-            "table"
-        );
-
-
-        /* REFERENCE */
-
-        addHidden(
-            form,
-            "BOOKING REFERENCE",
-            reference
-        );
-
-
-        /* CUSTOMER */
-
-        addHidden(
-            form,
-            "Customer Name",
-            selectedValue("fullName")
-        );
-
-        addHidden(
-            form,
-            "Email",
-            selectedValue("email")
-        );
-
-        addHidden(
-            form,
-            "Phone / WhatsApp",
-            selectedValue("phone")
-        );
-
-        addHidden(
-            form,
-            "Country",
-            selectedValue("country")
-        );
-
-
-        /* SERVICE */
-
-        addHidden(
-            form,
-            "Service",
-            service.options[
-                service.selectedIndex
-            ].text
-        );
-
-
-        /* PAYMENT */
-
-        addHidden(
-            form,
-            "Preferred Payment Method",
-            selectedValue("paymentMethod")
-        );
-
-
-        const s =
-        service.value;
-
-
-        /* CITY WALK */
-
-        if (
-            s === "city-walk"
-        ) {
-
-            const walk =
-            document.getElementById(
-                "walkType"
-            );
-
-
-            addHidden(
-                form,
-                "Walk",
-                walk.options[
-                    walk.selectedIndex
-                ].text
-            );
-
-
-            addHidden(
-                form,
-                "Date",
-                selectedValue(
-                    "walkDate"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Time",
-                selectedValue(
-                    "walkTime"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "People",
-                selectedValue(
-                    "walkPeople"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Meeting Point",
-                selectedValue(
-                    "walkMeetingPoint"
-                )
-            );
-
-
-            const walkTotal =
-            Number(
-                selectedValue(
-                    "walkType"
-                )
-            ) *
-            Number(
-                selectedValue(
-                    "walkPeople"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Total Price",
-                money(walkTotal)
-            );
-
-        }
-
-
-        /* CITY TOUR */
-
-        if (
-            s === "city-tour"
-        ) {
-
-            const vehicle =
-            selectedValue(
-                "cityTourVehicle"
-            );
-
-
-            addHidden(
-                form,
-                "Tour",
-                selectedValue(
-                    "cityTourName"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Date",
-                selectedValue(
-                    "cityTourDate"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Time",
-                selectedValue(
-                    "cityTourTime"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "People",
-                selectedValue(
-                    "cityTourPeople"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Vehicle",
-                vehicle
-            );
-
-
-            addHidden(
-                form,
-                "Transport Charge",
-                money(
-                    vehiclePrice(vehicle)
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Pickup",
-                selectedValue(
-                    "cityTourPickup"
-                )
-            );
-
-        }
-
-
-        /* COMBINE */
-
-        if (
-            s === "combine"
-        ) {
-
-            let combination =
-            selectedValue(
-                "combineType"
-            );
-
-
-            if (
-                combination ===
-                "Custom Combination"
-            ) {
-
-                combination =
-                selectedValue(
-                    "customCombineText"
-                );
-
-            }
-
-
-            const vehicle =
-            selectedValue(
-                "combineVehicle"
-            );
-
-
-            addHidden(
-                form,
-                "Combination",
-                combination
-            );
-
-
-            addHidden(
-                form,
-                "Date",
-                selectedValue(
-                    "combineDate"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Time",
-                selectedValue(
-                    "combineTime"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "People",
-                selectedValue(
-                    "combinePeople"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Vehicle",
-                vehicle
-            );
-
-
-            addHidden(
-                form,
-                "Transport Charge",
-                money(
-                    vehiclePrice(vehicle)
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Pickup",
-                selectedValue(
-                    "combinePickup"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Attraction Fees",
-                "Separate"
-            );
-
-        }
-
-
-        /* AIRPORT */
-
-        if (
-            s === "airport"
-        ) {
-
-            const vehicle =
-            selectedValue(
-                "airportVehicle"
-            );
-
-
-            addHidden(
-                form,
-                "Transfer Type",
-                selectedValue(
-                    "airportType"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Date",
-                selectedValue(
-                    "airportDate"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Time",
-                selectedValue(
-                    "airportTime"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Passengers",
-                selectedValue(
-                    "airportPeople"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Vehicle",
-                vehicle
-            );
-
-
-            addHidden(
-                form,
-                "Transport Charge",
-                money(
-                    vehiclePrice(vehicle)
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Pickup / Drop-off",
-                selectedValue(
-                    "airportLocation"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Flight Number",
-                selectedValue(
-                    "flightNumber"
-                )
-            );
-
-        }
-
-
-        /* HOTEL */
-
-        if (
-            s === "hotel"
-        ) {
-
-            const vehicle =
-            selectedValue(
-                "hotelVehicle"
-            );
-
-
-            addHidden(
-                form,
-                "Date",
-                selectedValue(
-                    "hotelDate"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Time",
-                selectedValue(
-                    "hotelTime"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Passengers",
-                selectedValue(
-                    "hotelPeople"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Vehicle",
-                vehicle
-            );
-
-
-            addHidden(
-                form,
-                "Transport Charge",
-                money(
-                    vehiclePrice(vehicle)
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Pickup",
-                selectedValue(
-                    "hotelPickup"
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Drop-off",
-                selectedValue(
-                    "hotelDropoff"
-                )
-            );
-
-        }
-
-
-        /* GENERIC SERVICES */
-
-        const generic =
-        getGenericServiceData(s);
-
-
-        if (
-            generic &&
-            s !== "city-tour" &&
-            s !== "airport" &&
-            s !== "hotel"
-        ) {
-
-            addHidden(
-                form,
-                "Date",
-                generic.date
-            );
-
-
-            addHidden(
-                form,
-                "Time",
-                generic.time
-            );
-
-
-            addHidden(
-                form,
-                "People",
-                generic.people
-            );
-
-
-            addHidden(
-                form,
-                "Vehicle",
-                generic.vehicle
-            );
-
-
-            addHidden(
-                form,
-                "Transport Charge",
-                money(
-                    vehiclePrice(
-                        generic.vehicle
-                    )
-                )
-            );
-
-
-            addHidden(
-                form,
-                "Pickup / Details",
-                generic.pickup
-            );
-
-        }
-
-
-        /* SPECIAL REQUESTS */
-
-        addHidden(
-            form,
-            "Special Requests",
-            selectedValue("message")
-        );
-
-
-        /* SUBMIT */
-
-        document.body.appendChild(form);
-
-        form.submit();
-
-    }
+updateVehicle(
+"cityTourPeople",
+"cityTourVehicle",
+"cityTourPrice",
+"cityTourWarning"
 );
 
+updateVehicle(
+"parkPeople",
+"parkVehicle",
+"parkPrice",
+"parkWarning"
+);
 
-/* ==========================================================
-UPDATE ALL
-========================================================== */
+updateVehicle(
+"giraffePeople",
+"giraffeVehicle",
+"giraffePrice",
+"giraffeWarning"
+);
 
-function updateAll() {
+updateVehicle(
+"karenPeople",
+"karenVehicle",
+"karenPrice",
+"karenWarning"
+);
 
-    updateWalk();
+updateVehicle(
+"museumPeople",
+"museumVehicle",
+"museumPrice",
+"museumWarning"
+);
 
-    updateCombine();
+updateVehicle(
+"bomasPeople",
+"bomasVehicle",
+"bomasPrice",
+"bomasWarning"
+);
 
+updateVehicle(
+"airportPeople",
+"airportVehicle",
+"airportPrice",
+"airportWarning"
+);
 
-    vehicleServices.forEach(
-        function(item) {
+updateVehicle(
+"hotelPeople",
+"hotelVehicle",
+"hotelPrice",
+"hotelWarning"
+);
 
-            calculateVehicle(
-                item[0],
-                item[1],
-                item[2],
-                item[3]
-            );
+updateVehicle(
+"privatePeople",
+"privateVehicle",
+"privatePrice",
+"privateWarning"
+);
 
-        }
-    );
-
-
-    updateSummary();
+updateSummary();
 
 }
 
 
-/* ==========================================================
-LISTEN FOR CHANGES
-========================================================== */
+/* LISTEN FOR CHANGES */
 
 document
-.querySelectorAll(
-    "input, select, textarea"
-)
-.forEach(
-    function(element) {
+.querySelectorAll("input,select,textarea")
+.forEach(function(element){
 
-        element.addEventListener(
-            "input",
-            updateAll
-        );
+element.addEventListener(
+"input",
+updateAll
+);
 
-        element.addEventListener(
-            "change",
-            updateAll
-        );
+element.addEventListener(
+"change",
+updateAll
+);
 
-    }
+});
+
+
+/* REFERENCE */
+
+function generateReference(){
+
+const d=new Date();
+
+const date=
+String(d.getFullYear()).slice(-2)+
+String(d.getMonth()+1).padStart(2,"0")+
+String(d.getDate()).padStart(2,"0");
+
+const random=
+Math.floor(
+1000+
+Math.random()*9000
+);
+
+return "STM-"+date+"-"+random;
+
+}
+
+
+/* CREATE REFERENCE BEFORE SUBMIT */
+
+document
+.getElementById("bookingForm")
+.addEventListener(
+"submit",
+function(){
+
+const reference=
+generateReference();
+
+document
+.getElementById("bookingReference")
+.value=
+reference;
+
+}
 );
 
 
