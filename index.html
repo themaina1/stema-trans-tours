@@ -7,10 +7,9 @@
 <title>Stema Trans | Nairobi City Tours, Walks & Transfers</title>
 
 <meta name="description"
-content="Stema Trans offers Nairobi city tours, guided city walks, attraction visits, airport transfers and private vehicle services.">
+content="Stema Trans offers Nairobi city tours, guided city walks, Nairobi attractions, airport transfers and private vehicle services.">
 
 <style>
-
 *{
     box-sizing:border-box;
 }
@@ -22,23 +21,21 @@ html{
 body{
     margin:0;
     font-family:Arial,Helvetica,sans-serif;
-    background:#f6f7f5;
     color:#222;
+    background:#f7f8f6;
     line-height:1.6;
 }
 
 img{
     width:100%;
+    height:100%;
+    object-fit:cover;
     display:block;
 }
 
 a{
     text-decoration:none;
 }
-
-/* ==============================
-   NAVIGATION
-============================== */
 
 .navbar{
     position:sticky;
@@ -48,12 +45,11 @@ a{
     box-shadow:0 3px 15px rgba(0,0,0,.18);
 }
 
-.nav-container{
+.nav-inner{
     max-width:1200px;
-    min-height:70px;
     margin:auto;
+    min-height:70px;
     padding:0 20px;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -86,41 +82,32 @@ a{
     color:#e6b34a;
 }
 
-.book-btn{
+.book{
     background:#e6b34a;
     color:#063d28 !important;
     padding:10px 17px;
     border-radius:6px;
 }
 
-/* ==============================
-   HERO
-============================== */
-
 .hero{
     min-height:650px;
-
     background:
-    linear-gradient(
-        rgba(0,0,0,.48),
-        rgba(0,0,0,.53)
-    ),
-    url("images/nairobi-skyline-kicc.jpg")
-    center/cover no-repeat;
-
+        linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.55)),
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_city_skyline_at_dawn_2025.jpg")
+        center/cover no-repeat;
     display:flex;
     align-items:center;
 }
 
-.hero-content{
-    max-width:1200px;
+.hero-inner{
     width:100%;
+    max-width:1200px;
     margin:auto;
     padding:80px 20px;
     color:white;
 }
 
-.hero-label{
+.badge{
     display:inline-block;
     background:#e6b34a;
     color:#063d28;
@@ -144,15 +131,15 @@ a{
 }
 
 .hero p{
-    max-width:700px;
+    max-width:720px;
     font-size:20px;
     margin-bottom:30px;
 }
 
 .buttons{
     display:flex;
-    flex-wrap:wrap;
     gap:14px;
+    flex-wrap:wrap;
 }
 
 .btn{
@@ -162,19 +149,15 @@ a{
     font-weight:bold;
 }
 
-.btn-primary{
+.primary{
     background:#e6b34a;
     color:#063d28;
 }
 
-.btn-outline{
-    border:2px solid white;
+.outline{
     color:white;
+    border:2px solid white;
 }
-
-/* ==============================
-   GENERAL SECTIONS
-============================== */
 
 .section{
     max-width:1200px;
@@ -183,102 +166,88 @@ a{
 }
 
 .heading{
+    text-align:center;
     max-width:800px;
     margin:0 auto 42px;
-    text-align:center;
 }
 
 .kicker{
     color:#087044;
     font-size:13px;
     font-weight:bold;
-    letter-spacing:1.5px;
     text-transform:uppercase;
+    letter-spacing:1.5px;
 }
 
 .heading h2{
-    margin:8px 0 12px;
     color:#063d28;
     font-size:38px;
+    margin:8px 0 12px;
 }
 
 .heading p{
     color:#666;
 }
 
-/* ==============================
-   CITY TOURS
-============================== */
+/* CITY TOURS */
 
 .city-grid{
     display:grid;
     grid-template-columns:1.35fr .85fr;
-    gap:25px;
+    gap:24px;
 }
 
-.feature-card,
-.mini-card{
+.photo-card{
     position:relative;
     overflow:hidden;
     border-radius:13px;
-    box-shadow:0 4px 16px rgba(0,0,0,.12);
+    box-shadow:0 4px 16px rgba(0,0,0,.13);
 }
 
-.feature-card{
-    min-height:500px;
+.large-photo{
+    min-height:510px;
 }
 
-.mini-card{
-    min-height:237px;
+.small-column{
+    display:grid;
+    gap:24px;
 }
 
-.feature-card img,
-.mini-card img{
-    height:100%;
-    object-fit:cover;
+.small-photo{
+    min-height:243px;
+}
+
+.photo-card img{
     transition:.4s;
 }
 
-.feature-card:hover img,
-.mini-card:hover img{
+.photo-card:hover img{
     transform:scale(1.05);
 }
 
-.mini-column{
-    display:grid;
-    gap:25px;
-}
-
-.photo-overlay{
+.overlay{
     position:absolute;
     left:0;
     right:0;
     bottom:0;
-    padding:80px 25px 23px;
+    padding:90px 24px 22px;
     color:white;
-
-    background:
-    linear-gradient(
-        transparent,
-        rgba(0,0,0,.9)
-    );
+    background:linear-gradient(transparent,rgba(0,0,0,.9));
 }
 
-.photo-overlay h3{
+.overlay h3{
     margin:0 0 6px;
-    font-size:26px;
+    font-size:25px;
 }
 
-.photo-overlay p{
+.overlay p{
     margin:0;
     color:#eee;
 }
 
-/* ==============================
-   CITY WALKS
-============================== */
+/* WALKS */
 
-.walk-section{
+.walk-area{
     background:#eaf1ec;
 }
 
@@ -286,44 +255,32 @@ a{
     max-width:1200px;
     margin:auto;
     padding:0 20px 75px;
-
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:22px;
 }
 
-.walk-card{
+.card{
     background:white;
     border-radius:12px;
     overflow:hidden;
     box-shadow:0 4px 15px rgba(0,0,0,.10);
 }
 
-.walk-photo{
+.card-image{
     height:250px;
-    overflow:hidden;
 }
 
-.walk-photo img{
-    height:100%;
-    object-fit:cover;
-    transition:.4s;
-}
-
-.walk-card:hover img{
-    transform:scale(1.05);
-}
-
-.walk-content{
+.card-content{
     padding:20px;
 }
 
-.walk-content h3{
-    margin:0 0 8px;
+.card-content h3{
     color:#063d28;
+    margin:0 0 8px;
 }
 
-.walk-content p{
+.card-content p{
     color:#666;
 }
 
@@ -332,9 +289,7 @@ a{
     font-weight:bold;
 }
 
-/* ==============================
-   ATTRACTIONS
-============================== */
+/* ATTRACTIONS */
 
 .attractions{
     display:grid;
@@ -343,104 +298,87 @@ a{
 }
 
 .attraction{
-    position:relative;
     height:310px;
+    position:relative;
     overflow:hidden;
     border-radius:11px;
 }
 
 .attraction img{
-    height:100%;
-    object-fit:cover;
     transition:.4s;
 }
 
 .attraction:hover img{
-    transform:scale(1.06);
+    transform:scale(1.05);
 }
 
-.attraction-name{
+.attraction-title{
     position:absolute;
     left:0;
     right:0;
     bottom:0;
-    padding:60px 18px 18px;
-
+    padding:65px 18px 18px;
     color:white;
-
-    background:
-    linear-gradient(
-        transparent,
-        rgba(0,0,0,.9)
-    );
+    background:linear-gradient(transparent,rgba(0,0,0,.9));
 }
 
-.attraction-name h3{
+.attraction-title h3{
     margin:0;
 }
 
-/* ==============================
-   WILDLIFE
-============================== */
+/* PARK */
 
-.wildlife{
+.park-area{
     background:#063d28;
     color:white;
 }
 
-.wildlife-inner{
+.park-inner{
     max-width:1200px;
     margin:auto;
     padding:75px 20px;
-
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:40px;
     align-items:center;
 }
 
-.wildlife-photo{
-    border-radius:13px;
-    overflow:hidden;
-}
-
-.wildlife-photo img{
+.park-photo{
     height:430px;
-    object-fit:cover;
+    overflow:hidden;
+    border-radius:13px;
 }
 
-.wildlife-text .kicker{
+.park-text .kicker{
     color:#e6b34a;
 }
 
-.wildlife-text h2{
+.park-text h2{
     font-size:40px;
     margin:8px 0 15px;
 }
 
-.wildlife-text p{
+.park-text p{
     color:#dce7e0;
 }
 
-.wildlife-text ul{
+.park-text ul{
     list-style:none;
     padding:0;
 }
 
-.wildlife-text li{
-    margin:8px 0;
+.park-text li{
+    margin:9px 0;
 }
 
-.wildlife-text li::before{
+.park-text li:before{
     content:"✓";
     color:#e6b34a;
     margin-right:9px;
     font-weight:bold;
 }
 
-/* ==============================
-   AIRPORT
-============================== */
+/* TRANSFERS */
 
 .transfer-grid{
     display:grid;
@@ -448,36 +386,21 @@ a{
     gap:25px;
 }
 
-.transfer-card{
-    background:white;
-    border-radius:13px;
-    overflow:hidden;
-    box-shadow:0 4px 15px rgba(0,0,0,.10);
-}
-
-.transfer-photo{
+.transfer-image{
     height:310px;
 }
 
-.transfer-photo img{
-    height:100%;
-    object-fit:cover;
-}
-
 .transfer-content{
-    padding:23px;
+    padding:22px;
 }
 
 .transfer-content h3{
-    margin-top:0;
     color:#063d28;
 }
 
-/* ==============================
-   VEHICLES
-============================== */
+/* VEHICLES */
 
-.vehicle-section{
+.vehicle-area{
     background:#edf1ee;
 }
 
@@ -487,21 +410,8 @@ a{
     gap:20px;
 }
 
-.vehicle-card{
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 4px 15px rgba(0,0,0,.10);
-}
-
-.vehicle-photo{
+.vehicle-image{
     height:220px;
-    background:#ddd;
-}
-
-.vehicle-photo img{
-    height:100%;
-    object-fit:cover;
 }
 
 .vehicle-content{
@@ -509,8 +419,8 @@ a{
 }
 
 .vehicle-content h3{
-    margin:0 0 5px;
     color:#063d28;
+    margin:0 0 6px;
 }
 
 .vehicle-content p{
@@ -523,11 +433,9 @@ a{
     font-weight:bold;
 }
 
-/* ==============================
-   COMBINED EXPERIENCES
-============================== */
+/* COMBINE */
 
-.combine-section{
+.combine-area{
     background:#f3f5f3;
 }
 
@@ -537,34 +445,11 @@ a{
     gap:20px;
 }
 
-.combine-card{
-    background:white;
-    border-radius:11px;
-    overflow:hidden;
-    box-shadow:0 3px 13px rgba(0,0,0,.10);
-}
-
-.combine-photo{
+.combine-image{
     height:220px;
 }
 
-.combine-photo img{
-    height:100%;
-    object-fit:cover;
-}
-
-.combine-content{
-    padding:18px;
-}
-
-.combine-content h3{
-    color:#063d28;
-    margin-top:0;
-}
-
-/* ==============================
-   WHY US
-============================== */
+/* WHY */
 
 .why-grid{
     display:grid;
@@ -572,7 +457,7 @@ a{
     gap:20px;
 }
 
-.why-card{
+.why{
     text-align:center;
     padding:20px;
 }
@@ -581,44 +466,32 @@ a{
     width:62px;
     height:62px;
     margin:auto;
-
+    border-radius:50%;
+    background:#e8f1eb;
+    color:#087044;
     display:flex;
     align-items:center;
     justify-content:center;
-
-    background:#e8f1eb;
-    color:#087044;
-
-    border-radius:50%;
     font-size:25px;
     font-weight:bold;
 }
 
-.why-card h3{
+.why h3{
     color:#063d28;
 }
 
-/* ==============================
-   CTA
-============================== */
+/* CTA */
 
 .cta{
     min-height:400px;
-
     background:
-    linear-gradient(
-        rgba(0,0,0,.57),
-        rgba(0,0,0,.65)
-    ),
-    url("images/nairobi-evening-skyline.jpg")
-    center/cover no-repeat;
-
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Aerial_view_of_the_Nairobi_skyline_from_the_KICC_rooftop_at_golden_hour.jpg")
+        center/cover no-repeat;
     color:white;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-align:center;
     padding:60px 20px;
 }
@@ -629,12 +502,9 @@ a{
 
 .cta h2{
     font-size:42px;
-    margin:0 0 12px;
 }
 
-/* ==============================
-   FOOTER
-============================== */
+/* FOOTER */
 
 footer{
     background:#032d1d;
@@ -645,7 +515,6 @@ footer{
 .footer-grid{
     max-width:1100px;
     margin:auto;
-
     display:grid;
     grid-template-columns:1.3fr 1fr 1fr;
     gap:35px;
@@ -683,9 +552,7 @@ footer a{
     font-size:13px;
 }
 
-/* ==============================
-   MOBILE
-============================== */
+/* MOBILE */
 
 @media(max-width:950px){
 
@@ -702,7 +569,7 @@ footer a{
     }
 
     .city-grid,
-    .wildlife-inner,
+    .park-inner,
     .transfer-grid{
         grid-template-columns:1fr;
     }
@@ -730,7 +597,7 @@ footer a{
 
 @media(max-width:600px){
 
-    .nav-links a:not(.book-btn){
+    .nav-links a:not(.book){
         display:none;
     }
 
@@ -743,7 +610,7 @@ footer a{
     }
 
     .hero h1{
-        font-size:37px;
+        font-size:38px;
     }
 
     .hero p{
@@ -762,19 +629,19 @@ footer a{
         grid-template-columns:1fr;
     }
 
-    .feature-card{
+    .large-photo{
         min-height:380px;
     }
 
-    .mini-card{
+    .small-photo{
         min-height:270px;
     }
 
-    .wildlife-photo img{
+    .park-photo{
         height:300px;
     }
 
-    .wildlife-text h2,
+    .park-text h2,
     .cta h2{
         font-size:31px;
     }
@@ -783,27 +650,21 @@ footer a{
         grid-template-columns:1fr;
     }
 }
-
 </style>
 </head>
 
 <body>
 
-
-<!-- ==============================
-     NAVIGATION
-============================== -->
+<!-- NAVIGATION -->
 
 <nav class="navbar">
-
-<div class="nav-container">
+<div class="nav-inner">
 
 <a href="index.html" class="logo">
 STEMA <span>TRANS</span>
 </a>
 
 <div class="nav-links">
-
 <a href="index.html">Home</a>
 <a href="tours.html">Tours</a>
 <a href="city-walks.html">City Walks</a>
@@ -811,47 +672,40 @@ STEMA <span>TRANS</span>
 <a href="fleet.html">Fleet</a>
 <a href="gallery.html">Gallery</a>
 <a href="contact.html">Contact</a>
-
-<a href="booking.html" class="book-btn">
-BOOK NOW
-</a>
-
+<a href="booking.html" class="book">BOOK NOW</a>
 </div>
 
 </div>
-
 </nav>
 
 
-<!-- ==============================
-     HERO
-============================== -->
+<!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-content">
+<div class="hero-inner">
 
-<div class="hero-label">
+<div class="badge">
 Nairobi City Tours & Experiences
 </div>
 
 <h1>
-Discover Nairobi
+Discover Nairobi.
 <span>Your Way.</span>
 </h1>
 
 <p>
-City tours, guided walks, attractions, wildlife experiences,
-airport transfers and private vehicle services in Nairobi.
+City tours, guided walks, attractions, airport transfers
+and private vehicle services in Kenya's capital.
 </p>
 
 <div class="buttons">
 
-<a href="booking.html" class="btn btn-primary">
+<a href="booking.html" class="btn primary">
 Book Your Experience
 </a>
 
-<a href="tours.html" class="btn btn-outline">
+<a href="tours.html" class="btn outline">
 Explore Nairobi
 </a>
 
@@ -862,9 +716,7 @@ Explore Nairobi
 </section>
 
 
-<!-- ==============================
-     CITY TOUR
-============================== -->
+<!-- CITY TOURS -->
 
 <section class="section">
 
@@ -879,24 +731,21 @@ See the City. Feel the City.
 </h2>
 
 <p>
-Explore Nairobi's landmarks, skyline, historic centre,
+Explore Nairobi's landmarks, CBD, historic areas,
 markets and green spaces with a local guide.
 </p>
 
 </div>
 
-
 <div class="city-grid">
 
-
-<div class="feature-card">
+<div class="photo-card large-photo">
 
 <img
-src="images/nairobi-kicc-cbd.jpg"
-alt="KICC and Nairobi CBD"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kenyatta_International_Convention_Centre_07.jpg"
+alt="Kenyatta International Convention Centre Nairobi">
 
-<div class="photo-overlay">
+<div class="overlay">
 
 <h3>
 Nairobi City Highlights
@@ -912,17 +761,15 @@ Jeevanjee Gardens and Uhuru Park.
 </div>
 
 
-<div class="mini-column">
+<div class="small-column">
 
-
-<div class="mini-card">
+<div class="photo-card small-photo">
 
 <img
-src="images/nairobi-cbd-street.jpg"
-alt="Nairobi CBD street"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Moi_Avenue_(Nairobi),_2025_(09).jpg"
+alt="Moi Avenue Nairobi">
 
-<div class="photo-overlay">
+<div class="overlay">
 
 <h3>
 Nairobi CBD
@@ -937,21 +784,20 @@ Experience the energy of Kenya's capital.
 </div>
 
 
-<div class="mini-card">
+<div class="photo-card small-photo">
 
 <img
-src="images/nairobi-kicc-view.jpg"
-alt="Nairobi KICC city view"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_city_skyline_at_dawn_2025.jpg"
+alt="Nairobi skyline">
 
-<div class="photo-overlay">
+<div class="overlay">
 
 <h3>
-KICC & Skyline
+Nairobi Skyline
 </h3>
 
 <p>
-One of Nairobi's most recognisable landmarks.
+See the city from one of its most recognisable viewpoints.
 </p>
 
 </div>
@@ -965,11 +811,9 @@ One of Nairobi's most recognisable landmarks.
 </section>
 
 
-<!-- ==============================
-     CITY WALKS
-============================== -->
+<!-- CITY WALKS -->
 
-<section class="walk-section">
+<section class="walk-area">
 
 <div class="section">
 
@@ -995,19 +839,17 @@ from street level.
 
 <div class="walk-grid">
 
+<div class="card">
 
-<div class="walk-card">
-
-<div class="walk-photo">
+<div class="card-image">
 
 <img
-src="images/nairobi-city-walk-cbd.jpg"
-alt="People walking in Nairobi CBD"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Moi_Avenue_(Nairobi),_2025_(10).jpg"
+alt="Nairobi street">
 
 </div>
 
-<div class="walk-content">
+<div class="card-content">
 
 <h3>
 Nairobi Highlights Walk
@@ -1027,18 +869,17 @@ KES 2,500 per person
 </div>
 
 
-<div class="walk-card">
+<div class="card">
 
-<div class="walk-photo">
+<div class="card-image">
 
 <img
-src="images/nairobi-history-culture.jpg"
-alt="Historic Nairobi streets"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_city_skyline_at_dawn_2025.jpg"
+alt="Nairobi historic city centre">
 
 </div>
 
-<div class="walk-content">
+<div class="card-content">
 
 <h3>
 History & Culture Walk
@@ -1058,18 +899,17 @@ KES 2,500 per person
 </div>
 
 
-<div class="walk-card">
+<div class="card">
 
-<div class="walk-photo">
+<div class="card-image">
 
 <img
-src="images/nairobi-local-life.jpg"
-alt="Nairobi local street life"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Colorful_beaded_necklaces_at_Nairobi_City_Market_in_Kenya.jpg"
+alt="Nairobi local market life">
 
 </div>
 
-<div class="walk-content">
+<div class="card-content">
 
 <h3>
 Food & Local Life Walk
@@ -1092,9 +932,7 @@ KES 3,500 per person
 </section>
 
 
-<!-- ==============================
-     ATTRACTIONS
-============================== -->
+<!-- ATTRACTIONS -->
 
 <section class="section">
 
@@ -1118,20 +956,14 @@ into one private experience.
 
 <div class="attractions">
 
-
 <div class="attraction">
 
 <img
-src="images/nairobi-national-museum-front.jpg"
-alt="Front of Nairobi National Museum"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Exterior_of_Nairobi_National_Museum,_Kenya_(1).jpg"
+alt="Front exterior of Nairobi National Museum">
 
-<div class="attraction-name">
-
-<h3>
-Nairobi National Museum
-</h3>
-
+<div class="attraction-title">
+<h3>Nairobi National Museum</h3>
 </div>
 
 </div>
@@ -1140,16 +972,11 @@ Nairobi National Museum
 <div class="attraction">
 
 <img
-src="images/nairobi-city-market.jpg"
-alt="Nairobi City Market"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_City_Market_in_Kenya.jpg"
+alt="Nairobi City Market exterior">
 
-<div class="attraction-name">
-
-<h3>
-City Market
-</h3>
-
+<div class="attraction-title">
+<h3>City Market</h3>
 </div>
 
 </div>
@@ -1158,16 +985,11 @@ City Market
 <div class="attraction">
 
 <img
-src="images/uhuru-park-nairobi.jpg"
-alt="Uhuru Park Nairobi"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Uhuru_Park,_2025_(01).jpg"
+alt="Uhuru Park Nairobi">
 
-<div class="attraction-name">
-
-<h3>
-Uhuru Park
-</h3>
-
+<div class="attraction-title">
+<h3>Uhuru Park</h3>
 </div>
 
 </div>
@@ -1176,16 +998,11 @@ Uhuru Park
 <div class="attraction">
 
 <img
-src="images/giraffe-centre-nairobi.jpg"
-alt="Giraffe Centre Nairobi"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_city_skyline_at_dawn_2025.jpg"
+alt="Nairobi city attraction">
 
-<div class="attraction-name">
-
-<h3>
-Giraffe Centre
-</h3>
-
+<div class="attraction-title">
+<h3>Nairobi City Experience</h3>
 </div>
 
 </div>
@@ -1195,29 +1012,25 @@ Giraffe Centre
 </section>
 
 
-<!-- ==============================
-     NAIROBI NATIONAL PARK
-============================== -->
+<!-- NAIROBI NATIONAL PARK -->
 
-<section class="wildlife">
+<section class="park-area">
 
-<div class="wildlife-inner">
+<div class="park-inner">
 
-
-<div class="wildlife-photo">
+<div class="park-photo">
 
 <img
-src="images/nairobi-national-park-giraffes.jpg"
-alt="Giraffes in Nairobi National Park"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_National_Park,_Kenya.jpg"
+alt="Nairobi National Park Kenya">
 
 </div>
 
 
-<div class="wildlife-text">
+<div class="park-text">
 
 <div class="kicker">
-Wildlife in Nairobi
+Wildlife Near the City
 </div>
 
 <h2>
@@ -1225,22 +1038,20 @@ Nairobi National Park
 </h2>
 
 <p>
-Experience wildlife just outside the city. Nairobi
-National Park gives visitors the unusual opportunity
-to see wildlife with Nairobi's skyline nearby.
+Experience wildlife only a short distance from the city.
+Nairobi National Park is one of the unique experiences
+available from Nairobi.
 </p>
 
 <ul>
-
 <li>Nairobi National Park game drives</li>
-<li>Giraffe Centre visits</li>
 <li>Private vehicle options</li>
-<li>Half-day and full-day experiences</li>
-
+<li>Half-day experiences</li>
+<li>Full-day experiences</li>
 </ul>
 
-<a href="booking.html" class="btn btn-primary">
-Book Wildlife Experience
+<a href="booking.html" class="btn primary">
+Book Park Experience
 </a>
 
 </div>
@@ -1250,25 +1061,23 @@ Book Wildlife Experience
 </section>
 
 
-<!-- ==============================
-     JKIA TRANSFERS
-============================== -->
+<!-- TRANSFERS -->
 
 <section class="section">
 
 <div class="heading">
 
 <div class="kicker">
-Airport Transfers
+Airport & Private Transfers
 </div>
 
 <h2>
-Arrive in Nairobi Without the Stress
+Move Around Nairobi Comfortably
 </h2>
 
 <p>
-Private airport transfers between JKIA and your hotel,
-residence or chosen Nairobi destination.
+Reliable private transfers between JKIA, hotels,
+residences and Nairobi attractions.
 </p>
 
 </div>
@@ -1277,14 +1086,13 @@ residence or chosen Nairobi destination.
 <div class="transfer-grid">
 
 
-<div class="transfer-card">
+<div class="card">
 
-<div class="transfer-photo">
+<div class="transfer-image">
 
 <img
-src="images/jkia-terminal-2026.jpg"
-alt="Jomo Kenyatta International Airport Nairobi"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_city_skyline_at_dawn_2025.jpg"
+alt="Nairobi airport transfer service">
 
 </div>
 
@@ -1295,8 +1103,9 @@ JKIA Airport Transfer
 </h3>
 
 <p>
-Professional airport pickup and drop-off service
-for visitors arriving or departing through JKIA.
+Private airport pickup and drop-off between
+Jomo Kenyatta International Airport and your
+Nairobi destination.
 </p>
 
 <a href="booking.html">
@@ -1308,14 +1117,13 @@ Book Airport Transfer →
 </div>
 
 
-<div class="transfer-card">
+<div class="card">
 
-<div class="transfer-photo">
+<div class="transfer-image">
 
 <img
-src="images/nairobi-hotel-transfer.jpg"
-alt="Nairobi hotel transfer"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kenyatta_International_Convention_Centre_07.jpg"
+alt="Nairobi private transfer">
 
 </div>
 
@@ -1326,8 +1134,8 @@ Hotel & Private Transfers
 </h3>
 
 <p>
-Comfortable transfers between hotels, residences,
-attractions and other Nairobi destinations.
+Comfortable transfers between hotels,
+residences, attractions and other destinations.
 </p>
 
 <a href="booking.html">
@@ -1343,11 +1151,9 @@ Request Transfer →
 </section>
 
 
-<!-- ==============================
-     VEHICLES
-============================== -->
+<!-- VEHICLES -->
 
-<section class="vehicle-section">
+<section class="vehicle-area">
 
 <div class="section">
 
@@ -1358,12 +1164,12 @@ Choose Your Ride
 </div>
 
 <h2>
-Vehicles for Your Experience
+Vehicle Categories
 </h2>
 
 <p>
-Vehicle categories suited to Nairobi city touring,
-transfers and longer excursions.
+Select the vehicle that best suits your group
+and experience.
 </p>
 
 </div>
@@ -1372,28 +1178,23 @@ transfers and longer excursions.
 <div class="vehicle-grid">
 
 
-<!-- SEDAN -->
+<div class="card">
 
-<div class="vehicle-card">
-
-<div class="vehicle-photo">
+<div class="vehicle-image">
 
 <img
-src="images/kenya-toyota-axio-sedan.jpg"
-alt="Toyota Axio sedan in Kenya"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Toyota_Axio.jpg"
+alt="Toyota sedan">
 
 </div>
 
 <div class="vehicle-content">
 
-<h3>
-Sedan
-</h3>
+<h3>Sedan</h3>
 
 <p>
-A practical Kenyan-market sedan such as a Toyota
-Axio/Corolla, ideal for individuals and couples.
+Practical sedan option for individuals,
+couples and small private transfers.
 </p>
 
 <div class="vehicle-price">
@@ -1405,28 +1206,23 @@ From KES 4,500
 </div>
 
 
-<!-- SUV -->
+<div class="card">
 
-<div class="vehicle-card">
-
-<div class="vehicle-photo">
+<div class="vehicle-image">
 
 <img
-src="images/kenya-prado-tx-suv.jpg"
-alt="Toyota Prado TX SUV in Kenya"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Toyota_Land_Cruiser_Prado.jpg"
+alt="Toyota Prado SUV">
 
 </div>
 
 <div class="vehicle-content">
 
-<h3>
-SUV
-</h3>
+<h3>SUV</h3>
 
 <p>
-Comfortable SUV option such as a Toyota Prado TX,
-ideal for small groups and premium transfers.
+Comfortable SUV category suitable for
+small groups and premium transfers.
 </p>
 
 <div class="vehicle-price">
@@ -1438,28 +1234,23 @@ From KES 6,500
 </div>
 
 
-<!-- TOUR VAN -->
+<div class="card">
 
-<div class="vehicle-card">
-
-<div class="vehicle-photo">
+<div class="vehicle-image">
 
 <img
-src="images/kenya-safari-tour-van.jpg"
-alt="Kenya safari tour van"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Toyota_Hiace.jpg"
+alt="Toyota Hiace tour van">
 
 </div>
 
 <div class="vehicle-content">
 
-<h3>
-Tour Van
-</h3>
+<h3>Tour Van</h3>
 
 <p>
-Toyota Hiace-style tour van suitable for groups
-of up to seven passengers.
+Tour van suitable for groups of up to
+seven passengers.
 </p>
 
 <div class="vehicle-price">
@@ -1471,28 +1262,23 @@ KES 5,500
 </div>
 
 
-<!-- LAND CRUISER -->
+<div class="card">
 
-<div class="vehicle-card">
-
-<div class="vehicle-photo">
+<div class="vehicle-image">
 
 <img
-src="images/kenya-safari-land-cruiser.jpg"
-alt="Kenya safari Land Cruiser"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Toyota_Land_Cruiser_(J70)_safari_vehicle,_Voi,_2025_(01).jpg"
+alt="Safari Land Cruiser in Kenya">
 
 </div>
 
 <div class="vehicle-content">
 
-<h3>
-Tour Land Cruiser
-</h3>
+<h3>Tour Land Cruiser</h3>
 
 <p>
-Safari-configured Land Cruiser with the comfort
-and capability required for wildlife touring.
+Safari-configured Land Cruiser for
+wildlife and longer excursions.
 </p>
 
 <div class="vehicle-price">
@@ -1510,11 +1296,9 @@ KES 8,500
 </section>
 
 
-<!-- ==============================
-     COMBINE EXPERIENCES
-============================== -->
+<!-- COMBINED EXPERIENCES -->
 
-<section class="combine-section">
+<section class="combine-area">
 
 <div class="section">
 
@@ -1529,8 +1313,8 @@ Combine Experiences
 </h2>
 
 <p>
-Combine nearby Nairobi attractions into one convenient
-private tour instead of booking separate trips.
+Combine nearby Nairobi attractions into one
+convenient private experience.
 </p>
 
 </div>
@@ -1539,26 +1323,25 @@ private tour instead of booking separate trips.
 <div class="combine-grid">
 
 
-<div class="combine-card">
+<div class="card">
 
-<div class="combine-photo">
+<div class="combine-image">
 
 <img
-src="images/nairobi-museum-front.jpg"
-alt="Nairobi National Museum"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Exterior_of_Nairobi_National_Museum,_Kenya_(1).jpg"
+alt="Nairobi National Museum">
 
 </div>
 
-<div class="combine-content">
+<div class="card-content">
 
 <h3>
 Museum + City Highlights
 </h3>
 
 <p>
-Visit the National Museum and continue into Nairobi's
-CBD and landmark areas.
+Visit the National Museum and continue into
+Nairobi's CBD and landmark areas.
 </p>
 
 </div>
@@ -1566,25 +1349,25 @@ CBD and landmark areas.
 </div>
 
 
-<div class="combine-card">
+<div class="card">
 
-<div class="combine-photo">
+<div class="combine-image">
 
 <img
-src="images/nairobi-park-city.jpg"
-alt="Nairobi National Park"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_National_Park,_Kenya.jpg"
+alt="Nairobi National Park">
 
 </div>
 
-<div class="combine-content">
+<div class="card-content">
 
 <h3>
 City + Nairobi National Park
 </h3>
 
 <p>
-Combine Nairobi sightseeing with a wildlife experience.
+Combine Nairobi sightseeing with a
+wildlife experience.
 </p>
 
 </div>
@@ -1592,26 +1375,25 @@ Combine Nairobi sightseeing with a wildlife experience.
 </div>
 
 
-<div class="combine-card">
+<div class="card">
 
-<div class="combine-photo">
+<div class="combine-image">
 
 <img
-src="images/nairobi-local-street.jpg"
-alt="Nairobi local street life"
->
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Colorful_beaded_necklaces_at_Nairobi_City_Market_in_Kenya.jpg"
+alt="Nairobi local life">
 
 </div>
 
-<div class="combine-content">
+<div class="card-content">
 
 <h3>
 City + Local Life
 </h3>
 
 <p>
-Combine a city tour with a genuine street-level
-Nairobi experience.
+Combine city sightseeing with a genuine
+street-level Nairobi experience.
 </p>
 
 </div>
@@ -1625,9 +1407,7 @@ Nairobi experience.
 </section>
 
 
-<!-- ==============================
-     WHY STEMA
-============================== -->
+<!-- WHY STEMA -->
 
 <section class="section">
 
@@ -1646,8 +1426,7 @@ A More Personal Way to See Nairobi
 
 <div class="why-grid">
 
-
-<div class="why-card">
+<div class="why">
 
 <div class="icon">✓</div>
 
@@ -1662,7 +1441,7 @@ Explore Nairobi with local knowledge.
 </div>
 
 
-<div class="why-card">
+<div class="why">
 
 <div class="icon">★</div>
 
@@ -1677,7 +1456,7 @@ Choose the places and experiences you want.
 </div>
 
 
-<div class="why-card">
+<div class="why">
 
 <div class="icon">🚐</div>
 
@@ -1692,7 +1471,7 @@ Sedan, SUV, Tour Van and Land Cruiser options.
 </div>
 
 
-<div class="why-card">
+<div class="why">
 
 <div class="icon">✓</div>
 
@@ -1701,7 +1480,7 @@ Easy Booking
 </h3>
 
 <p>
-Tell us what you want and we arrange the experience.
+Tell us your plans and we arrange the experience.
 </p>
 
 </div>
@@ -1711,9 +1490,7 @@ Tell us what you want and we arrange the experience.
 </section>
 
 
-<!-- ==============================
-     CTA
-============================== -->
+<!-- CTA -->
 
 <section class="cta">
 
@@ -1725,10 +1502,9 @@ Ready to Explore Nairobi?
 
 <p>
 Tell us your date, group size and preferred experience.
-We'll help you plan the rest.
 </p>
 
-<a href="booking.html" class="btn btn-primary">
+<a href="booking.html" class="btn primary">
 BOOK YOUR EXPERIENCE
 </a>
 
@@ -1737,9 +1513,7 @@ BOOK YOUR EXPERIENCE
 </section>
 
 
-<!-- ==============================
-     FOOTER
-============================== -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1747,9 +1521,7 @@ BOOK YOUR EXPERIENCE
 
 <div>
 
-<h3>
-STEMA TRANS
-</h3>
+<h3>STEMA TRANS</h3>
 
 <p>
 Nairobi City Tours, City Walks, Attractions,
@@ -1765,12 +1537,9 @@ Discover Nairobi your way.
 
 <div>
 
-<h3>
-Quick Links
-</h3>
+<h3>Quick Links</h3>
 
 <ul>
-
 <li><a href="index.html">Home</a></li>
 <li><a href="tours.html">Tours</a></li>
 <li><a href="city-walks.html">City Walks</a></li>
@@ -1778,7 +1547,6 @@ Quick Links
 <li><a href="fleet.html">Fleet</a></li>
 <li><a href="gallery.html">Gallery</a></li>
 <li><a href="booking.html">Book Now</a></li>
-
 </ul>
 
 </div>
@@ -1786,9 +1554,7 @@ Quick Links
 
 <div>
 
-<h3>
-Contact
-</h3>
+<h3>Contact</h3>
 
 <p>
 Phone / WhatsApp:<br>
@@ -1806,9 +1572,7 @@ stemawastrans@gmail.com
 
 
 <div class="copyright">
-
 © 2026 Stema Trans. All Rights Reserved.
-
 </div>
 
 </footer>
