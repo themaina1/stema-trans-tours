@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>City Walks | Stema Trans Nairobi</title>
+
+<meta name="description"
+content="Explore Nairobi on foot with Stema Trans guided city walks including Nairobi Highlights, History & Culture, and Food & Local Life walks.">
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f7f8f6;
+    color:#222;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#063d28;
+    box-shadow:0 3px 15px rgba(0,0,0,.18);
+}
+
+.nav-inner{
+    max-width:1200px;
+    margin:auto;
+    min-height:70px;
+    padding:0 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:#fff;
+    font-size:24px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#e6b34a;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:17px;
+}
+
+.nav-links a{
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    color:#e6b34a;
+}
+
+.book{
+    background:#e6b34a;
+    color:#063d28 !important;
+    padding:10px 17px;
+    border-radius:6px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:500px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.42),
+        rgba(0,0,0,.68)
+    ),
+    url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_city_skyline_at_dawn_2025.jpg")
+    center/cover no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:#fff;
+}
+
+.hero-content{
+    max-width:850px;
+    padding:75px 20px;
+}
+
+.badge{
+    display:inline-block;
+
+    background:#e6b34a;
+    color:#063d28;
+
+    padding:7px 14px;
+    border-radius:5px;
+
+    font-size:13px;
+    font-weight:bold;
+
+    text-transform:uppercase;
+    letter-spacing:1.3px;
+}
+
+.hero h1{
+    font-size:54px;
+    line-height:1.1;
+    margin:18px 0;
+}
+
+.hero h1 span{
+    color:#e6b34a;
+}
+
+.hero p{
+    max-width:720px;
+    margin:auto;
+
+    font-size:19px;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:75px 20px;
+}
+
+.heading{
+    max-width:800px;
+    margin:0 auto 45px;
+    text-align:center;
+}
+
+.kicker{
+    color:#087044;
+
+    font-size:13px;
+    font-weight:bold;
+
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+}
+
+.heading h2{
+    color:#063d28;
+    font-size:38px;
+    margin:8px 0 12px;
+}
+
+.heading p{
+    color:#666;
+}
+
+
+/* =========================
+   WALK CARDS
+========================= */
+
+.walk-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.walk-card{
+    background:#fff;
+
+    border-radius:13px;
+    overflow:hidden;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.11);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.walk-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 27px rgba(0,0,0,.16);
+}
+
+.walk-image{
+    height:270px;
+    overflow:hidden;
+}
+
+.walk-image img{
+    transition:transform .4s ease;
+}
+
+.walk-card:hover .walk-image img{
+    transform:scale(1.05);
+}
+
+.walk-content{
+    padding:25px;
+}
+
+.walk-content h3{
+    color:#063d28;
+    font-size:25px;
+    margin:0 0 10px;
+}
+
+.walk-content p{
+    color:#666;
+}
+
+.walk-details{
+    margin:20px 0;
+
+    background:#f0f5f1;
+
+    border-radius:8px;
+
+    padding:14px;
+}
+
+.walk-details div{
+    margin:5px 0;
+}
+
+.walk-details strong{
+    color:#063d28;
+}
+
+.price{
+    border-top:1px solid #ddd;
+
+    padding-top:18px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:12px;
+}
+
+.price-label{
+    color:#666;
+    font-size:13px;
+}
+
+.price-value{
+    color:#9a6700;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.book-walk{
+    display:inline-block;
+
+    margin-top:5px;
+
+    background:#063d28;
+    color:#fff;
+
+    padding:11px 17px;
+
+    border-radius:6px;
+
+    font-weight:bold;
+    font-size:14px;
+}
+
+.book-walk:hover{
+    background:#087044;
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how-area{
+    background:#063d28;
+    color:#fff;
+}
+
+.how-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:75px 20px;
+}
+
+.how-heading{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 45px;
+}
+
+.how-heading .kicker{
+    color:#e6b34a;
+}
+
+.how-heading h2{
+    font-size:38px;
+    margin:8px 0;
+}
+
+.how-heading p{
+    color:#dbe6df;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.step{
+    text-align:center;
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    padding:30px 22px;
+
+    border-radius:10px;
+}
+
+.step-number{
+    width:58px;
+    height:58px;
+
+    margin:0 auto 17px;
+
+    border-radius:50%;
+
+    background:#e6b34a;
+    color:#063d28;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:22px;
+    font-weight:bold;
+}
+
+.step h3{
+    margin:8px 0;
+}
+
+.step p{
+    color:#dbe6df;
+}
+
+
+/* =========================
+   IMPORTANT PRICING
+========================= */
+
+.pricing{
+    background:#eaf1ec;
+}
+
+.pricing-box{
+    max-width:900px;
+    margin:auto;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:30px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+    border-left:5px solid #087044;
+}
+
+.pricing-box h3{
+    color:#063d28;
+    margin-top:0;
+}
+
+.pricing-box ul{
+    padding-left:20px;
+}
+
+.pricing-box li{
+    margin:8px 0;
+}
+
+.pricing-box strong{
+    color:#063d28;
+}
+
+
+/* =========================
+   WALK EXPERIENCE
+========================= */
+
+.experience-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:stretch;
+}
+
+.experience-card{
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:30px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.experience-card h3{
+    color:#063d28;
+    font-size:26px;
+}
+
+.experience-card ul{
+    padding-left:20px;
+}
+
+.experience-card li{
+    margin:9px 0;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:#f0f4f1;
+
+    text-align:center;
+
+    padding:75px 20px;
+}
+
+.cta-content{
+    max-width:750px;
+    margin:auto;
+}
+
+.cta h2{
+    color:#063d28;
+    font-size:40px;
+    margin:0 0 12px;
+}
+
+.cta p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.cta-button{
+    display:inline-block;
+
+    background:#e6b34a;
+    color:#063d28;
+
+    padding:14px 25px;
+
+    border-radius:7px;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#032d1d;
+    color:#fff;
+
+    padding:50px 20px 20px;
+}
+
+.footer-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+
+    gap:35px;
+}
+
+footer h3{
+    color:#e6b34a;
+}
+
+footer p,
+footer li{
+    color:#d7dfda;
+}
+
+footer ul{
+    list-style:none;
+    padding:0;
+}
+
+footer li{
+    margin:7px 0;
+}
+
+footer a{
+    color:#d7dfda;
+}
+
+footer a:hover{
+    color:#e6b34a;
+}
+
+.copyright{
+    max-width:1100px;
+    margin:30px auto 0;
+
+    padding-top:18px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+    color:#9daaa3;
+    font-size:13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:950px){
+
+    .nav-links{
+        gap:9px;
+    }
+
+    .nav-links a{
+        font-size:12px;
+    }
+
+    .walk-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .experience-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .nav-links a:not(.book){
+        display:none;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
+    .hero{
+        min-height:420px;
+    }
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .heading h2,
+    .how-heading h2,
+    .cta h2{
+        font-size:30px;
+    }
+
+    .walk-grid{
+        grid-template-columns:1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .walk-image{
+        height:240px;
+    }
+
+    .price{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="navbar">
+
+<div class="nav-inner">
+
+<a href="index.html" class="logo">
+STEMA <span>TRANS</span>
+</a>
+
+<div class="nav-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="tours.html">
+Tours
+</a>
+
+<a href="city-walks.html">
+City Walks
+</a>
+
+<a href="transfers.html">
+Transfers
+</a>
+
+<a href="fleet.html">
+Fleet
+</a>
+
+<a href="gallery.html">
+Gallery
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+<a href="booking.html" class="book">
+BOOK NOW
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="badge">
+Guided Nairobi Walking Experiences
+</div>
+
+<h1>
+Walk <span>Nairobi</span>
+</h1>
+
+<p>
+Experience Nairobi from street level through
+guided walks focusing on the city's landmarks,
+history, culture, food and everyday local life.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="section">
+
+<div class="heading">
+
+<div class="kicker">
+Explore on Foot
+</div>
+
+<h2>
+Nairobi Is Better When You Walk It
+</h2>
+
+<p>
+Our guided walking experiences are designed for
+travellers who want to slow down, look around,
+learn about the city and experience Nairobi beyond
+the usual tourist route.
+</p>
+
+</div>
+
+
+<!-- =========================
+     WALK OPTIONS
+========================= -->
+
+<div class="walk-grid">
+
+
+<!-- =========================
+     HIGHLIGHTS WALK
+========================= -->
+
+<div class="walk-card">
+
+<div class="walk-image">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_city_skyline_at_dawn_2025.jpg"
+alt="Nairobi city centre skyline">
+
+</div>
+
+<div class="walk-content">
+
+<h3>
+Nairobi Highlights Walk
+</h3>
+
+<p>
+A relaxed introduction to central Nairobi,
+covering important landmarks, streets,
+public spaces and viewpoints.
+</p>
+
+<div class="walk-details">
+
+<div>
+<strong>Duration:</strong>
+Approximately 2–3 hours
+</div>
+
+<div>
+<strong>Type:</strong>
+Guided walking tour
+</div>
+
+<div>
+<strong>Vehicle:</strong>
+Not required
+</div>
+
+</div>
+
+<div class="price">
+
+<div>
+
+<div class="price-label">
+Price
+</div>
+
+<div class="price-value">
+KES 2,500 / person
+</div>
+
+</div>
+
+<a href="booking.html" class="book-walk">
+Book Walk
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     HISTORY & CULTURE
+========================= -->
+
+<div class="walk-card">
+
+<div class="walk-image">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/National_Archives_(1443451252).jpg"
+alt="Kenya National Archives Nairobi">
+
+</div>
+
+<div class="walk-content">
+
+<h3>
+Nairobi History & Culture Walk
+</h3>
+
+<p>
+Discover the history of Nairobi through
+historic buildings, monuments, heritage
+sites and stories about the city's development.
+</p>
+
+<div class="walk-details">
+
+<div>
+<strong>Duration:</strong>
+Approximately 2–3 hours
+</div>
+
+<div>
+<strong>Type:</strong>
+Guided walking tour
+</div>
+
+<div>
+<strong>Vehicle:</strong>
+Not required
+</div>
+
+</div>
+
+<div class="price">
+
+<div>
+
+<div class="price-label">
+Price
+</div>
+
+<div class="price-value">
+KES 2,500 / person
+</div>
+
+</div>
+
+<a href="booking.html" class="book-walk">
+Book Walk
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     FOOD & LOCAL LIFE
+========================= -->
+
+<div class="walk-card">
+
+<div class="walk-image">
+
+<img
+src="https://explorepartsunknown.com/wp-content/uploads/2018/09/20171112_150852_5S0A2454.jpg"
+alt="Nairobi local food and market life">
+
+</div>
+
+<div class="walk-content">
+
+<h3>
+Nairobi Food & Local Life Walk
+</h3>
+
+<p>
+Explore Nairobi through local food,
+markets, street life and everyday culture.
+A more immersive way to experience the city.
+</p>
+
+<div class="walk-details">
+
+<div>
+<strong>Duration:</strong>
+Approximately 2–3 hours
+</div>
+
+<div>
+<strong>Type:</strong>
+Guided walking experience
+</div>
+
+<div>
+<strong>Vehicle:</strong>
+Not required
+</div>
+
+</div>
+
+<div class="price">
+
+<div>
+
+<div class="price-label">
+Price
+</div>
+
+<div class="price-value">
+KES 3,500 / person
+</div>
+
+</div>
+
+<a href="booking.html" class="book-walk">
+Book Walk
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
+<section class="how-area">
+
+<div class="how-inner">
+
+<div class="how-heading">
+
+<div class="kicker">
+Simple & Personal
+</div>
+
+<h2>
+How a City Walk Works
+</h2>
+
+<p>
+Choose your experience, tell us your date and
+group size, and meet your guide at the agreed
+starting point.
+</p>
+
+</div>
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="step-number">
+1
+</div>
+
+<h3>
+Choose Your Walk
+</h3>
+
+<p>
+Select Highlights, History & Culture,
+or Food & Local Life.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+2
+</div>
+
+<h3>
+Choose Your Date
+</h3>
+
+<p>
+Tell us when you would like to explore Nairobi
+and how many people will be walking.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+3
+</div>
+
+<h3>
+Meet Your Guide
+</h3>
+
+<p>
+Meet at the agreed starting point and
+begin your Nairobi experience on foot.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PRICING
+========================= -->
+
+<section class="pricing">
+
+<div class="section">
+
+<div class="heading">
+
+<div class="kicker">
+Simple Pricing
+</div>
+
+<h2>
+City Walk Pricing
+</h2>
+
+</div>
+
+
+<div class="pricing-box">
+
+<h3>
+Walking Tours Are Charged Per Person
+</h3>
+
+<ul>
+
+<li>
+<strong>Nairobi Highlights Walk:</strong>
+KES 2,500 per person
+</li>
+
+<li>
+<strong>Nairobi History & Culture Walk:</strong>
+KES 2,500 per person
+</li>
+
+<li>
+<strong>Nairobi Food & Local Life Walk:</strong>
+KES 3,500 per person
+</li>
+
+</ul>
+
+<p>
+City walks are walking experiences, therefore
+<strong>vehicle and passenger vehicle charges do not apply.</strong>
+</p>
+
+<p>
+If you require transport before or after your walk,
+you can separately request a vehicle transfer through
+Stema Trans.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE DETAILS
+========================= -->
+
+<section class="section">
+
+<div class="heading">
+
+<div class="kicker">
+Your Experience
+</div>
+
+<h2>
+What to Expect
+</h2>
+
+<p>
+Every walk is designed to be informative,
+comfortable and enjoyable.
+</p>
+
+</div>
+
+
+<div class="experience-grid">
+
+
+<div class="experience-card">
+
+<h3>
+What You Get
+</h3>
+
+<ul>
+
+<li>
+A guided Nairobi walking experience
+</li>
+
+<li>
+Local information and stories
+</li>
+
+<li>
+Landmark and neighbourhood exploration
+</li>
+
+<li>
+Opportunities for photographs
+</li>
+
+<li>
+A flexible experience for your group
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="experience-card">
+
+<h3>
+What to Bring
+</h3>
+
+<ul>
+
+<li>
+Comfortable walking shoes
+</li>
+
+<li>
+Drinking water
+</li>
+
+<li>
+Sun protection
+</li>
+
+<li>
+A phone or camera
+</li>
+
+<li>
+A comfortable attitude for exploring
+</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+<div class="cta-content">
+
+<h2>
+Ready to Walk Nairobi?
+</h2>
+
+<p>
+Choose your preferred walking experience,
+select your date and tell us how many people
+will be joining.
+</p>
+
+<a href="booking.html" class="cta-button">
+BOOK A CITY WALK
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+STEMA TRANS
+</h3>
+
+<p>
+Nairobi City Tours, City Walks, Attractions,
+Transfers and Guided Experiences.
+</p>
+
+<p>
+Discover Nairobi your way.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Quick Links
+</h3>
+
+<ul>
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="tours.html">
+Tours
+</a>
+</li>
+
+<li>
+<a href="city-walks.html">
+City Walks
+</a>
+</li>
+
+<li>
+<a href="transfers.html">
+Transfers
+</a>
+</li>
+
+<li>
+<a href="fleet.html">
+Fleet
+</a>
+</li>
+
+<li>
+<a href="gallery.html">
+Gallery
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
+
+<li>
+<a href="booking.html">
+Book Now
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>
+Contact
+</h3>
+
+<p>
+Phone / WhatsApp:<br>
+0722 915 913
+</p>
+
+<p>
+Email:<br>
+stemawastrans@gmail.com
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Stema Trans. All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
