@@ -2,792 +2,1343 @@
 <html lang="en">
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Tours | Stema Trans Tours</title>
-
-    <meta name="description"
-          content="Discover Nairobi city tours, wildlife experiences, cultural attractions and private tours with Stema Trans Tours.">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #111;
-            color: white;
-            padding: 18px 5%;
-        }
-
-        .header-container {
-            max-width: 1150px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: #d6a03d;
-        }
-
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 18px;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            color: #d6a03d;
-        }
-
-        .hero {
-            background:
-                linear-gradient(rgba(0,0,0,0.63), rgba(0,0,0,0.63)),
-                url("images/hero.jpg") center/cover;
-
-            min-height: 390px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-            color: white;
-
-            padding: 50px 20px;
-        }
-
-        .hero-content {
-            max-width: 850px;
-        }
-
-        .hero h1 {
-            font-size: 46px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 19px;
-        }
-
-        .container {
-            max-width: 1150px;
-            width: 92%;
-            margin: 55px auto;
-        }
-
-        .intro {
-            max-width: 850px;
-            text-align: center;
-            margin: 0 auto 60px;
-        }
-
-        .intro h2 {
-            font-size: 31px;
-            margin-bottom: 14px;
-        }
-
-        .intro p {
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .tour-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-            gap: 25px;
-        }
-
-        .tour-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-            transition: transform 0.2s ease;
-        }
-
-        .tour-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .tour-card img {
-            width: 100%;
-            height: 210px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .tour-content {
-            padding: 24px;
-        }
-
-        .tour-content h3 {
-            color: #9a681c;
-            margin-bottom: 10px;
-            font-size: 21px;
-        }
-
-        .tour-content p {
-            color: #555;
-            margin-bottom: 18px;
-        }
-
-        .tour-button {
-            display: inline-block;
-            background: #111;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .tour-button:hover {
-            background: #333;
-        }
-
-        .section {
-            margin-bottom: 70px;
-        }
-
-        .section-heading {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .section-heading h2 {
-            font-size: 30px;
-            margin-bottom: 8px;
-        }
-
-        .section-heading p {
-            color: #666;
-        }
-
-        .experience-box {
-            background: #222;
-            color: white;
-            padding: 40px;
-            border-radius: 10px;
-        }
-
-        .experience-box h2 {
-            margin-bottom: 15px;
-        }
-
-        .experience-box p {
-            color: #ddd;
-            margin-bottom: 20px;
-        }
-
-        .experience-box ul {
-            list-style: none;
-        }
-
-        .experience-box li {
-            margin-bottom: 10px;
-            padding-left: 22px;
-            position: relative;
-        }
-
-        .experience-box li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #d6a03d;
-            font-weight: bold;
-        }
-
-        .custom {
-            background: white;
-            padding: 35px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
-            text-align: center;
-        }
-
-        .custom h2 {
-            margin-bottom: 12px;
-        }
-
-        .custom p {
-            color: #555;
-            max-width: 750px;
-            margin: 0 auto 22px;
-        }
-
-        .button {
-            display: inline-block;
-            background: #d6a03d;
-            color: #111;
-            text-decoration: none;
-            padding: 13px 28px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .button:hover {
-            background: #c18c2d;
-        }
-
-        .note {
-            background: #fff8e7;
-            border-left: 5px solid #d6a03d;
-            padding: 22px;
-            margin-top: 30px;
-            border-radius: 5px;
-        }
-
-        .cta {
-            background: #d6a03d;
-            text-align: center;
-            padding: 55px 20px;
-        }
-
-        .cta h2 {
-            font-size: 31px;
-            margin-bottom: 10px;
-        }
-
-        .cta p {
-            margin-bottom: 23px;
-        }
-
-        .cta .button {
-            background: #111;
-            color: white;
-        }
-
-        footer {
-            background: #111;
-            color: #bbb;
-            text-align: center;
-            padding: 27px 15px;
-            font-size: 14px;
-        }
-
-        footer strong {
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-
-            .header-container {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav {
-                justify-content: center;
-                text-align: center;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px 7px;
-            }
-
-            .hero {
-                min-height: 310px;
-            }
-
-            .hero h1 {
-                font-size: 35px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .intro h2,
-            .section-heading h2 {
-                font-size: 26px;
-            }
-
-            .experience-box {
-                padding: 30px 24px;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nairobi Tours | Stema Trans</title>
+
+<meta name="description"
+content="Explore Nairobi with Stema Trans through private city tours, museums, Giraffe Centre, Bomas of Kenya, Karen Blixen and Nairobi National Park experiences.">
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f7f8f6;
+    color:#222;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#063d28;
+    box-shadow:0 3px 15px rgba(0,0,0,.18);
+}
+
+.nav-inner{
+    max-width:1200px;
+    min-height:70px;
+    margin:auto;
+    padding:0 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:#fff;
+    font-size:24px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#e6b34a;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:17px;
+}
+
+.nav-links a{
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    color:#e6b34a;
+}
+
+.book{
+    background:#e6b34a;
+    color:#063d28 !important;
+    padding:10px 17px;
+    border-radius:6px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:500px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.43),
+        rgba(0,0,0,.67)
+    ),
+    url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_CBD_from_KICC.jpg")
+    center/cover no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:#fff;
+}
+
+.hero-content{
+    max-width:850px;
+    padding:80px 20px;
+}
+
+.badge{
+    display:inline-block;
+
+    background:#e6b34a;
+    color:#063d28;
+
+    padding:7px 14px;
+    border-radius:5px;
+
+    font-size:13px;
+    font-weight:bold;
+
+    text-transform:uppercase;
+    letter-spacing:1.4px;
+}
+
+.hero h1{
+    font-size:54px;
+    line-height:1.1;
+    margin:18px 0;
+}
+
+.hero h1 span{
+    color:#e6b34a;
+}
+
+.hero p{
+    max-width:730px;
+    margin:auto;
+    font-size:19px;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:75px 20px;
+}
+
+.heading{
+    max-width:800px;
+    margin:0 auto 45px;
+    text-align:center;
+}
+
+.kicker{
+    color:#087044;
+    font-size:13px;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+}
+
+.heading h2{
+    color:#063d28;
+    font-size:38px;
+    margin:8px 0 12px;
+}
+
+.heading p{
+    color:#666;
+}
+
+
+/* =========================
+   TOUR GRID
+========================= */
+
+.tour-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+}
+
+.tour-card{
+    background:#fff;
+
+    border-radius:14px;
+    overflow:hidden;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.11);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.tour-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 28px rgba(0,0,0,.16);
+}
+
+.tour-photo{
+    height:310px;
+    background:#ddd;
+    overflow:hidden;
+}
+
+.tour-photo img{
+    transition:transform .4s ease;
+}
+
+.tour-card:hover .tour-photo img{
+    transform:scale(1.04);
+}
+
+.tour-content{
+    padding:25px;
+}
+
+.tour-content h3{
+    margin:0 0 10px;
+    color:#063d28;
+    font-size:27px;
+}
+
+.tour-content p{
+    color:#666;
+}
+
+.tour-details{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin:20px 0;
+}
+
+.detail{
+    background:#f0f5f1;
+    padding:11px;
+    border-radius:7px;
+}
+
+.detail strong{
+    display:block;
+    color:#063d28;
+    font-size:13px;
+}
+
+.detail span{
+    color:#666;
+    font-size:14px;
+}
+
+.tour-price{
+    border-top:1px solid #ddd;
+    padding-top:18px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:15px;
+}
+
+.price-label{
+    color:#666;
+    font-size:13px;
+}
+
+.price{
+    color:#9a6700;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.tour-button{
+    display:inline-block;
+
+    background:#063d28;
+    color:#fff;
+
+    padding:11px 17px;
+
+    border-radius:6px;
+
+    font-weight:bold;
+    font-size:14px;
+}
+
+.tour-button:hover{
+    background:#087044;
+}
+
+
+/* =========================
+   PRICING EXPLANATION
+========================= */
+
+.pricing-section{
+    background:#eaf1ec;
+}
+
+.pricing-box{
+    max-width:900px;
+    margin:auto;
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    border-left:5px solid #087044;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+}
+
+.pricing-box h3{
+    margin-top:0;
+    color:#063d28;
+}
+
+.pricing-box p{
+    color:#555;
+}
+
+.pricing-box strong{
+    color:#063d28;
+}
+
+
+/* =========================
+   COMBINED EXPERIENCES
+========================= */
+
+.combine-area{
+    background:#063d28;
+    color:#fff;
+}
+
+.combine-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:75px 20px;
+}
+
+.combine-heading{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 45px;
+}
+
+.combine-heading .kicker{
+    color:#e6b34a;
+}
+
+.combine-heading h2{
+    font-size:38px;
+    margin:8px 0 12px;
+}
+
+.combine-heading p{
+    color:#dbe6df;
+}
+
+.combine-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.combine-card{
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    padding:25px;
+
+    border-radius:10px;
+}
+
+.combine-card h3{
+    color:#fff;
+    margin-top:0;
+}
+
+.combine-card p{
+    color:#dbe6df;
+    font-size:14px;
+}
+
+.combine-card a{
+    color:#e6b34a;
+    font-weight:bold;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:#f0f4f1;
+    text-align:center;
+    padding:75px 20px;
+}
+
+.cta-content{
+    max-width:750px;
+    margin:auto;
+}
+
+.cta h2{
+    color:#063d28;
+    font-size:40px;
+    margin:0 0 12px;
+}
+
+.cta p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.cta-button{
+    display:inline-block;
+
+    background:#e6b34a;
+    color:#063d28;
+
+    padding:14px 25px;
+
+    border-radius:7px;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#032d1d;
+    color:#fff;
+    padding:50px 20px 20px;
+}
+
+.footer-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+
+    gap:35px;
+}
+
+footer h3{
+    color:#e6b34a;
+}
+
+footer p,
+footer li{
+    color:#d7dfda;
+}
+
+footer ul{
+    list-style:none;
+    padding:0;
+}
+
+footer li{
+    margin:7px 0;
+}
+
+footer a{
+    color:#d7dfda;
+}
+
+footer a:hover{
+    color:#e6b34a;
+}
+
+.copyright{
+    max-width:1100px;
+    margin:30px auto 0;
+
+    padding-top:18px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+    color:#9daaa3;
+    font-size:13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:950px){
+
+    .nav-links{
+        gap:9px;
+    }
+
+    .nav-links a{
+        font-size:12px;
+    }
+
+    .tour-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .combine-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .nav-links a:not(.book){
+        display:none;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
+    .hero{
+        min-height:420px;
+    }
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .heading h2,
+    .combine-heading h2,
+    .cta h2{
+        font-size:30px;
+    }
+
+    .tour-grid{
+        grid-template-columns:1fr;
+    }
+
+    .combine-grid{
+        grid-template-columns:1fr;
+    }
+
+    .tour-photo{
+        height:250px;
+    }
+
+    .tour-details{
+        grid-template-columns:1fr;
+    }
+
+    .tour-price{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
 
 </head>
 
 <body>
 
 
-<header>
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-    <div class="header-container">
+<nav class="navbar">
 
-        <div class="logo">
-            STEMA <span>TRANS</span>
-        </div>
+<div class="nav-inner">
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="tours.html">Tours</a>
-            <a href="transfers.html">Transfers</a>
-            <a href="rates.html">Rates</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+<a href="index.html" class="logo">
+STEMA <span>TRANS</span>
+</a>
 
-    </div>
+<div class="nav-links">
 
-</header>
+<a href="index.html">Home</a>
+
+<a href="tours.html">Tours</a>
+
+<a href="city-walks.html">City Walks</a>
+
+<a href="transfers.html">Transfers</a>
+
+<a href="fleet.html">Fleet</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="contact.html">Contact</a>
+
+<a href="booking.html" class="book">
+BOOK NOW
+</a>
+
+</div>
+
+</div>
+
+</nav>
 
 
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <h1>Nairobi Tours & Experiences</h1>
+<div class="badge">
+Nairobi Guided Experiences
+</div>
 
-        <p>
-            Discover Nairobi through private city tours,
-            wildlife experiences, culture, history and local attractions.
-        </p>
+<h1>
+Discover <span>Nairobi</span>
+</h1>
 
-    </div>
+<p>
+Private city tours and guided experiences
+designed around Nairobi's landmarks,
+culture, history and attractions.
+</p>
+
+</div>
 
 </section>
 
 
+<!-- =========================
+     TOUR INTRO
+========================= -->
 
-<main class="container">
+<section class="section">
 
+<div class="heading">
 
-    <section class="intro">
+<div class="kicker">
+Nairobi Tours
+</div>
 
-        <h2>Explore Nairobi with Stema Trans</h2>
+<h2>
+Explore Nairobi Your Way
+</h2>
 
-        <p>
-            Nairobi is a city where modern urban life meets wildlife,
-            history and Kenyan culture. Our private tours are designed
-            to help visitors experience the city comfortably and at
-            their own pace.
-        </p>
+<p>
+Choose an individual attraction or combine several
+nearby experiences into one private Nairobi day.
+</p>
 
-        <p>
-            Choose one of our popular experiences or contact us to
-            create a private itinerary around your interests.
-        </p>
+</div>
 
-    </section>
 
+<div class="tour-grid">
 
 
-    <section class="section">
+<!-- =========================
+     CITY HIGHLIGHTS
+========================= -->
 
-        <div class="section-heading">
+<div class="tour-card">
 
-            <h2>Popular Nairobi Tours</h2>
+<div class="tour-photo">
 
-            <p>
-                Private tours with flexible pickup and sightseeing options.
-            </p>
+<img
+src="YOUR_CITY_HIGHLIGHTS_PHOTO.jpg"
+alt="Nairobi city centre and KICC">
 
-        </div>
+</div>
 
+<div class="tour-content">
 
-        <div class="tour-grid">
+<h3>
+Nairobi City Highlights
+</h3>
 
+<p>
+See some of Nairobi's best-known landmarks and
+city attractions, including the CBD, KICC area,
+City Market and major public spaces.
+</p>
 
-            <!-- NAIROBI CITY -->
+<div class="tour-details">
 
-            <article class="tour-card">
+<div class="detail">
+<strong>Type</strong>
+<span>Private city tour</span>
+</div>
 
-                <img src="images/nairobi-city.jpg"
-                     alt="Nairobi city skyline">
+<div class="detail">
+<strong>Duration</strong>
+<span>Half day</span>
+</div>
 
-                <div class="tour-content">
+</div>
 
-                    <h3>Nairobi City Highlights</h3>
+<div class="tour-price">
 
-                    <p>
-                        Discover some of Nairobi's best-known landmarks,
-                        including the city centre, KICC area, City Market,
-                        Jeevanjee Gardens, Uhuru Park and other points
-                        of interest.
-                    </p>
+<div>
+<div class="price-label">
+Vehicle-based service
+</div>
 
-                    <a href="booking.html" class="tour-button">
-                        Book This Tour
-                    </a>
+<div class="price">
+From KES 4,500
+</div>
+</div>
 
-                </div>
+<a href="booking.html" class="tour-button">
+Book Tour
+</a>
 
-            </article>
+</div>
 
+</div>
 
+</div>
 
-            <!-- NAIROBI NATIONAL PARK -->
 
-            <article class="tour-card">
+<!-- =========================
+     NATIONAL MUSEUM
+========================= -->
 
-                <img src="images/nairobi-national-park.jpg"
-                     alt="Wildlife at Nairobi National Park">
+<div class="tour-card">
 
-                <div class="tour-content">
+<div class="tour-photo">
 
-                    <h3>Nairobi National Park</h3>
+<img
+src="YOUR_NATIONAL_MUSEUM_PHOTO.jpg"
+alt="Front exterior of Nairobi National Museum">
 
-                    <p>
-                        Experience wildlife just outside the city.
-                        Depending on conditions and season, guests may
-                        encounter lions, giraffes, zebras, buffalo,
-                        rhinos, antelopes and many bird species.
-                    </p>
+</div>
 
-                    <a href="booking.html" class="tour-button">
-                        Book This Tour
-                    </a>
+<div class="tour-content">
 
-                </div>
+<h3>
+Nairobi National Museum
+</h3>
 
-            </article>
+<p>
+Visit the Nairobi National Museum at Museum Hill
+and explore Kenya's history, culture, art,
+heritage and natural history.
+</p>
 
+<div class="tour-details">
 
+<div class="detail">
+<strong>Type</strong>
+<span>Museum visit</span>
+</div>
 
-            <!-- GIRAFFE CENTRE -->
+<div class="detail">
+<strong>Location</strong>
+<span>Museum Hill</span>
+</div>
 
-            <article class="tour-card">
+</div>
 
-                <img src="images/giraffe-centre.jpg"
-                     alt="Giraffe at the Giraffe Centre">
+<div class="tour-price">
 
-                <div class="tour-content">
+<div>
+<div class="price-label">
+Vehicle + entrance fees
+</div>
 
-                    <h3>Giraffe Centre</h3>
+<div class="price">
+From KES 4,500
+</div>
+</div>
 
-                    <p>
-                        Visit the famous Giraffe Centre and learn about
-                        giraffe conservation while enjoying a close
-                        encounter with these remarkable animals.
-                    </p>
+<a href="booking.html" class="tour-button">
+Book Tour
+</a>
 
-                    <a href="booking.html" class="tour-button">
-                        Book This Tour
-                    </a>
+</div>
 
-                </div>
+</div>
 
-            </article>
+</div>
 
 
+<!-- =========================
+     GIRAFFE CENTRE
+========================= -->
 
-            <!-- KAREN BLIXEN -->
+<div class="tour-card">
 
-            <article class="tour-card">
+<div class="tour-photo">
 
-                <img src="images/karen-blixen.jpg"
-                     alt="Karen Blixen Museum area">
+<img
+src="YOUR_GIRAFFE_CENTRE_PHOTO.jpg"
+alt="Rothschild giraffe at Giraffe Centre Nairobi">
 
-                <div class="tour-content">
+</div>
 
-                    <h3>Karen & Karen Blixen</h3>
+<div class="tour-content">
 
-                    <p>
-                        Explore the Karen area and visit the former home
-                        of author Karen Blixen while learning about the
-                        history and heritage of this part of Nairobi.
-                    </p>
+<h3>
+Giraffe Centre
+</h3>
 
-                    <a href="booking.html" class="tour-button">
-                        Book This Tour
-                    </a>
+<p>
+Meet the endangered Rothschild's giraffe at the
+Giraffe Centre in Lang'ata and enjoy the famous
+close-up giraffe feeding experience.
+</p>
 
-                </div>
+<div class="tour-details">
 
-            </article>
+<div class="detail">
+<strong>Type</strong>
+<span>Attraction visit</span>
+</div>
 
+<div class="detail">
+<strong>Location</strong>
+<span>Lang'ata</span>
+</div>
 
+</div>
 
-            <!-- MUSEUM -->
+<div class="tour-price">
 
-            <article class="tour-card">
+<div>
+<div class="price-label">
+Vehicle + entrance fees
+</div>
 
-                <img src="images/nairobi-museum.jpg"
-                     alt="Nairobi National Museum">
+<div class="price">
+From KES 4,500
+</div>
+</div>
 
-                <div class="tour-content">
+<a href="booking.html" class="tour-button">
+Book Tour
+</a>
 
-                    <h3>Nairobi National Museum</h3>
+</div>
 
-                    <p>
-                        Discover Kenya's natural history, culture,
-                        archaeology and art at one of Nairobi's
-                        leading cultural attractions.
-                    </p>
+</div>
 
-                    <a href="booking.html" class="tour-button">
-                        Book This Tour
-                    </a>
+</div>
 
-                </div>
 
-            </article>
+<!-- =========================
+     BOMAS
+========================= -->
 
+<div class="tour-card">
 
+<div class="tour-photo">
 
-            <!-- BOMAS -->
+<img
+src="YOUR_BOMAS_PHOTO.jpg"
+alt="Traditional homestead at Bomas of Kenya">
 
-            <article class="tour-card">
+</div>
 
-                <img src="images/bomas-of-kenya.jpg"
-                     alt="Bomas of Kenya cultural performance">
+<div class="tour-content">
 
-                <div class="tour-content">
+<h3>
+Bomas of Kenya
+</h3>
 
-                    <h3>Bomas of Kenya</h3>
+<p>
+Experience Kenya's cultural diversity through
+traditional homesteads, cultural performances,
+music, dance and heritage.
+</p>
 
-                    <p>
-                        Experience Kenya's diverse cultures through
-                        traditional homes, cultural displays, music,
-                        dance and performances.
-                    </p>
+<div class="tour-details">
 
-                    <a href="booking.html" class="tour-button">
-                        Book This Tour
-                    </a>
+<div class="detail">
+<strong>Type</strong>
+<span>Cultural experience</span>
+</div>
 
-                </div>
+<div class="detail">
+<strong>Location</strong>
+<span>Lang'ata</span>
+</div>
 
-            </article>
+</div>
 
+<div class="tour-price">
 
-        </div>
+<div>
+<div class="price-label">
+Vehicle + entrance fees
+</div>
 
+<div class="price">
+From KES 4,500
+</div>
+</div>
 
-        <div class="note">
+<a href="booking.html" class="tour-button">
+Book Tour
+</a>
 
-            <strong>Important:</strong>
-            Attraction entrance fees are separate unless your
-            quotation specifically states that they are included.
-            See our <a href="rates.html">Rates</a> page for vehicle
-            and tour transport rates.
+</div>
 
-        </div>
+</div>
 
-    </section>
+</div>
 
 
+<!-- =========================
+     KAREN BLIXEN
+========================= -->
 
-    <!-- COMBINATION EXPERIENCES -->
+<div class="tour-card">
 
-    <section class="section">
+<div class="tour-photo">
 
-        <div class="section-heading">
+<img
+src="YOUR_KAREN_BLIXEN_PHOTO.jpg"
+alt="Karen Blixen Museum historic house in Nairobi">
 
-            <h2>Combine Experiences</h2>
+</div>
 
-            <p>
-                Make better use of your time by combining nearby attractions.
-            </p>
+<div class="tour-content">
 
-        </div>
+<h3>
+Karen Blixen Museum
+</h3>
 
+<p>
+Visit the former home of author Karen Blixen
+and learn about her life and the history
+surrounding the famous Karen estate.
+</p>
 
-        <div class="tour-grid">
+<div class="tour-details">
 
+<div class="detail">
+<strong>Type</strong>
+<span>Historic house museum</span>
+</div>
 
-            <div class="tour-card">
+<div class="detail">
+<strong>Location</strong>
+<span>Karen</span>
+</div>
 
-                <div class="tour-content">
+</div>
 
-                    <h3>City & Museum Experience</h3>
+<div class="tour-price">
 
-                    <p>
-                        Combine a Nairobi city orientation with a visit
-                        to the Nairobi National Museum.
-                    </p>
+<div>
+<div class="price-label">
+Vehicle + entrance fees
+</div>
 
-                    <a href="booking.html" class="tour-button">
-                        Plan This Tour
-                    </a>
+<div class="price">
+From KES 4,500
+</div>
+</div>
 
-                </div>
+<a href="booking.html" class="tour-button">
+Book Tour
+</a>
 
-            </div>
+</div>
 
+</div>
 
-            <div class="tour-card">
+</div>
 
-                <div class="tour-content">
 
-                    <h3>Karen Experience</h3>
+<!-- =========================
+     NAIROBI NATIONAL PARK
+========================= -->
 
-                    <p>
-                        Combine the Giraffe Centre, Karen Blixen Museum
-                        and other attractions around Karen.
-                    </p>
+<div class="tour-card">
 
-                    <a href="booking.html" class="tour-button">
-                        Plan This Tour
-                    </a>
+<div class="tour-photo">
 
-                </div>
+<img
+src="YOUR_NAIROBI_NATIONAL_PARK_PHOTO.jpg"
+alt="Nairobi National Park landscape">
 
-            </div>
+</div>
 
+<div class="tour-content">
 
-            <div class="tour-card">
+<h3>
+Nairobi National Park
+</h3>
 
-                <div class="tour-content">
+<p>
+Enjoy a game drive in Kenya's unique urban
+national park, located close to Nairobi city
+and known for its open grasslands and wildlife.
+</p>
 
-                    <h3>Wildlife & City Experience</h3>
+<div class="tour-details">
 
-                    <p>
-                        Combine Nairobi National Park with selected
-                        city or cultural attractions for a full Nairobi day.
-                    </p>
+<div class="detail">
+<strong>Type</strong>
+<span>Game drive</span>
+</div>
 
-                    <a href="booking.html" class="tour-button">
-                        Plan This Tour
-                    </a>
+<div class="detail">
+<strong>Location</strong>
+<span>Nairobi National Park</span>
+</div>
 
-                </div>
+</div>
 
-            </div>
+<div class="tour-price">
 
+<div>
+<div class="price-label">
+Vehicle + park fees
+</div>
 
-        </div>
+<div class="price">
+From KES 5,500
+</div>
+</div>
 
-    </section>
+<a href="booking.html" class="tour-button">
+Book Tour
+</a>
 
+</div>
 
+</div>
 
-    <!-- PRIVATE EXPERIENCES -->
+</div>
 
-    <section class="section">
 
-        <div class="experience-box">
+</div>
 
-            <h2>Private & Flexible Experiences</h2>
+</section>
 
-            <p>
-                Not every traveller wants the same itinerary.
-                Stema Trans can arrange private Nairobi experiences
-                according to your available time and interests.
-            </p>
 
-            <ul>
+<!-- =========================
+     PRICING
+========================= -->
 
-                <li>
-                    Flexible hotel or residence pickup
-                </li>
+<section class="pricing-section">
 
-                <li>
-                    Private vehicle for your group
-                </li>
+<div class="section">
 
-                <li>
-                    Professional driver / driver-guide
-                </li>
+<div class="heading">
 
-                <li>
-                    Flexible sightseeing and photo stops
-                </li>
+<div class="kicker">
+Clear Pricing
+</div>
 
-                <li>
-                    City, wildlife, cultural and historical experiences
-                </li>
+<h2>
+How Tour Pricing Works
+</h2>
 
-                <li>
-                    Custom itineraries available on request
-                </li>
+</div>
 
-            </ul>
 
-        </div>
+<div class="pricing-box">
 
-    </section>
+<h3>
+Private Vehicle Tours
+</h3>
 
+<p>
+Stema Trans vehicle-based tours are charged
+<strong>per vehicle, not per passenger</strong>,
+within the applicable vehicle capacity.
+</p>
 
+<p>
+Typical vehicle options include:
+<strong>Sedan, SUV, Tour Van and Tour Land Cruiser.</strong>
+</p>
 
-    <!-- CUSTOM TOUR -->
+<p>
+Attraction entrance fees, park fees and activity
+fees are charged separately unless the selected
+package specifically states that they are included.
+</p>
 
-    <section class="section">
+<p>
+This means you are not charged a separate passenger
+transport fee simply because additional guests are
+travelling within the vehicle's capacity.
+</p>
 
-        <div class="custom">
+</div>
 
-            <h2>Have Your Own Itinerary?</h2>
+</div>
 
-            <p>
-                Tell us where you would like to go, how many people
-                are travelling and how much time you have. We can
-                help organize a private Nairobi tour around your plans.
-            </p>
+</section>
 
-            <a href="booking.html" class="button">
-                Plan My Tour
-            </a>
 
-        </div>
+<!-- =========================
+     COMBINED EXPERIENCES
+========================= -->
 
-    </section>
+<section class="combine-area">
 
+<div class="combine-inner">
 
-</main>
+<div class="combine-heading">
 
+<div class="kicker">
+Make More of Your Day
+</div>
 
+<h2>
+Combine Experiences
+</h2>
+
+<p>
+Several Nairobi attractions are close enough to
+combine into a convenient private experience.
+</p>
+
+</div>
+
+
+<div class="combine-grid">
+
+
+<div class="combine-card">
+
+<h3>
+City Highlights + Museum
+</h3>
+
+<p>
+Combine Nairobi's major city landmarks with a
+visit to the Nairobi National Museum.
+</p>
+
+<a href="booking.html">
+Plan This Experience →
+</a>
+
+</div>
+
+
+<div class="combine-card">
+
+<h3>
+Giraffe Centre + Karen
+</h3>
+
+<p>
+Combine the Giraffe Centre with Karen-area
+attractions for a convenient private outing.
+</p>
+
+<a href="booking.html">
+Plan This Experience →
+</a>
+
+</div>
+
+
+<div class="combine-card">
+
+<h3>
+City + Cultural Experience
+</h3>
+
+<p>
+Combine Nairobi city highlights with Bomas of
+Kenya for a broader introduction to Nairobi.
+</p>
+
+<a href="booking.html">
+Plan This Experience →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
 
-    <h2>Ready to Explore Nairobi?</h2>
+<div class="cta-content">
 
-    <p>
-        Choose your experience and let Stema Trans handle the transportation.
-    </p>
+<h2>
+Ready to Explore Nairobi?
+</h2>
 
-    <a href="booking.html" class="button">
-        Book Your Tour
-    </a>
+<p>
+Choose your tour, preferred vehicle and date.
+We'll help you arrange your Nairobi experience.
+</p>
+
+<a href="booking.html" class="cta-button">
+BOOK YOUR TOUR
+</a>
+
+</div>
 
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-    <p>
-        <strong>STEMA TRANS</strong>
-        — Nairobi City Tours, Transfers & Guided Experiences
-    </p>
+<div class="footer-grid">
 
-    <p>
-        © 2026 Stema Trans. All Rights Reserved.
-    </p>
+
+<div>
+
+<h3>
+STEMA TRANS
+</h3>
+
+<p>
+Nairobi City Tours, City Walks, Attractions,
+Transfers and Guided Experiences.
+</p>
+
+<p>
+Discover Nairobi your way.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Quick Links
+</h3>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="tours.html">Tours</a></li>
+<li><a href="city-walks.html">City Walks</a></li>
+<li><a href="transfers.html">Transfers</a></li>
+<li><a href="fleet.html">Fleet</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="booking.html">Book Now</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>
+Contact
+</h3>
+
+<p>
+Phone / WhatsApp:<br>
+0722 915 913
+</p>
+
+<p>
+Email:<br>
+stemawastrans@gmail.com
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Stema Trans. All Rights Reserved.
+
+</div>
 
 </footer>
 
