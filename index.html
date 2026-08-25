@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -76,7 +78,7 @@ a{
 .nav-links{
     display:flex;
     align-items:center;
-    gap:17px;
+    gap:15px;
 }
 
 .nav-links a{
@@ -102,10 +104,13 @@ a{
 ========================= */
 
 .hero{
-    min-height:650px;
+    min-height:620px;
 
     background:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.58)),
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.62)
+    ),
     url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_city_skyline_at_dawn_2025.jpg")
     center/cover no-repeat;
 
@@ -123,20 +128,26 @@ a{
 
 .badge{
     display:inline-block;
+
     background:#e6b34a;
     color:#063d28;
+
     padding:7px 13px;
     border-radius:5px;
+
     font-size:13px;
     font-weight:bold;
+
     text-transform:uppercase;
     letter-spacing:1px;
 }
 
 .hero h1{
     max-width:850px;
+
     font-size:58px;
     line-height:1.05;
+
     margin:20px 0;
 }
 
@@ -186,7 +197,7 @@ a{
 
 .heading{
     text-align:center;
-    max-width:800px;
+    max-width:820px;
     margin:0 auto 42px;
 }
 
@@ -387,6 +398,7 @@ a{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:40px;
+
     align-items:center;
 }
 
@@ -426,6 +438,46 @@ a{
 }
 
 
+/* PARK RATES */
+
+.park-rates{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin:25px 0;
+}
+
+.park-rate{
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:8px;
+    padding:14px;
+}
+
+.park-rate strong{
+    display:block;
+    color:#fff;
+    font-size:14px;
+}
+
+.park-rate span{
+    display:block;
+    color:#e6b34a;
+    font-weight:bold;
+    margin-top:4px;
+}
+
+.park-rate small{
+    color:#dce7e0;
+    font-size:11px;
+}
+
+.park-note{
+    color:#dce7e0;
+    font-size:13px;
+}
+
+
 /* =========================
    TRANSFERS
 ========================= */
@@ -441,16 +493,21 @@ a{
     overflow:hidden;
 }
 
-.transfer-image img{
-    object-position:center center;
-}
-
 .transfer-content{
     padding:22px;
 }
 
 .transfer-content h3{
     color:#063d28;
+}
+
+.transfer-content p{
+    color:#666;
+}
+
+.transfer-content a{
+    color:#087044;
+    font-weight:bold;
 }
 
 
@@ -480,12 +537,13 @@ a{
 }
 
 .vehicle-content{
-    padding:18px;
+    padding:20px;
 }
 
 .vehicle-content h3{
     color:#063d28;
     margin:0 0 6px;
+    font-size:22px;
 }
 
 .vehicle-content p{
@@ -493,9 +551,60 @@ a{
     font-size:14px;
 }
 
-.vehicle-price{
+
+/* NEW PRICE DISPLAY */
+
+.vehicle-price-box{
+    margin-top:15px;
+
+    background:#f7f4e9;
+
+    border-left:4px solid #e6b34a;
+
+    border-radius:6px;
+
+    padding:13px;
+}
+
+.vehicle-price-title{
+    color:#063d28;
+    font-weight:bold;
+    font-size:13px;
+
+    margin-bottom:8px;
+}
+
+.vehicle-rate{
+    display:flex;
+    justify-content:space-between;
+    gap:8px;
+
+    padding:6px 0;
+
+    border-bottom:1px solid #e5e1d5;
+
+    font-size:13px;
+}
+
+.vehicle-rate:last-child{
+    border-bottom:none;
+}
+
+.vehicle-rate span:first-child{
+    color:#555;
+}
+
+.vehicle-rate span:last-child{
     color:#9a6700;
     font-weight:bold;
+}
+
+.vehicle-note{
+    margin-top:10px;
+
+    font-size:11px;
+
+    color:#777;
 }
 
 
@@ -564,7 +673,10 @@ a{
     min-height:400px;
 
     background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.65)
+    ),
     url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_city_skyline_at_dawn_2025.jpg")
     center/cover no-repeat;
 
@@ -629,15 +741,22 @@ footer a{
     color:#d7dfda;
 }
 
+footer a:hover{
+    color:#e6b34a;
+}
+
 .copyright{
     max-width:1100px;
     margin:30px auto 0;
+
     padding-top:18px;
 
     border-top:1px solid rgba(255,255,255,.15);
 
     text-align:center;
+
     color:#9daaa3;
+
     font-size:13px;
 }
 
@@ -685,6 +804,11 @@ footer a{
     .why-grid{
         grid-template-columns:repeat(2,1fr);
     }
+
+    .park-rates{
+        grid-template-columns:repeat(2,1fr);
+    }
+
 }
 
 
@@ -738,6 +862,10 @@ footer a{
         height:300px;
     }
 
+    .park-rates{
+        grid-template-columns:1fr;
+    }
+
     .park-text h2,
     .cta h2{
         font-size:31px;
@@ -750,12 +878,16 @@ footer a{
 }
 
 </style>
+
 </head>
+
 
 <body>
 
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav class="navbar">
 
@@ -768,11 +900,19 @@ STEMA <span>TRANS</span>
 <div class="nav-links">
 
 <a href="index.html">Home</a>
+
 <a href="tours.html">Tours</a>
+
 <a href="city-walks.html">City Walks</a>
+
 <a href="transfers.html">Transfers</a>
+
+<a href="rates.html">Rates</a>
+
 <a href="fleet.html">Fleet</a>
+
 <a href="gallery.html">Gallery</a>
+
 <a href="contact.html">Contact</a>
 
 <a href="booking.html" class="book">
@@ -786,7 +926,9 @@ BOOK NOW
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -823,7 +965,9 @@ Explore Nairobi
 </section>
 
 
-<!-- CITY TOURS -->
+<!-- =========================
+     CITY TOURS
+========================= -->
 
 <section class="section">
 
@@ -922,7 +1066,9 @@ See the city from one of its most recognisable viewpoints.
 </section>
 
 
-<!-- CITY WALKS -->
+<!-- =========================
+     CITY WALKS
+========================= -->
 
 <section class="walk-area">
 
@@ -1046,7 +1192,9 @@ KES 3,500 per person
 </section>
 
 
-<!-- ATTRACTIONS -->
+<!-- =========================
+     ATTRACTIONS
+========================= -->
 
 <section class="section">
 
@@ -1144,7 +1292,9 @@ Kenya National Archives
 </section>
 
 
-<!-- NAIROBI NATIONAL PARK -->
+<!-- =========================
+     NAIROBI NATIONAL PARK
+========================= -->
 
 <section class="park-area">
 
@@ -1171,17 +1321,139 @@ Nairobi National Park
 </h2>
 
 <p>
-Experience wildlife only a short distance from the city.
+Experience wildlife only a short distance from Nairobi.
+Safari vehicle rates are different from ordinary city
+vehicle hire.
 </p>
+
 
 <ul>
 
 <li>Nairobi National Park game drives</li>
+
 <li>Private vehicle options</li>
+
 <li>Half-day experiences</li>
+
 <li>Full-day experiences</li>
 
 </ul>
+
+
+<div class="park-rates">
+
+
+<div class="park-rate">
+
+<strong>
+SUV / Prado TX
+</strong>
+
+<span>
+KES 15,000
+</span>
+
+<small>
+Half day
+</small>
+
+</div>
+
+
+<div class="park-rate">
+
+<strong>
+Tour Van
+</strong>
+
+<span>
+KES 18,000
+</span>
+
+<small>
+Half day
+</small>
+
+</div>
+
+
+<div class="park-rate">
+
+<strong>
+Tour Land Cruiser
+</strong>
+
+<span>
+KES 25,000
+</span>
+
+<small>
+Half day
+</small>
+
+</div>
+
+
+<div class="park-rate">
+
+<strong>
+SUV / Prado TX
+</strong>
+
+<span>
+KES 20,000
+</span>
+
+<small>
+Full day
+</small>
+
+</div>
+
+
+<div class="park-rate">
+
+<strong>
+Tour Van
+</strong>
+
+<span>
+KES 25,000
+</span>
+
+<small>
+Full day
+</small>
+
+</div>
+
+
+<div class="park-rate">
+
+<strong>
+Tour Land Cruiser
+</strong>
+
+<span>
+KES 30,000
+</span>
+
+<small>
+Full day
+</small>
+
+</div>
+
+
+</div>
+
+
+<p class="park-note">
+Vehicle rates are per vehicle. Park entry,
+conservation fees and applicable passenger
+charges are separate unless specifically stated.
+</p>
+
 
 <a href="booking.html" class="btn primary">
 Book Park Experience
@@ -1194,7 +1466,9 @@ Book Park Experience
 </section>
 
 
-<!-- TRANSFERS -->
+<!-- =========================
+     TRANSFERS
+========================= -->
 
 <section class="section">
 
@@ -1285,7 +1559,9 @@ Request Transfer →
 </section>
 
 
-<!-- VEHICLES -->
+<!-- =========================
+     VEHICLE CATEGORIES
+========================= -->
 
 <section class="vehicle-area">
 
@@ -1302,8 +1578,8 @@ Vehicle Categories
 </h2>
 
 <p>
-Practical vehicle options for Nairobi transfers,
-city tours and private experiences.
+Vehicle hire is charged per vehicle. Choose the category
+that best suits your group, comfort requirements and itinerary.
 </p>
 
 </div>
@@ -1335,8 +1611,58 @@ A practical private-car option for
 individual travellers and couples.
 </p>
 
-<div class="vehicle-price">
-From KES 4,500
+
+<div class="vehicle-price-box">
+
+<div class="vehicle-price-title">
+CITY / PRIVATE HIRE — PER VEHICLE
+</div>
+
+
+<div class="vehicle-rate">
+
+<span>
+4 hours
+</span>
+
+<span>
+KES 6,000
+</span>
+
+</div>
+
+
+<div class="vehicle-rate">
+
+<span>
+6 hours
+</span>
+
+<span>
+KES 8,000
+</span>
+
+</div>
+
+
+<div class="vehicle-rate">
+
+<span>
+8 hours
+</span>
+
+<span>
+KES 10,000
+</span>
+
+</div>
+
+
+</div>
+
+<div class="vehicle-note">
+Rates apply to vehicle hire. Attraction and
+park entrance fees are separate.
 </div>
 
 </div>
@@ -1359,7 +1685,7 @@ alt="Toyota Land Cruiser Prado SUV">
 <div class="vehicle-content">
 
 <h3>
-SUV
+SUV / Prado TX
 </h3>
 
 <p>
@@ -1367,8 +1693,58 @@ A comfortable SUV option for small groups,
 private transfers and city excursions.
 </p>
 
-<div class="vehicle-price">
-From KES 6,500
+
+<div class="vehicle-price-box">
+
+<div class="vehicle-price-title">
+CITY / PRIVATE HIRE — PER VEHICLE
+</div>
+
+
+<div class="vehicle-rate">
+
+<span>
+4 hours
+</span>
+
+<span>
+KES 9,000
+</span>
+
+</div>
+
+
+<div class="vehicle-rate">
+
+<span>
+6 hours
+</span>
+
+<span>
+KES 12,000
+</span>
+
+</div>
+
+
+<div class="vehicle-rate">
+
+<span>
+8 hours
+</span>
+
+<span>
+KES 15,000
+</span>
+
+</div>
+
+
+</div>
+
+<div class="vehicle-note">
+Rates apply to vehicle hire. Attraction and
+park entrance fees are separate.
 </div>
 
 </div>
@@ -1395,12 +1771,62 @@ Tour Van
 </h3>
 
 <p>
-A practical passenger van suitable for
+A practical passenger tour van suitable for
 city tours, transfers and small groups.
 </p>
 
-<div class="vehicle-price">
-KES 5,500
+
+<div class="vehicle-price-box">
+
+<div class="vehicle-price-title">
+CITY / PRIVATE HIRE — PER VEHICLE
+</div>
+
+
+<div class="vehicle-rate">
+
+<span>
+4 hours
+</span>
+
+<span>
+KES 10,000
+</span>
+
+</div>
+
+
+<div class="vehicle-rate">
+
+<span>
+6 hours
+</span>
+
+<span>
+KES 14,000
+</span>
+
+</div>
+
+
+<div class="vehicle-rate">
+
+<span>
+8 hours
+</span>
+
+<span>
+KES 18,000
+</span>
+
+</div>
+
+
+</div>
+
+<div class="vehicle-note">
+Rates apply to vehicle hire. Attraction and
+park entrance fees are separate.
 </div>
 
 </div>
@@ -1408,7 +1834,7 @@ KES 5,500
 </div>
 
 
-<!-- TOUR LAND CRUISER -->
+<!-- LAND CRUISER -->
 
 <div class="card">
 
@@ -1428,11 +1854,61 @@ Tour Land Cruiser
 
 <p>
 A rugged tour vehicle suitable for
-Nairobi excursions and longer journeys.
+city excursions, parks and longer journeys.
 </p>
 
-<div class="vehicle-price">
-KES 8,500
+
+<div class="vehicle-price-box">
+
+<div class="vehicle-price-title">
+CITY / PRIVATE HIRE — PER VEHICLE
+</div>
+
+
+<div class="vehicle-rate">
+
+<span>
+4 hours
+</span>
+
+<span>
+KES 15,000
+</span>
+
+</div>
+
+
+<div class="vehicle-rate">
+
+<span>
+6 hours
+</span>
+
+<span>
+KES 20,000
+</span>
+
+</div>
+
+
+<div class="vehicle-rate">
+
+<span>
+8 hours
+</span>
+
+<span>
+KES 25,000
+</span>
+
+</div>
+
+
+</div>
+
+<div class="vehicle-note">
+Safari / park rates may differ from ordinary
+city vehicle hire.
 </div>
 
 </div>
@@ -1447,7 +1923,9 @@ KES 8,500
 </section>
 
 
-<!-- COMBINE EXPERIENCES -->
+<!-- =========================
+     COMBINE EXPERIENCES
+========================= -->
 
 <section class="combine-area">
 
@@ -1559,7 +2037,9 @@ markets and everyday local life.
 </section>
 
 
-<!-- WHY STEMA -->
+<!-- =========================
+     WHY STEMA
+========================= -->
 
 <section class="section">
 
@@ -1652,7 +2132,9 @@ Tell us your plans and we arrange the experience.
 </section>
 
 
-<!-- CTA -->
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
 
@@ -1663,7 +2145,8 @@ Ready to Explore Nairobi?
 </h2>
 
 <p>
-Tell us your date, group size and preferred experience.
+Tell us your date, group size, preferred vehicle
+and experience.
 </p>
 
 <a href="booking.html" class="btn primary">
@@ -1675,7 +2158,9 @@ BOOK YOUR EXPERIENCE
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1708,13 +2193,59 @@ Quick Links
 
 <ul>
 
-<li><a href="index.html">Home</a></li>
-<li><a href="tours.html">Tours</a></li>
-<li><a href="city-walks.html">City Walks</a></li>
-<li><a href="transfers.html">Transfers</a></li>
-<li><a href="fleet.html">Fleet</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="booking.html">Book Now</a></li>
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="tours.html">
+Tours
+</a>
+</li>
+
+<li>
+<a href="city-walks.html">
+City Walks
+</a>
+</li>
+
+<li>
+<a href="transfers.html">
+Transfers
+</a>
+</li>
+
+<li>
+<a href="rates.html">
+Rates
+</a>
+</li>
+
+<li>
+<a href="fleet.html">
+Fleet
+</a>
+</li>
+
+<li>
+<a href="gallery.html">
+Gallery
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
+
+<li>
+<a href="booking.html">
+Book Now
+</a>
+</li>
 
 </ul>
 
@@ -1753,4 +2284,5 @@ stemawastrans@gmail.com
 
 
 </body>
+
 </html>
