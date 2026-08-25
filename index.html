@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -9,7 +8,7 @@
 <title>Stema Trans | Nairobi City Tours, Walks & Transfers</title>
 
 <meta name="description"
-content="Stema Trans offers Nairobi city tours, guided city walks, attractions, airport transfers and private vehicle services in Nairobi, Kenya.">
+content="Stema Trans offers Nairobi city tours, city walks, attractions, airport transfers and private vehicle hire in Nairobi, Kenya.">
 
 <style>
 
@@ -25,15 +24,15 @@ body{
     margin:0;
     font-family:Arial,Helvetica,sans-serif;
     color:#222;
-    background:#f7f8f6;
+    background:#f6f8f6;
     line-height:1.6;
 }
 
 img{
     width:100%;
     height:100%;
-    display:block;
     object-fit:cover;
+    display:block;
 }
 
 a{
@@ -78,7 +77,7 @@ a{
 .nav-links{
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:14px;
 }
 
 .nav-links a{
@@ -94,8 +93,8 @@ a{
 .book{
     background:#e6b34a;
     color:#063d28 !important;
-    padding:10px 17px;
-    border-radius:6px;
+    padding:11px 17px;
+    border-radius:7px;
 }
 
 
@@ -108,8 +107,8 @@ a{
 
     background:
     linear-gradient(
-        rgba(0,0,0,.45),
-        rgba(0,0,0,.62)
+        rgba(0,0,0,.43),
+        rgba(0,0,0,.65)
     ),
     url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Nairobi_city_skyline_at_dawn_2025.jpg")
     center/cover no-repeat;
@@ -128,26 +127,20 @@ a{
 
 .badge{
     display:inline-block;
-
     background:#e6b34a;
     color:#063d28;
-
     padding:7px 13px;
     border-radius:5px;
-
     font-size:13px;
     font-weight:bold;
-
     text-transform:uppercase;
     letter-spacing:1px;
 }
 
 .hero h1{
     max-width:850px;
-
     font-size:58px;
     line-height:1.05;
-
     margin:20px 0;
 }
 
@@ -186,7 +179,7 @@ a{
 
 
 /* =========================
-   GENERAL
+   GENERAL SECTIONS
 ========================= */
 
 .section{
@@ -438,46 +431,6 @@ a{
 }
 
 
-/* PARK RATES */
-
-.park-rates{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
-    margin:25px 0;
-}
-
-.park-rate{
-    background:rgba(255,255,255,.10);
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:8px;
-    padding:14px;
-}
-
-.park-rate strong{
-    display:block;
-    color:#fff;
-    font-size:14px;
-}
-
-.park-rate span{
-    display:block;
-    color:#e6b34a;
-    font-weight:bold;
-    margin-top:4px;
-}
-
-.park-rate small{
-    color:#dce7e0;
-    font-size:11px;
-}
-
-.park-note{
-    color:#dce7e0;
-    font-size:13px;
-}
-
-
 /* =========================
    TRANSFERS
 ========================= */
@@ -511,12 +464,139 @@ a{
 }
 
 
+/* ==================================================
+   VEHICLE & RATE SECTION
+================================================== */
+
+.vehicle-rate-area{
+    background:#eef3ef;
+}
+
+.rate-intro{
+    max-width:900px;
+    margin:0 auto 35px;
+    text-align:center;
+}
+
+.rate-intro p{
+    color:#666;
+    margin:6px 0;
+}
+
+.per-vehicle{
+    display:inline-block;
+    margin-top:10px;
+    padding:9px 16px;
+
+    background:#063d28;
+    color:#fff;
+
+    border-radius:20px;
+
+    font-size:13px;
+    font-weight:bold;
+}
+
+
 /* =========================
-   VEHICLES
+   RATE PANEL
 ========================= */
 
-.vehicle-area{
-    background:#edf1ee;
+.rate-panel{
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.10);
+
+    margin-bottom:38px;
+}
+
+.rate-panel-header{
+    background:#063d28;
+    color:#fff;
+    padding:22px 25px;
+}
+
+.rate-panel-header h3{
+    margin:0;
+    font-size:25px;
+}
+
+.rate-panel-header p{
+    margin:5px 0 0;
+    color:#dce7e0;
+    font-size:14px;
+}
+
+
+/* =========================
+   DESKTOP RATE TABLE
+========================= */
+
+.rate-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.rate-table th{
+    background:#f0f3f1;
+    color:#063d28;
+
+    padding:16px 18px;
+
+    text-align:left;
+
+    font-size:14px;
+}
+
+.rate-table td{
+    padding:18px;
+
+    border-top:1px solid #e5e9e6;
+
+    font-size:15px;
+}
+
+.rate-table tr:hover td{
+    background:#fafcfb;
+}
+
+.vehicle-name{
+    color:#063d28;
+    font-weight:bold;
+}
+
+.capacity{
+    color:#777;
+    font-size:13px;
+}
+
+.rate-amount{
+    color:#9a6700;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.rate-note{
+    padding:18px 22px;
+
+    background:#f8f6ed;
+
+    color:#666;
+
+    font-size:13px;
+
+    border-top:1px solid #e9e3cf;
+}
+
+
+/* =========================
+   VEHICLE CATEGORY CARDS
+========================= */
+
+.vehicle-title{
+    margin-top:55px;
 }
 
 .vehicle-grid{
@@ -525,86 +605,47 @@ a{
     gap:20px;
 }
 
-.vehicle-image{
-    height:230px;
+.vehicle-card{
+    background:#fff;
+    border-radius:12px;
     overflow:hidden;
-    background:#ddd;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.10);
 }
 
-.vehicle-image img{
-    object-fit:cover;
-    object-position:center center;
+.vehicle-image{
+    height:220px;
 }
 
 .vehicle-content{
-    padding:20px;
+    padding:19px;
 }
 
 .vehicle-content h3{
     color:#063d28;
-    margin:0 0 6px;
-    font-size:22px;
+    margin:0 0 7px;
+    font-size:21px;
 }
 
 .vehicle-content p{
     color:#666;
     font-size:14px;
+    margin:0;
 }
 
+.vehicle-capacity{
+    margin-top:12px;
 
-/* NEW PRICE DISPLAY */
+    display:inline-block;
 
-.vehicle-price-box{
-    margin-top:15px;
-
-    background:#f7f4e9;
-
-    border-left:4px solid #e6b34a;
-
-    border-radius:6px;
-
-    padding:13px;
-}
-
-.vehicle-price-title{
+    background:#eaf1ec;
     color:#063d28;
+
+    padding:6px 10px;
+    border-radius:5px;
+
+    font-size:12px;
     font-weight:bold;
-    font-size:13px;
-
-    margin-bottom:8px;
-}
-
-.vehicle-rate{
-    display:flex;
-    justify-content:space-between;
-    gap:8px;
-
-    padding:6px 0;
-
-    border-bottom:1px solid #e5e1d5;
-
-    font-size:13px;
-}
-
-.vehicle-rate:last-child{
-    border-bottom:none;
-}
-
-.vehicle-rate span:first-child{
-    color:#555;
-}
-
-.vehicle-rate span:last-child{
-    color:#9a6700;
-    font-weight:bold;
-}
-
-.vehicle-note{
-    margin-top:10px;
-
-    font-size:11px;
-
-    color:#777;
 }
 
 
@@ -768,7 +809,7 @@ footer a:hover{
 @media(max-width:950px){
 
     .nav-links{
-        gap:9px;
+        gap:8px;
     }
 
     .nav-links a{
@@ -802,10 +843,6 @@ footer a:hover{
     }
 
     .why-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .park-rates{
         grid-template-columns:repeat(2,1fr);
     }
 
@@ -862,10 +899,6 @@ footer a:hover{
         height:300px;
     }
 
-    .park-rates{
-        grid-template-columns:1fr;
-    }
-
     .park-text h2,
     .cta h2{
         font-size:31px;
@@ -873,6 +906,115 @@ footer a:hover{
 
     .footer-grid{
         grid-template-columns:1fr;
+    }
+
+
+    /* MOBILE RATE TABLE */
+
+    .rate-panel{
+        border-radius:10px;
+    }
+
+    .rate-panel-header{
+        padding:18px;
+    }
+
+    .rate-panel-header h3{
+        font-size:21px;
+    }
+
+    .rate-table,
+    .rate-table tbody,
+    .rate-table tr,
+    .rate-table td{
+        display:block;
+        width:100%;
+    }
+
+    .rate-table thead{
+        display:none;
+    }
+
+    .rate-table tr{
+        padding:17px;
+
+        border-bottom:1px solid #e4e8e5;
+    }
+
+    .rate-table tr:last-child{
+        border-bottom:none;
+    }
+
+    .rate-table td{
+        border:none;
+        padding:3px 0;
+    }
+
+    .rate-table td:first-child{
+        font-size:17px;
+        margin-bottom:5px;
+    }
+
+    .rate-table td:nth-child(2){
+        font-size:13px;
+        color:#777;
+        margin-bottom:9px;
+    }
+
+    .rate-table td:nth-child(3)::before{
+        content:"4 HOURS: ";
+        color:#666;
+        font-weight:normal;
+    }
+
+    .rate-table td:nth-child(4)::before{
+        content:"6 HOURS: ";
+        color:#666;
+        font-weight:normal;
+    }
+
+    .rate-table td:nth-child(5)::before{
+        content:"8 HOURS / FULL DAY: ";
+        color:#666;
+        font-weight:normal;
+    }
+
+    .rate-table td:nth-child(3),
+    .rate-table td:nth-child(4),
+    .rate-table td:nth-child(5){
+        display:inline-block;
+        width:100%;
+        color:#9a6700;
+        font-weight:bold;
+    }
+
+    .rate-table td:nth-child(3){
+        margin-top:4px;
+    }
+
+    .rate-note{
+        padding:15px 17px;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media(max-width:380px){
+
+    .hero h1{
+        font-size:33px;
+    }
+
+    .nav-inner{
+        padding:0 12px;
+    }
+
+    .logo{
+        font-size:18px;
     }
 
 }
@@ -1163,7 +1305,7 @@ KES 2,500 per person
 
 <img
 src="https://explorepartsunknown.com/wp-content/uploads/2018/09/20171112_150852_5S0A2454.jpg"
-alt="Nairobi food and local market life">
+alt="Nairobi food and local life">
 
 </div>
 
@@ -1322,138 +1464,25 @@ Nairobi National Park
 
 <p>
 Experience wildlife only a short distance from Nairobi.
-Safari vehicle rates are different from ordinary city
-vehicle hire.
+We can arrange private vehicle hire for your game drive.
 </p>
-
 
 <ul>
 
-<li>Nairobi National Park game drives</li>
-
 <li>Private vehicle options</li>
 
-<li>Half-day experiences</li>
+<li>Half-day game drives</li>
 
-<li>Full-day experiences</li>
+<li>Full-day game drives</li>
+
+<li>Flexible pickup arrangements</li>
 
 </ul>
 
-
-<div class="park-rates">
-
-
-<div class="park-rate">
-
-<strong>
-SUV / Prado TX
-</strong>
-
-<span>
-KES 15,000
-</span>
-
-<small>
-Half day
-</small>
-
-</div>
-
-
-<div class="park-rate">
-
-<strong>
-Tour Van
-</strong>
-
-<span>
-KES 18,000
-</span>
-
-<small>
-Half day
-</small>
-
-</div>
-
-
-<div class="park-rate">
-
-<strong>
-Tour Land Cruiser
-</strong>
-
-<span>
-KES 25,000
-</span>
-
-<small>
-Half day
-</small>
-
-</div>
-
-
-<div class="park-rate">
-
-<strong>
-SUV / Prado TX
-</strong>
-
-<span>
-KES 20,000
-</span>
-
-<small>
-Full day
-</small>
-
-</div>
-
-
-<div class="park-rate">
-
-<strong>
-Tour Van
-</strong>
-
-<span>
-KES 25,000
-</span>
-
-<small>
-Full day
-</small>
-
-</div>
-
-
-<div class="park-rate">
-
-<strong>
-Tour Land Cruiser
-</strong>
-
-<span>
-KES 30,000
-</span>
-
-<small>
-Full day
-</small>
-
-</div>
-
-
-</div>
-
-
 <p class="park-note">
-Vehicle rates are per vehicle. Park entry,
-conservation fees and applicable passenger
-charges are separate unless specifically stated.
+National Park entrance and applicable conservation
+fees are separate from vehicle hire.
 </p>
-
 
 <a href="booking.html" class="btn primary">
 Book Park Experience
@@ -1483,8 +1512,8 @@ Move Around Nairobi Comfortably
 </h2>
 
 <p>
-Reliable private transfers between JKIA, hotels,
-residences and Nairobi attractions.
+Private transfers between JKIA, hotels, residences,
+attractions and other Nairobi destinations.
 </p>
 
 </div>
@@ -1530,7 +1559,7 @@ Book Airport Transfer →
 
 <img
 src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Trademark_Hotel_entrance_during_Wikimania_2025.jpg"
-alt="Hotel entrance in Nairobi Kenya">
+alt="Hotel entrance in Nairobi">
 
 </div>
 
@@ -1559,28 +1588,371 @@ Request Transfer →
 </section>
 
 
-<!-- =========================
-     VEHICLE CATEGORIES
-========================= -->
+<!-- ==================================================
+     VEHICLE RATES
+================================================== -->
 
-<section class="vehicle-area">
+<section class="vehicle-rate-area">
 
 <div class="section">
+
 
 <div class="heading">
 
 <div class="kicker">
-Choose Your Ride
+Vehicle Hire
 </div>
 
 <h2>
-Vehicle Categories
+Vehicle Hire Rates
 </h2>
 
 <p>
-Vehicle hire is charged per vehicle. Choose the category
-that best suits your group, comfort requirements and itinerary.
+Choose the vehicle category that suits your group
+and itinerary.
 </p>
+
+<span class="per-vehicle">
+ALL VEHICLE RATES ARE PER VEHICLE
+</span>
+
+</div>
+
+
+<!-- =========================
+     CITY / PRIVATE HIRE
+========================= -->
+
+<div class="rate-panel">
+
+
+<div class="rate-panel-header">
+
+<h3>
+Nairobi City Tours & Private Hire
+</h3>
+
+<p>
+For city tours, sightseeing, private transfers and other
+Nairobi vehicle-based services.
+</p>
+
+</div>
+
+
+<table class="rate-table">
+
+<thead>
+
+<tr>
+
+<th>
+Vehicle
+</th>
+
+<th>
+Capacity
+</th>
+
+<th>
+4 Hours
+</th>
+
+<th>
+6 Hours
+</th>
+
+<th>
+8 Hours / Full Day
+</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+
+<tr>
+
+<td class="vehicle-name">
+Sedan
+</td>
+
+<td class="capacity">
+1–3 passengers
+</td>
+
+<td class="rate-amount">
+KES 6,000
+</td>
+
+<td class="rate-amount">
+KES 8,000
+</td>
+
+<td class="rate-amount">
+KES 10,000
+</td>
+
+</tr>
+
+
+<tr>
+
+<td class="vehicle-name">
+SUV / Prado TX
+</td>
+
+<td class="capacity">
+1–4 passengers
+</td>
+
+<td class="rate-amount">
+KES 9,000
+</td>
+
+<td class="rate-amount">
+KES 12,000
+</td>
+
+<td class="rate-amount">
+KES 15,000
+</td>
+
+</tr>
+
+
+<tr>
+
+<td class="vehicle-name">
+Tour Van
+</td>
+
+<td class="capacity">
+1–7 passengers
+</td>
+
+<td class="rate-amount">
+KES 10,000
+</td>
+
+<td class="rate-amount">
+KES 14,000
+</td>
+
+<td class="rate-amount">
+KES 18,000
+</td>
+
+</tr>
+
+
+<tr>
+
+<td class="vehicle-name">
+Tour Land Cruiser
+</td>
+
+<td class="capacity">
+1–7 passengers
+</td>
+
+<td class="rate-amount">
+KES 15,000
+</td>
+
+<td class="rate-amount">
+KES 20,000
+</td>
+
+<td class="rate-amount">
+KES 25,000
+</td>
+
+</tr>
+
+
+</tbody>
+
+</table>
+
+
+<div class="rate-note">
+
+<strong>
+Important:
+</strong>
+
+These rates are for the vehicle hire and are charged
+per vehicle. Attraction entrance fees, museum tickets,
+parking charges and other applicable fees are separate
+unless specifically included in a quoted package.
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     NATIONAL PARK
+========================= -->
+
+<div class="rate-panel">
+
+
+<div class="rate-panel-header">
+
+<h3>
+Nairobi National Park Game Drive Hire
+</h3>
+
+<p>
+Separate safari vehicle rates for Nairobi National Park.
+</p>
+
+</div>
+
+
+<table class="rate-table">
+
+<thead>
+
+<tr>
+
+<th>
+Vehicle
+</th>
+
+<th>
+Capacity
+</th>
+
+<th>
+Half Day
+<br>
+4–5 Hours
+</th>
+
+<th>
+Full Day
+<br>
+6–8 Hours
+</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+
+<tr>
+
+<td class="vehicle-name">
+SUV / Prado TX
+</td>
+
+<td class="capacity">
+1–4 passengers
+</td>
+
+<td class="rate-amount">
+KES 15,000
+</td>
+
+<td class="rate-amount">
+KES 20,000
+</td>
+
+</tr>
+
+
+<tr>
+
+<td class="vehicle-name">
+Safari Tour Van
+</td>
+
+<td class="capacity">
+1–7 passengers
+</td>
+
+<td class="rate-amount">
+KES 18,000
+</td>
+
+<td class="rate-amount">
+KES 25,000
+</td>
+
+</tr>
+
+
+<tr>
+
+<td class="vehicle-name">
+Safari Land Cruiser
+</td>
+
+<td class="capacity">
+1–7 passengers
+</td>
+
+<td class="rate-amount">
+KES 25,000
+</td>
+
+<td class="rate-amount">
+KES 30,000
+</td>
+
+</tr>
+
+
+</tbody>
+
+</table>
+
+
+<div class="rate-note">
+
+<strong>
+Important:
+</strong>
+
+National Park entrance and conservation fees are
+separate from the vehicle hire rates. The above amounts
+are vehicle hire charges, not park entrance fees.
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     VEHICLE TYPES
+========================= -->
+
+<div class="vehicle-title">
+
+<div class="heading">
+
+<div class="kicker">
+Our Vehicle Categories
+</div>
+
+<h2>
+Choose Your Vehicle
+</h2>
+
+<p>
+Vehicle availability depends on the date and requested service.
+</p>
+
+</div>
 
 </div>
 
@@ -1590,7 +1962,7 @@ that best suits your group, comfort requirements and itinerary.
 
 <!-- SEDAN -->
 
-<div class="card">
+<div class="vehicle-card">
 
 <div class="vehicle-image">
 
@@ -1607,63 +1979,13 @@ Sedan
 </h3>
 
 <p>
-A practical private-car option for
-individual travellers and couples.
+Comfortable and practical for individuals,
+couples and small groups.
 </p>
 
-
-<div class="vehicle-price-box">
-
-<div class="vehicle-price-title">
-CITY / PRIVATE HIRE — PER VEHICLE
-</div>
-
-
-<div class="vehicle-rate">
-
-<span>
-4 hours
+<span class="vehicle-capacity">
+1–3 PASSENGERS
 </span>
-
-<span>
-KES 6,000
-</span>
-
-</div>
-
-
-<div class="vehicle-rate">
-
-<span>
-6 hours
-</span>
-
-<span>
-KES 8,000
-</span>
-
-</div>
-
-
-<div class="vehicle-rate">
-
-<span>
-8 hours
-</span>
-
-<span>
-KES 10,000
-</span>
-
-</div>
-
-
-</div>
-
-<div class="vehicle-note">
-Rates apply to vehicle hire. Attraction and
-park entrance fees are separate.
-</div>
 
 </div>
 
@@ -1672,7 +1994,7 @@ park entrance fees are separate.
 
 <!-- SUV -->
 
-<div class="card">
+<div class="vehicle-card">
 
 <div class="vehicle-image">
 
@@ -1689,63 +2011,13 @@ SUV / Prado TX
 </h3>
 
 <p>
-A comfortable SUV option for small groups,
-private transfers and city excursions.
+Comfortable SUV for private tours,
+transfers and sightseeing.
 </p>
 
-
-<div class="vehicle-price-box">
-
-<div class="vehicle-price-title">
-CITY / PRIVATE HIRE — PER VEHICLE
-</div>
-
-
-<div class="vehicle-rate">
-
-<span>
-4 hours
+<span class="vehicle-capacity">
+1–4 PASSENGERS
 </span>
-
-<span>
-KES 9,000
-</span>
-
-</div>
-
-
-<div class="vehicle-rate">
-
-<span>
-6 hours
-</span>
-
-<span>
-KES 12,000
-</span>
-
-</div>
-
-
-<div class="vehicle-rate">
-
-<span>
-8 hours
-</span>
-
-<span>
-KES 15,000
-</span>
-
-</div>
-
-
-</div>
-
-<div class="vehicle-note">
-Rates apply to vehicle hire. Attraction and
-park entrance fees are separate.
-</div>
 
 </div>
 
@@ -1754,7 +2026,7 @@ park entrance fees are separate.
 
 <!-- TOUR VAN -->
 
-<div class="card">
+<div class="vehicle-card">
 
 <div class="vehicle-image">
 
@@ -1771,63 +2043,13 @@ Tour Van
 </h3>
 
 <p>
-A practical passenger tour van suitable for
-city tours, transfers and small groups.
+Practical passenger vehicle for families
+and small groups.
 </p>
 
-
-<div class="vehicle-price-box">
-
-<div class="vehicle-price-title">
-CITY / PRIVATE HIRE — PER VEHICLE
-</div>
-
-
-<div class="vehicle-rate">
-
-<span>
-4 hours
+<span class="vehicle-capacity">
+1–7 PASSENGERS
 </span>
-
-<span>
-KES 10,000
-</span>
-
-</div>
-
-
-<div class="vehicle-rate">
-
-<span>
-6 hours
-</span>
-
-<span>
-KES 14,000
-</span>
-
-</div>
-
-
-<div class="vehicle-rate">
-
-<span>
-8 hours
-</span>
-
-<span>
-KES 18,000
-</span>
-
-</div>
-
-
-</div>
-
-<div class="vehicle-note">
-Rates apply to vehicle hire. Attraction and
-park entrance fees are separate.
-</div>
 
 </div>
 
@@ -1836,7 +2058,7 @@ park entrance fees are separate.
 
 <!-- LAND CRUISER -->
 
-<div class="card">
+<div class="vehicle-card">
 
 <div class="vehicle-image">
 
@@ -1853,63 +2075,13 @@ Tour Land Cruiser
 </h3>
 
 <p>
-A rugged tour vehicle suitable for
-city excursions, parks and longer journeys.
+A capable tour vehicle for city excursions,
+parks and longer journeys.
 </p>
 
-
-<div class="vehicle-price-box">
-
-<div class="vehicle-price-title">
-CITY / PRIVATE HIRE — PER VEHICLE
-</div>
-
-
-<div class="vehicle-rate">
-
-<span>
-4 hours
+<span class="vehicle-capacity">
+1–7 PASSENGERS
 </span>
-
-<span>
-KES 15,000
-</span>
-
-</div>
-
-
-<div class="vehicle-rate">
-
-<span>
-6 hours
-</span>
-
-<span>
-KES 20,000
-</span>
-
-</div>
-
-
-<div class="vehicle-rate">
-
-<span>
-8 hours
-</span>
-
-<span>
-KES 25,000
-</span>
-
-</div>
-
-
-</div>
-
-<div class="vehicle-note">
-Safari / park rates may differ from ordinary
-city vehicle hire.
-</div>
 
 </div>
 
@@ -2194,57 +2366,39 @@ Quick Links
 <ul>
 
 <li>
-<a href="index.html">
-Home
-</a>
+<a href="index.html">Home</a>
 </li>
 
 <li>
-<a href="tours.html">
-Tours
-</a>
+<a href="tours.html">Tours</a>
 </li>
 
 <li>
-<a href="city-walks.html">
-City Walks
-</a>
+<a href="city-walks.html">City Walks</a>
 </li>
 
 <li>
-<a href="transfers.html">
-Transfers
-</a>
+<a href="transfers.html">Transfers</a>
 </li>
 
 <li>
-<a href="rates.html">
-Rates
-</a>
+<a href="rates.html">Rates</a>
 </li>
 
 <li>
-<a href="fleet.html">
-Fleet
-</a>
+<a href="fleet.html">Fleet</a>
 </li>
 
 <li>
-<a href="gallery.html">
-Gallery
-</a>
+<a href="gallery.html">Gallery</a>
 </li>
 
 <li>
-<a href="contact.html">
-Contact
-</a>
+<a href="contact.html">Contact</a>
 </li>
 
 <li>
-<a href="booking.html">
-Book Now
-</a>
+<a href="booking.html">Book Now</a>
 </li>
 
 </ul>
@@ -2260,7 +2414,7 @@ Contact
 
 <p>
 Phone / WhatsApp:<br>
-0722 915 913
+0722 910 913
 </p>
 
 <p>
@@ -2284,5 +2438,4 @@ stemawastrans@gmail.com
 
 
 </body>
-
 </html>
