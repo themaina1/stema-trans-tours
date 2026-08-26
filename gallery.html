@@ -1,165 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Gallery | Stema Trans</title>
+<title>Gallery | STEMA TRANS</title>
 
-    <link rel="stylesheet" href="style.css">
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f7f5;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:#063d28;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+header h1 span{
+    color:#e6b34a;
+}
+
+header p{
+    margin:8px 0 0;
+    color:#e6eee9;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:#032d1d;
+    text-align:center;
+    padding:14px 8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    margin:4px 9px;
+    display:inline-block;
+}
+
+nav a:hover{
+    color:#e6b34a;
+}
+
+/* INTRO */
+
+.gallery-intro{
+    text-align:center;
+    max-width:850px;
+    margin:40px auto 25px;
+    padding:0 20px;
+}
+
+.gallery-intro h2{
+    color:#063d28;
+    font-size:40px;
+    margin:0 0 10px;
+}
+
+.gallery-intro p{
+    color:#666;
+    font-size:18px;
+    margin:0;
+}
+
+/* GALLERY */
+
+.gallery{
+    max-width:1200px;
+    margin:0 auto 50px;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.gallery-item{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,.10);
+    transition:transform .25s ease,box-shadow .25s ease;
+}
+
+.gallery-item:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 22px rgba(0,0,0,.16);
+}
+
+.gallery-item img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+}
+
+.caption{
+    padding:16px;
+    text-align:center;
+}
+
+.caption h3{
+    margin:0;
+    color:#063d28;
+    font-size:20px;
+}
+
+.caption p{
+    margin:6px 0 0;
+    color:#666;
+    font-size:14px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#032d1d;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+footer p{
+    margin:5px 0;
+    color:#d8e1dc;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .gallery-intro h2{
+        font-size:32px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+        padding:15px;
+    }
+
+    .gallery-item img{
+        height:240px;
+    }
+
+    nav a{
+        font-size:14px;
+        margin:4px 5px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-    <div class="container nav-container">
 
-        <a href="index.html" class="logo">
-            <strong>STEMA TRANS</strong>
-            <span>City Tours & Transfers</span>
-        </a>
+<h1>
+STEMA <span>TRANS</span>
+</h1>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="tours.html">Tours</a>
-            <a href="transfers.html">Transfers</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="rates.html">Rates</a>
-            <a href="booking.html" class="book-button">Book Now</a>
-        </nav>
+<p>
+Nairobi City Tours, Transfers & Guided Experiences
+</p>
 
-    </div>
 </header>
 
 
-<main>
+<nav>
 
-    <section class="section">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="tours.html">Tours</a>
+<a href="city-walks.html">City Walks</a>
+<a href="transfers.html">Transfers</a>
+<a href="rates.html">Rates</a>
+<a href="fleet.html">Fleet</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
 
-        <div class="container">
-
-            <p class="eyebrow">STEMA TRANS</p>
-
-            <h1>Gallery</h1>
-
-            <p style="max-width:650px; margin-top:15px;">
-                A selection of places, experiences and journeys
-                around Nairobi.
-            </p>
-
-        </div>
-
-    </section>
+</nav>
 
 
-    <!-- GALLERY -->
+<section class="gallery-intro">
 
-    <section class="section light">
+<h2>
+Nairobi Through STEMA TRANS
+</h2>
 
-        <div class="container">
+<p>
+Explore Nairobi's attractions, city life, walking experiences,
+wildlife, vehicles and transfer services.
+</p>
 
-            <div class="gallery">
-
-                <img src="images/gallery01.jpg" alt="Stema Trans">
-
-                <img src="images/gallery02.jpg" alt="Stema Trans">
-
-                <img src="images/gallery03.jpg" alt="Stema Trans">
-
-                <img src="images/gallery04.jpg" alt="Stema Trans">
-
-                <img src="images/gallery05.jpg" alt="Stema Trans">
-
-                <img src="images/gallery06.jpg" alt="Stema Trans">
-
-                <img src="images/gallery07.jpg" alt="Stema Trans">
-
-                <img src="images/gallery08.jpg" alt="Stema Trans">
-
-                <img src="images/gallery09.jpg" alt="Stema Trans">
-
-                <img src="images/gallery10.jpg" alt="Stema Trans">
-
-                <img src="images/gallery11.jpg" alt="Stema Trans">
-
-                <img src="images/gallery12.jpg" alt="Stema Trans">
-
-            </div>
-
-        </div>
-
-    </section>
+</section>
 
 
-    <section class="cta">
+<section class="gallery">
 
-        <div class="container">
 
-            <h2>
-                Explore Nairobi With Us
-            </h2>
+<!-- NAIROBI CITY -->
 
-            <p>
-                Choose a tour or transfer and let us help
-                you plan your journey.
-            </p>
+<div class="gallery-item">
 
-            <a href="booking.html" class="button">
-                Book Now
-            </a>
+<img
+src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85"
+alt="Nairobi city skyline"
+loading="lazy"
+>
 
-        </div>
+<div class="caption">
+<h3>Nairobi City</h3>
+<p>The vibrant capital city of Kenya</p>
+</div>
 
-    </section>
+</div>
 
-</main>
+
+<!-- KICC -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1567608198472-26bf8c8b1c2d?auto=format&fit=crop&w=1200&q=85"
+alt="Nairobi city centre"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>Nairobi City Centre</h3>
+<p>Experience the heart of Nairobi</p>
+</div>
+
+</div>
+
+
+<!-- UHURU PARK -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85"
+alt="Nairobi green park"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>Uhuru Park</h3>
+<p>A green escape in the centre of Nairobi</p>
+</div>
+
+</div>
+
+
+<!-- NAIROBI NATIONAL MUSEUM -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=1200&q=85"
+alt="Museum building"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>Nairobi National Museum</h3>
+<p>Kenya's history, culture and heritage</p>
+</div>
+
+</div>
+
+
+<!-- CITY MARKET -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1200&q=85"
+alt="African city market"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>City Market</h3>
+<p>Discover Nairobi's local market atmosphere</p>
+</div>
+
+</div>
+
+
+<!-- CITY WALK -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?auto=format&fit=crop&w=1200&q=85"
+alt="People walking through a city"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>Nairobi City Walks</h3>
+<p>Explore Nairobi on foot</p>
+</div>
+
+</div>
+
+
+<!-- HISTORY AND CULTURE -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1200&q=85"
+alt="African cultural experience"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>History & Culture Walk</h3>
+<p>Discover Nairobi's history and cultural character</p>
+</div>
+
+</div>
+
+
+<!-- FOOD AND LOCAL LIFE -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=85"
+alt="Kenyan food"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>Food & Local Life</h3>
+<p>Taste and experience Nairobi's everyday life</p>
+</div>
+
+</div>
+
+
+<!-- NAIROBI NATIONAL PARK -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=85"
+alt="African wildlife safari"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>Nairobi National Park</h3>
+<p>Wildlife just outside Nairobi</p>
+</div>
+
+</div>
+
+
+<!-- GIRAFFE CENTRE -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=1200&q=85"
+alt="Giraffe"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>Giraffe Experience</h3>
+<p>Meet giraffes in Nairobi</p>
+</div>
+
+</div>
+
+
+<!-- TOUR LAND CRUISER -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=85"
+alt="Safari vehicle and African wildlife"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>Tour Land Cruiser</h3>
+<p>Comfortable safari transport for your adventure</p>
+</div>
+
+</div>
+
+
+<!-- TOUR VAN -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1200&q=85"
+alt="Safari tour vehicle"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>Tour Van</h3>
+<p>Spacious transport for city and safari experiences</p>
+</div>
+
+</div>
+
+
+<!-- SUV -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=85"
+alt="SUV vehicle"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>SUV / Prado TX</h3>
+<p>Comfortable private transport around Kenya</p>
+</div>
+
+</div>
+
+
+<!-- SEDAN -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=85"
+alt="Modern sedan"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>Private Sedan</h3>
+<p>Comfortable transport for private transfers and city travel</p>
+</div>
+
+</div>
+
+
+<!-- JKIA -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=85"
+alt="Passenger aircraft at airport"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>Airport Transfers</h3>
+<p>Reliable transfers to and from JKIA</p>
+</div>
+
+</div>
+
+
+<!-- HOTEL TRANSFERS -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85"
+alt="Hotel accommodation"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>Hotel Transfers</h3>
+<p>Convenient transfers between hotels and destinations</p>
+</div>
+
+</div>
+
+
+<!-- PRIVATE TRANSFERS -->
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1200&q=85"
+alt="Private car transfer"
+loading="lazy"
+>
+
+<div class="caption">
+<h3>Private Transfers</h3>
+<p>Comfortable private transportation around Nairobi</p>
+</div>
+
+</div>
+
+
+</section>
 
 
 <footer>
 
-    <div class="container footer-grid">
+<p>
+© 2026 STEMA TRANS
+</p>
 
-        <div>
+<p>
+Nairobi, Kenya
+</p>
 
-            <h3>STEMA TRANS</h3>
-
-            <p>
-                Nairobi City Tours & Transfers
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h4>Quick Links</h4>
-
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="tours.html">Tours</a>
-            <a href="transfers.html">Transfers</a>
-            <a href="rates.html">Rates</a>
-            <a href="booking.html">Book Now</a>
-
-        </div>
-
-
-        <div>
-
-            <h4>Contact</h4>
-
-            <p>0722 910 913</p>
-            <p>stemawastrans@gmail.com</p>
-
-        </div>
-
-    </div>
-
-
-    <div class="copyright">
-        © 2026 Stema Trans. All Rights Reserved.
-    </div>
+<p>
+0722910913 | stemawastrans@gmail.com
+</p>
 
 </footer>
 
