@@ -7,15 +7,18 @@
 <title>Gallery | STEMA TRANS</title>
 
 <style>
-
 *{
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f4f7f5;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7f6;
     color:#222;
 }
 
@@ -23,14 +26,14 @@ body{
 
 header{
     background:#063d28;
-    color:#fff;
+    color:white;
     text-align:center;
     padding:28px 15px;
 }
 
 header h1{
     margin:0;
-    font-size:32px;
+    font-size:34px;
     letter-spacing:1px;
 }
 
@@ -40,113 +43,144 @@ header h1 span{
 
 header p{
     margin:8px 0 0;
-    color:#e3eee8;
+    font-size:16px;
+    color:#e4eee9;
 }
 
 /* NAVIGATION */
 
 nav{
     background:#032d1d;
-    text-align:center;
-    padding:14px 8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:12px 8px;
 }
 
 nav a{
-    color:#fff;
+    color:white;
     text-decoration:none;
     font-weight:bold;
-    margin:4px 9px;
-    display:inline-block;
+    padding:8px 10px;
+    margin:2px;
+    border-radius:6px;
+    font-size:14px;
 }
 
 nav a:hover{
-    color:#e6b34a;
+    background:#e6b34a;
+    color:#032d1d;
 }
 
 /* INTRO */
 
-.gallery-intro{
+.intro{
     max-width:900px;
-    margin:42px auto 25px;
+    margin:45px auto 25px;
     padding:0 20px;
     text-align:center;
 }
 
-.gallery-intro h2{
-    margin:0 0 10px;
+.intro h2{
+    margin:0 0 12px;
     color:#063d28;
     font-size:40px;
 }
 
-.gallery-intro p{
+.intro p{
     margin:0;
     color:#666;
     font-size:18px;
+    line-height:1.6;
 }
 
 /* GALLERY */
 
 .gallery{
     max-width:1200px;
-    margin:0 auto 55px;
-    padding:20px;
+    margin:0 auto;
+    padding:25px 20px 60px;
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
 }
 
-.gallery-item{
-    background:#fff;
-    border-radius:16px;
+/* CARD */
+
+.gallery-card{
+    background:white;
+    border-radius:15px;
     overflow:hidden;
-    box-shadow:0 4px 16px rgba(0,0,0,.10);
-    transition:.25s ease;
+    box-shadow:0 5px 18px rgba(0,0,0,0.10);
+    transition:transform .25s ease, box-shadow .25s ease;
 }
 
-.gallery-item:hover{
+.gallery-card:hover{
     transform:translateY(-5px);
-    box-shadow:0 9px 25px rgba(0,0,0,.16);
+    box-shadow:0 10px 25px rgba(0,0,0,0.16);
 }
 
-.gallery-item img{
+/* IMAGE */
+
+.gallery-card img{
     width:100%;
-    height:235px;
+    height:240px;
     object-fit:cover;
     display:block;
 }
 
+/* CAPTION */
+
 .caption{
-    padding:17px;
+    padding:18px 16px 20px;
     text-align:center;
 }
 
 .caption h3{
-    margin:0;
+    margin:0 0 7px;
     color:#063d28;
-    font-size:20px;
+    font-size:21px;
 }
 
 .caption p{
-    margin:6px 0 0;
+    margin:0;
     color:#666;
     font-size:14px;
+    line-height:1.5;
 }
 
 /* FOOTER */
 
 footer{
     background:#032d1d;
-    color:#fff;
+    color:white;
     text-align:center;
     padding:30px 15px;
 }
 
-footer p{
-    margin:5px 0;
-    color:#d8e1dc;
+footer h3{
+    margin:0 0 8px;
+    color:#e6b34a;
 }
 
-/* MOBILE */
+footer p{
+    margin:5px 0;
+    color:#dce7e1;
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+
+    .gallery{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+}
+
+/* PHONE */
 
 @media(max-width:600px){
 
@@ -154,23 +188,37 @@ footer p{
         font-size:28px;
     }
 
-    .gallery-intro h2{
-        font-size:32px;
+    nav{
+        padding:10px 5px;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:7px 8px;
+    }
+
+    .intro{
+        margin-top:35px;
+    }
+
+    .intro h2{
+        font-size:31px;
+    }
+
+    .intro p{
+        font-size:16px;
     }
 
     .gallery{
         grid-template-columns:1fr;
-        padding:15px;
+        padding:20px 15px 45px;
+        gap:22px;
     }
 
-    .gallery-item img{
-        height:240px;
+    .gallery-card img{
+        height:245px;
     }
 
-    nav a{
-        font-size:14px;
-        margin:4px 5px;
-    }
 }
 
 </style>
@@ -179,460 +227,494 @@ footer p{
 <body>
 
 
+<!-- HEADER -->
+
 <header>
 
-<h1>
-STEMA <span>TRANS</span>
-</h1>
+    <h1>
+        STEMA <span>TRANS</span>
+    </h1>
 
-<p>
-Nairobi City Tours, Transfers & Guided Experiences
-</p>
+    <p>
+        Nairobi City Tours, Walks & Transfers
+    </p>
 
 </header>
 
 
+<!-- NAVIGATION -->
+
 <nav>
 
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="tours.html">Tours</a>
-<a href="city-walks.html">City Walks</a>
-<a href="transfers.html">Transfers</a>
-<a href="rates.html">Rates</a>
-<a href="fleet.html">Fleet</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+
+    <a href="about.html">About</a>
+
+    <a href="tours.html">Tours</a>
+
+    <a href="city-walks.html">City Walks</a>
+
+    <a href="transfers.html">Transfers</a>
+
+    <a href="rates.html">Rates</a>
+
+    <a href="fleet.html">Fleet</a>
+
+    <a href="gallery.html">Gallery</a>
+
+    <a href="contact.html">Contact</a>
 
 </nav>
 
 
-<section class="gallery-intro">
+<!-- INTRO -->
 
-<h2>
-Nairobi Through STEMA TRANS
-</h2>
+<section class="intro">
 
-<p>
-Explore Nairobi's landmarks, attractions, city life,
-wildlife experiences and transportation services.
-</p>
+    <h2>
+        Our Gallery
+    </h2>
+
+    <p>
+        Explore Nairobi through STEMA TRANS — from city landmarks
+        and cultural experiences to wildlife, walking tours and
+        comfortable transportation.
+    </p>
 
 </section>
 
+
+<!-- GALLERY -->
 
 <section class="gallery">
 
 
-<!-- 1. NAIROBI CITY -->
+    <!-- NAIROBI CITY -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20skyline%20from%20Uhuru%20Park.jpg?width=1200"
-alt="Nairobi skyline viewed from Uhuru Park"
-loading="lazy"
->
+        <img
+            src="images/nairobi-city.jpg"
+            alt="Nairobi city"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>Nairobi City</h3>
+            <h3>Nairobi City</h3>
 
-<p>
-Nairobi skyline and central city
-</p>
+            <p>
+                Discover the vibrant capital city of Kenya.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 2. KICC / CITY CENTRE -->
+    <!-- KICC -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://images.pexels.com/photos/9833513/pexels-photo-9833513.jpeg?auto=compress&cs=tinysrgb&w=1200"
-alt="Kenyatta International Convention Centre Nairobi"
-loading="lazy"
->
+        <img
+            src="images/kicc-city-centre.jpeg"
+            alt="KICC and Nairobi city centre"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>KICC & City Centre</h3>
+            <h3>KICC & City Centre</h3>
 
-<p>
-Iconic Nairobi city landmark
-</p>
+            <p>
+                See one of Nairobi's most recognised landmarks
+                and explore the heart of the city.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 3. UHURU PARK -->
+    <!-- UHURU PARK -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://commons.wikimedia.org/wiki/Special:FilePath/Uhuru%20Park%20in%20Nairobi%2C%20Kenya%2C%20during%20sunset.jpg?width=1200"
-alt="Uhuru Park Nairobi Kenya"
-loading="lazy"
->
+        <img
+            src="images/uhuru-park.jpg"
+            alt="Uhuru Park Nairobi"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>Uhuru Park</h3>
+            <h3>Uhuru Park</h3>
 
-<p>
-Nairobi's famous central urban park
-</p>
+            <p>
+                A historic green space in the heart of Nairobi.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 4. NAIROBI NATIONAL MUSEUM -->
+    <!-- NATIONAL MUSEUM -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://commons.wikimedia.org/wiki/Special:FilePath/Exterior%20of%20Nairobi%20National%20Museum%2C%20Kenya%20%281%29.jpg?width=1200"
-alt="Exterior of Nairobi National Museum Kenya"
-loading="lazy"
->
+        <img
+            src="images/nairobi-national-museum.jpg"
+            alt="Nairobi National Museum"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>Nairobi National Museum</h3>
+            <h3>Nairobi National Museum</h3>
 
-<p>
-Kenya's history, culture and heritage
-</p>
+            <p>
+                Explore Kenya's history, culture, art and heritage.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 5. CITY MARKET -->
+    <!-- CITY MARKET -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi%20City%20Market%20in%20Kenya.jpg?width=1200"
-alt="Exterior of Nairobi City Market Kenya"
-loading="lazy"
->
+        <img
+            src="images/nairobi-city-market.jpeg"
+            alt="Nairobi City Market"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>Nairobi City Market</h3>
+            <h3>Nairobi City Market</h3>
 
-<p>
-Historic Nairobi marketplace
-</p>
+            <p>
+                Experience one of Nairobi's well-known city markets.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 6. CITY WALK -->
+    <!-- CITY WALK -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://mediaim.expedia.com/localexpert/3283913/de26bd57-145c-4e77-881e-fc1aab699c80.jpg"
-alt="People walking in Nairobi city centre"
-loading="lazy"
->
+        <img
+            src="images/nairobi-city-walk.jpeg"
+            alt="Nairobi city walking experience"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>Nairobi City Walks</h3>
+            <h3>Nairobi City Walks</h3>
 
-<p>
-Explore the city on foot
-</p>
+            <p>
+                Discover Nairobi's streets, landmarks and everyday
+                city atmosphere on foot.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 7. HISTORY & CULTURE -->
+    <!-- HISTORY & CULTURE -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20main%20hall%20at%20the%20Nairobi%20National%20Museum%2001.jpg?width=1200"
-alt="Inside Nairobi National Museum"
-loading="lazy"
->
+        <img
+            src="images/nairobi-culture-walk.jpg"
+            alt="Nairobi history and culture walk"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>History & Culture Walk</h3>
+            <h3>History & Culture Walk</h3>
 
-<p>
-Discover Nairobi's history and heritage
-</p>
+            <p>
+                Discover the stories, heritage and cultural character
+                of Nairobi.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 8. FOOD & LOCAL LIFE -->
+    <!-- FOOD & LOCAL LIFE -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://photos.jamminglobal.com/images/Kenya_0749.jpeg"
-alt="Fresh produce at a Kenyan market"
-loading="lazy"
->
+        <img
+            src="images/food-localLife.jpeg"
+            alt="Kenyan food and local life"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>Food & Local Life</h3>
+            <h3>Food & Local Life</h3>
 
-<p>
-Experience Nairobi's everyday local life
-</p>
+            <p>
+                Experience Nairobi through food, markets and
+                everyday local life.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 9. NAIROBI NATIONAL PARK -->
+    <!-- NAIROBI NATIONAL PARK -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://commons.wikimedia.org/wiki/Special:FilePath/Black%20rhino%20at%20Nairobi%20National%20Park.jpg?width=1200"
-alt="Black rhino at Nairobi National Park Kenya"
-loading="lazy"
->
+        <img
+            src="images/nairobi-national-park.jpeg"
+            alt="Nairobi National Park"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>Nairobi National Park</h3>
+            <h3>Nairobi National Park</h3>
 
-<p>
-Wildlife just outside Nairobi
-</p>
+            <p>
+                Experience wildlife in a national park just outside
+                Nairobi city.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 10. GIRAFFE CENTRE -->
+    <!-- GIRAFFE CENTRE -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://cdn.getyourguide.com/img/tour/b3909cd52352417f47c5cdca5d447b5f9baa5c0fd215df7fde5d372bacead44f.jpg/vertical_520_780.jpg"
-alt="Giraffe Centre entrance Nairobi"
-loading="lazy"
->
+        <img
+            src="images/giraffe-center.jpg"
+            alt="Giraffe Centre Nairobi"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>Giraffe Centre</h3>
+            <h3>Giraffe Centre</h3>
 
-<p>
-A unique Nairobi wildlife experience
-</p>
+            <p>
+                Enjoy a memorable giraffe experience in Nairobi.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 11. TOUR LAND CRUISER -->
+    <!-- TOUR LAND CRUISER -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://cdn.theabroadguide.com/media/nairobi-national-park-private-safari-in-a-44-landcruiser-d5280-73433P137-3.jpg"
-alt="Safari Land Cruiser at Nairobi National Park"
-loading="lazy"
->
+        <img
+            src="images/tour-land-cruiser.jpg"
+            alt="Tour Land Cruiser"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>Tour Land Cruiser</h3>
+            <h3>Tour Land Cruiser</h3>
 
-<p>
-Safari vehicle for wildlife experiences
-</p>
+            <p>
+                A capable touring vehicle for safari and
+                wildlife experiences.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 12. TOUR VAN -->
+    <!-- TOUR VAN -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://cdn.getyourguide.com/image/format%3Dauto%2Cfit%3Dcrop%2Cgravity%3Dcenter%2Cquality%3D60%2Cwidth%3D1200%2Cheight%3D800%2Cdpr%3D2/tour_img/4c6cd72f9a4aa6278ce4ca56aebdb3d38c8c955fe339ed555cdd7d90a6055860.jpg"
-alt="Kenya safari tour van"
-loading="lazy"
->
+        <img
+            src="images/tour-van.jpg"
+            alt="Tour van"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>Tour Van</h3>
+            <h3>Tour Van</h3>
 
-<p>
-Spacious vehicle for tours and group travel
-</p>
+            <p>
+                Spacious transport for city tours, excursions
+                and group travel.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 13. SUV / PRADO -->
+    <!-- SUV -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://kai-and-karo.ams3.cdn.digitaloceanspaces.com/media/vehicles/images/IMG-20240105-WA0141.jpg"
-alt="Toyota Land Cruiser Prado TX in Kenya"
-loading="lazy"
->
+        <img
+            src="images/suv-prado-tx.jpg"
+            alt="SUV Prado TX"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>SUV / Prado TX</h3>
+            <h3>SUV / Prado TX</h3>
 
-<p>
-Comfortable private touring vehicle
-</p>
+            <p>
+                Comfortable private transport for touring
+                and travel around Kenya.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 14. SEDAN -->
+    <!-- SEDAN -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://drivenow.co.ke/uploads/vehicles/1762171213_0_6908994daebeb.jpeg"
-alt="Toyota sedan in Nairobi Kenya"
-loading="lazy"
->
+        <img
+            src="images/private-sedan.jpg"
+            alt="Private sedan"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>Private Sedan</h3>
+            <h3>Private Sedan</h3>
 
-<p>
-Comfortable transport for city travel
-</p>
+            <p>
+                Comfortable transport for city travel,
+                transfers and private journeys.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 15. JKIA -->
+    <!-- JKIA -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://commons.wikimedia.org/wiki/Special:FilePath/Jomo%20Kenyatta%20international%20airport%20-%20Nairobi%20-%20International%20arrivals.jpg?width=1200"
-alt="Jomo Kenyatta International Airport Nairobi"
-loading="lazy"
->
+        <img
+            src="images/jkia-airport.jpeg"
+            alt="Jomo Kenyatta International Airport"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>JKIA Airport Transfers</h3>
+            <h3>JKIA Airport Transfers</h3>
 
-<p>
-Airport pickup and drop-off in Nairobi
-</p>
+            <p>
+                Reliable airport pickup and drop-off
+                between JKIA and your destination.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 16. HOTEL TRANSFERS -->
+    <!-- HOTEL TRANSFERS -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/753651015.webp"
-alt="Hotel in Nairobi Kenya"
-loading="lazy"
->
+        <img
+            src="images/private-transfers.jpeg"
+            alt="Private transfer service"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>Hotel Transfers</h3>
+            <h3>Hotel Transfers</h3>
 
-<p>
-Convenient transfers to and from Nairobi hotels
-</p>
+            <p>
+                Convenient transportation between Nairobi hotels,
+                the airport and other destinations.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<!-- 17. PRIVATE TRANSFERS -->
+    <!-- PRIVATE TRANSFERS -->
 
-<div class="gallery-item">
+    <div class="gallery-card">
 
-<img
-src="https://drivenow.co.ke/uploads/vehicles/1762171213_0_6908994daebeb.jpeg"
-alt="Private car transfer in Nairobi"
-loading="lazy"
->
+        <img
+            src="images/private-transfers.jpeg"
+            alt="Private transfer service in Nairobi"
+            loading="lazy"
+        >
 
-<div class="caption">
+        <div class="caption">
 
-<h3>Private Transfers</h3>
+            <h3>Private Transfers</h3>
 
-<p>
-Comfortable private transportation around Nairobi
-</p>
+            <p>
+                Comfortable and convenient private transportation
+                around Nairobi.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-<p>
-© 2026 STEMA TRANS
-</p>
+    <h3>STEMA TRANS</h3>
 
-<p>
-Nairobi, Kenya
-</p>
+    <p>
+        Nairobi City Tours, Walks & Transfers
+    </p>
 
-<p>
-0722910913 | stemawastrans@gmail.com
-</p>
+    <p>
+        Nairobi, Kenya
+    </p>
+
+    <p>
+        © 2026 STEMA TRANS. All rights reserved.
+    </p>
 
 </footer>
+
 
 </body>
 </html>
