@@ -7,220 +7,219 @@
 <title>Gallery | STEMA TRANS</title>
 
 <style>
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f7f6;
-    color:#222;
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f6;
+    color: #222;
 }
 
 /* HEADER */
 
-header{
-    background:#063d28;
-    color:white;
-    text-align:center;
-    padding:28px 15px;
+header {
+    background: #063d28;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
 }
 
-header h1{
-    margin:0;
-    font-size:34px;
-    letter-spacing:1px;
+header h1 {
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: 1px;
 }
 
-header h1 span{
-    color:#e6b34a;
+header h1 span {
+    color: #e6b34a;
 }
 
-header p{
-    margin:8px 0 0;
-    font-size:16px;
-    color:#e4eee9;
+header p {
+    margin: 8px 0 0;
+    font-size: 16px;
+    color: #e4eee9;
 }
 
 /* NAVIGATION */
 
-nav{
-    background:#032d1d;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    padding:12px 8px;
+nav {
+    background: #032d1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 12px 8px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    padding:8px 10px;
-    margin:2px;
-    border-radius:6px;
-    font-size:14px;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 10px;
+    margin: 2px;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
-nav a:hover{
-    background:#e6b34a;
-    color:#032d1d;
+nav a:hover {
+    background: #e6b34a;
+    color: #032d1d;
 }
 
 /* INTRO */
 
-.intro{
-    max-width:900px;
-    margin:45px auto 25px;
-    padding:0 20px;
-    text-align:center;
+.intro {
+    max-width: 900px;
+    margin: 45px auto 25px;
+    padding: 0 20px;
+    text-align: center;
 }
 
-.intro h2{
-    margin:0 0 12px;
-    color:#063d28;
-    font-size:40px;
+.intro h2 {
+    margin: 0 0 12px;
+    color: #063d28;
+    font-size: 40px;
 }
 
-.intro p{
-    margin:0;
-    color:#666;
-    font-size:18px;
-    line-height:1.6;
+.intro p {
+    margin: 0;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 /* GALLERY */
 
-.gallery{
-    max-width:1200px;
-    margin:0 auto;
-    padding:25px 20px 60px;
+.gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 20px 60px;
 
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:28px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
 }
 
 /* CARD */
 
-.gallery-card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 18px rgba(0,0,0,0.10);
-    transition:transform .25s ease, box-shadow .25s ease;
+.gallery-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.gallery-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.16);
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
 }
 
 /* IMAGE */
 
-.gallery-card img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
-    display:block;
+.gallery-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
 }
 
 /* CAPTION */
 
-.caption{
-    padding:18px 16px 20px;
-    text-align:center;
+.caption {
+    padding: 18px 16px 20px;
+    text-align: center;
 }
 
-.caption h3{
-    margin:0 0 7px;
-    color:#063d28;
-    font-size:21px;
+.caption h3 {
+    margin: 0 0 7px;
+    color: #063d28;
+    font-size: 21px;
 }
 
-.caption p{
-    margin:0;
-    color:#666;
-    font-size:14px;
-    line-height:1.5;
+.caption p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 /* FOOTER */
 
-footer{
-    background:#032d1d;
-    color:white;
-    text-align:center;
-    padding:30px 15px;
+footer {
+    background: #032d1d;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
 }
 
-footer h3{
-    margin:0 0 8px;
-    color:#e6b34a;
+footer h3 {
+    margin: 0 0 8px;
+    color: #e6b34a;
 }
 
-footer p{
-    margin:5px 0;
-    color:#dce7e1;
+footer p {
+    margin: 5px 0;
+    color: #dce7e1;
 }
 
 /* TABLET */
 
-@media(max-width:900px){
+@media (max-width: 900px) {
 
-    .gallery{
-        grid-template-columns:repeat(2, 1fr);
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
 /* PHONE */
 
-@media(max-width:600px){
+@media (max-width: 600px) {
 
-    header h1{
-        font-size:28px;
+    header h1 {
+        font-size: 28px;
     }
 
-    nav{
-        padding:10px 5px;
+    nav {
+        padding: 10px 5px;
     }
 
-    nav a{
-        font-size:13px;
-        padding:7px 8px;
+    nav a {
+        font-size: 13px;
+        padding: 7px 8px;
     }
 
-    .intro{
-        margin-top:35px;
+    .intro {
+        margin-top: 35px;
     }
 
-    .intro h2{
-        font-size:31px;
+    .intro h2 {
+        font-size: 31px;
     }
 
-    .intro p{
-        font-size:16px;
+    .intro p {
+        font-size: 16px;
     }
 
-    .gallery{
-        grid-template-columns:1fr;
-        padding:20px 15px 45px;
-        gap:22px;
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 20px 15px 45px;
+        gap: 22px;
     }
 
-    .gallery-card img{
-        height:245px;
+    .gallery-card img {
+        height: 245px;
     }
 
 }
-
 </style>
 </head>
 
@@ -247,21 +246,13 @@ footer p{
 <nav>
 
     <a href="index.html">Home</a>
-
     <a href="about.html">About</a>
-
     <a href="tours.html">Tours</a>
-
     <a href="city-walks.html">City Walks</a>
-
     <a href="transfers.html">Transfers</a>
-
     <a href="rates.html">Rates</a>
-
     <a href="fleet.html">Fleet</a>
-
     <a href="gallery.html">Gallery</a>
-
     <a href="contact.html">Contact</a>
 
 </nav>
@@ -271,9 +262,7 @@ footer p{
 
 <section class="intro">
 
-    <h2>
-        Our Gallery
-    </h2>
+    <h2>Our Gallery</h2>
 
     <p>
         Explore Nairobi through STEMA TRANS — from city landmarks
@@ -289,7 +278,7 @@ footer p{
 <section class="gallery">
 
 
-    <!-- NAIROBI CITY -->
+    <!-- 1. NAIROBI CITY -->
 
     <div class="gallery-card">
 
@@ -312,7 +301,7 @@ footer p{
     </div>
 
 
-    <!-- KICC -->
+    <!-- 2. KICC -->
 
     <div class="gallery-card">
 
@@ -336,7 +325,7 @@ footer p{
     </div>
 
 
-    <!-- UHURU PARK -->
+    <!-- 3. UHURU PARK -->
 
     <div class="gallery-card">
 
@@ -359,7 +348,7 @@ footer p{
     </div>
 
 
-    <!-- NATIONAL MUSEUM -->
+    <!-- 4. NATIONAL MUSEUM -->
 
     <div class="gallery-card">
 
@@ -382,7 +371,7 @@ footer p{
     </div>
 
 
-    <!-- CITY MARKET -->
+    <!-- 5. CITY MARKET -->
 
     <div class="gallery-card">
 
@@ -405,7 +394,7 @@ footer p{
     </div>
 
 
-    <!-- CITY WALK -->
+    <!-- 6. CITY WALK -->
 
     <div class="gallery-card">
 
@@ -429,7 +418,7 @@ footer p{
     </div>
 
 
-    <!-- HISTORY & CULTURE -->
+    <!-- 7. HISTORY & CULTURE -->
 
     <div class="gallery-card">
 
@@ -453,12 +442,12 @@ footer p{
     </div>
 
 
-    <!-- FOOD & LOCAL LIFE -->
+    <!-- 8. FOOD & LOCAL LIFE -->
 
     <div class="gallery-card">
 
         <img
-            src="images/food-localLife.jpeg"
+            src="images/food-local-life.jpg"
             alt="Kenyan food and local life"
             loading="lazy"
         >
@@ -477,7 +466,7 @@ footer p{
     </div>
 
 
-    <!-- NAIROBI NATIONAL PARK -->
+    <!-- 9. NAIROBI NATIONAL PARK -->
 
     <div class="gallery-card">
 
@@ -501,7 +490,7 @@ footer p{
     </div>
 
 
-    <!-- GIRAFFE CENTRE -->
+    <!-- 10. GIRAFFE CENTRE -->
 
     <div class="gallery-card">
 
@@ -524,7 +513,7 @@ footer p{
     </div>
 
 
-    <!-- TOUR LAND CRUISER -->
+    <!-- 11. TOUR LAND CRUISER -->
 
     <div class="gallery-card">
 
@@ -548,7 +537,7 @@ footer p{
     </div>
 
 
-    <!-- TOUR VAN -->
+    <!-- 12. TOUR VAN -->
 
     <div class="gallery-card">
 
@@ -572,7 +561,7 @@ footer p{
     </div>
 
 
-    <!-- SUV -->
+    <!-- 13. SUV / PRADO TX -->
 
     <div class="gallery-card">
 
@@ -596,7 +585,7 @@ footer p{
     </div>
 
 
-    <!-- SEDAN -->
+    <!-- 14. PRIVATE SEDAN -->
 
     <div class="gallery-card">
 
@@ -620,7 +609,7 @@ footer p{
     </div>
 
 
-    <!-- JKIA -->
+    <!-- 15. JKIA -->
 
     <div class="gallery-card">
 
@@ -644,13 +633,13 @@ footer p{
     </div>
 
 
-    <!-- HOTEL TRANSFERS -->
+    <!-- 16. HOTEL TRANSFERS -->
 
     <div class="gallery-card">
 
         <img
-            src="images/private-transfers.jpeg"
-            alt="Private transfer service"
+            src="images/hotel-transfers.jpg"
+            alt="Nairobi hotel"
             loading="lazy"
         >
 
@@ -668,13 +657,13 @@ footer p{
     </div>
 
 
-    <!-- PRIVATE TRANSFERS -->
+    <!-- 17. PRIVATE TRANSFERS -->
 
     <div class="gallery-card">
 
         <img
             src="images/private-transfers.jpeg"
-            alt="Private transfer service in Nairobi"
+            alt="Private transfer service"
             loading="lazy"
         >
 
