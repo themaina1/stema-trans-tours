@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>STEMA TRANS | Nairobi City Tours, Walks & Transfers</title>
 
 <meta name="description"
-content="STEMA TRANS offers Nairobi city tours, city walks, airport transfers, hotel transfers, private transportation and guided Nairobi experiences.">
+content="STEMA TRANS offers Nairobi city tours, guided city walks, attraction visits, airport transfers, hotel transfers, private transfers and vehicle hire.">
 
 <style>
-
-/* =========================================================
-   RESET
-========================================================= */
-
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 html{
@@ -28,557 +21,564 @@ html{
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    color:#252525;
-    background:#f7f8f6;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#173f2f;
+    background:#f7faf8;
     line-height:1.6;
-}
-
-img{
-    display:block;
-    width:100%;
 }
 
 a{
     text-decoration:none;
+    color:inherit;
 }
 
+img{
+    max-width:100%;
+    display:block;
+}
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
+/* =========================
+   HEADER
+========================= */
 
-.navbar{
+header{
+    background:#063d28;
+    color:white;
     position:sticky;
     top:0;
     z-index:1000;
-    background:#063d28;
-    box-shadow:0 3px 15px rgba(0,0,0,.18);
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
 
-.nav-inner{
+.navbar{
     max-width:1200px;
     margin:auto;
-    padding:15px 20px;
-
+    padding:18px 25px;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:20px;
 }
 
 .logo{
-    color:#fff;
-    font-size:25px;
+    font-size:27px;
     font-weight:800;
     letter-spacing:1px;
 }
 
 .logo span{
-    color:#e6b34a;
+    color:#e7b94f;
 }
 
 .nav-links{
     display:flex;
     align-items:center;
-    gap:17px;
+    gap:18px;
+    list-style:none;
 }
 
 .nav-links a{
-    color:#fff;
+    color:white;
     font-size:14px;
     font-weight:600;
+    padding:8px 5px;
 }
 
 .nav-links a:hover{
-    color:#e6b34a;
+    color:#e7b94f;
 }
 
 .book-btn{
-    background:#e6b34a;
-    color:#063d28 !important;
-    padding:10px 17px;
-    border-radius:6px;
+    background:#e7b94f;
+    color:#173f2f !important;
+    padding:11px 18px !important;
+    border-radius:8px;
     font-weight:800 !important;
 }
 
+.book-btn:hover{
+    background:#f2cf76;
+}
 
-/* =========================================================
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero{
-
-    min-height:650px;
-
+    min-height:620px;
     background:
-    linear-gradient(
-        rgba(0,0,0,.38),
-        rgba(0,40,25,.68)
-    ),
-    url("images/nairobi-city.jpg")
-    center/cover no-repeat;
-
+    linear-gradient(rgba(0,40,25,.57),rgba(0,40,25,.60)),
+    url("images/nairobi-city.jpg") center/cover no-repeat;
     display:flex;
     align-items:center;
     justify-content:center;
-
     text-align:center;
-    color:#fff;
+    padding:80px 20px;
+    color:white;
 }
 
 .hero-content{
-    max-width:900px;
-    padding:70px 20px;
-}
-
-.hero-label{
-    display:inline-block;
-
-    background:#e6b34a;
-    color:#063d28;
-
-    padding:7px 15px;
-    border-radius:5px;
-
-    font-size:13px;
-    font-weight:800;
-
-    letter-spacing:1.5px;
-    text-transform:uppercase;
+    max-width:850px;
 }
 
 .hero h1{
-    font-size:58px;
-    line-height:1.08;
-    margin:20px 0;
+    font-size:52px;
+    line-height:1.15;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
-    color:#e6b34a;
+    color:#e7b94f;
 }
 
 .hero p{
-    max-width:760px;
-    margin:auto;
-
     font-size:20px;
-
-    color:#fff;
+    max-width:750px;
+    margin:0 auto 30px;
 }
 
 .hero-buttons{
-    margin-top:30px;
-
     display:flex;
     justify-content:center;
-    gap:13px;
+    gap:15px;
     flex-wrap:wrap;
 }
 
-.hero-button{
-
+.primary-btn,
+.secondary-btn{
+    padding:14px 25px;
+    border-radius:8px;
+    font-weight:700;
     display:inline-block;
-
-    padding:14px 24px;
-
-    border-radius:7px;
-
-    font-weight:800;
 }
 
-.hero-button.primary{
-    background:#e6b34a;
+.primary-btn{
+    background:#e7b94f;
+    color:#173f2f;
+}
+
+.secondary-btn{
+    background:transparent;
+    color:white;
+    border:2px solid white;
+}
+
+.primary-btn:hover{
+    background:#f3ce6d;
+}
+
+.secondary-btn:hover{
+    background:white;
     color:#063d28;
 }
 
-.hero-button.secondary{
-    border:2px solid #fff;
-    color:#fff;
-}
-
-.hero-button.primary:hover{
-    background:#f3ca68;
-}
-
-.hero-button.secondary:hover{
-    background:#fff;
-    color:#063d28;
-}
-
-
-/* =========================================================
-   GENERAL SECTION
-========================================================= */
+/* =========================
+   GENERAL
+========================= */
 
 .section{
-    max-width:1200px;
-    margin:auto;
     padding:75px 20px;
 }
 
-.section-heading{
-    max-width:800px;
-    margin:0 auto 45px;
-    text-align:center;
+.container{
+    max-width:1250px;
+    margin:auto;
 }
 
-.section-label{
-    color:#a87916;
-    font-size:13px;
+.section-heading{
+    text-align:center;
+    max-width:850px;
+    margin:0 auto 45px;
+}
+
+.small-heading{
+    color:#b18a2c;
     font-weight:800;
+    letter-spacing:3px;
+    font-size:14px;
     text-transform:uppercase;
-    letter-spacing:2px;
+    margin-bottom:10px;
 }
 
 .section-heading h2{
+    font-size:40px;
     color:#063d28;
-    font-size:39px;
-    margin:8px 0 12px;
+    margin-bottom:15px;
 }
 
 .section-heading p{
     color:#666;
+    font-size:17px;
 }
 
-
-/* =========================================================
-   INTRO
-========================================================= */
-
-.intro{
-
-    background:#fff;
-}
-
-.intro-grid{
-
-    max-width:1100px;
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:45px;
-
-    align-items:center;
-}
-
-.intro-image{
-
-    height:360px;
-
-    border-radius:12px;
-
-    overflow:hidden;
-}
-
-.intro-image img{
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-}
-
-.intro-text h2{
-
-    color:#063d28;
-
-    font-size:35px;
-
-    margin-bottom:15px;
-}
-
-.intro-text p{
-
-    color:#606060;
-
-    margin-bottom:15px;
-}
-
-.intro-button{
-
-    display:inline-block;
-
-    margin-top:10px;
-
-    background:#063d28;
-
-    color:#fff;
-
-    padding:12px 20px;
-
-    border-radius:6px;
-
-    font-weight:800;
-}
-
-
-/* =========================================================
-   SERVICES
-========================================================= */
+/* =========================
+   QUICK SERVICES
+========================= */
 
 .services-grid{
-
     display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:24px;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
 }
 
 .service-card{
-
-    background:#fff;
-
-    border-radius:12px;
-
-    overflow:hidden;
-
-    box-shadow:0 4px 18px rgba(0,0,0,.09);
-
-    border:1px solid #e6e9e6;
-
-    transition:.25s ease;
+    background:white;
+    padding:30px 22px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
 .service-card:hover{
-
     transform:translateY(-5px);
-
-    box-shadow:0 9px 25px rgba(0,0,0,.14);
 }
 
-.service-image{
-
-    height:220px;
-
-    overflow:hidden;
+.service-icon{
+    width:65px;
+    height:65px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    background:#063d28;
+    color:#e7b94f;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
 }
 
-.service-image img{
-
-    height:100%;
-
-    width:100%;
-
-    object-fit:cover;
-
-    transition:.4s ease;
-}
-
-.service-card:hover .service-image img{
-
-    transform:scale(1.04);
-}
-
-.service-info{
-
-    padding:22px;
-}
-
-.service-info h3{
-
-    color:#063d28;
-
-    font-size:22px;
-
+.service-card h3{
     margin-bottom:8px;
-}
-
-.service-info p{
-
-    color:#666;
-
-    font-size:14px;
-
-    margin-bottom:15px;
-}
-
-.service-link{
-
-    color:#a87916;
-
-    font-weight:800;
-
-    font-size:14px;
-}
-
-
-/* =========================================================
-   CITY WALKS
-========================================================= */
-
-.walks-section{
-
-    background:#fff;
-}
-
-.walks-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:24px;
-}
-
-.walk-card{
-
-    background:#f8faf8;
-
-    border:1px solid #e3e8e4;
-
-    border-radius:12px;
-
-    overflow:hidden;
-
-    box-shadow:0 3px 14px rgba(0,0,0,.07);
-}
-
-.walk-image{
-
-    height:230px;
-
-    overflow:hidden;
-}
-
-.walk-image img{
-
-    height:100%;
-
-    object-fit:cover;
-}
-
-.walk-info{
-
-    padding:21px;
-}
-
-.walk-info h3{
-
     color:#063d28;
-
-    font-size:21px;
-
-    margin-bottom:8px;
 }
 
-.walk-info p{
-
+.service-card p{
     color:#666;
-
     font-size:14px;
-
-    margin-bottom:12px;
 }
 
-.walk-price{
+/* =========================
+   VEHICLE SECTION
+========================= */
 
-    color:#a87916;
-
-    font-weight:800;
+.fleet-section{
+    background:#ffffff;
 }
 
-
-/* =========================================================
-   VEHICLES
-========================================================= */
-
-.vehicle-section{
-
-    background:#f1f5f2;
-}
-
-.vehicle-grid{
-
+.fleet-grid{
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
-    gap:20px;
+    gap:18px;
+    align-items:stretch;
 }
 
 .vehicle-card{
-
-    background:#fff;
-
-    border-radius:12px;
-
+    background:white;
+    border-radius:15px;
     overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.10);
+    border:1px solid #eeeeee;
+    display:flex;
+    flex-direction:column;
+    transition:.3s ease;
+}
 
-    box-shadow:0 4px 17px rgba(0,0,0,.09);
-
-    border:1px solid #e1e6e2;
+.vehicle-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .vehicle-image{
-
-    height:220px;
-
+    height:305px;
+    position:relative;
     overflow:hidden;
-
-    background:#e8eeeb;
+    background:#e9efeb;
 }
 
 .vehicle-image img{
-
     width:100%;
     height:100%;
+    object-fit:cover;
+    object-position:center;
+    transition:.4s ease;
+}
 
+.vehicle-card:hover .vehicle-image img{
+    transform:scale(1.04);
+}
+
+.vehicle-icon{
+    position:absolute;
+    left:50%;
+    bottom:-34px;
+    transform:translateX(-50%);
+    width:68px;
+    height:68px;
+    border-radius:50%;
+    background:#063d28;
+    border:5px solid white;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    z-index:3;
+}
+
+.vehicle-content{
+    padding:48px 22px 22px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.vehicle-content h3{
+    font-size:23px;
+    color:#063d28;
+    margin-bottom:12px;
+}
+
+.gold-line{
+    width:50px;
+    height:3px;
+    background:#e7b94f;
+    margin:0 auto 15px;
+    border-radius:3px;
+}
+
+.vehicle-content p{
+    color:#666;
+    font-size:15px;
+    line-height:1.75;
+    margin-bottom:20px;
+    flex:1;
+}
+
+.details-btn{
+    background:#063d28;
+    color:white;
+    padding:11px 20px;
+    border-radius:6px;
+    display:inline-block;
+    font-size:14px;
+    font-weight:700;
+}
+
+.details-btn:hover{
+    background:#0b563a;
+}
+
+/* =========================
+   FLEET BENEFITS
+========================= */
+
+.fleet-benefits{
+    margin-top:35px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    overflow:hidden;
+}
+
+.benefit{
+    padding:25px 20px;
+    display:flex;
+    gap:15px;
+    align-items:flex-start;
+    position:relative;
+}
+
+.benefit:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:20%;
+    height:60%;
+    width:2px;
+    background:#e7b94f;
+}
+
+.benefit-icon{
+    min-width:58px;
+    height:58px;
+    background:#063d28;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+}
+
+.benefit h4{
+    color:#063d28;
+    margin-bottom:4px;
+}
+
+.benefit p{
+    font-size:13px;
+    color:#666;
+}
+
+.all-vehicles{
+    text-align:center;
+    margin-top:25px;
+}
+
+.all-vehicles a{
+    display:inline-block;
+    background:#063d28;
+    color:white;
+    padding:13px 35px;
+    border-radius:7px;
+    font-weight:700;
+}
+
+.all-vehicles a:hover{
+    background:#0b563a;
+}
+
+/* =========================
+   EXPERIENCES
+========================= */
+
+.experiences{
+    background:#f2f7f4;
+}
+
+.experience-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.experience-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.experience-card img{
+    width:100%;
+    height:220px;
     object-fit:cover;
 }
 
-.vehicle-info{
-
-    padding:19px;
+.experience-body{
+    padding:22px;
 }
 
-.vehicle-info h3{
-
+.experience-body h3{
     color:#063d28;
-
-    font-size:20px;
-
-    margin-bottom:7px;
+    margin-bottom:10px;
 }
 
-.vehicle-info p{
-
+.experience-body p{
     color:#666;
-
-    font-size:13px;
-
-    margin-bottom:13px;
+    font-size:14px;
+    margin-bottom:15px;
 }
 
-.vehicle-rate{
+.read-more{
+    color:#063d28;
+    font-weight:700;
+}
 
-    color:#a87916;
+/* =========================
+   WALKS
+========================= */
 
-    font-weight:800;
+.walk-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
 
+.walk-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.walk-card img{
+    height:220px;
+    width:100%;
+    object-fit:cover;
+}
+
+.walk-content{
+    padding:22px;
+}
+
+.walk-content h3{
+    color:#063d28;
+    margin-bottom:10px;
+}
+
+.walk-content p{
+    color:#666;
     font-size:14px;
 }
 
-.vehicle-link{
+/* =========================
+   TRANSFERS
+========================= */
 
-    display:inline-block;
-
-    margin-top:13px;
-
+.transfer-section{
     background:#063d28;
+    color:white;
+}
 
-    color:#fff;
+.transfer-section .section-heading h2{
+    color:white;
+}
 
-    padding:9px 14px;
+.transfer-section .section-heading p{
+    color:#d8e5df;
+}
 
-    border-radius:5px;
+.transfer-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
 
-    font-size:13px;
+.transfer-card{
+    background:#0d5239;
+    border-radius:15px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.12);
+}
 
-    font-weight:800;
+.transfer-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.transfer-content{
+    padding:22px;
+}
+
+.transfer-content h3{
+    margin-bottom:8px;
+    color:#e7b94f;
+}
+
+.transfer-content p{
+    color:#e3eee8;
+    font-size:14px;
 }
 
 
@@ -587,529 +587,295 @@ a{
 ========================================================= */
 
 .reviews-section{
-
-    background:#fff;
+    background:#f2f7f4;
+    padding:80px 20px;
 }
 
-.reviews-top{
+.reviews-container{
+    max-width:1250px;
+    margin:auto;
+}
 
-    max-width:900px;
-
-    margin:0 auto 35px;
-
+.reviews-heading{
     text-align:center;
+    max-width:850px;
+    margin:0 auto 40px;
 }
 
-.review-score{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    background:#f4f7f4;
-
-    border:1px solid #dfe7e1;
-
-    border-radius:12px;
-
-    padding:18px 25px;
-
-    margin-top:10px;
+.reviews-heading .small-heading{
+    color:#b18a2c;
 }
 
-.review-stars{
-
-    color:#e6b34a;
-
-    font-size:26px;
-
-    letter-spacing:2px;
-}
-
-.review-score-text{
-
-    text-align:left;
-}
-
-.review-score-text strong{
-
-    display:block;
-
+.reviews-heading h2{
     color:#063d28;
-
-    font-size:18px;
+    font-size:40px;
+    margin-bottom:15px;
 }
 
-.review-score-text span{
-
-    color:#777;
-
-    font-size:13px;
+.reviews-heading p{
+    color:#666;
+    font-size:17px;
 }
 
 
-/* REVIEW CARDS */
+/* Rating summary */
+
+.rating-summary{
+    max-width:700px;
+    margin:0 auto 35px;
+    background:white;
+    border-radius:15px;
+    padding:30px 25px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    border:1px solid #e5e9e6;
+}
+
+.rating-stars{
+    color:#e0ad35;
+    font-size:30px;
+    letter-spacing:4px;
+    margin-bottom:7px;
+}
+
+.rating-summary h3{
+    color:#063d28;
+    font-size:24px;
+    margin-bottom:6px;
+}
+
+.rating-summary p{
+    color:#666;
+    font-size:14px;
+}
+
+
+/* Review cards */
 
 .review-grid{
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:22px;
-
-    max-width:1100px;
-
-    margin:auto;
 }
 
 .review-card{
-
-    background:#f8faf8;
-
-    border:1px solid #e1e7e2;
-
-    border-radius:12px;
-
-    padding:24px;
-
-    position:relative;
-}
-
-.review-card.empty{
-
-    text-align:center;
-
+    background:white;
+    border-radius:15px;
+    padding:27px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    border:1px solid #e5e9e6;
+    min-height:255px;
     display:flex;
-
     flex-direction:column;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-height:230px;
+    justify-content:space-between;
 }
 
-.review-card.empty .review-icon{
-
-    width:54px;
-
-    height:54px;
-
-    border-radius:50%;
-
-    background:#e6b34a;
-
-    color:#063d28;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:24px;
-
-    font-weight:800;
-
-    margin-bottom:14px;
-}
-
-.review-card.empty h3{
-
-    color:#063d28;
-
-    margin-bottom:8px;
-}
-
-.review-card.empty p{
-
-    color:#666;
-
-    font-size:14px;
-
-    max-width:260px;
-}
-
-.review-service{
-
-    color:#a87916;
-
-    font-size:12px;
-
-    font-weight:800;
-
-    text-transform:uppercase;
-
-    letter-spacing:1px;
-
-    margin-bottom:8px;
-}
-
-.review-stars-small{
-
-    color:#e6b34a;
-
-    font-size:20px;
-
+.review-stars{
+    color:#e0ad35;
+    font-size:21px;
+    letter-spacing:2px;
     margin-bottom:12px;
 }
 
-.review-text{
-
-    color:#555;
-
-    font-size:14px;
-
-    font-style:italic;
-
-    margin-bottom:15px;
-}
-
-.review-name{
-
+.review-card h3{
     color:#063d28;
+    font-size:19px;
+    margin-bottom:10px;
+}
 
-    font-weight:800;
-
+.review-card p{
+    color:#666;
     font-size:14px;
+    line-height:1.75;
 }
 
-.review-date{
-
-    color:#888;
-
-    font-size:12px;
+.review-author{
+    border-top:1px solid #e4e8e5;
+    margin-top:20px;
+    padding-top:13px;
+    color:#555;
+    font-size:13px;
+    font-weight:700;
 }
 
 
-/* REVIEW ACTION */
+/* First reviewer */
 
-.review-action{
+.first-review{
+    background:#063d28;
+    border-color:#063d28;
+}
 
+.first-review .review-stars{
+    color:#e7b94f;
+}
+
+.first-review h3{
+    color:#e7b94f;
+}
+
+.first-review p{
+    color:#e1ebe6;
+}
+
+.first-review .review-author{
+    color:#e7b94f;
+    border-color:rgba(255,255,255,.18);
+}
+
+
+/* Review buttons */
+
+.review-actions{
     text-align:center;
-
     margin-top:35px;
 }
 
-.review-action p{
-
+.review-actions p{
     color:#666;
-
-    margin-bottom:15px;
-
-    font-size:14px;
+    margin-bottom:16px;
 }
 
 .review-button{
-
     display:inline-block;
-
     background:#063d28;
-
-    color:#fff;
-
-    padding:13px 22px;
-
+    color:white;
+    padding:12px 23px;
     border-radius:7px;
-
-    font-weight:800;
+    font-weight:700;
+    margin:5px;
 }
 
 .review-button:hover{
-
-    background:#0a5a3d;
-}
-
-.review-button.gold{
-
-    background:#e6b34a;
-
-    color:#063d28;
-
-    margin-left:8px;
-}
-
-.review-button.gold:hover{
-
-    background:#f1c965;
+    background:#0b563a;
 }
 
 
-/* =========================================================
+/* =========================
    WHY STEMA
-========================================================= */
-
-.why-section{
-
-    background:#063d28;
-
-    color:#fff;
-}
-
-.why-inner{
-
-    max-width:1150px;
-
-    margin:auto;
-
-    padding:75px 20px;
-}
-
-.why-heading{
-
-    max-width:750px;
-
-    margin:0 auto 42px;
-
-    text-align:center;
-}
-
-.why-heading .section-label{
-
-    color:#e6b34a;
-}
-
-.why-heading h2{
-
-    font-size:38px;
-
-    margin:8px 0 12px;
-}
-
-.why-heading p{
-
-    color:#dbe6df;
-}
+========================= */
 
 .why-grid{
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:20px;
 }
 
 .why-card{
-
-    padding:24px 18px;
-
     text-align:center;
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(255,255,255,.12);
-
-    border-radius:10px;
+    padding:30px 18px;
 }
 
-.why-icon{
-
-    width:56px;
-
-    height:56px;
-
-    margin:0 auto 14px;
-
-    background:#e6b34a;
-
-    color:#063d28;
-
+.why-card .why-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 15px;
     border-radius:50%;
-
+    background:#063d28;
+    color:#e7b94f;
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    font-size:22px;
-
-    font-weight:800;
+    font-size:30px;
 }
 
 .why-card h3{
-
+    color:#063d28;
     margin-bottom:8px;
 }
 
 .why-card p{
-
-    color:#dbe6df;
-
-    font-size:13px;
+    color:#666;
+    font-size:14px;
 }
 
-
-/* =========================================================
+/* =========================
    CTA
-========================================================= */
+========================= */
 
 .cta{
-
-    background:#f0f4f1;
-
+    background:
+    linear-gradient(rgba(6,61,40,.88),rgba(6,61,40,.88)),
+    url("images/nairobi-city.jpg") center/cover;
+    color:white;
     text-align:center;
-
-    padding:75px 20px;
-}
-
-.cta-inner{
-
-    max-width:780px;
-
-    margin:auto;
+    padding:80px 20px;
 }
 
 .cta h2{
-
-    color:#063d28;
-
-    font-size:39px;
-
-    margin-bottom:12px;
+    font-size:40px;
+    margin-bottom:15px;
 }
 
 .cta p{
-
-    color:#666;
-
-    margin-bottom:25px;
+    max-width:700px;
+    margin:0 auto 25px;
+    color:#e2ece7;
 }
 
-.cta-button{
-
-    display:inline-block;
-
-    background:#e6b34a;
-
-    color:#063d28;
-
-    padding:14px 26px;
-
-    border-radius:7px;
-
-    font-weight:800;
-}
-
-.cta-button:hover{
-
-    background:#f2ca68;
-}
-
-
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
 footer{
-
-    background:#032d1d;
-
-    color:#fff;
-
+    background:#032b1d;
+    color:white;
     padding:50px 20px 20px;
 }
 
 .footer-grid{
-
-    max-width:1150px;
-
+    max-width:1200px;
     margin:auto;
-
     display:grid;
-
-    grid-template-columns:2fr 1fr 1fr;
-
-    gap:35px;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
 }
 
-.footer-logo{
-
-    font-size:25px;
-
-    font-weight:800;
-
-    margin-bottom:12px;
+.footer-column h3{
+    color:#e7b94f;
+    margin-bottom:15px;
 }
 
-.footer-logo span{
-
-    color:#e6b34a;
-}
-
-.footer-grid h3{
-
-    color:#e6b34a;
-
-    margin-bottom:13px;
-}
-
-.footer-grid p,
-.footer-grid li{
-
-    color:#cfdad4;
-
+.footer-column p,
+.footer-column li{
+    color:#cbd9d3;
     font-size:14px;
 }
 
-.footer-grid ul{
-
+.footer-column ul{
     list-style:none;
 }
 
-.footer-grid li{
-
-    margin-bottom:7px;
+.footer-column li{
+    margin-bottom:8px;
 }
 
-.footer-grid a{
-
-    color:#cfdad4;
+.footer-column a:hover{
+    color:#e7b94f;
 }
 
-.footer-grid a:hover{
-
-    color:#e6b34a;
-}
-
-.copyright{
-
-    max-width:1150px;
-
-    margin:30px auto 0;
-
-    padding-top:18px;
-
+.footer-bottom{
+    max-width:1200px;
+    margin:35px auto 0;
+    padding-top:20px;
     border-top:1px solid rgba(255,255,255,.15);
-
     text-align:center;
-
-    color:#9daaa3;
-
+    color:#aebfb7;
     font-size:13px;
 }
 
 
-/* =========================================================
-   TABLET
-========================================================= */
+/* =========================
+   MOBILE
+========================= */
 
-@media(max-width:950px){
+@media(max-width:1000px){
 
-    .nav-links{
-        gap:10px;
+    .fleet-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .nav-links a{
-        font-size:12px;
-    }
-
-    .vehicle-grid{
+    .services-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
@@ -1117,228 +883,198 @@ footer{
         grid-template-columns:repeat(2,1fr);
     }
 
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 
+@media(max-width:750px){
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:650px){
-
-    .nav-links a:not(.book-btn){
-        display:none;
+    .navbar{
+        padding:15px 18px;
     }
 
-    .logo{
-        font-size:21px;
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:68px;
+        left:0;
+        right:0;
+        background:#063d28;
+        flex-direction:column;
+        padding:20px;
+        gap:5px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links a{
+        display:block;
+        width:100%;
+        text-align:center;
+        padding:12px;
     }
 
     .hero{
-        min-height:560px;
+        min-height:540px;
     }
 
     .hero h1{
-        font-size:39px;
+        font-size:38px;
     }
 
     .hero p{
-        font-size:16px;
+        font-size:17px;
     }
 
     .section{
         padding:55px 15px;
     }
 
-    .section-heading h2,
-    .why-heading h2,
-    .cta h2{
-        font-size:30px;
+    .section-heading h2{
+        font-size:31px;
     }
 
-    .intro-grid{
-        grid-template-columns:1fr;
-    }
-
-    .intro-image{
-        height:280px;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr;
-    }
-
-    .walks-grid{
-        grid-template-columns:1fr;
-    }
-
-    .vehicle-grid{
-        grid-template-columns:1fr;
-    }
-
+    .fleet-grid,
+    .services-grid,
+    .experience-grid,
+    .walk-grid,
+    .transfer-grid,
     .review-grid{
         grid-template-columns:1fr;
     }
 
-    .review-score{
-        width:100%;
-        justify-content:center;
+    .fleet-benefits{
+        grid-template-columns:1fr;
     }
 
-    .review-button.gold{
-        margin-left:0;
-        margin-top:10px;
+    .benefit{
+        border-bottom:1px solid #e6e6e6;
+    }
+
+    .benefit:not(:last-child)::after{
+        display:none;
     }
 
     .why-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:1fr 1fr;
     }
 
     .footer-grid{
         grid-template-columns:1fr;
     }
 
+    .vehicle-image{
+        height:270px;
+    }
+
+    .reviews-section{
+        padding:55px 15px;
+    }
+
+    .reviews-heading h2{
+        font-size:31px;
+    }
 }
 
+@media(max-width:450px){
+
+    .logo{
+        font-size:22px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+        width:100%;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+}
 </style>
-
 </head>
-
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
 
-<!-- =========================================================
-     NAVIGATION
-========================================================= -->
+<header>
 
-<nav class="navbar">
-
-<div class="nav-inner">
+<div class="navbar">
 
 <a href="index.html" class="logo">
 STEMA <span>TRANS</span>
 </a>
 
-<div class="nav-links">
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<a href="index.html">Home</a>
+<ul class="nav-links" id="navLinks">
 
-<a href="tours.html">Tours</a>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="tours.html">City Tours</a></li>
+<li><a href="city-walks.html">City Walks</a></li>
+<li><a href="transfers.html">Transfers</a></li>
+<li><a href="fleet.html">Fleet</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="rates.html">Rates</a></li>
+<li><a href="contact.html">Contact</a></li>
 
-<a href="city-walks.html">City Walks</a>
+<li>
+<a href="booking.html" class="book-btn">BOOK NOW</a>
+</li>
 
-<a href="transfers.html">Transfers</a>
-
-<a href="fleet.html">Fleet</a>
-
-<a href="gallery.html">Gallery</a>
-
-<a href="rates.html">Rates</a>
-
-<a href="contact.html">Contact</a>
-
-<a href="booking.html" class="book-btn">
-BOOK NOW
-</a>
+</ul>
 
 </div>
 
-</div>
-
-</nav>
+</header>
 
 
-
-<!-- =========================================================
+<!-- =========================
      HERO
-========================================================= -->
+========================= -->
 
 <section class="hero">
 
 <div class="hero-content">
 
-<div class="hero-label">
-Nairobi City Tours & Experiences
-</div>
-
 <h1>
-Discover <span>Nairobi</span> Your Way
+Discover <span>Nairobi</span><br>
+Your Way
 </h1>
 
 <p>
-City tours, guided walks, airport transfers, hotel transfers
-and private experiences designed to help you experience
-Nairobi comfortably and confidently.
+City tours, guided walks, attraction visits, airport transfers,
+hotel transfers and private transportation with STEMA TRANS.
 </p>
 
 <div class="hero-buttons">
 
-<a href="tours.html" class="hero-button primary">
-EXPLORE OUR TOURS
+<a href="booking.html" class="primary-btn">
+Book Your Experience
 </a>
 
-<a href="booking.html" class="hero-button secondary">
-BOOK YOUR EXPERIENCE
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     INTRODUCTION
-========================================================= -->
-
-<section class="section intro">
-
-<div class="intro-grid">
-
-<div class="intro-image">
-
-<img
-src="images/nairobi-city.jpg"
-alt="Nairobi city skyline and city centre"
-loading="lazy"
->
-
-</div>
-
-
-<div class="intro-text">
-
-<div class="section-label">
-WELCOME TO STEMA TRANS
-</div>
-
-<h2>
-Experience Nairobi Beyond the Ordinary
-</h2>
-
-<p>
-Nairobi is a city of contrasts — modern buildings,
-historic streets, green spaces, vibrant markets,
-local food, culture and everyday Kenyan life.
-</p>
-
-<p>
-STEMA TRANS helps visitors experience the city through
-guided tours, walking experiences and reliable private
-transportation.
-</p>
-
-<p>
-Whether you have a few hours between flights or several
-days to explore, we can help you make the most of your
-time in Nairobi.
-</p>
-
-<a href="about.html" class="intro-button">
-LEARN MORE ABOUT US
+<a href="tours.html" class="secondary-btn">
+Explore City Tours
 </a>
 
 </div>
@@ -1348,26 +1084,28 @@ LEARN MORE ABOUT US
 </section>
 
 
-
-<!-- =========================================================
-     TOURS
-========================================================= -->
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section class="section">
 
+<div class="container">
+
 <div class="section-heading">
 
-<div class="section-label">
-NAIROBI TOURS
+<div class="small-heading">
+WHAT WE OFFER
 </div>
 
 <h2>
-Explore Nairobi's Highlights
+Nairobi Experiences & Transport
 </h2>
 
 <p>
-Discover some of Nairobi's best-known attractions,
-landmarks, cultural sites and experiences.
+Whether you want to explore Nairobi, walk through its history and
+culture, visit major attractions or simply get around comfortably,
+STEMA TRANS is here to make your journey easier.
 </p>
 
 </div>
@@ -1375,210 +1113,58 @@ landmarks, cultural sites and experiences.
 
 <div class="services-grid">
 
+<div class="service-card">
 
-<!-- CITY HIGHLIGHTS -->
+<div class="service-icon">🏙️</div>
+
+<h3>Nairobi City Tours</h3>
+
+<p>
+Discover Nairobi's landmarks, history, architecture,
+government institutions and everyday city life.
+</p>
+
+</div>
+
 
 <div class="service-card">
 
-<div class="service-image">
+<div class="service-icon">🚶</div>
 
-<img
-src="images/nairobi-city.jpg"
-alt="Nairobi city highlights tour"
-loading="lazy"
->
-
-</div>
-
-<div class="service-info">
-
-<h3>
-Nairobi City Highlights Tour
-</h3>
+<h3>City Walks</h3>
 
 <p>
-See important landmarks and discover the history,
-architecture and everyday character of Nairobi.
+Experience Nairobi on foot through history, culture,
+food, markets and local life.
 </p>
 
-<a href="tours.html" class="service-link">
-VIEW TOUR →
-</a>
-
 </div>
 
-</div>
-
-
-
-<!-- GIRAFFE -->
 
 <div class="service-card">
 
-<div class="service-image">
+<div class="service-icon">🦒</div>
 
-<img
-src="images/giraffe-centre.jpg"
-alt="Giraffe Centre Nairobi"
-loading="lazy"
->
-
-</div>
-
-<div class="service-info">
-
-<h3>
-Giraffe Centre Tour
-</h3>
+<h3>Attractions & Excursions</h3>
 
 <p>
-Get close to Rothschild's giraffes and learn about
-wildlife conservation in Nairobi.
+Visit Nairobi National Park, Giraffe Centre, National Museum,
+Bomas of Kenya and other attractions.
 </p>
 
-<a href="tours.html" class="service-link">
-VIEW TOUR →
-</a>
-
 </div>
 
-</div>
-
-
-
-<!-- MUSEUM -->
 
 <div class="service-card">
 
-<div class="service-image">
+<div class="service-icon">✈️</div>
 
-<img
-src="images/nairobi-national-museum.jpg"
-alt="Front entrance of Nairobi National Museum"
-loading="lazy"
->
-
-</div>
-
-<div class="service-info">
-
-<h3>
-Nairobi National Museum
-</h3>
+<h3>Transfers</h3>
 
 <p>
-Explore Kenya's history, culture, art, archaeology
-and natural heritage.
+Comfortable airport, hotel and private transfers around Nairobi
+and beyond.
 </p>
-
-<a href="tours.html" class="service-link">
-VIEW TOUR →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- UHURU PARK -->
-
-<div class="service-card">
-
-<div class="service-image">
-
-<img
-src="images/uhuru-park.jpg"
-alt="Uhuru Park Nairobi"
-loading="lazy"
->
-
-</div>
-
-<div class="service-info">
-
-<h3>
-Uhuru Park Experience
-</h3>
-
-<p>
-Discover one of Nairobi's best-known urban green spaces
-and an important part of the city's public life.
-</p>
-
-<a href="tours.html" class="service-link">
-VIEW TOUR →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- BOMAS -->
-
-<div class="service-card">
-
-<div class="service-image">
-
-<img
-src="images/bomas-of-kenya.jpg"
-alt="Bomas of Kenya"
-loading="lazy"
->
-
-</div>
-
-<div class="service-info">
-
-<h3>
-Bomas of Kenya
-</h3>
-
-<p>
-Experience Kenyan cultural traditions, architecture,
-music and dance.
-</p>
-
-<a href="tours.html" class="service-link">
-VIEW TOUR →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- NATIONAL PARK -->
-
-<div class="service-card">
-
-<div class="service-image">
-
-<img
-src="images/nairobi-national-park.jpg"
-alt="Nairobi National Park"
-loading="lazy"
->
-
-</div>
-
-<div class="service-info">
-
-<h3>
-Nairobi National Park
-</h3>
-
-<p>
-Experience Kenya's famous wildlife park located
-just outside Nairobi's city centre.
-</p>
-
-<a href="tours.html" class="service-link">
-VIEW TOUR →
-</a>
 
 </div>
 
@@ -1589,376 +1175,74 @@ VIEW TOUR →
 </section>
 
 
-
-<!-- =========================================================
-     CITY WALKS
-========================================================= -->
-
-<section class="section walks-section">
-
-<div class="section-heading">
-
-<div class="section-label">
-NAIROBI CITY WALKS
-</div>
-
-<h2>
-Walk, Taste & Discover Nairobi
-</h2>
-
-<p>
-Go beyond sightseeing and experience Nairobi through
-its streets, stories, food and local life.
-</p>
-
-</div>
-
-
-<div class="walks-grid">
-
-
-<!-- HIGHLIGHTS WALK -->
-
-<div class="walk-card">
-
-<div class="walk-image">
-
-<img
-src="images/nairobi-city-walk.jpg"
-alt="Nairobi city walking experience"
-loading="lazy"
->
-
-</div>
-
-<div class="walk-info">
-
-<h3>
-Nairobi Highlights Walk
-</h3>
-
-<p>
-Explore central Nairobi on foot while discovering
-landmarks, public spaces and the city's everyday rhythm.
-</p>
-
-<div class="walk-price">
-KES 2,500 per person
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- HISTORY -->
-
-<div class="walk-card">
-
-<div class="walk-image">
-
-<img
-src="images/nairobi-history-culture.jpg"
-alt="Nairobi history and culture walking tour"
-loading="lazy"
->
-
-</div>
-
-<div class="walk-info">
-
-<h3>
-Nairobi History & Culture Walk
-</h3>
-
-<p>
-Discover Nairobi's history, important landmarks,
-architecture and stories that shaped the city.
-</p>
-
-<div class="walk-price">
-KES 2,500 per person
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- FOOD -->
-
-<div class="walk-card">
-
-<div class="walk-image">
-
-<img
-src="images/kenya-food-local-life.jpg"
-alt="Kenyan food and local life experience in Nairobi"
-loading="lazy"
->
-
-</div>
-
-<div class="walk-info">
-
-<h3>
-Nairobi Food & Local Life Walk
-</h3>
-
-<p>
-Experience local food, markets and everyday Nairobi
-while discovering the city from a local perspective.
-</p>
-
-<div class="walk-price">
-KES 3,500 per person
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     TRANSFERS
-========================================================= -->
-
-<section class="section">
-
-<div class="section-heading">
-
-<div class="section-label">
-TRANSFERS
-</div>
-
-<h2>
-Reliable Nairobi Transfers
-</h2>
-
-<p>
-Comfortable private transportation for airport,
-hotel and personal transfers.
-</p>
-
-</div>
-
-
-<div class="services-grid">
-
-
-<div class="service-card">
-
-<div class="service-image">
-
-<img
-src="images/jkia-airport.jpg"
-alt="Jomo Kenyatta International Airport Nairobi"
-loading="lazy"
->
-
-</div>
-
-<div class="service-info">
-
-<h3>
-JKIA Airport Transfer
-</h3>
-
-<p>
-Private airport transportation between Jomo Kenyatta
-International Airport and your Nairobi destination.
-</p>
-
-<a href="transfers.html" class="service-link">
-VIEW TRANSFER →
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-image">
-
-<img
-src="images/hotel-transfer.jpg"
-alt="Hotel transfer service in Nairobi"
-loading="lazy"
->
-
-</div>
-
-<div class="service-info">
-
-<h3>
-Hotel Transfer
-</h3>
-
-<p>
-Convenient private transportation between your hotel
-and other destinations around Nairobi.
-</p>
-
-<a href="transfers.html" class="service-link">
-VIEW TRANSFER →
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="service-card">
-
-<div class="service-image">
-
-<img
-src="images/private-transfer.jpg"
-alt="Private transfer service in Nairobi"
-loading="lazy"
->
-
-</div>
-
-<div class="service-info">
-
-<h3>
-Private Transfer
-</h3>
-
-<p>
-Flexible transportation for personal journeys,
-business travel and private Nairobi trips.
-</p>
-
-<a href="transfers.html" class="service-link">
-VIEW TRANSFER →
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
+<!-- =========================
      VEHICLE CATEGORIES
-========================================================= -->
+========================= -->
 
-<section class="section vehicle-section">
+<section class="section fleet-section" id="fleet">
+
+<div class="container">
 
 <div class="section-heading">
 
-<div class="section-label">
-OUR VEHICLES
+<div class="small-heading">
+OUR FLEET
 </div>
 
 <h2>
-Choose Your Vehicle
+Our Vehicle Categories
 </h2>
 
 <p>
-Vehicle categories for private transfers, city tours,
-excursions and longer journeys.
+We have a range of well-maintained vehicles to suit your needs,
+whether for city tours, airport transfers, excursions or private hire.
 </p>
 
 </div>
 
 
-<div class="vehicle-grid">
+<div class="fleet-grid">
 
 
-<!-- SEDAN -->
+<!-- TOUR LAND CRUISER -->
 
 <div class="vehicle-card">
 
 <div class="vehicle-image">
 
 <img
-src="images/private-sedan.jpg"
-alt="Private Sedan"
+src="images/tour-land-cruiser.jpg"
+alt="STEMA TRANS Tour Land Cruiser"
 loading="lazy"
 >
 
+<div class="vehicle-icon">
+🚙
 </div>
 
-<div class="vehicle-info">
+</div>
+
+<div class="vehicle-content">
 
 <h3>
-Private Sedan
+Tour Land Cruiser
 </h3>
 
+<div class="gold-line"></div>
+
 <p>
-Suitable for individuals, couples and small private transfers.
+Ideal for safari-style excursions, national park visits,
+long-distance touring and guests who prefer a spacious
+and capable touring vehicle.
 </p>
 
-<div class="vehicle-rate">
-Rate on request
-</div>
-
-<a href="fleet.html" class="vehicle-link">
-VIEW VEHICLE
+<a href="fleet.html" class="details-btn">
+View Details
 </a>
 
 </div>
 
 </div>
-
-
-
-<!-- SUV -->
-
-<div class="vehicle-card">
-
-<div class="vehicle-image">
-
-<img
-src="images/suv-prado-tx.jpg"
-alt="Toyota Prado TX SUV"
-loading="lazy"
->
-
-</div>
-
-<div class="vehicle-info">
-
-<h3>
-SUV / Prado TX
-</h3>
-
-<p>
-Comfortable option for small groups, private tours and excursions.
-</p>
-
-<div class="vehicle-rate">
-KES 15,000 half day | KES 20,000 full day
-</div>
-
-<a href="fleet.html" class="vehicle-link">
-VIEW VEHICLE
-</a>
-
-</div>
-
-</div>
-
 
 
 <!-- TOUR VAN -->
@@ -1969,28 +1253,31 @@ VIEW VEHICLE
 
 <img
 src="images/tour-van.jpg"
-alt="Tour Van"
+alt="STEMA TRANS Tour Van"
 loading="lazy"
 >
 
+<div class="vehicle-icon">
+🚐
 </div>
 
-<div class="vehicle-info">
+</div>
+
+<div class="vehicle-content">
 
 <h3>
 Tour Van
 </h3>
 
+<div class="gold-line"></div>
+
 <p>
-Practical group vehicle for tours, transfers and excursions.
+A practical and comfortable option for group travel,
+Nairobi city tours, transfers and excursions.
 </p>
 
-<div class="vehicle-rate">
-KES 18,000 half day | KES 25,000 full day
-</div>
-
-<a href="fleet.html" class="vehicle-link">
-VIEW VEHICLE
+<a href="fleet.html" class="details-btn">
+View Details
 </a>
 
 </div>
@@ -1998,37 +1285,287 @@ VIEW VEHICLE
 </div>
 
 
-
-<!-- LAND CRUISER -->
+<!-- SUV / PRADO TX -->
 
 <div class="vehicle-card">
 
 <div class="vehicle-image">
 
 <img
-src="images/tour-land-cruiser.jpg"
-alt="Tour Land Cruiser"
+src="images/suv-prado-tx.jpg"
+alt="STEMA TRANS SUV Prado TX"
 loading="lazy"
 >
 
+<div class="vehicle-icon">
+🚙
 </div>
 
-<div class="vehicle-info">
+</div>
+
+<div class="vehicle-content">
 
 <h3>
-Tour Land Cruiser
+SUV / Prado TX
+</h3>
+
+<div class="gold-line"></div>
+
+<p>
+A comfortable and stylish option for small groups,
+families, private tours, airport transfers and
+personalised travel.
+</p>
+
+<a href="fleet.html" class="details-btn">
+View Details
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRIVATE SEDAN -->
+
+<div class="vehicle-card">
+
+<div class="vehicle-image">
+
+<img
+src="images/private-sedan.jpg"
+alt="STEMA TRANS Private Sedan"
+loading="lazy"
+>
+
+<div class="vehicle-icon">
+🚘
+</div>
+
+</div>
+
+<div class="vehicle-content">
+
+<h3>
+Private Sedan
+</h3>
+
+<div class="gold-line"></div>
+
+<p>
+Ideal for airport transfers, hotel transfers,
+business travel and private point-to-point
+transportation.
+</p>
+
+<a href="fleet.html" class="details-btn">
+View Details
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FLEET BENEFITS -->
+
+<div class="fleet-benefits">
+
+<div class="benefit">
+
+<div class="benefit-icon">
+✓
+</div>
+
+<div>
+<h4>Well Maintained</h4>
+
+<p>
+Vehicles are regularly serviced for
+your safety and comfort.
+</p>
+</div>
+
+</div>
+
+
+<div class="benefit">
+
+<div class="benefit-icon">
+👤
+</div>
+
+<div>
+<h4>Professional Drivers</h4>
+
+<p>
+Experienced, friendly and knowledgeable
+drivers and guides.
+</p>
+</div>
+
+</div>
+
+
+<div class="benefit">
+
+<div class="benefit-icon">
+♢
+</div>
+
+<div>
+<h4>Comfort & Safety</h4>
+
+<p>
+Clean, comfortable vehicles with
+appropriate safety equipment.
+</p>
+</div>
+
+</div>
+
+
+<div class="benefit">
+
+<div class="benefit-icon">
+◷
+</div>
+
+<div>
+<h4>On Time Always</h4>
+
+<p>
+Punctual, reliable and committed
+to your itinerary.
+</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="all-vehicles">
+
+<a href="fleet.html">
+View All Vehicles &nbsp; →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CITY TOURS
+========================= -->
+
+<section class="section experiences">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small-heading">
+EXPLORE NAIROBI
+</div>
+
+<h2>
+City Tours & Attractions
+</h2>
+
+<p>
+See Nairobi beyond the usual stops. Explore its landmarks,
+history, culture, wildlife and everyday life.
+</p>
+
+</div>
+
+
+<div class="experience-grid">
+
+
+<div class="experience-card">
+
+<img
+src="images/kicc-city-centre.jpeg"
+alt="KICC and Nairobi city centre"
+loading="lazy"
+>
+
+<div class="experience-body">
+
+<h3>
+Nairobi City Highlights
 </h3>
 
 <p>
-Dedicated touring vehicle for park trips, excursions and longer journeys.
+Explore KICC, the CBD, Parliament area, City Market,
+Jeevanjee Gardens, Uhuru Park and other central landmarks.
 </p>
 
-<div class="vehicle-rate">
-KES 25,000 half day | KES 30,000 full day
+<a href="tours.html" class="read-more">
+Explore Tour →
+</a>
+
 </div>
 
-<a href="fleet.html" class="vehicle-link">
-VIEW VEHICLE
+</div>
+
+
+<div class="experience-card">
+
+<img
+src="images/nairobi-national-museum.jpg"
+alt="Nairobi National Museum"
+loading="lazy"
+>
+
+<div class="experience-body">
+
+<h3>
+Nairobi National Museum
+</h3>
+
+<p>
+Discover Kenya's natural heritage, history, archaeology,
+culture and art.
+</p>
+
+<a href="tours.html" class="read-more">
+Explore Tour →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="experience-card">
+
+<img
+src="images/nairobi-national-park.jpeg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="experience-body">
+
+<h3>
+Nairobi National Park
+</h3>
+
+<p>
+Experience wildlife and conservation only a short distance
+from the heart of Kenya's capital.
+</p>
+
+<a href="tours.html" class="read-more">
+Explore Tour →
 </a>
 
 </div>
@@ -2038,162 +1575,413 @@ VIEW VEHICLE
 
 </div>
 
+</div>
+
 </section>
 
 
+<!-- =========================
+     CITY WALKS
+========================= -->
 
-<!-- =========================================================
-     RATINGS & REVIEWS
-========================================================= -->
+<section class="section">
 
-<section class="section reviews-section">
+<div class="container">
 
-<div class="reviews-top">
+<div class="section-heading">
 
-<div class="section-label">
-GUEST FEEDBACK
+<div class="small-heading">
+WALK NAIROBI
 </div>
 
-<div class="section-heading" style="margin-bottom:15px;">
-
 <h2>
-Ratings & Reviews
+Discover Nairobi on Foot
 </h2>
 
 <p>
-We value every guest's experience. After travelling with
-STEMA TRANS, we invite you to share your experience and
-help future guests make an informed choice.
+Our guided walks give you a closer look at the city,
+its stories, people, food and everyday life.
 </p>
 
 </div>
 
 
-<div class="review-score">
+<div class="walk-grid">
+
+
+<div class="walk-card">
+
+<img
+src="images/nairobi-city-walk.jpeg"
+alt="Nairobi city walking experience"
+loading="lazy"
+>
+
+<div class="walk-content">
+
+<h3>
+Nairobi Highlights Walk
+</h3>
+
+<p>
+Walk through the heart of Nairobi and discover
+important landmarks and city life.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="walk-card">
+
+<img
+src="images/nairobi-culture-walk.jpg"
+alt="Nairobi history and culture walk"
+loading="lazy"
+>
+
+<div class="walk-content">
+
+<h3>
+History & Culture Walk
+</h3>
+
+<p>
+Discover the stories, heritage, architecture and
+cultural layers that shaped Nairobi.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="walk-card">
+
+<img
+src="images/food-local-life.jpeg"
+alt="Kenyan food and local life in Nairobi"
+loading="lazy"
+>
+
+<div class="walk-content">
+
+<h3>
+Food & Local Life
+</h3>
+
+<p>
+Experience Nairobi through food, markets and
+ordinary local life.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div style="text-align:center;margin-top:30px;">
+
+<a href="city-walks.html" class="details-btn">
+View All City Walks
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     TRANSFERS
+========================= -->
+
+<section class="section transfer-section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small-heading">
+TRANSFERS
+</div>
+
+<h2>
+Comfortable Transfers Around Nairobi
+</h2>
+
+<p>
+Reliable transportation for arrivals, departures,
+hotel movements and private journeys.
+</p>
+
+</div>
+
+
+<div class="transfer-grid">
+
+
+<div class="transfer-card">
+
+<img
+src="images/jkia-airport.jpeg"
+alt="Jomo Kenyatta International Airport"
+loading="lazy"
+>
+
+<div class="transfer-content">
+
+<h3>
+Airport Transfers
+</h3>
+
+<p>
+Meet-and-transfer service to and from JKIA with
+attention to timing, luggage and guest comfort.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="transfer-card">
+
+<img
+src="images/hotel-transfers.jpeg"
+alt="Hotel transfer service in Nairobi"
+loading="lazy"
+>
+
+<div class="transfer-content">
+
+<h3>
+Hotel Transfers
+</h3>
+
+<p>
+Convenient transfers between hotels, attractions,
+meeting points and other destinations.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="transfer-card">
+
+<img
+src="images/private-transfers.jpeg"
+alt="Private transfer service in Nairobi"
+loading="lazy"
+>
+
+<div class="transfer-content">
+
+<h3>
+Private Transfers
+</h3>
+
+<p>
+Comfortable point-to-point transportation for
+individuals, families, business travellers and groups.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     RATINGS & REVIEWS
+===================================================== -->
+
+<section class="reviews-section">
+
+<div class="reviews-container">
+
+
+<div class="reviews-heading">
+
+<div class="small-heading">
+RATINGS & REVIEWS
+</div>
+
+<h2>
+What Our Guests Say
+</h2>
+
+<p>
+Your experience matters to us. We value honest feedback
+from guests who travel with STEMA TRANS.
+</p>
+
+</div>
+
+
+<!-- RATING SUMMARY -->
+
+<div class="rating-summary">
+
+<div class="rating-stars">
+★★★★★
+</div>
+
+<h3>
+Guest Reviews
+</h3>
+
+<p>
+Real guest ratings and reviews will be displayed here
+as they are received.
+</p>
+
+</div>
+
+
+<!-- REVIEW CARDS -->
+
+<div class="review-grid">
+
+
+<!-- FIRST REVIEW CARD -->
+
+<div class="review-card first-review">
+
+<div>
 
 <div class="review-stars">
 ★★★★★
 </div>
 
-<div class="review-score-text">
-
-<strong>
+<h3>
 Be Our First Reviewer
-</strong>
-
-<span>
-Your genuine experience will appear here.
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="review-grid">
-
-
-<!-- EMPTY REVIEW 1 -->
-
-<div class="review-card empty">
-
-<div class="review-icon">
-★
-</div>
-
-<h3>
-Your Experience Matters
 </h3>
 
 <p>
-Have you travelled with STEMA TRANS?
-Share your experience with future guests.
+Have you travelled with STEMA TRANS? Tell us about your
+city tour, city walk, attraction visit, airport transfer
+or private transportation experience. Your honest review
+can help future guests choose with confidence.
 </p>
 
 </div>
 
+<div class="review-author">
+STEMA TRANS Guest
+</div>
+
+</div>
 
 
-<!-- EMPTY REVIEW 2 -->
+<!-- SECOND CARD -->
 
-<div class="review-card empty">
+<div class="review-card">
 
-<div class="review-icon">
-★
+<div>
+
+<div class="review-stars">
+★★★★★
 </div>
 
 <h3>
-City Tours & Walks
+Share Your Experience
 </h3>
 
 <p>
-Reviews from guests who experience our Nairobi
-tours and city walks will appear here.
+Tell us what you enjoyed about your STEMA TRANS experience,
+including our service, vehicle, driver or guide, punctuality
+and overall experience.
 </p>
 
 </div>
 
+<div class="review-author">
+Guest Feedback
+</div>
+
+</div>
 
 
-<!-- EMPTY REVIEW 3 -->
+<!-- THIRD CARD -->
 
-<div class="review-card empty">
+<div class="review-card">
 
-<div class="review-icon">
-★
+<div>
+
+<div class="review-stars">
+★★★★★
 </div>
 
 <h3>
-Transfers
+Your Feedback Matters
 </h3>
 
 <p>
-Guests can share their experience of our airport,
-hotel and private transfer services.
+We welcome honest feedback from every guest. Your comments
+help us improve our services and provide better experiences
+for future travellers.
 </p>
 
 </div>
 
+<div class="review-author">
+Guest Feedback
+</div>
 
 </div>
 
 
+</div>
 
-<div class="review-action">
+
+<div class="review-actions">
 
 <p>
-Already travelled with us? We would love to hear from you.
+Have you experienced STEMA TRANS?
 </p>
 
 <a href="contact.html" class="review-button">
-LEAVE A REVIEW
+⭐ Leave a Review
 </a>
 
-<a href="booking.html" class="review-button gold">
-BOOK WITH STEMA TRANS
+<a href="contact.html" class="review-button">
+Read Guest Feedback
 </a>
+
+</div>
+
 
 </div>
 
 </section>
 
 
+<!-- =========================
+     WHY STEMA TRANS
+========================= -->
 
-<!-- =========================================================
-     WHY CHOOSE STEMA TRANS
-========================================================= -->
+<section class="section">
 
-<section class="why-section">
+<div class="container">
 
-<div class="why-inner">
+<div class="section-heading">
 
-<div class="why-heading">
-
-<div class="section-label">
-WHY CHOOSE STEMA TRANS
+<div class="small-heading">
+WHY STEMA TRANS
 </div>
 
 <h2>
@@ -2201,8 +1989,8 @@ Travel With Confidence
 </h2>
 
 <p>
-Our aim is to make discovering Nairobi comfortable,
-informative and enjoyable.
+We focus on making your Nairobi experience comfortable,
+informative and professionally organised.
 </p>
 
 </div>
@@ -2214,7 +2002,25 @@ informative and enjoyable.
 <div class="why-card">
 
 <div class="why-icon">
-1
+✓
+</div>
+
+<h3>
+Reliable
+</h3>
+
+<p>
+We respect agreed pickup times,
+routes and itineraries.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+★
 </div>
 
 <h3>
@@ -2222,56 +2028,17 @@ Local Knowledge
 </h3>
 
 <p>
-Discover Nairobi with guides who understand the city,
-its history and everyday life.
+Experience Nairobi with someone who
+understands the city and its stories.
 </p>
 
 </div>
 
 
-
 <div class="why-card">
 
 <div class="why-icon">
-2
-</div>
-
-<h3>
-Flexible Experiences
-</h3>
-
-<p>
-Choose from tours, walks, transfers and private
-experiences according to your needs.
-</p>
-
-</div>
-
-
-
-<div class="why-card">
-
-<div class="why-icon">
-3
-</div>
-
-<h3>
-Comfortable Travel
-</h3>
-
-<p>
-Choose a vehicle category that suits your group
-and journey.
-</p>
-
-</div>
-
-
-
-<div class="why-card">
-
-<div class="why-icon">
-4
+♧
 </div>
 
 <h3>
@@ -2279,8 +2046,26 @@ Guest Focused
 </h3>
 
 <p>
-We aim to make every journey welcoming,
-informative and memorable.
+We listen to your interests and
+help make the experience comfortable.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+◆
+</div>
+
+<h3>
+Professional
+</h3>
+
+<p>
+Clear communication, clean vehicles
+and responsible service.
 </p>
 
 </div>
@@ -2293,103 +2078,92 @@ informative and memorable.
 </section>
 
 
-
-<!-- =========================================================
-     FINAL CTA
-========================================================= -->
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
-
-<div class="cta-inner">
 
 <h2>
 Ready to Explore Nairobi?
 </h2>
 
 <p>
-Tell us what you would like to experience, how many
-people are travelling and when you would like to go.
-We will help you plan your Nairobi experience.
+Choose a city tour, walking experience, attraction visit,
+airport transfer or private transportation and let
+STEMA TRANS help you experience Nairobi.
 </p>
 
-<a href="booking.html" class="cta-button">
-BOOK YOUR EXPERIENCE
+<a href="booking.html" class="primary-btn">
+Book With STEMA TRANS
 </a>
-
-</div>
 
 </section>
 
 
-
-<!-- =========================================================
+<!-- =========================
      FOOTER
-========================================================= -->
+========================= -->
 
 <footer>
 
 <div class="footer-grid">
 
 
-<div>
+<div class="footer-column">
 
-<div class="footer-logo">
+<div class="logo">
 STEMA <span>TRANS</span>
 </div>
-
-<p>
-Nairobi City Tours, City Walks, Attractions,
-Airport Transfers, Hotel Transfers and
-Private Transportation.
-</p>
 
 <br>
 
 <p>
-Discover Nairobi your way.
+Nairobi City Tours, Guided Walks,
+Attractions, Airport Transfers,
+Hotel Transfers and Private Transportation.
 </p>
 
 </div>
 
 
-<div>
+<div class="footer-column">
 
 <h3>
-Quick Links
+Explore
 </h3>
 
 <ul>
 
-<li>
-<a href="index.html">Home</a>
-</li>
-
-<li>
-<a href="tours.html">Tours</a>
-</li>
-
-<li>
-<a href="city-walks.html">City Walks</a>
-</li>
-
-<li>
-<a href="transfers.html">Transfers</a>
-</li>
-
-<li>
-<a href="fleet.html">Fleet</a>
-</li>
-
-<li>
-<a href="gallery.html">Gallery</a>
-</li>
+<li><a href="tours.html">City Tours</a></li>
+<li><a href="city-walks.html">City Walks</a></li>
+<li><a href="fleet.html">Our Fleet</a></li>
+<li><a href="gallery.html">Gallery</a></li>
 
 </ul>
 
 </div>
 
 
-<div>
+<div class="footer-column">
+
+<h3>
+Services
+</h3>
+
+<ul>
+
+<li><a href="transfers.html">Airport Transfers</a></li>
+<li><a href="transfers.html">Hotel Transfers</a></li>
+<li><a href="transfers.html">Private Transfers</a></li>
+<li><a href="rates.html">Rates</a></li>
+
+</ul>
+
+</div>
+
+
+<div class="footer-column">
 
 <h3>
 Contact
@@ -2397,21 +2171,9 @@ Contact
 
 <ul>
 
-<li>
-<a href="booking.html">Book Now</a>
-</li>
-
-<li>
-<a href="contact.html">Contact Us</a>
-</li>
-
-<li>
-0722 915 913
-</li>
-
-<li>
-stemawastrans@gmail.com
-</li>
+<li><a href="booking.html">Make a Booking</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="about.html">About STEMA TRANS</a></li>
 
 </ul>
 
@@ -2421,14 +2183,35 @@ stemawastrans@gmail.com
 </div>
 
 
-<div class="copyright">
+<div class="footer-bottom">
 
-© 2026 STEMA TRANS. All Rights Reserved.
+© 2026 STEMA TRANS — Nairobi City Tours & Transfers.
+All rights reserved.
 
 </div>
 
 </footer>
 
+
+<script>
+
+function toggleMenu(){
+
+    document.getElementById("navLinks").classList.toggle("active");
+
+}
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        document.getElementById("navLinks").classList.remove("active");
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
